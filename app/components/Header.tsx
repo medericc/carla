@@ -1,6 +1,5 @@
 "use client";
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 
 const Header = () => {
   return (
@@ -8,7 +7,7 @@ const Header = () => {
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
-      style={{ textAlign: 'center', marginTop: '50px' }}
+      style={{ textAlign: 'center', marginTop: '80px' }}
     >
       <div style={{ position: 'relative', display: 'inline-block' }}>
         {/* Title with overlap on the flag */}
@@ -17,14 +16,15 @@ const Header = () => {
           animate={{ scale: 1 }}
           transition={{ duration: 1.5 }}
           style={{
-            fontSize: '4rem', // Adjust size as needed
+            fontSize: '7rem', // Adjust size as needed
             fontWeight: 'bold',
             position: 'absolute',
             top: '-50px', // Adjust for text to overlap the flag
-            left: '30%',
+            left: '27%',
             transform: 'translateX(-30%)',
             color: '#FFF', // Color to contrast with the background
             zIndex: 3,
+            fontFamily: 'Heroic, Helvetica, Arial, sans-serif', // Add font family
           }}
         >
           CARLA
@@ -34,33 +34,46 @@ const Header = () => {
           animate={{ scale: 1 }}
           transition={{ duration: 1.5 }}
           style={{
-            fontSize: '4rem', // Adjust size as needed
+            fontSize: '7rem', // Adjust size as needed
             fontWeight: 'bold',
             position: 'absolute',
-            top: '-0px', // Adjust for text to overlap the flag
-            left: '35%',
+            top: '55px', // Adjust for text to overlap the flag
+            left: '32%',
             transform: 'translateX(-35%)',
             color: '#FFF', // Color to contrast with the background
             zIndex: 3,
+            fontFamily: 'Heroic, Helvetica, Arial, sans-serif', // Add font family
           }}
         >
           LEITE
         </motion.h1>
 
-        {/* Flag */}
+        {/* Video Flag */}
         <motion.div
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ duration: 2 }}
-          style={{ position: 'relative', zIndex: 1 }}
+          style={{ position: 'relative', zIndex: -1 }}
         >
-          <Image
-            src="/drapeau.png"
-            alt="Drapeau"
-            width={500}
-            height={300}
-            style={{ opacity: 0.6 }}
-          />
+        <video 
+  muted 
+  loop 
+  playsInline 
+  autoPlay  // Ajout de autoPlay pour que la vidéo démarre automatiquement
+  preload="auto" // Chargement automatique de la vidéo
+  className="flag" 
+  style={{
+    width: '133.33vw',
+    marginBottom: '-14vw', 
+    minWidth: '43.75rem', 
+    position: 'relative', 
+    opacity: 0.6,
+   
+  }}
+>
+  <source src="/fr.mp4" type="video/mp4" />
+</video>
+
         </motion.div>
 
         {/* Character */}
@@ -71,15 +84,15 @@ const Header = () => {
           style={{
             position: 'absolute',
             bottom: '-20px',
-            left: '30%',
+            left: '33%',
             transform: 'translateX(-30%)',
-            zIndex: 2,
+            zIndex: 5,
           }}
         >
-          <Image
+          <img
             src="/perso.png"
             alt="Personnage"
-            width={200}
+            width={314}
             height={300}
           />
         </motion.div>
@@ -95,26 +108,75 @@ const Header = () => {
           justifyContent: 'center',
           marginTop: '30px',
           gap: '30px',
-          fontSize: '2rem',
+          textTransform: 'uppercase',
+          letterSpacing: '2px',
         }}
       >
-        <div>
-          <p>WINS</p>
-          <p style={{ fontSize: '3rem', fontWeight: 'bold' }}>30</p>
+        <div style={{ textAlign: 'center' }}>
+          <p style={{
+            fontFamily: '"Nima Regular", sans-serif',
+            marginBottom: '0px',
+            fontSize: '20px',
+            lineHeight: '20px',
+          }}>Wins</p>
+          <p style={{
+            fontSize: '60px',
+            fontWeight: '900',
+            letterSpacing: '-2px',
+            marginTop: '0px',
+          }}>30</p>
         </div>
-        <div>
-          <p>LOSSES</p>
-          <p style={{ fontSize: '3rem', fontWeight: 'bold' }}>05</p>
+        <div style={{ textAlign: 'center' }}>
+          <p style={{
+            fontFamily: '"Nima Regular", sans-serif',
+            marginBottom: '0px',
+            fontSize: '20px',
+            lineHeight: '20px',
+          }}>Losses</p>
+          <p style={{
+            fontSize: '60px',
+            fontWeight: '900',
+            letterSpacing: '-2px',
+            marginTop: '0px',
+          }}>05</p>
         </div>
-        <div>
-          <p>DRAWS</p>
-          <p style={{ fontSize: '3rem', fontWeight: 'bold' }}>00</p>
+        <div style={{ textAlign: 'center' }}>
+          <p style={{
+            fontFamily: '"Nima Regular", sans-serif',
+            marginBottom: '0px',
+            fontSize: '20px',
+            lineHeight: '20px',
+          }}>Draws</p>
+          <p style={{
+            fontSize: '60px',
+            fontWeight: '900',
+            letterSpacing: '-2px',
+            marginTop: '0px',
+          }}>00</p>
         </div>
-        <div>
-          <p>KO</p>
-          <p style={{ fontSize: '3rem', fontWeight: 'bold' }}>18</p>
+        <div style={{ textAlign: 'center' }}>
+          <p style={{
+            fontFamily: '"Nima Regular", sans-serif',
+            marginBottom: '0px',
+            fontSize: '20px',
+            lineHeight: '20px',
+          }}>KO</p>
+          <p style={{
+            fontSize: '60px',
+            fontWeight: '900',
+            letterSpacing: '-2px',
+            marginTop: '0px',
+          }}>18</p>
         </div>
       </motion.div>
+
+      {/* Horizontal Line */}
+      <div style={{
+        height: '3px',  // Thickness of the line
+        width: '80%',    // Width of the line (adjust as needed)
+        backgroundColor: '#fff',
+        margin: '20px auto 0 auto'  // Centered and with margin at the top
+      }} />
     </motion.header>
   );
 };

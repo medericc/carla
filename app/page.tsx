@@ -16,12 +16,12 @@ export default function Home() {
       {/* Header avec nom et drapeau */}
       <Header />
 
-
+{/* Biographie */}
+<Biography />
       {/* Statistiques */}
       <Stats />
 
-      {/* Biographie */}
-      <Biography />
+      
 
       {/* News */}
       <Cards />
