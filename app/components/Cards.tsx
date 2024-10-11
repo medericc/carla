@@ -78,25 +78,31 @@ const FightCard: React.FC<FightCardProps> = ({ eventTitle, fighter1, fighter2, f
           </span>
         </div>
 
-        <div className="flex mt-4 relative border-t-[0.0625rem] border-t-[#272727]">
+        <div className="flex mt-4 border-t-[0.0625rem] border-t-[#272727]">
           {/* Fighter 1 */}
-          <div className="flex-1 text-center relative border-r border-l border-l-[#272727] border-r-[#272727] ">
-          <div className="border-b  border-b-[#272727]">
+          <div className="flex-1 text-center border-r border-l border-l-[#272727] border-r-[#272727]">
+  {/* Conteneur pour l'image et le texte "WIN" */}
+  <div className="relative border-b border-b-[#272727]">
+    {/* Image du combattant */}
+    <Image
+      src={fighter1.img}
+      alt={fighter1.name}
+      width={150}
+      height={150}
+      className="rounded-full object-cover"
+    />
+    {/* Texte "WIN" positionné par rapport à l'image */}
+    {fighter1.win && (
+      <span className="absolute bg-[#c30000] text-white font-bold uppercase text-[1.25rem] leading-[0.8] px-6 py-3 left-0 bottom-0 z-20">
+        WIN
+      </span>
+    )}
+  </div>
+  
+  {/* Nom du combattant en dessous */}
+  <p className="mt-2 text-xl font-bold">{fighter1.name}</p>
+</div>
 
-            <Image
-              src={fighter1.img}
-              alt={fighter1.name}
-              width={150}
-              height={150}
-              className="rounded-full object-cover"
-            /> </div>
-            <p className="mt-2 text-xl font-bold ">{fighter1.name}</p>
-            {fighter1.win && (
-              <span className="absolute bg-[#c30000] text-white font-bold uppercase text-[1.25rem] leading-[0.8] px-6 py-3 left-0 bottom-0 z-20">
-                WIN
-              </span>
-            )}
-          </div>
 
           
           {/* VS */}
