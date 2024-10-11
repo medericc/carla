@@ -1,7 +1,7 @@
 "use client";
-import dynamic from 'next/dynamic';
-import { motion } from 'framer-motion';
-import Image from 'next/image';
+import dynamic from "next/dynamic";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 // Create a dynamic component for motion
 const MotionDiv = dynamic(() => Promise.resolve(motion.div), { ssr: false });
@@ -15,128 +15,115 @@ const Cards = () => {
       </div>
 
       {/* Main content */}
-      <h1 className="text-4xl mb-10 z-10"></h1>
+      <h1 className="text-4xl mb-10 z-10">Fight Cards</h1>
 
-      {/* Card 1: Pereira vs Vakhitov */}
-      <div className="bg-[#1a1a1a] rounded-lg mb-8 p-5 shadow-lg max-w-3xl mx-auto z-20">
-        <div className="bg-[#b1100f] text-white py-2 rounded-t-lg text-2xl mb-5 text-center">
-          GLORY 78
-        </div>
-        <div className="flex justify-between items-center max-w-full">
-          <div className="flex-1 text-center">
-            <Image
-              src="/path-to-image/perreira.png"
-              alt="Pereira"
-              width={150}
-              height={150}
-              className="rounded-full object-cover"
-            />
-            <p className="mt-2 text-xl font-bold">Pereira</p>
-          </div>
-          <div className="text-xl font-bold mx-5">VS</div>
-          <div className="flex-1 text-center">
-            <Image
-              src="/path-to-image/vakhitov.png"
-              alt="Vakhitov"
-              width={150}
-              height={150}
-              className="rounded-full object-cover"
-            />
-            <p className="mt-2 text-xl font-bold">
-              Vakhitov <span className="bg-[#b1100f] text-white px-2 py-1 rounded-lg ml-2">WIN</span>
-            </p>
-          </div>
-        </div>
-        <div className="mt-5 text-center">
-          <div className="flex justify-center gap-5">
-            <button className="px-5 py-2 text-lg bg-[#b1100f] text-white rounded-md">Fight Card</button>
-            <button className="px-5 py-2 text-lg bg-[#b1100f] text-white rounded-md">Watch</button>
-          </div>
-          <p className="text-lg text-white mt-5">
-            Light Heavyweight World Title Fight - MD 03:00 Round 5
-          </p>
-        </div>
-      </div>
+      {/* Card Component (Reusable) */}
+      <FightCard
+        eventTitle="GLORY 78"
+        fightDetails="Light Heavyweight World Title Fight - MD 03:00 Round 5"
+        fightDetail="Submission 04:00 Rounds"
+        fighter1={{ name: "Pereira", img: "/path-to-image/perreira.png", win: false }}
+        fighter2={{ name: "Vakhitov", img: "/path-to-image/vakhitov.png", win: true }}
+      />
 
-      {/* Card 2: Adesanya vs Blachowicz */}
-      <div className="bg-[#1a1a1a] rounded-lg mb-8 p-5 shadow-lg max-w-3xl mx-auto z-20">
-        <div className="bg-[#b1100f] text-white py-2 rounded-t-lg text-2xl mb-5 text-center">
-          UFC 259
-        </div>
-        <div className="flex justify-between items-center max-w-full">
-          <div className="flex-1 text-center">
-            <Image
-              src="/path-to-image/adesanya.png"
-              alt="Adesanya"
-              width={150}
-              height={150}
-              className="rounded-full object-cover"
-            />
-            <p className="mt-2 text-xl font-bold">Adesanya</p>
-          </div>
-          <div className="text-xl font-bold mx-5">VS</div>
-          <div className="flex-1 text-center">
-            <Image
-              src="/path-to-image/blachowicz.png"
-              alt="Blachowicz"
-              width={150}
-              height={150}
-              className="rounded-full object-cover"
-            />
-            <p className="mt-2 text-xl font-bold">
-              Blachowicz <span className="bg-[#b1100f] text-white px-2 py-1 rounded-lg ml-2">WIN</span>
-            </p>
-          </div>
-        </div>
-        <div className="mt-5 text-center">
-          <div className="flex justify-center gap-5">
-            <button className="px-5 py-2 text-lg bg-[#b1100f] text-white rounded-md">Fight Card</button>
-            <button className="px-5 py-2 text-lg bg-[#b1100f] text-white rounded-md">Watch</button>
-          </div>
-          <p className="text-lg text-white mt-5">
-            Light Heavyweight Championship - UD 05:00 Rounds
-          </p>
-        </div>
-      </div>
+      <FightCard
+        eventTitle="UFC 259"
+        fightDetails="Lightweight Championship"
+        fightDetail="Submission 04:00 Rounds"
+        fighter1={{ name: "Adesanya", img: "/path-to-image/adesanya.png", win: false }}
+        fighter2={{ name: "Blachowicz", img: "/path-to-image/blachowicz.png", win: true }}
+      />
 
-      {/* Card 3: Nurmagomedov vs McGregor */}
-      <div className="bg-[#1a1a1a] rounded-lg mb-8 p-5 shadow-lg max-w-3xl mx-auto z-20">
+      <FightCard
+        eventTitle="UFC 229"
+        fightDetails="Lightweight Championship - Submission 04:00 Rounds"
+        fightDetail="Submission 04:00 Rounds"
+        fighter1={{ name: "Nurmagomedov", img: "/path-to-image/nurmagomedov.png", win: true }}
+        fighter2={{ name: "McGregor", img: "/path-to-image/mcgregor.png", win: false }}
+      />
+    </div>
+  );
+};
+
+// Define the types for the fighters
+interface Fighter {
+  name: string;
+  img: string;
+  win: boolean;
+}
+
+interface FightCardProps {
+  eventTitle: string;
+  fighter1: Fighter;
+  fighter2: Fighter;
+  fightDetails: string;
+  fightDetail: string;
+}
+
+const FightCard: React.FC<FightCardProps> = ({ eventTitle, fighter1, fighter2, fightDetails }) => {
+  return (
+    <div className="bg-[#1a1a1a] flex flex-col rounded-lg mb-8 p-5 shadow-lg max-w-3xl mx-auto z-20">
+      {/* Event Title */}
+      <div className="mt-5 text-center">
         <div className="bg-[#b1100f] text-white py-2 rounded-t-lg text-2xl mb-5 text-center">
-          UFC 229
+          {eventTitle}
         </div>
-        <div className="flex justify-between items-center max-w-full">
-          <div className="flex-1 text-center">
+
+        {/* Fight details */}
+        <div className="flex flex-col justify-between items-center max-w-full relative">
+          <p className="text-lg text-white">{fightDetails}</p>
+          <span className="flex items-center bg-white text-black rounded-[0.0625rem] font-sans text-[.75rem] font-semibold h-4 mt-[.3125rem] p-[.0625rem] pl-[.25rem] pt-0 uppercase">
+            {fightDetails}
+          </span>
+        </div>
+
+        <div className="flex relative">
+          {/* Fighter 1 */}
+          <div className="flex-1 text-center relative">
             <Image
-              src="/path-to-image/nurmagomedov.png"
-              alt="Nurmagomedov"
+              src={fighter1.img}
+              alt={fighter1.name}
               width={150}
               height={150}
               className="rounded-full object-cover"
             />
-            <p className="mt-2 text-xl font-bold">Nurmagomedov</p>
+            <p className="mt-2 text-xl font-bold">{fighter1.name}</p>
+            {fighter1.win && (
+              <span className="absolute top-0 right-0 bg-[#b1100f] text-white px-2 py-1 rounded-lg ml-2">
+                WIN
+              </span>
+            )}
           </div>
+
+          {/* VS */}
           <div className="text-xl font-bold mx-5">VS</div>
-          <div className="flex-1 text-center">
+
+          {/* Fighter 2 */}
+          <div className="flex-1 text-center relative">
             <Image
-              src="/path-to-image/mcgregor.png"
-              alt="McGregor"
+              src={fighter2.img}
+              alt={fighter2.name}
               width={150}
               height={150}
               className="rounded-full object-cover"
             />
-            <p className="mt-2 text-xl font-bold">
-              McGregor <span className="bg-[#b1100f] text-white px-2 py-1 rounded-lg ml-2">LOSS</span>
-            </p>
+            <p className="mt-2 text-xl font-bold">{fighter2.name}</p>
+            {fighter2.win && (
+              <span className="absolute top-0 right-0 bg-[#b1100f] text-white px-2 py-1 rounded-lg ml-2">
+                WIN
+              </span>
+            )}
           </div>
         </div>
-        <div className="mt-5 text-center">
-          <div className="flex justify-center gap-5">
-            <button className="px-5 py-2 text-lg bg-[#b1100f] text-white rounded-md">Fight Card</button>
-            <button className="px-5 py-2 text-lg bg-[#b1100f] text-white rounded-md">Watch</button>
-          </div>
-          <p className="text-lg text-white mt-5">
-            Lightweight Championship - Submission 04:00 Rounds
-          </p>
+
+        {/* Buttons under Fighters */}
+        <div className="flex flex-col items-center mt-5">
+          <button className="inline-flex items-center justify-center h-12 px-[3.25rem] bg-[#b1100f] text-white rounded-[.125rem] text-[.875rem] font-extrabold uppercase cursor-pointer relative whitespace-nowrap transition-colors transition-bg transition-border duration-[.37s] ease-[cubic-bezier(.39,.575,.565,1)] mx-2">
+            Fight Card
+          </button>
+          <button className="inline-flex items-center justify-center h-12 px-[3.25rem] bg-[#b1100f] text-white rounded-[.125rem] text-[.875rem] font-extrabold uppercase cursor-pointer relative whitespace-nowrap transition-colors transition-bg transition-border duration-[.37s] ease-[cubic-bezier(.39,.575,.565,1)] mx-2">
+            Watch
+          </button>
         </div>
       </div>
     </div>
@@ -155,8 +142,8 @@ const keyframesStyle = `
   }
 `;
 
-if (typeof document !== 'undefined') {
-  const style = document.createElement('style');
+if (typeof document !== "undefined") {
+  const style = document.createElement("style");
   style.innerHTML = keyframesStyle;
   document.head.appendChild(style);
 }
