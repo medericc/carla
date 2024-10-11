@@ -2,7 +2,7 @@
 import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import Image from "next/image";
-
+import styles from './FightCard.module.css';
 // Create a dynamic component for motion
 const MotionDiv = dynamic(() => Promise.resolve(motion.div), { ssr: false });
 
@@ -60,56 +60,63 @@ interface FightCardProps {
   fightDetail: string;
 }
 
-const FightCard: React.FC<FightCardProps> = ({ eventTitle, fighter1, fighter2, fightDetails }) => {
+const FightCard: React.FC<FightCardProps> = ({ eventTitle, fighter1, fighter2, fightDetails, fightDetail }) => {
   return (
     <div className="bg-[#1a1a1a] flex flex-col rounded-lg mb-8 p-5 shadow-lg max-w-3xl mx-auto z-20">
       {/* Event Title */}
       <div className="mt-5 text-center">
-        <div className="bg-[#b1100f] text-white py-2 rounded-t-lg text-2xl mb-5 text-center">
+        <div className="text-white py-2 rounded-t-lg text-2xl mb-5">
           {eventTitle}
         </div>
 
         {/* Fight details */}
-        <div className="flex flex-col justify-between items-center max-w-full relative">
+        <div className="flex flex-col justify-between items-center max-w-full relative border-t-[0.0625rem] border-t-[#272727] mt-6 mb-8 pt-7 px-4 pb-0">
+
           <p className="text-lg text-white">{fightDetails}</p>
-          <span className="flex items-center bg-white text-black rounded-[0.0625rem] font-sans text-[.75rem] font-semibold h-4 mt-[.3125rem] p-[.0625rem] pl-[.25rem] pt-0 uppercase">
-            {fightDetails}
+          <span className="flex items-center bg-white text-black rounded-[0.0625rem] font-sans text-[0.75rem] font-semibold h-4 mt-[0.3125rem] p-[0.0625rem] pl-[0.25rem] pt-0 uppercase">
+            {fightDetail}
           </span>
         </div>
 
-        <div className="flex relative">
+        <div className="flex mt-4 relative border-t-[0.0625rem] border-t-[#272727]">
           {/* Fighter 1 */}
-          <div className="flex-1 text-center relative">
+          <div className="flex-1 text-center relative border-r border-l border-l-[#272727] border-r-[#272727] ">
+          <div className="border-b  border-b-[#272727]">
+
             <Image
               src={fighter1.img}
               alt={fighter1.name}
               width={150}
               height={150}
               className="rounded-full object-cover"
-            />
-            <p className="mt-2 text-xl font-bold">{fighter1.name}</p>
+            /> </div>
+            <p className="mt-2 text-xl font-bold ">{fighter1.name}</p>
             {fighter1.win && (
-              <span className="absolute top-0 right-0 bg-[#b1100f] text-white px-2 py-1 rounded-lg ml-2">
+              <span className="absolute bg-[#c30000] text-white font-bold uppercase text-[1.25rem] leading-[0.8] px-6 py-3 left-0 bottom-0 z-20">
                 WIN
               </span>
             )}
           </div>
 
+          
           {/* VS */}
-          <div className="text-xl font-bold mx-5">VS</div>
+          <div className={`relative ${styles.fighters} flex-1 text-center`}>
+            {/* Le "vs" sera ajouté via le pseudo-élément ::after */}
+          </div>
 
           {/* Fighter 2 */}
-          <div className="flex-1 text-center relative">
+          <div className="flex-1 text-center relative border-r border-r-[#272727]">
+          <div className="border-b  border-b-[#272727]">
             <Image
               src={fighter2.img}
               alt={fighter2.name}
               width={150}
               height={150}
               className="rounded-full object-cover"
-            />
+            /></div>
             <p className="mt-2 text-xl font-bold">{fighter2.name}</p>
             {fighter2.win && (
-              <span className="absolute top-0 right-0 bg-[#b1100f] text-white px-2 py-1 rounded-lg ml-2">
+              <span className="absolute bg-[#c30000] text-white font-bold uppercase text-[1.25rem] leading-[0.8] px-6 py-3 right-0 bottom-0 z-20">
                 WIN
               </span>
             )}
@@ -117,14 +124,18 @@ const FightCard: React.FC<FightCardProps> = ({ eventTitle, fighter1, fighter2, f
         </div>
 
         {/* Buttons under Fighters */}
-        <div className="flex flex-col items-center mt-5">
-          <button className="inline-flex items-center justify-center h-12 px-[3.25rem] bg-[#b1100f] text-white rounded-[.125rem] text-[.875rem] font-extrabold uppercase cursor-pointer relative whitespace-nowrap transition-colors transition-bg transition-border duration-[.37s] ease-[cubic-bezier(.39,.575,.565,1)] mx-2">
-            Fight Card
-          </button>
-          <button className="inline-flex items-center justify-center h-12 px-[3.25rem] bg-[#b1100f] text-white rounded-[.125rem] text-[.875rem] font-extrabold uppercase cursor-pointer relative whitespace-nowrap transition-colors transition-bg transition-border duration-[.37s] ease-[cubic-bezier(.39,.575,.565,1)] mx-2">
-            Watch
-          </button>
-        </div>
+        <div className="flex flex-col items-center border-t-[0.0625rem] border-t-[#272727] space-y-[0.75rem]">
+    <a className="inline-flex items-center justify-center mt-5 h-12 w-[14rem] bg-[#b1100f] text-white rounded-[0.125rem] text-[0.875rem] font-extrabold uppercase cursor-pointer transition-colors transition-bg transition-border duration-[0.37s] ease-[cubic-bezier(.39,.575,.565,1)]">
+        Fight Card
+    </a>
+    <a className="inline-flex items-center justify-center h-12 w-[14rem] bg-transparent border-[0.0625rem] text-white rounded-[0.125rem] text-[0.875rem] font-extrabold uppercase cursor-pointer transition-colors transition-bg transition-border duration-[0.37s] ease-[cubic-bezier(.39,.575,.565,1)]">
+        Watch
+    </a>
+</div>
+
+
+
+
       </div>
     </div>
   );
