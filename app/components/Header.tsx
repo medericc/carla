@@ -7,7 +7,7 @@ const Header = () => {
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
-      style={{ textAlign: 'center', marginTop: '80px' }}
+      style={{ textAlign: 'center', marginTop: '80px', position: 'relative' }}
     >
       <div style={{ position: 'relative', display: 'inline-block' }}>
         {/* Title with overlap on the flag */}
@@ -16,66 +16,70 @@ const Header = () => {
           animate={{ scale: 1 }}
           transition={{ duration: 1.5 }}
           style={{
-            fontSize: '7rem', // Adjust size as needed
+            fontSize: '20vw',
             fontWeight: 'bold',
             position: 'absolute',
-            top: '-50px', // Adjust for text to overlap the flag
+            top: '-50px',
             left: '27%',
             transform: 'translateX(-30%)',
-            color: '#FFF', // Color to contrast with the background
+            color: '#FFF',
             zIndex: 3,
-            fontFamily: 'Heroic, Helvetica, Arial, sans-serif', // Add font family
+            letterSpacing: '-0.02em',
+    textTransform: 'uppercase', 
+            fontFamily: 'Heroic, Helvetica, Arial, sans-serif',
           }}
         >
           CARLA
         </motion.h1>
         <motion.h1
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 1.5 }}
-          style={{
-            fontSize: '7rem', // Adjust size as needed
-            fontWeight: 'bold',
-            position: 'absolute',
-            top: '55px', // Adjust for text to overlap the flag
-            left: '32%',
-            transform: 'translateX(-35%)',
-            color: '#FFF', // Color to contrast with the background
-            zIndex: 3,
-            fontFamily: 'Heroic, Helvetica, Arial, sans-serif', // Add font family
-          }}
-        >
-          LEITE
-        </motion.h1>
-
-        {/* Video Flag */}
-        <motion.div
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 2 }}
-          style={{ position: 'relative', zIndex: -1 }}
-        >
-        <video 
-  muted 
-  loop 
-  playsInline 
-  autoPlay  // Ajout de autoPlay pour que la vidéo démarre automatiquement
-  preload="auto" // Chargement automatique de la vidéo
-  className="flag" 
+  initial={{ scale: 0 }}
+  animate={{ scale: 1 }}
+  transition={{ duration: 1.5 }}
   style={{
-    width: '133.33vw',
-    marginBottom: '-14vw', 
-    minWidth: '43.75rem', 
-    position: 'relative', 
-    opacity: 0.6,
-   
+    fontSize: '20vw',
+    fontWeight: 'bold',
+    position: 'absolute',
+    top: '55px',
+    left: '32%',
+    transform: 'translateX(-35%)',
+    color: '#FFF',
+    zIndex: 3,
+     // camelCase pour 'text-transform'
+    fontFamily: 'Heroic, Helvetica, Arial, sans-serif',
   }}
 >
-  <source src="/fr.mp4" type="video/mp4" />
-</video>
+  LEITE
+</motion.h1>
 
-        </motion.div>
 
+      {/* Video Flag */}
+<motion.div
+  initial={{ scale: 0 }}
+  animate={{ scale: 1 }}
+  transition={{ duration: 2 }}
+  style={{ position: 'relative', zIndex: -1 }}
+>
+  <video
+    muted
+    loop
+    playsInline
+    autoPlay
+    preload="auto"
+    className="flag"
+    style={{
+      width: '100vw',  // Réduire à 100vw pour éviter le dépassement
+      marginBottom: '-14vw',
+      minWidth: '87rem',
+      position: 'relative',
+      opacity: 0.6,
+    }}
+  >
+    <source src="/fr.mp4" type="video/mp4" />
+  </video>
+</motion.div>
+
+
+      
         {/* Character */}
         <motion.div
           initial={{ opacity: 0, x: 100 }}
@@ -89,14 +93,25 @@ const Header = () => {
             zIndex: 5,
           }}
         >
-          <img
-            src="/perso.png"
-            alt="Personnage"
-            width={314}
-            height={300}
-          />
+          <img src="/perso.png" alt="Personnage" width={600} height={300} />
         </motion.div>
       </div>
+  {/* Bande noire entre le personnage et le drapeau */}
+  <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.5 }}
+          style={{
+            content: '""',
+            position: 'absolute',
+            top: '230px',  // Ajuster la position
+            left: 0,
+            width: '100%',
+            height: '25vh',  // Ajuster la hauteur
+            background: 'linear-gradient(0deg, #1a1a1a 32%, rgba(195, 0, 0, 0))',
+            zIndex: 1001,  // Juste au-dessus du drapeau, sous le perso
+          }}
+        />
 
       {/* Stats Section */}
       <motion.div
@@ -106,77 +121,111 @@ const Header = () => {
         style={{
           display: 'flex',
           justifyContent: 'center',
-          marginTop: '30px',
+          marginTop: '100px',
           gap: '30px',
           textTransform: 'uppercase',
           letterSpacing: '2px',
         }}
       >
         <div style={{ textAlign: 'center' }}>
-          <p style={{
-            fontFamily: '"Nima Regular", sans-serif',
-            marginBottom: '0px',
-            fontSize: '20px',
-            lineHeight: '20px',
-          }}>Wins</p>
-          <p style={{
-            fontSize: '60px',
-            fontWeight: '900',
-            letterSpacing: '-2px',
-            marginTop: '0px',
-          }}>30</p>
+          <p
+            style={{
+              fontFamily: '"Nima Regular", sans-serif',
+              marginBottom: '0px',
+              fontSize: '20px',
+              lineHeight: '20px',
+            }}
+          >
+            Wins
+          </p>
+          <p
+            style={{
+              fontSize: '60px',
+              fontWeight: '900',
+              letterSpacing: '-2px',
+              marginTop: '0px',
+            }}
+          >
+            30
+          </p>
         </div>
         <div style={{ textAlign: 'center' }}>
-          <p style={{
-            fontFamily: '"Nima Regular", sans-serif',
-            marginBottom: '0px',
-            fontSize: '20px',
-            lineHeight: '20px',
-          }}>Losses</p>
-          <p style={{
-            fontSize: '60px',
-            fontWeight: '900',
-            letterSpacing: '-2px',
-            marginTop: '0px',
-          }}>05</p>
+          <p
+            style={{
+              fontFamily: '"Nima Regular", sans-serif',
+              marginBottom: '0px',
+              fontSize: '20px',
+              lineHeight: '20px',
+            }}
+          >
+            Losses
+          </p>
+          <p
+            style={{
+              fontSize: '60px',
+              fontWeight: '900',
+              letterSpacing: '-2px',
+              marginTop: '0px',
+            }}
+          >
+            05
+          </p>
         </div>
         <div style={{ textAlign: 'center' }}>
-          <p style={{
-            fontFamily: '"Nima Regular", sans-serif',
-            marginBottom: '0px',
-            fontSize: '20px',
-            lineHeight: '20px',
-          }}>Draws</p>
-          <p style={{
-            fontSize: '60px',
-            fontWeight: '900',
-            letterSpacing: '-2px',
-            marginTop: '0px',
-          }}>00</p>
+          <p
+            style={{
+              fontFamily: '"Nima Regular", sans-serif',
+              marginBottom: '0px',
+              fontSize: '20px',
+              lineHeight: '20px',
+            }}
+          >
+            Draws
+          </p>
+          <p
+            style={{
+              fontSize: '60px',
+              fontWeight: '900',
+              letterSpacing: '-2px',
+              marginTop: '0px',
+            }}
+          >
+            00
+          </p>
         </div>
         <div style={{ textAlign: 'center' }}>
-          <p style={{
-            fontFamily: '"Nima Regular", sans-serif',
-            marginBottom: '0px',
-            fontSize: '20px',
-            lineHeight: '20px',
-          }}>KO</p>
-          <p style={{
-            fontSize: '60px',
-            fontWeight: '900',
-            letterSpacing: '-2px',
-            marginTop: '0px',
-          }}>18</p>
+          <p
+            style={{
+              fontFamily: '"Nima Regular", sans-serif',
+              marginBottom: '0px',
+              fontSize: '20px',
+              lineHeight: '20px',
+            }}
+          >
+            KO
+          </p>
+          <p
+            style={{
+              fontSize: '60px',
+              fontWeight: '900',
+              letterSpacing: '-2px',
+              marginTop: '0px',
+            }}
+          >
+            18
+          </p>
         </div>
       </motion.div>
 
       {/* Horizontal Line */}
-      <div style={{
-        height: '3px',  // Thickness of the line
-        width: '80%',    // Width of the line (adjust as needed)
-        backgroundColor: '#fff',
-        margin: '20px auto 0 auto'  // Centered and with margin at the top
-      }} />
+      <div
+        style={{
+          height: '3px',
+          width: '80%',
+          backgroundColor: '#fff',
+          margin: '20px auto 0 auto',
+        }}
+      />
     </motion.header>
   );
 };
