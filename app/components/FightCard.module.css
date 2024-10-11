@@ -1,10 +1,11 @@
 .fighters {
     position: relative;
+    flex: 0; /* Le conteneur ne prendra pas de largeur */
   }
   
   .fighters::after {
       content: "vs";
-      background-color: transparent; /* transparent to avoid unwanted background */
+      background-color: transparent;
       font-family: Heroic, Helvetica, Arial, sans-serif;
       font-size: 1.8125rem;
       font-weight: 700;
@@ -16,9 +17,9 @@
       transform: translate(-50%, -50%);
       z-index: 10;
       letter-spacing: 0;
-      line-height: 1; /* Keep line-height standard */
-      padding: 0;
+      line-height: 1;
   }
+  
   
   @media screen and (max-width: 768px) {
       .fighters::after {
