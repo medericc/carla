@@ -12,61 +12,43 @@ const Biography = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 4, duration: 1 }}
-      style={{
-        marginTop: '20px',
-        display: 'flex',  // Flexbox for left-right layout
-        gap: '20px', // Adds space between image and details
-        alignItems: 'center', // Centers content vertically
-        color: '#fff', // Text color, can be customized
-         // Background color for entire section
-        padding: '20px', // Padding around the whole section
-        borderRadius: '10px' // Rounds corners for aesthetics
-      }}
+      className="mt-5 p-5 bg-gray-900 rounded-lg text-white flex flex-col items-center"
     >
-      {/* Image Section on the left */}
-      <div style={{ flex: '1' }}>
-        {/* Replace '/path/to/your-image.png' with your actual image path */}
-        <Image
-          src="/perso.png"
-          alt="Character Image"
-          width={300} // Adjust width as necessary
-          height={450} // Adjust height as necessary
-          style={{ borderRadius: '10px' }} // Adds a rounded corner to the image
-        />
-      </div>
+      {/* The Greatness Title */}
+      <h2 className="text-4xl mb-8 text-center">The Greatness</h2>
 
-      {/* Biography Info on the right */}
-      <div style={{ flex: '1.5', fontSize: '1.2rem', lineHeight: '1.5' }}>
-        <h2 style={{ fontSize: '2rem', marginBottom: '10px' }}>The Greatness</h2>
-        
-        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
-          <span>Division:</span>
-          <span>Light Heavyweight</span>
+      {/* Main content section with flexbox layout */}
+      <div className="flex  items-center w-full max-w-5xl mx-auto">
+        {/* Image Section on the left */}
+        <div className="flex-1">
+          <Image
+            src="/path/to/your-image.png" // Remplace par le chemin réel de ton image
+            alt="Character Image"
+            width={300}
+            height={450}
+            className="rounded-lg"
+          />
         </div>
-        
-        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
-          <span>Status:</span>
-          <span>Retired</span>
-        </div>
-        
-        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
-          <span>Age:</span>
-          <span>37</span>
-        </div>
-        
-        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
-          <span>Height:</span>
-          <span>1.94m</span>
-        </div>
-        
-        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
-          <span>Weight:</span>
-          <span>85kg</span>
-        </div>
-        
-        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
-          <span>Nationality:</span>
-          <span>Brazil</span>
+
+        {/* Biography Info on the right */}
+        <div className="flex-1 text-lg space-y-7">
+          {[
+            { label: 'Club', value: 'ESBVA-LM' },
+            { label: 'Poste', value: 'Small Guard' },
+            { label: 'Age', value: '20' },
+            { label: 'Height', value: '1.74m' },
+            { label: 'Nationality', value: 'French' },
+            { label: 'WNBA Team', value: 'Dallas' },
+            
+          ].map((info, idx) => (
+            <div
+              key={idx}
+              className="flex flex-col justify-between pb-2 border-b border-gray-600"
+            >
+              <span>{info.label}</span>
+              <span>{info.value}</span>
+            </div>
+          ))}
         </div>
       </div>
     </MotionDiv>

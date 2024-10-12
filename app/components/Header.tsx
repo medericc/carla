@@ -9,23 +9,16 @@ const Header = () => {
       transition={{ duration: 1 }}
       className="relative text-center mt-10 md:mt-20"
     >
-      <div className="relative inline-block">
+      <div className="relative inline-block mt-7">
         {/* Title with overlap on the flag */}
         <motion.h1
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ duration: 1.5 }}
-          className="text-[18vw] md:text-[10vw] font-bold absolute top-[-8vw] md:top-[-5vw] left-1/4 transform -translate-x-1/2 text-white uppercase z-10"
+          className="text-[18vw] md:text-[10vw] font-bold absolute top-[5vw] left-1/2 transform -translate-x-1/2 text-white uppercase z-10 mt-5 flex flex-col"
         >
-          CARLA
-        </motion.h1>
-        <motion.h1
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 1.5 }}
-          className="text-[18vw] md:text-[10vw] font-bold absolute top-[5vw] md:top-[2vw] left-1/4 transform -translate-x-1/2 text-white uppercase z-10"
-        >
-          LEITE
+          <span>CARLA</span>
+          <span>LEITE</span>
         </motion.h1>
 
         {/* Video Flag */}
@@ -33,7 +26,7 @@ const Header = () => {
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ duration: 2 }}
-          className="relative z-0"
+          className="absolute top-0 left-0 w-screen h-screen z-0"
         >
           <video
             muted
@@ -41,7 +34,7 @@ const Header = () => {
             playsInline
             autoPlay
             preload="auto"
-            className="w-full h-auto opacity-60"
+            className="w-full h-full object-cover opacity-60"
           >
             <source src="/fr.mp4" type="video/mp4" />
           </video>
@@ -52,7 +45,7 @@ const Header = () => {
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 2, duration: 1 }}
-          className="absolute bottom-[-10px] left-1/4 transform -translate-x-1/2 z-20"
+          className="absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 z-20"
         >
           <img
             src="/perso.png"
@@ -75,24 +68,38 @@ const Header = () => {
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1.5 }}
-        className="flex justify-center mt-12 md:mt-24 gap-5 md:gap-10 text-uppercase tracking-wide text-white"
+        className="flex justify-center mt-12 md:mt-24 gap-5 md:gap-10 text-uppercase tracking-wide text-white "
       >
-        <div className="text-center">
-          <p className="text-sm md:text-base mb-0">Wins</p>
-          <p className="text-4xl md:text-6xl font-bold">30</p>
-        </div>
-        <div className="text-center">
-          <p className="text-sm md:text-base mb-0">Losses</p>
-          <p className="text-4xl md:text-6xl font-bold">05</p>
-        </div>
-        <div className="text-center">
-          <p className="text-sm md:text-base mb-0">Draws</p>
-          <p className="text-4xl md:text-6xl font-bold">00</p>
-        </div>
-        <div className="text-center">
-          <p className="text-sm md:text-base mb-0">KO</p>
-          <p className="text-4xl md:text-6xl font-bold">18</p>
-        </div>
+        <ul
+          className="flex w-full md:w-auto justify-around md:gap-10  md:px-0 bg-black pt-4 pb-4 ml-2 mr-2 "
+          data-v-eb447b1e
+        >
+          <li
+            className="text-center border-r md:border-r-0 md:border-b-0 border-gray-600 flex-1 md:w-auto "
+            data-v-eb447b1e
+          >
+            <p className="text-sm md:text-base mb-0">Wins</p>
+            <p className="text-4xl md:text-6xl font-bold">30</p>
+          </li>
+          <li
+            className="text-center border-r md:border-r-0 md:border-b-0 border-gray-600 flex-1 md:w-auto "
+            data-v-eb447b1e
+          >
+            <p className="text-sm md:text-base mb-0">Losses</p>
+            <p className="text-4xl md:text-6xl font-bold">05</p>
+          </li>
+          <li
+            className="text-center border-r md:border-r-0 md:border-b-0 border-gray-600 flex-1 md:w-auto "
+            data-v-eb447b1e
+          >
+            <p className="text-sm md:text-base mb-0 pb-1 ">Draws</p>
+            <p className="text-4xl md:text-6xl font-bold">00</p>
+          </li>
+          <li className="text-center flex-1 md:w-auto " data-v-eb447b1e>
+            <p className="text-sm md:text-base mb-0">KO</p>
+            <p className="text-4xl md:text-6xl font-bold">18</p>
+          </li>
+        </ul>
       </motion.div>
 
       {/* Horizontal Line */}
