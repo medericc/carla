@@ -21,7 +21,7 @@ export default function Home() {
       {/* Statistiques */}
       <Stats />
 
-      
+      <News/>
 
       {/* News */}
       <Cards />
