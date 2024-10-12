@@ -82,3 +82,11 @@ a {
 .animate-scrollText {
   animation: scrollText 15s linear infinite;
 }
+
+.snap-x {
+  scroll-snap-type: x mandatory;
+}
+
+.snap-center {
+  scroll-snap-align: center;
+}

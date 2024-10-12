@@ -1,6 +1,6 @@
 "use client";
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 const statsData = [
   { label: 'Wins', value: 12 },
@@ -15,48 +15,72 @@ const statsData = [
 
 const Stats = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null); // Référence pour le container scrollable
 
   const handleDotClick = (index: number) => {
     setCurrentIndex(index);
+    if (containerRef.current) {
+      // Scroll vers l'élément spécifique en fonction de l'index
+      const scrollAmount = containerRef.current.clientWidth * index;
+      containerRef.current.scrollTo({
+        left: scrollAmount,
+        behavior: 'smooth',
+      });
+    }
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (containerRef.current) {
+        const scrollLeft = containerRef.current.scrollLeft;
+        const width = containerRef.current.clientWidth;
+        const newIndex = Math.round(scrollLeft / width);
+        setCurrentIndex(newIndex);
+      }
+    };
+
+    const container = containerRef.current;
+    if (container) {
+      container.addEventListener('scroll', handleScroll);
+      return () => container.removeEventListener('scroll', handleScroll);
+    }
+  }, []);
+
   return (
-    <div className="relative h-screen w-full bg-white text-white overflow-hidden">
+    <div className="relative h-screen w-full bg-black text-white">
       {/* Texte animé en fond */}
       <div className="absolute top-[7%] left-0 whitespace-nowrap z-1 text-[6rem] opacity-10 uppercase font-bold text-white animate-scrollText">
         STATISTICS STATISTICS STATISTICS
       </div>
 
-      {/* Scroll horizontal pour les blocs */}
-      <div className="absolute top-[25%] left-0 right-0 z-10 flex justify-center">
-        <motion.div
-          className="flex w-full overflow-x-auto scrollbar-hide" // Hide scrollbar for cleaner UI
-          animate={{ x: -currentIndex * 100 + '%' }} // Animation pour le scroll horizontal
-          transition={{ duration: 0.5 }}
-        >
-          {statsData.map((stat, index) => (
-            <div
-              key={index}
-              className="min-w-full p-8 flex justify-center items-center"
-              style={{ minWidth: '100%' }} // Pour que chaque bloc occupe la largeur complète
+      {/* Scroll horizontal manuel */}
+      <div
+        className="absolute top-[25%] left-0 right-0 z-10 flex overflow-x-scroll scrollbar-hide snap-x snap-mandatory"
+        ref={containerRef} // Référence du conteneur pour le scroll
+        style={{ scrollSnapType: 'x mandatory', scrollBehavior: 'smooth' }}
+      >
+        {statsData.map((stat, index) => (
+          <div
+            key={index}
+            className="min-w-full p-8 flex justify-center items-center snap-center"
+            style={{ minWidth: '100%' }}
+          >
+            <motion.div
+              className="bg-black p-8 rounded-lg shadow-lg w-[80%]"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
             >
-              <motion.div
-                className="bg-black p-8 rounded-lg shadow-lg w-[80%]"
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-              >
-                <h2 className="text-center text-2xl font-bold uppercase mb-6">
-                  Glory Record
-                </h2>
-                <div className="grid grid-cols-2 gap-6 text-center">
-                  <span className="block text-4xl font-bold">{stat.value}</span>
-                  <span className="block text-xl">{stat.label}</span>
-                </div>
-              </motion.div>
-            </div>
-          ))}
-        </motion.div>
+              <h2 className="text-center text-2xl font-bold uppercase mb-6">
+                Glory Record
+              </h2>
+              <div className="grid grid-cols-2 gap-6 text-center">
+                <span className="block text-4xl font-bold">{stat.value}</span>
+                <span className="block text-xl">{stat.label}</span>
+              </div>
+            </motion.div>
+          </div>
+        ))}
       </div>
 
       {/* Dots pour indiquer la position */}
