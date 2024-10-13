@@ -9,16 +9,23 @@ const Header = () => {
       transition={{ duration: 1 }}
       className="relative text-center mt-10 md:mt-20"
     >
-      <div className="relative inline-block mt-7">
+      <div className="relative inline-block">
         {/* Title with overlap on the flag */}
         <motion.h1
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ duration: 1.5 }}
-          className="text-[18vw] md:text-[10vw] font-bold absolute top-[5vw] left-1/2 transform -translate-x-1/2 text-white uppercase z-10 mt-5 flex flex-col"
+          className="text-[18vw] md:text-[10vw] font-bold absolute top-[-8vw] md:top-[-5vw] left-1/4 transform -translate-x-1/2 text-white uppercase z-10"
         >
-          <span>CARLA</span>
-          <span>LEITE</span>
+          CARLA
+        </motion.h1>
+        <motion.h1
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 1.5 }}
+          className="text-[18vw] md:text-[10vw] font-bold absolute top-[5vw] md:top-[2vw] left-1/4 transform -translate-x-1/2 text-white uppercase z-10"
+        >
+          LEITE
         </motion.h1>
 
         {/* Video Flag */}
@@ -26,7 +33,7 @@ const Header = () => {
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ duration: 2 }}
-          className="absolute top-0 left-0 w-screen h-screen z-0"
+          className="relative z-0 w-full h-[80vh] overflow-hidden"
         >
           <video
             muted
@@ -45,7 +52,7 @@ const Header = () => {
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 2, duration: 1 }}
-          className="absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 z-20"
+          className="absolute bottom-[-10px] left-1/4 transform -translate-x-1/2 z-20"
         >
           <img
             src="/perso.png"
@@ -63,8 +70,8 @@ const Header = () => {
         className="absolute top-[25vh] md:top-[30vh] left-0 w-full h-[20vh] bg-gradient-to-t from-[#1a1a1a] via-transparent z-5"
       />
 
-      {/* Stats Section */}
-      <motion.div
+       {/* Stats Section */}
+       <motion.div
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1.5 }}

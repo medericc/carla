@@ -15,12 +15,11 @@ const statsData = [
 
 const Stats = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const containerRef = useRef<HTMLDivElement>(null); // Référence pour le container scrollable
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const handleDotClick = (index: number) => {
     setCurrentIndex(index);
     if (containerRef.current) {
-      // Scroll vers l'élément spécifique en fonction de l'index
       const scrollAmount = containerRef.current.clientWidth * index;
       containerRef.current.scrollTo({
         left: scrollAmount,
@@ -47,7 +46,7 @@ const Stats = () => {
   }, []);
 
   return (
-    <div className="relative h-screen w-full bg-black text-white">
+    <div className="relative h-screen w-full bg-black text-white overflow-hidden">
       {/* Texte animé en fond */}
       <div className="absolute top-[7%] left-0 whitespace-nowrap z-1 text-[6rem] opacity-10 uppercase font-bold text-white animate-scrollText">
         STATISTICS STATISTICS STATISTICS
@@ -56,7 +55,7 @@ const Stats = () => {
       {/* Scroll horizontal manuel */}
       <div
         className="absolute top-[25%] left-0 right-0 z-10 flex overflow-x-scroll scrollbar-hide snap-x snap-mandatory"
-        ref={containerRef} // Référence du conteneur pour le scroll
+        ref={containerRef}
         style={{ scrollSnapType: 'x mandatory', scrollBehavior: 'smooth' }}
       >
         {statsData.map((stat, index) => (
@@ -100,5 +99,26 @@ const Stats = () => {
     </div>
   );
 };
+
+// Ajouter les keyframes pour l'animation du texte défilant
+const keyframesStyle = `
+  @keyframes scrollText {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  .animate-scrollText {
+    animation: scrollText 10s linear infinite;
+  }
+`;
+
+if (typeof document !== 'undefined') {
+  const style = document.createElement('style');
+  style.innerHTML = keyframesStyle;
+  document.head.appendChild(style);
+}
 
 export default Stats;
