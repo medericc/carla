@@ -80,6 +80,7 @@ const Header = () => {
           >
             <source src="/fr.mp4" type="video/mp4" />
           </video>
+
         </motion.div>
 
         {/* Personnage */}
@@ -87,7 +88,7 @@ const Header = () => {
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 2, duration: 1 }}
-          className="absolute bottom-[-40px] left-[-7%] transform -translate-x-1/2 z-20"
+          className="absolute bottom-[-11px] left-[-7%] transform -translate-x-1/2 z-20"
         >
           <img
             src="/perso.png"
@@ -95,16 +96,18 @@ const Header = () => {
             className="w-[116vw] md:w-[20vw] h-auto"
             style={{ maxWidth: 'none' }}
           />
+          
+  {/* Dégradé pour masquer le bas de l'image */}
+  <div className="absolute bottom-0 left-0 w-full h-[16vw] z-[1001]" 
+    style={{ 
+      background: 'linear-gradient(0deg, #1a1a1a 10%, rgba(195, 0, 0, 0))'
+    }} 
+  />
         </motion.div>
       </div>
 
-      {/* Bande noire entre le personnage et le drapeau */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1.5 }}
-        className="absolute md:top-[30vh] left-0 w-full h-[20vh] bg-gradient-to-t from-[#1a1a1a] via-transparent z-5"
-      />
+     
+
 
       {/* Section des stats */}
       <motion.div
@@ -216,6 +219,7 @@ const Header = () => {
           </li>
         </ul>
       </motion.div>
+      
     </motion.header>
   );
 };

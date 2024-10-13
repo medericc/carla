@@ -67,7 +67,7 @@ const Biography = () => {
                     fontFamily: 'Roboto, Helvetica, Arial, sans-serif',
                     fontSize: '.875rem',
                     paddingRight: '1rem',
-                    paddingBottom: '.6875rem',
+                    paddingBottom: '1.125rem', // Changement ici à 1.125rem
                     textTransform: 'none',
                     fontWeight: 400,
                     borderBottom: '.0625rem solid #3c3c3c',
