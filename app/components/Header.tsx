@@ -9,14 +9,15 @@ const Header = () => {
       transition={{ duration: 1 }}
       className="relative text-center mt-10 md:mt-20"
     >
-      <motion.img
-        src="/arrow.png"
-        alt="Arrow Background"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.5 }}
-        transition={{ duration: 2 }}
-        className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[300vw] md:w-[30vw] z-50"
-      />
+     <motion.img
+  src="/arrow.png"
+  alt="Arrow Background"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 0.5 }}
+  transition={{ duration: 2 }}
+  className="absolute top-[-45px] left-1/2 transform -translate-x-1/2 w-[300vw] md:w-[30vw] z-50"
+/>
+
       <div className="relative inline-block mt-[30vw]">
 
         {/* Numéro doré au-dessus du nom */}
@@ -109,36 +110,36 @@ const Header = () => {
 
       {/* Section des stats */}
       <motion.div
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1.5 }}
-        className="flex justify-center mt-12 md:mt-24 gap-5 md:gap-10 text-uppercase tracking-wide text-white"
-      >
-        <ul
-          className="flex w-full md:w-auto justify-around md:gap-10 md:px-0 bg-black pt-4 pb-4 ml-2 mr-2"
-          data-v-eb447b1e
-        >
-          <li className="text-center border-r md:border-r-0 md:border-b-0 border-gray-600 flex-1 md:w-auto" data-v-eb447b1e>
-            <p className="text-sm md:text-base mb-0">Wins</p>
-            <p className="text-4xl md:text-6xl font-bold">30</p>
-          </li>
-          <li className="text-center border-r md:border-r-0 md:border-b-0 border-gray-600 flex-1 md:w-auto" data-v-eb447b1e>
-            <p className="text-sm md:text-base mb-0">Losses</p>
-            <p className="text-4xl md:text-6xl font-bold">05</p>
-          </li>
-          <li className="text-center border-r md:border-r-0 md:border-b-0 border-gray-600 flex-1 md:w-auto" data-v-eb447b1e>
-            <p className="text-sm md:text-base mb-0 pb-1">Draws</p>
-            <p className="text-4xl md:text-6xl font-bold">00</p>
-          </li>
-          <li className="text-center flex-1 md:w-auto" data-v-eb447b1e>
-            <p className="text-sm md:text-base mb-0">KO</p>
-            <p className="text-4xl md:text-6xl font-bold">18</p>
-          </li>
-        </ul>
-      </motion.div>
+  initial={{ opacity: 0, x: 50 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ duration: 1.5 }}
+  className="flex justify-center mt-20 md:mt-24 text-uppercase tracking-wide text-white mb-20"
+>
+  <ul
+    className="flex w-full md:w-auto justify-between md:gap-10 px-4 md:px-0 bg-black pt-2 pb-2 ml-4 mr-4 max-w-[90%]" 
+    data-v-eb447b1e
+  >
+    <li className="text-center border-r md:border-r-0 md:border-b-0 border-gray-600 flex-1 md:w-auto" data-v-eb447b1e>
+      <p className="text-sm md:text-base mb-0">Wins</p>
+      <p className="text-4xl md:text-6xl font-bold">30</p>
+    </li>
+    <li className="text-center border-r md:border-r-0 md:border-b-0 border-gray-600 flex-1 md:w-auto" data-v-eb447b1e>
+      <p className="text-sm md:text-base mb-0">Losses</p>
+      <p className="text-4xl md:text-6xl font-bold">05</p>
+    </li>
+    <li className="text-center border-r md:border-r-0 md:border-b-0 border-gray-600 flex-1 md:w-auto" data-v-eb447b1e>
+      <p className="text-sm md:text-base mb-0">Draws</p>
+      <p className="text-4xl md:text-6xl font-bold">00</p>
+    </li>
+    <li className="text-center flex-1 md:w-auto" data-v-eb447b1e>
+      <p className="text-sm md:text-base mb-0">KO</p>
+      <p className="text-4xl md:text-6xl font-bold">18</p>
+    </li>
+  </ul>
+</motion.div>
 
-      {/* Ligne horizontale */}
-      <div className="h-[3px] w-4/5 bg-white mx-auto mt-5" />
+
+   
     </motion.header>
   );
 };
