@@ -9,40 +9,39 @@ const Header = () => {
       transition={{ duration: 1 }}
       className="relative text-center mt-10 md:mt-20"
     >
-     <motion.img
-  src="/arrow.png"
-  alt="Arrow Background"
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 0.5 }}
-  transition={{ duration: 2 }}
-  className="absolute top-[-45px] left-1/2 transform -translate-x-1/2 w-[300vw] md:w-[30vw] z-50"
-/>
+      <motion.img
+        src="/arrow.png"
+        alt="Arrow Background"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.5 }}
+        transition={{ duration: 2 }}
+        className="absolute top-[-45px] left-1/2 transform -translate-x-1/2 w-[300vw] md:w-[30vw] z-50"
+      />
 
       <div className="relative inline-block mt-[30vw]">
 
         {/* Numéro doré au-dessus du nom */}
         <motion.h2
-  initial={{ scale: 0 }}
-  animate={{ scale: 1 }}
-  transition={{ duration: 1.5 }}
-  className="font-bold absolute top-[-12vw] md:top-[-8vw] left-[30%] transform -translate-x-1/2 z-20 uppercase"
-  style={{
-    background: 'linear-gradient(90deg, #eec99e, #ffeec2)',
-    WebkitBackgroundClip: 'text',
-    WebkitTextFillColor: 'transparent', // Safari/Chrome support
-    backgroundClip: 'text', // Pour les autres navigateurs
-    fontFamily: 'Heroic, Helvetica, Arial, sans-serif',
-    fontSize: '2rem',
-    fontWeight: 700,
-    letterSpacing: '0',
-    lineHeight: 0.9,
-    paddingTop: '0.1em',
-    textTransform: 'uppercase', 
-  }}
->
-  NUMBER #0
-</motion.h2>
-
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 1.5 }}
+          className="font-bold absolute top-[-12vw] md:top-[-8vw] left-[30%] transform -translate-x-1/2 z-20 uppercase"
+          style={{
+            background: 'linear-gradient(90deg, #eec99e, #ffeec2)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+            fontFamily: 'Heroic, Helvetica, Arial, sans-serif',
+            fontSize: '2rem',
+            fontWeight: 700,
+            letterSpacing: '0',
+            lineHeight: 0.9,
+            paddingTop: '0.1em',
+            textTransform: 'uppercase',
+          }}
+        >
+          NUMBER #0
+        </motion.h2>
 
         {/* Titre CARLA */}
         <motion.h1
@@ -97,7 +96,6 @@ const Header = () => {
             style={{ maxWidth: 'none' }}
           />
         </motion.div>
-
       </div>
 
       {/* Bande noire entre le personnage et le drapeau */}
@@ -110,36 +108,114 @@ const Header = () => {
 
       {/* Section des stats */}
       <motion.div
-  initial={{ opacity: 0, x: 50 }}
-  animate={{ opacity: 1, x: 0 }}
-  transition={{ duration: 1.5 }}
-  className="flex justify-center mt-20 md:mt-24 text-uppercase tracking-wide text-white mb-20"
->
-  <ul
-    className="flex w-full md:w-auto justify-between md:gap-10 px-4 md:px-0 bg-black pt-2 pb-2 ml-4 mr-4 max-w-[90%]" 
-    data-v-eb447b1e
-  >
-    <li className="text-center border-r md:border-r-0 md:border-b-0 border-gray-600 flex-1 md:w-auto" data-v-eb447b1e>
-      <p className="text-sm md:text-base mb-0">Wins</p>
-      <p className="text-4xl md:text-6xl font-bold">30</p>
-    </li>
-    <li className="text-center border-r md:border-r-0 md:border-b-0 border-gray-600 flex-1 md:w-auto" data-v-eb447b1e>
-      <p className="text-sm md:text-base mb-0">Losses</p>
-      <p className="text-4xl md:text-6xl font-bold">05</p>
-    </li>
-    <li className="text-center border-r md:border-r-0 md:border-b-0 border-gray-600 flex-1 md:w-auto" data-v-eb447b1e>
-      <p className="text-sm md:text-base mb-0">Draws</p>
-      <p className="text-4xl md:text-6xl font-bold">00</p>
-    </li>
-    <li className="text-center flex-1 md:w-auto" data-v-eb447b1e>
-      <p className="text-sm md:text-base mb-0">KO</p>
-      <p className="text-4xl md:text-6xl font-bold">18</p>
-    </li>
-  </ul>
-</motion.div>
-
-
-   
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1.5 }}
+        className="flex justify-center mt-20 md:mt-24 text-uppercase tracking-wide text-white mb-20"
+      >
+        <ul
+          className="flex w-full md:w-auto justify-between md:gap-10 px-4 md:px-0 bg-black pt-[0.75rem] pb-[0.75rem] ml-4 mr-4 max-w-[90%]" 
+        >
+          <li className="text-center border-r md:border-r-0 md:border-b-0 border-gray-600 flex-1 md:w-auto">
+          <p
+              style={{
+                fontSize: '.75rem',
+                fontFamily: 'Industry, Helvetica, Arial, sans-serif',
+                fontWeight: 600,
+                textTransform: 'uppercase',
+                opacity: 0.5,
+                boxSizing: 'inherit',
+              }}
+              className="mb-0"
+            >Wins</p>
+             <p
+              style={{
+                fontSize: '11vw',
+                margin: '-.3em 0 -.16em',
+                fontFamily: 'Industry, Helvetica, Arial, sans-serif',
+                fontWeight: 600,
+                textTransform: 'uppercase',
+                boxSizing: 'inherit',
+              }}
+            >30</p>
+          </li>
+          <li className="text-center border-r md:border-r-0 md:border-b-0 border-gray-600 flex-1 md:w-auto">
+          <p
+              style={{
+                fontSize: '.75rem',
+                fontFamily: 'Industry, Helvetica, Arial, sans-serif',
+                fontWeight: 600,
+                textTransform: 'uppercase',
+                opacity: 0.5,
+                boxSizing: 'inherit',
+              }}
+              className="mb-0"
+            >Losses</p>
+            <p
+              style={{
+                fontSize: '11vw',
+                margin: '-.3em 0 -.16em',
+                fontFamily: 'Industry, Helvetica, Arial, sans-serif',
+                fontWeight: 600,
+                textTransform: 'uppercase',
+                boxSizing: 'inherit',
+              }}
+            >05</p>
+          </li>
+          <li className="text-center border-r md:border-r-0 md:border-b-0 border-gray-600 flex-1 md:w-auto">
+            {/* Styled Draws */}
+            <p
+              style={{
+                fontSize: '.75rem',
+                fontFamily: 'Industry, Helvetica, Arial, sans-serif',
+                fontWeight: 600,
+                textTransform: 'uppercase',
+                opacity: 0.5,
+                boxSizing: 'inherit',
+              }}
+              className="mb-0"
+            >
+              Draws
+            </p>
+            <p
+              style={{
+                fontSize: '11vw',
+                margin: '-.3em 0 -.16em',
+                fontFamily: 'Industry, Helvetica, Arial, sans-serif',
+                fontWeight: 600,
+                textTransform: 'uppercase',
+                boxSizing: 'inherit',
+              }}
+            >00</p>
+          </li>
+          <li className="text-center flex-1 md:w-auto">
+            {/* Styled KO */}
+            <p
+              style={{
+                fontSize: '.75rem',
+                fontFamily: 'Industry, Helvetica, Arial, sans-serif',
+                fontWeight: 600,
+                textTransform: 'uppercase',
+                opacity: 0.5,
+                boxSizing: 'inherit',
+              }}
+              className="mb-0"
+            >
+              KO
+            </p>
+            <p
+              style={{
+                fontSize: '11vw',
+                margin: '-.3em 0 -.16em',
+                fontFamily: 'Industry, Helvetica, Arial, sans-serif',
+                fontWeight: 600,
+                textTransform: 'uppercase',
+                boxSizing: 'inherit',
+              }}
+            >18</p>
+          </li>
+        </ul>
+      </motion.div>
     </motion.header>
   );
 };
