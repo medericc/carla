@@ -7,6 +7,7 @@ import { FaSearch, FaBars, FaTimes } from "react-icons/fa";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false); // État pour le menu déroulant "OTHERS"
 
   // Fonction pour détecter le scroll
   useEffect(() => {
@@ -27,6 +28,10 @@ export default function Header() {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  const toggleDropdown = () => {
+    setDropdownOpen(!dropdownOpen);
   };
 
   return (
@@ -73,19 +78,40 @@ export default function Header() {
         </ul>
 
         {/* Right Side - Shop and Tickets */}
-        <div className="hidden md:flex items-center space-x-6">
+        <div className="hidden md:flex items-center space-x-6 relative">
           <a
             href="#"
             className="text-white uppercase text-sm hover:text-gray-300"
           >
-            Shop ↗
+            Home ↗
           </a>
-          <a
-            href="#"
-            className="border border-white text-white px-4 py-1 text-sm uppercase hover:bg-white hover:text-black transition"
-          >
-            Tickets
-          </a>
+
+          {/* Dropdown Button */}
+          <div className="relative">
+            <button
+              onClick={toggleDropdown}
+              className="border border-white text-white px-4 py-1 text-sm uppercase hover:bg-white hover:text-black transition"
+            >
+              OTHERS
+            </button>
+            {dropdownOpen && (
+              <div className="absolute right-0 mt-2 w-48 bg-black border border-white text-white text-sm">
+                <a
+                  href="#"
+                  className="block px-4 py-2 hover:bg-white hover:text-black"
+                >
+                  Lena
+                </a>
+                <a
+                  href="#"
+                  className="block px-4 py-2 hover:bg-white hover:text-black"
+                >
+                  Lucile
+                </a>
+              </div>
+            )}
+          </div>
+
           <FaSearch className="text-white hover:text-gray-300 cursor-pointer" />
         </div>
       </nav>
@@ -93,17 +119,47 @@ export default function Header() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden flex flex-col items-center bg-black text-white uppercase text-sm space-y-4 py-4">
-          <a href="#" className="hover:text-gray-300">Events</a>
-          <a href="#" className="hover:text-gray-300">Fighters</a>
-          <a href="#" className="hover:text-gray-300">News</a>
-          <a href="#" className="hover:text-gray-300">Watch</a>
-          <a href="#" className="text-sm hover:text-gray-300">Shop ↗</a>
-          <a
-            href="#"
-            className="border border-white text-white px-4 py-1 text-sm uppercase hover:bg-white hover:text-black transition"
-          >
-            Tickets
+          <a href="#" className="hover:text-gray-300">
+            Events
           </a>
+          <a href="#" className="hover:text-gray-300">
+            Fighters
+          </a>
+          <a href="#" className="hover:text-gray-300">
+            News
+          </a>
+          <a href="#" className="hover:text-gray-300">
+            Watch
+          </a>
+          <a href="#" className="text-sm hover:text-gray-300">
+            Home ↗
+          </a>
+
+          {/* Mobile Dropdown Button */}
+          <div className="w-full flex flex-col items-center">
+            <button
+              onClick={toggleDropdown}
+              className="border border-white text-white px-4 py-1 text-sm uppercase hover:bg-white hover:text-black transition"
+            >
+              OTHERS
+            </button>
+            {dropdownOpen && (
+              <div className="w-full mt-2 flex flex-col items-center bg-black border border-white text-white text-sm">
+                <a
+                  href="#"
+                  className="block px-4 py-2 hover:bg-white hover:text-black"
+                >
+                  Lena
+                </a>
+                <a
+                  href="#"
+                  className="block px-4 py-2 hover:bg-white hover:text-black"
+                >
+                  Lucile
+                </a>
+              </div>
+            )}
+          </div>
         </div>
       )}
     </header>

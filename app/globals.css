@@ -90,3 +90,8 @@ a {
 .snap-center {
   scroll-snap-align: center;
 }
+/* Ajout d'une classe pour masquer les éléments initialement */
+.hidden-item {
+  opacity: 0;
+  transform: translateY(20px);
+}

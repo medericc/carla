@@ -13,7 +13,7 @@ const Header = () => {
         src="/arrow.png"
         alt="Arrow Background"
         initial={{ opacity: 0 }}
-        animate={{ opacity: 0.5 }}
+        animate={{ opacity: 4 }}
         transition={{ duration: 2 }}
         className="absolute top-[-45px] left-1/2 transform -translate-x-1/2 w-[300vw] md:w-[30vw] z-50"
       />
@@ -25,14 +25,14 @@ const Header = () => {
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ duration: 1.5 }}
-          className="font-bold absolute top-[-12vw] md:top-[-8vw] left-[30%] transform -translate-x-1/2 z-20 uppercase"
+          className="font-bold absolute top-[-12vw] md:top-[-8vw] left-[32.5%] transform -translate-x-1/2 z-20 uppercase"
           style={{
             background: 'linear-gradient(90deg, #eec99e, #ffeec2)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
             fontFamily: 'Heroic, Helvetica, Arial, sans-serif',
-            fontSize: '2rem',
+            fontSize: '1.6rem',
             fontWeight: 700,
             letterSpacing: '0',
             lineHeight: 0.9,
