@@ -95,3 +95,16 @@ a {
   opacity: 0;
   transform: translateY(20px);
 }
+.bg-black-2 {
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: inherit;
+  gap: 2rem;
+  height: 25.75rem;
+  padding: 3rem 2.375rem;
+  text-align: center;
+}

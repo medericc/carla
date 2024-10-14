@@ -28,42 +28,42 @@ const Biography = () => {
   const itemsRef = useRef<Array<HTMLDivElement | null>>([]);
 
   // Utiliser IntersectionObserver pour détecter quand un élément est visible dans la fenêtre
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          const index = parseInt(entry.target.getAttribute('data-index') || '0', 10);
-          if (entry.isIntersecting) {
-            setVisibleItems((prev) => {
-              if (!prev.includes(index)) {
-                return [...prev, index];
-              }
-              return prev;
-            });
-          } else {
-            setVisibleItems((prev) => prev.filter((i) => i !== index));
-          }
-        });
-      },
-      { threshold: 0.1 } // L'élément est considéré visible quand 10% est dans la fenêtre
-    );
-  
-    itemsRef.current.forEach((item) => {
-      if (item) observer.observe(item);
-    });
-  
-    return () => {
-      itemsRef.current.forEach((item) => {
-        if (item) observer.unobserve(item);
+useEffect(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const index = parseInt(entry.target.getAttribute('data-index') || '0', 10);
+        if (entry.isIntersecting) {
+          setVisibleItems((prev) => {
+            if (!prev.includes(index)) {
+              return [...prev, index];
+            }
+            return prev;
+          });
+        } else {
+          setVisibleItems((prev) => prev.filter((i) => i !== index));
+        }
       });
-    };
-  }, []);
-   // Garder cette dépendance vide pour éviter de réinitialiser à chaque rendu
+    },
+    { threshold: 0.1 } // L'élément est considéré visible quand 10% est dans la fenêtre
+  );
+
+  itemsRef.current.forEach((item) => {
+    if (item) observer.observe(item);
+  });
+
+  return () => {
+    itemsRef.current.forEach((item) => {
+      if (item) observer.unobserve(item);
+    });
+  };
+}, []);
+ // Garder cette dépendance vide pour éviter de réinitialiser à chaque rendu
 
   return (
     <div
       className="mt-5 p-5 rounded-lg text-white flex flex-col items-center"
-      style={{ minHeight: '100vh', backgroundColor: '#111', color: '#fff' }}
+      style={{ minHeight: '100vh', color: '#fff' }}
     >
       {/* Titre avec styles */}
       <h2 className="text-4xl font-bold mb-8 text-center"

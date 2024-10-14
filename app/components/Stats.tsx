@@ -46,9 +46,10 @@ const Stats = () => {
   }, []);
 
   return (
-    <div className="relative h-screen w-full bg-black text-white overflow-hidden">
+    <div className="relative h-screen w-full  text-white overflow-hidden ">
       {/* Texte animé en fond */}
-      <div className="absolute top-[7%] left-0 whitespace-nowrap z-1 text-[6rem] opacity-10 uppercase font-bold text-white animate-scrollText">
+    
+      <div className="absolute top-[-15%] left-0 whitespace-nowrap z-1 text-[25rem] opacity-10 uppercase font-bold text-white animate-scrollText ">
         STATISTICS STATISTICS STATISTICS
       </div>
 
@@ -64,38 +65,51 @@ const Stats = () => {
             className="min-w-full p-8 flex justify-center items-center snap-center"
             style={{ minWidth: '100%' }}
           >
-            <motion.div
-              className="bg-black p-8 rounded-lg shadow-lg w-[80%]"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <h2 className="text-center text-2xl font-bold uppercase mb-6">
-                Glory Record
-              </h2>
-              <div className="grid grid-cols-2 gap-6 text-center">
-                <span className="block text-4xl font-bold">{stat.value}</span>
-                <span className="block text-xl">{stat.label}</span>
-              </div>
-            </motion.div>
+           <motion.div
+  className="bg-black-2 p-8 rounded-lg shadow-lg"
+  style={{
+    width: '100%',
+    height: '25.75rem',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    gap: '2rem',
+    padding: '3rem 2.375rem',
+    boxSizing: 'inherit',
+  }}
+  initial={{ opacity: 0, y: 50 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5 }}
+>
+  <h2 className="text-center text-2xl font-bold uppercase">
+    Glory Record
+  </h2>
+  <div className="grid grid-cols-2 gap-6 text-center">
+    <span className="block text-4xl font-bold">{stat.value}</span>
+    <span className="block text-xl">{stat.label}</span>
+  </div>
+</motion.div>
+
           </div>
         ))}
       </div>
 
       {/* Dots pour indiquer la position */}
-      <div className="absolute bottom-10 w-full flex justify-center z-20">
-        <div className="flex space-x-2">
-          {statsData.map((_, index) => (
-            <div
-              key={index}
-              className={`h-2 w-2 rounded-full ${
-                currentIndex === index ? 'bg-white' : 'bg-gray-500'
-              } cursor-pointer`}
-              onClick={() => handleDotClick(index)}
-            />
-          ))}
-        </div>
-      </div>
+      <div className="absolute bottom-40 w-full flex justify-center z-20">
+  <div className="flex space-x-2">
+    {statsData.map((_, index) => (
+      <div
+        key={index}
+        className={`h-2 w-2 rounded-full ${
+          currentIndex === index ? 'bg-white' : 'bg-gray-500'
+        } cursor-pointer`}
+        onClick={() => handleDotClick(index)}
+      />
+    ))}
+  </div>
+</div>
+
     </div>
   );
 };
@@ -111,7 +125,7 @@ const keyframesStyle = `
     }
   }
   .animate-scrollText {
-    animation: scrollText 10s linear infinite;
+    animation: scrollText 60s linear infinite;
   }
 `;
 
