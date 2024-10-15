@@ -3,29 +3,30 @@ import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import styles from './FightCard.module.css';
+
 // Create a dynamic component for motion
 const MotionDiv = dynamic(() => Promise.resolve(motion.div), { ssr: false });
 
 const Cards = () => {
   return (
-    <div className="relative bg-black text-white py-10 text-center overflow-hidden max-w-full px-5"> {/* Ajout de px-5 pour le padding global */}
+    <div className="relative  bg-black text-white py-10 text-center overflow-hidden max-w-full px-5 "> {/* Ajout de px-5 pour le padding global */}
       {/* Scrolling Text in the background */}
-      <div className="absolute top-[7%] left-0 whitespace-nowrap z-1 text-[6rem] opacity-10 uppercase font-bold text-white animate-scrollText">
+      <div className="absolute left-0 top-[-1%] whitespace-nowrap z-1 text-[20rem] uppercase font-bold text-white animate-scrollText">
         GAMES HISTORY
       </div>
 
-      {/* Main content */}
-      <h1 className="text-4xl mb-10 z-10 mt-5">Games 2024/2025</h1>
+      {/* Première carte avec mt-[15rem] */}
+      <div className="mt-[15rem]">
+        <FightCard
+          eventTitle="GAME 04"
+          fightDetails="Ligue Féminine de Basket"
+          fightDetail="Journée 3"
+          fighter1={{ name: "Angers", img: "/path-to-image/perreira.png", win: false }}
+          fighter2={{ name: "Lille", img: "/path-to-image/vakhitov.png", win: true }}
+        />
+      </div>
 
-      {/* Card Component (Reusable) */}
-      <FightCard
-        eventTitle="GAME 04"
-        fightDetails="Ligue Féminine de Basket"
-        fightDetail="Journée 3"
-        fighter1={{ name: "Angers", img: "/path-to-image/perreira.png", win: false }}
-        fighter2={{ name: "Lille", img: "/path-to-image/vakhitov.png", win: true }}
-      />
-
+      {/* Autres cartes sans mt-[15rem] */}
       <FightCard
         eventTitle="GAME 03"
         fightDetails="Euroleague Women"
@@ -36,14 +37,15 @@ const Cards = () => {
 
       <FightCard
         eventTitle="GAME 02"
- fightDetails="Ligue Féminine de Basket"
+        fightDetails="Ligue Féminine de Basket"
         fightDetail="Journée 2"
         fighter1={{ name: "Lille", img: "/path-to-image/nurmagomedov.png", win: true }}
         fighter2={{ name: "Lyon", img: "/path-to-image/mcgregor.png", win: false }}
       />
+      
       <FightCard
         eventTitle="GAME 01"
-       fightDetails="Ligue Féminine de Basket"
+        fightDetails="Ligue Féminine de Basket"
         fightDetail="Journée 1"
         fighter1={{ name: "Landerneau", img: "/path-to-image/nurmagomedov.png", win: true }}
         fighter2={{ name: "Lille", img: "/path-to-image/mcgregor.png", win: false }}
@@ -82,7 +84,7 @@ const FightCard: React.FC<FightCardProps> = ({ eventTitle, fighter1, fighter2, f
         {/* Fight details */}
         <div className="flex flex-col justify-between items-center max-w-full relative border-t-[0.0625rem] border-t-[#272727] mt-6 mb-8 pt-7 px-4 pb-0">
           <p className="text-lg text-white">{fightDetails}</p>
-          <span className="flex items-center bg-white text-black rounded-[0.0625rem] font-sans text-[0.75rem] font-semibold h-4 mt-[0.3125rem] p-[0.0625rem] pl-[0.25rem] pt-0 uppercase">
+          <span className="flex items-center bg-white text-black rounded-[0.0625rem] font-sans text-[0.75rem] font-semibold h-4 mt-[0.3125rem] p-[1rem] pl-[1rem] uppercase">
             {fightDetail}
           </span>
         </div>
@@ -138,15 +140,13 @@ const FightCard: React.FC<FightCardProps> = ({ eventTitle, fighter1, fighter2, f
             Watch
           </a>
           <a className="inline-flex items-center justify-center h-12 w-[14rem] bg-transparent border-[0.0625rem] text-white rounded-[0.125rem] text-[0.875rem] font-extrabold uppercase cursor-pointer transition-colors transition-bg transition-border duration-[0.37s] ease-[cubic-bezier(.39,.575,.565,1)]">
-          Boxscore
+            Boxscore
           </a>
         </div>
       </div>
     </div>
   );
 };
-
-
 
 // Add keyframes for scrollText animation in Tailwind
 const keyframesStyle = `
