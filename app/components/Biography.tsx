@@ -62,40 +62,41 @@ useEffect(() => {
 
   return (
     <div
-      className="mt-5 p-5 rounded-lg text-white flex flex-col items-center"
+      className=" p-5 rounded-lg text-white flex flex-col items-center"
       style={{ minHeight: '100vh', color: '#fff' }}
     >
       {/* Titre avec styles */}
-      <h2 className="text-4xl font-bold mb-8 text-center"
+      <h2 className="text-4xl font-bold mb-10 text-center"
         style={{
           fontSize: '2.5rem',
           marginBottom: '2rem',
-          paddingTop: '4rem',
           textAlign: 'center',
           lineHeight: '1.2',
           fontWeight: '700',
           letterSpacing: '0',
         }}
       >
-        The Greatness
+        THE GREATNESS
       </h2>
 
       {/* Section avec Image et Biographie */}
-      <div className="flex items-center w-full max-w-6xl mx-auto">
+      <div className="flex items-center w-full max-w-6xl mx-auto mt-5">
         {/* Section Image à gauche */}
-        <div className="flex-shrink-0 w-1/3">
-          <Image
-            src="/path/to/your-image.png" // Assure-toi que le chemin de l'image est correct
-            alt="Character Image"
-            width={300}
-            height={450}
-            className="rounded-lg"
-          />
+        <div className="flex-shrink-0 w-1/3  ">
+        <Image
+  src="/img.png" // Assure-toi que le chemin de l'image est correct
+  alt="Character Image"
+  width={335}
+  height={470}
+  className="rounded-lg right-[104.5%]"
+  style={{ maxWidth: 'none', width: '335px', position: 'relative'}} // Ajout de position: relative
+/>
+
         </div>
 
         {/* Informations biographiques */}
-        <div className="flex-grow pl-10">
-          <div className="space-y-4 mt-5 w-full">
+        <div className="flex-grow pl-[8rem] mt-20">
+          <div className=" mt-5 mb-1 w-full">
             {[
               { label: 'Club', value: 'ESBVA-LM' },
               { label: 'Poste', value: 'Small Guard' },
@@ -117,7 +118,7 @@ useEffect(() => {
               className="flex flex-col justify-between pb-2 border-gray-600"
             >
               {/* Label stylé */}
-              <span className="uppercase font-semibold"
+              <span className="uppercase font-semibold mt-2"
                 style={{
                   fontFamily: 'Industry, Helvetica, Arial, sans-serif',
                   fontSize: '.875rem',
@@ -134,7 +135,7 @@ useEffect(() => {
                   fontFamily: 'Roboto, Helvetica, Arial, sans-serif',
                   fontSize: '1rem',
                   paddingRight: '1rem',
-                  paddingBottom: '1.125rem',
+                  paddingBottom: '0.6rem',
                   textTransform: 'none',
                   fontWeight: 400,
                   borderBottom: '.0625rem solid #3c3c3c',

@@ -25,14 +25,14 @@ const Header = () => {
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ duration: 1.5 }}
-          className="font-bold absolute top-[-12vw] md:top-[-8vw] left-[32.5%] transform -translate-x-1/2 z-20 uppercase"
+          className="font-bold absolute top-[-12vw] md:top-[-8vw] left-[34.5%] transform -translate-x-1/2 z-20 uppercase"
           style={{
             background: 'linear-gradient(90deg, #eec99e, #ffeec2)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
             fontFamily: 'Heroic, Helvetica, Arial, sans-serif',
-            fontSize: '1.6rem',
+            fontSize: '1.45rem',
             fontWeight: 700,
             letterSpacing: '0',
             lineHeight: 0.9,
@@ -88,12 +88,12 @@ const Header = () => {
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 2, duration: 1 }}
-          className="absolute bottom-[-11px] left-[-7%] transform -translate-x-1/2 z-20"
+          className="absolute bottom-[-11px] left-[2%] transform -translate-x-1/2 z-20"
         >
           <img
             src="/perso.png"
             alt="Personnage"
-            className="w-[116vw] md:w-[20vw] h-auto"
+            className="w-[95vw] md:w-[20vw] h-auto"
             style={{ maxWidth: 'none' }}
           />
           
@@ -114,7 +114,7 @@ const Header = () => {
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1.5 }}
-        className="flex justify-center mt-20 md:mt-24 text-uppercase tracking-wide text-white mb-20"
+        className="flex justify-center mt-10 md:mt-24 text-uppercase tracking-wide text-white mb-10"
       >
         <ul
           className="flex w-full md:w-auto justify-between md:gap-10 px-4 md:px-0 bg-black pt-[0.75rem] pb-[0.75rem] ml-4 mr-4 max-w-[90%]" 
