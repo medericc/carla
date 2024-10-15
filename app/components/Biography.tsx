@@ -61,6 +61,7 @@ useEffect(() => {
  // Garder cette dépendance vide pour éviter de réinitialiser à chaque rendu
 
   return (
+    <section id="biography">
     <div
       className=" p-5 rounded-lg text-white flex flex-col items-center"
       style={{ minHeight: '100vh', color: '#fff' }}
@@ -149,7 +150,7 @@ useEffect(() => {
           </div>
         </div>
       </div>
-    </div>
+    </div></section>
   );
 };
 

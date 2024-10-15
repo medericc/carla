@@ -13,16 +13,19 @@ const CarlaAbout = () => {
   }, []);
 
   return (
-    <div className="relative h-[155vh] w-full bg-white text-black"> {/* Hauteur augmentée */}   {/* Texte défilant en fond */}
+    <section id="news">
+    <div className="relative h-[155vh] w-full bg-white text-black overflow-hidden"> {/* Empêche le débordement */}
+      
+      {/* Texte défilant en fond */}
       <div
-        className="absolute top-[4%] left-0 whitespace-nowrap z-1 text-[5rem] opacity-10 uppercase font-bold text-black animate-scrollText"
+        className="absolute top-[4%] left-0 whitespace-nowrap z-1 text-[5rem] opacity-10 uppercase font-bold text-black animate-scrollText overflow-hidden"
         ref={textRef}
       >
-        CARLA ABOUT CARLA ABOUT CARLA ABOUT
+        CARLA ABOUT 
       </div>
 
-      {/* Paragraphe de texte */}
-      <div className="absolute top-[15%] left-[10%] right-[10%] z-10 text-lg leading-7 text-gray-800">
+      {/* Paragraphe de texte (fixe) */}
+      <div className="absolute top-[15%] left-[10%] right-[10%] z-10 text-lg leading-7 text-gray-800" style={{ animation: 'none' }}>
         <p className="mb-6">
           En tant que cadette à Lyon, Carla est devenue championne de France espoir 
           et a mené son équipe à Bercy grâce à un run à plus de 30 points 
@@ -47,7 +50,7 @@ const CarlaAbout = () => {
           la Française la plus rapide à franchir la barre des 1000 points.
         </p>
       </div>
-    </div>
+    </div></section>
   );
 };
 

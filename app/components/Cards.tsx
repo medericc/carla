@@ -16,6 +16,7 @@ const cardVariants = {
 
 const Cards = () => {
   return (
+    
     <div className="relative bg-black text-white py-10 text-center overflow-hidden max-w-full px-5">
       {/* Scrolling Text in the background */}
       <div className="absolute left-0 top-[-1%] whitespace-nowrap z-1 text-[20rem] uppercase font-bold text-white animate-scrollText">
@@ -83,6 +84,7 @@ const FightCard: React.FC<FightCardProps> = ({ eventTitle, fighter1, fighter2, f
   });
 
   return (
+    <section id="watch">
     <motion.div
       ref={ref}
       variants={cardVariants}
@@ -158,7 +160,7 @@ const FightCard: React.FC<FightCardProps> = ({ eventTitle, fighter1, fighter2, f
           </a>
         </div>
       </div>
-    </motion.div>
+    </motion.div></section>
   );
 };
 

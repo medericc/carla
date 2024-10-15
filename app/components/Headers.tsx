@@ -34,6 +34,12 @@ export default function Header() {
     setDropdownOpen(!dropdownOpen);
   };
 
+  const handleLinkClick = () => {
+    // Ferme le menu après un clic
+    setIsOpen(false);
+    setDropdownOpen(false);
+  };
+
   return (
     <header
       className={`w-full py-4 fixed top-0 left-0 z-50 transition-colors duration-300 ${
@@ -64,16 +70,16 @@ export default function Header() {
         {/* Menu Links for Desktop */}
         <ul className="hidden md:flex space-x-8 text-white uppercase text-sm">
           <li className="hover:text-gray-300">
-            <a href="#">Events</a>
+            <a href="#biography" onClick={handleLinkClick}>Biography</a>
           </li>
           <li className="hover:text-gray-300">
-            <a href="#">Fighters</a>
+            <a href="#" onClick={handleLinkClick}>Records</a>
           </li>
           <li className="hover:text-gray-300">
-            <a href="#">News</a>
+            <a href="#" onClick={handleLinkClick}>News</a>
           </li>
           <li className="hover:text-gray-300">
-            <a href="#">Watch</a>
+            <a href="#" onClick={handleLinkClick}>Watch</a>
           </li>
         </ul>
 
@@ -82,6 +88,7 @@ export default function Header() {
           <a
             href="#"
             className="text-white uppercase text-sm hover:text-gray-300"
+            onClick={handleLinkClick}
           >
             Home ↗
           </a>
@@ -99,12 +106,14 @@ export default function Header() {
                 <a
                   href="#"
                   className="block px-4 py-2 hover:bg-white hover:text-black"
+                  onClick={handleLinkClick}
                 >
                   Lena
                 </a>
                 <a
                   href="#"
                   className="block px-4 py-2 hover:bg-white hover:text-black"
+                  onClick={handleLinkClick}
                 >
                   Lucile
                 </a>
@@ -119,19 +128,19 @@ export default function Header() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden flex flex-col items-center bg-black text-white uppercase text-sm space-y-4 py-4">
-          <a href="#" className="hover:text-gray-300">
-            Events
+          <a href="#biography" className="hover:text-gray-300" onClick={handleLinkClick}>
+            Biography
           </a>
-          <a href="#" className="hover:text-gray-300">
-            Fighters
+          <a href="#records" className="hover:text-gray-300" onClick={handleLinkClick}>
+            Records
           </a>
-          <a href="#" className="hover:text-gray-300">
+          <a href="#news" className="hover:text-gray-300" onClick={handleLinkClick}>
             News
           </a>
-          <a href="#" className="hover:text-gray-300">
+          <a href="#watch" className="hover:text-gray-300" onClick={handleLinkClick}>
             Watch
           </a>
-          <a href="#" className="text-sm hover:text-gray-300">
+          <a href="#" className="text-sm hover:text-gray-300" onClick={handleLinkClick}>
             Home ↗
           </a>
 
@@ -148,12 +157,14 @@ export default function Header() {
                 <a
                   href="#"
                   className="block px-4 py-2 hover:bg-white hover:text-black"
+                  onClick={handleLinkClick}
                 >
                   Lena
                 </a>
                 <a
                   href="#"
                   className="block px-4 py-2 hover:bg-white hover:text-black"
+                  onClick={handleLinkClick}
                 >
                   Lucile
                 </a>
