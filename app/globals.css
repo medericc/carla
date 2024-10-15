@@ -81,7 +81,10 @@ a {
 
 .animate-scrollText {
   animation: scrollText 15s linear infinite;
+  white-space: nowrap;
+  display: flex;
 }
+
 
 .snap-x {
   scroll-snap-type: x mandatory;

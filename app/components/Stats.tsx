@@ -57,8 +57,10 @@ const Stats = () => {
     <div className="relative h-screen w-full text-white overflow-hidden">
       {/* Texte animé en fond */}
       <div className="absolute top-[-15%] left-0 whitespace-nowrap z-1 text-[25rem] opacity-10 uppercase font-bold text-white animate-scrollText">
-        STATISTICS STATISTICS STATISTICS
-      </div>
+  <span>STATISTICS STATISTICS STATISTICS</span>
+  <span className="ml-[100vw]">STATISTICS STATISTICS STATISTICS</span> {/* Double pour le défilement continu */}
+</div>
+
 
       {/* Scroll horizontal manuel */}
       <div

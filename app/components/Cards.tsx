@@ -20,8 +20,10 @@ const Cards = () => {
     <div className="relative bg-black text-white py-10 text-center overflow-hidden max-w-full px-5">
       {/* Scrolling Text in the background */}
       <div className="absolute left-0 top-[-1%] whitespace-nowrap z-1 text-[20rem] uppercase font-bold text-white animate-scrollText">
-        GAMES HISTORY
-      </div>
+  <span>GAMES HISTORY</span>
+  <span className="ml-[100vw]">GAMES HISTORY</span> {/* Double text for seamless scrolling */}
+</div>
+
 
       {/* Animated Cards */}
       <div className="mt-[15rem]">
@@ -102,7 +104,7 @@ const FightCard: React.FC<FightCardProps> = ({ eventTitle, fighter1, fighter2, f
         {/* Fight details */}
         <div className="flex flex-col justify-between items-center max-w-full relative border-t-[0.0625rem] border-t-[#272727] mt-6 mb-8 pt-7 px-4 pb-0">
           <p className="text-lg text-white">{fightDetails}</p>
-          <span className="flex items-center bg-white text-black rounded-[0.0625rem] font-sans text-[0.75rem] font-semibold h-4 mt-[0.3125rem] p-[1rem] pl-[1rem] uppercase">
+          <span className="flex items-center bg-white text-black rounded-[0.0625rem] font-sans text-[0.75rem] font-semibold h-4 mt-[0.3125rem] p-[0.7rem] pl-[0.6rem] uppercase">
             {fightDetail}
           </span>
         </div>
@@ -151,7 +153,7 @@ const FightCard: React.FC<FightCardProps> = ({ eventTitle, fighter1, fighter2, f
         </div>
 
         {/* Buttons under Fighters */}
-        <div className="flex flex-col items-center border-t-[0.0625rem] border-t-[#272727] space-y-[0.75rem]">
+        <div className="flex flex-col items-center border-t-[0.0625rem] border-t-[#272727] space-y-[0.75rem] mt-2">
           <a className="inline-flex items-center justify-center mt-5 h-12 w-[14rem] bg-[#b1100f] text-white rounded-[0.125rem] text-[0.875rem] font-extrabold uppercase cursor-pointer transition-colors transition-bg transition-border duration-[0.37s] ease-[cubic-bezier(.39,.575,.565,1)]">
             Watch
           </a>
