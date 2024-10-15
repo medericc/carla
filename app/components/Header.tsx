@@ -88,7 +88,7 @@ const Header = () => {
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 2, duration: 1 }}
-          className="absolute bottom-[-11px] left-[2%] transform -translate-x-1/2 z-20"
+          className="absolute bottom-[-11px] left-[2%]  z-20"
         >
           <img
             src="/perso.png"
@@ -129,8 +129,8 @@ const Header = () => {
                 opacity: 0.5,
                 boxSizing: 'inherit',
               }}
-              className="mb-0"
-            >Wins</p>
+              className="mb-1"
+            >PTS</p>
              <p
               style={{
                 fontSize: '11vw',
@@ -152,8 +152,8 @@ const Header = () => {
                 opacity: 0.5,
                 boxSizing: 'inherit',
               }}
-              className="mb-0"
-            >Losses</p>
+              className="mb-1"
+            >AST</p>
             <p
               style={{
                 fontSize: '11vw',
@@ -176,9 +176,9 @@ const Header = () => {
                 opacity: 0.5,
                 boxSizing: 'inherit',
               }}
-              className="mb-0"
+              className="mb-1"
             >
-              Draws
+              RBD
             </p>
             <p
               style={{
@@ -202,9 +202,9 @@ const Header = () => {
                 opacity: 0.5,
                 boxSizing: 'inherit',
               }}
-              className="mb-0"
+              className="mb-1"
             >
-              KO
+              EFF
             </p>
             <p
               style={{

@@ -18,7 +18,7 @@ const CarlaAbout = () => {
       
       {/* Texte défilant en fond */}
       <div
-        className="absolute top-[4%] left-0 whitespace-nowrap z-1 text-[5rem] opacity-10 uppercase font-bold text-black animate-scrollText overflow-hidden"
+        className="absolute top-[-1%] left-0 whitespace-nowrap z-1 text-[15rem] opacity-10 uppercase font-bold text-black animate-scrollText overflow-hidden"
         ref={textRef}
       >
         CARLA ABOUT 
