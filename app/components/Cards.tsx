@@ -3,19 +3,26 @@ import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import styles from './FightCard.module.css';
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
 // Create a dynamic component for motion
 const MotionDiv = dynamic(() => Promise.resolve(motion.div), { ssr: false });
 
+const cardVariants = {
+  hidden: { opacity: 0, y: 50 },  // Start below and invisible
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },  // Animate into place
+};
+
 const Cards = () => {
   return (
-    <div className="relative  bg-black text-white py-10 text-center overflow-hidden max-w-full px-5 "> {/* Ajout de px-5 pour le padding global */}
+    <div className="relative bg-black text-white py-10 text-center overflow-hidden max-w-full px-5">
       {/* Scrolling Text in the background */}
       <div className="absolute left-0 top-[-1%] whitespace-nowrap z-1 text-[20rem] uppercase font-bold text-white animate-scrollText">
         GAMES HISTORY
       </div>
 
-      {/* Première carte avec mt-[15rem] */}
+      {/* Animated Cards */}
       <div className="mt-[15rem]">
         <FightCard
           eventTitle="GAME 04"
@@ -26,7 +33,6 @@ const Cards = () => {
         />
       </div>
 
-      {/* Autres cartes sans mt-[15rem] */}
       <FightCard
         eventTitle="GAME 03"
         fightDetails="Euroleague Women"
@@ -70,16 +76,26 @@ interface FightCardProps {
 }
 
 const FightCard: React.FC<FightCardProps> = ({ eventTitle, fighter1, fighter2, fightDetails, fightDetail }) => {
+  // Intersection Observer to trigger animations when the card comes into view
+  const { ref, inView } = useInView({
+    triggerOnce: false,  // Trigger animation when scrolling up and down
+    threshold: 0.3,  // Trigger when 30% of the card is in view
+  });
+
   return (
-    <div className="relative bg-[#1a1a1a] flex flex-col mb-8 p-5 shadow-lg max-w-2xl mx-auto z-20">
+    <motion.div
+      ref={ref}
+      variants={cardVariants}
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}  // Re-trigger the animation on scroll
+      className="relative bg-[#1a1a1a] flex flex-col mb-8 p-5 shadow-lg max-w-2xl mx-auto z-20"
+    >
       {/* Bandeau rouge */}
-      <div className="absolute top-0 left-0 w-full h-2 bg-[#970000] "></div>
+      <div className="absolute top-0 left-0 w-full h-2 bg-[#970000]"></div>
 
       {/* Event Title */}
       <div className="mt-5 text-center">
-        <div className="text-white py-2 text-2xl mb-5">
-          {eventTitle}
-        </div>
+        <div className="text-white py-2 text-2xl mb-5">{eventTitle}</div>
 
         {/* Fight details */}
         <div className="flex flex-col justify-between items-center max-w-full relative border-t-[0.0625rem] border-t-[#272727] mt-6 mb-8 pt-7 px-4 pb-0">
@@ -110,9 +126,7 @@ const FightCard: React.FC<FightCardProps> = ({ eventTitle, fighter1, fighter2, f
           </div>
 
           {/* VS */}
-          <div className={`relative ${styles.fighters} flex-1 text-center`}>
-            {/* Le "vs" sera ajouté via le pseudo-élément ::after */}
-          </div>
+          <div className={`relative ${styles.fighters} flex-1 text-center`}></div>
 
           {/* Fighter 2 */}
           <div className="flex-1 text-center relative border-r border-r-[#272727]">
@@ -144,26 +158,8 @@ const FightCard: React.FC<FightCardProps> = ({ eventTitle, fighter1, fighter2, f
           </a>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
-
-// Add keyframes for scrollText animation in Tailwind
-const keyframesStyle = `
-  @keyframes scrollText {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(100%);
-    }
-  }
-`;
-
-if (typeof document !== "undefined") {
-  const style = document.createElement("style");
-  style.innerHTML = keyframesStyle;
-  document.head.appendChild(style);
-}
 
 export default Cards;
