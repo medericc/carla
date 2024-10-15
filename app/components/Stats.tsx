@@ -3,14 +3,21 @@ import { motion } from 'framer-motion';
 import { useState, useRef, useEffect } from 'react';
 
 const statsData = [
-  { label: 'Wins', value: 12 },
-  { label: 'Losses', value: 4 },
-  { label: 'Draws', value: 0 },
-  { label: 'KO', value: 8 },
-  { label: 'Points', value: 1500 },
-  { label: 'Trophies', value: 5 },
-  { label: 'Matches', value: 300 },
-  { label: 'Streak', value: 10 },
+  { label: 'Meilleure Evaluation de l\'histoire des PO LFB 🌟', value: 21 },
+  { label: 'Meilleure Evaluation de l\'histoire sur une campagne de PO LFB 🌟', value: 21 },
+  { label: 'Meilleur marqueur jeune français de l\'histoire 🌟', value: 18.4 },
+  { label: 'Joueuse la plus rapide à rentrer dans la First Team de la LFB 🌟', value: '2th' },
+  { label: 'Meilleure Marqueuse de l\'histoire des PO LFB 🌟', value: 20 },
+  { label: 'Meilleure Marqueuse de l\'histoire sur une campagne de PO LFB 🌟', value: '20' },
+  { label: 'Seule joueuse de l\'histoire des PO LFB à scorer 26 points à 90% 🌟', value: '26 pts to 90%' },
+  { label: 'Première à éliminer en quart la meilleure équipe de l\'histoire du championnat français en MVP 🌟', value: '26 pts to 90%' },
+  { label: 'Joueuse la plus décisive sur une campagne de PO LFB 🌟', value: '25.6' },
+  { label: 'PPM Record de l\'Eurobasket U20) 🌟', value: '0.8' },
+  { label: 'Meilleure marqueuse française championne 🌟', value: "18.4" },
+  { label: 'Seule européenne à finir une saison en 15-5 en LFB 🌟', value: '15-5' },
+  { label: 'Seule joueuse de l\'histoire des Playoffs LFB à finir à +20 ppg 🌟', value: '21' },
+  { label: 'Joueuse française la plus rapide à atteindre 1000 points 🌟', value: '64' },
+  { label: 'Plus jeune joueuse à finir joueuse la plus décisive de la LFB 🌟', value: '21.3' },
 ];
 
 const Stats = () => {
@@ -46,10 +53,9 @@ const Stats = () => {
   }, []);
 
   return (
-    <div className="relative h-screen w-full  text-white overflow-hidden ">
+    <div className="relative h-screen w-full text-white overflow-hidden">
       {/* Texte animé en fond */}
-    
-      <div className="absolute top-[-15%] left-0 whitespace-nowrap z-1 text-[25rem] opacity-10 uppercase font-bold text-white animate-scrollText ">
+      <div className="absolute top-[-15%] left-0 whitespace-nowrap z-1 text-[25rem] opacity-10 uppercase font-bold text-white animate-scrollText">
         STATISTICS STATISTICS STATISTICS
       </div>
 
@@ -65,54 +71,68 @@ const Stats = () => {
             className="min-w-full p-8 flex justify-center items-center snap-center"
             style={{ minWidth: '100%' }}
           >
-           <motion.div
-  className="bg-black-2 p-8 rounded-lg shadow-lg"
-  style={{
-    width: '100%',
-    height: '25.75rem',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    gap: '2rem',
-    padding: '3rem 2.375rem',
-    boxSizing: 'inherit',
-  }}
-  initial={{ opacity: 0, y: 50 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.5 }}
->
-  <h2 className="text-center text-2xl font-bold uppercase">
-    Glory Record
+            <motion.div
+              className="bg-black-2 p-8 rounded-lg shadow-lg"
+              style={{
+                width: '100%',
+                height: '25.75rem',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+                boxSizing: 'border-box',
+                padding: '2rem',
+              }}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+                <h2 className="text-center text-2xl font-bold uppercase">
+    Carla Record
   </h2>
-  <div className="grid grid-cols-2 gap-6 text-center">
-    <span className="block text-4xl font-bold">{stat.value}</span>
-    <span className="block text-xl">{stat.label}</span>
-  </div>
-</motion.div>
+              {/* Label en petit */}
+              <h3 className="text-sm font-light uppercase mb-4 text-center tracking-wide">
+                {stat.label}
+              </h3>
+              {/* Valeur en grand */}
 
+
+
+               <span
+                className={`block font-extrabold mt-2 ${
+                  stat.value === '26 to 90%' || stat.value === '26 pts to 90%'
+                    ? 'text-4xl'
+                    : 'text-7xl'
+                }`}
+              >
+               
+               
+               
+                {stat.value}
+              </span>
+            </motion.div>
           </div>
         ))}
       </div>
 
       {/* Dots pour indiquer la position */}
       <div className="absolute bottom-40 w-full flex justify-center z-20">
-  <div className="flex space-x-2">
-    {statsData.map((_, index) => (
-      <div
-        key={index}
-        className={`h-2 w-2 rounded-full ${
-          currentIndex === index ? 'bg-white' : 'bg-gray-500'
-        } cursor-pointer`}
-        onClick={() => handleDotClick(index)}
-      />
-    ))}
-  </div>
-</div>
-
+        <div className="flex space-x-2">
+          {statsData.map((_, index) => (
+            <div
+              key={index}
+              className={`h-2 w-2 rounded-full ${
+                currentIndex === index ? 'bg-white' : 'bg-gray-500'
+              } cursor-pointer`}
+              onClick={() => handleDotClick(index)}
+            />
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
+
 
 // Ajouter les keyframes pour l'animation du texte défilant
 const keyframesStyle = `

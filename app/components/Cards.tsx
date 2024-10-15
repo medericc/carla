@@ -11,35 +11,42 @@ const Cards = () => {
     <div className="relative bg-black text-white py-10 text-center overflow-hidden max-w-full px-5"> {/* Ajout de px-5 pour le padding global */}
       {/* Scrolling Text in the background */}
       <div className="absolute top-[7%] left-0 whitespace-nowrap z-1 text-[6rem] opacity-10 uppercase font-bold text-white animate-scrollText">
-        CARDS HISTORY FIGHT
+        GAMES HISTORY
       </div>
 
       {/* Main content */}
-      <h1 className="text-4xl mb-10 z-10">Fight Cards</h1>
+      <h1 className="text-4xl mb-10 z-10 mt-5">Games 2024/2025</h1>
 
       {/* Card Component (Reusable) */}
       <FightCard
-        eventTitle="GLORY 78"
-        fightDetails="Light Heavyweight World Title Fight - MD 03:00 Round 5"
-        fightDetail="Submission 04:00 Rounds"
-        fighter1={{ name: "Pereira", img: "/path-to-image/perreira.png", win: false }}
-        fighter2={{ name: "Vakhitov", img: "/path-to-image/vakhitov.png", win: true }}
+        eventTitle="GAME 04"
+        fightDetails="Ligue Féminine de Basket"
+        fightDetail="Journée 3"
+        fighter1={{ name: "Angers", img: "/path-to-image/perreira.png", win: false }}
+        fighter2={{ name: "Lille", img: "/path-to-image/vakhitov.png", win: true }}
       />
 
       <FightCard
-        eventTitle="UFC 259"
-        fightDetails="Lightweight Championship"
-        fightDetail="Submission 04:00 Rounds"
-        fighter1={{ name: "Adesanya", img: "/path-to-image/adesanya.png", win: false }}
-        fighter2={{ name: "Blachowicz", img: "/path-to-image/blachowicz.png", win: true }}
+        eventTitle="GAME 03"
+        fightDetails="Euroleague Women"
+        fightDetail="Journée 1"
+        fighter1={{ name: "Lille", img: "/path-to-image/adesanya.png", win: false }}
+        fighter2={{ name: "Fenerbahce", img: "/path-to-image/blachowicz.png", win: true }}
       />
 
       <FightCard
-        eventTitle="UFC 229"
-        fightDetails="Lightweight Championship - Submission 04:00 Rounds"
-        fightDetail="Submission 04:00 Rounds"
-        fighter1={{ name: "Nurmagomedov", img: "/path-to-image/nurmagomedov.png", win: true }}
-        fighter2={{ name: "McGregor", img: "/path-to-image/mcgregor.png", win: false }}
+        eventTitle="GAME 02"
+ fightDetails="Ligue Féminine de Basket"
+        fightDetail="Journée 2"
+        fighter1={{ name: "Lille", img: "/path-to-image/nurmagomedov.png", win: true }}
+        fighter2={{ name: "Lyon", img: "/path-to-image/mcgregor.png", win: false }}
+      />
+      <FightCard
+        eventTitle="GAME 01"
+       fightDetails="Ligue Féminine de Basket"
+        fightDetail="Journée 1"
+        fighter1={{ name: "Landerneau", img: "/path-to-image/nurmagomedov.png", win: true }}
+        fighter2={{ name: "Lille", img: "/path-to-image/mcgregor.png", win: false }}
       />
     </div>
   );
@@ -62,7 +69,7 @@ interface FightCardProps {
 
 const FightCard: React.FC<FightCardProps> = ({ eventTitle, fighter1, fighter2, fightDetails, fightDetail }) => {
   return (
-    <div className="relative bg-[#1a1a1a] flex flex-col mb-8 p-5 shadow-lg max-w-2xl mx-auto z-20 ">
+    <div className="relative bg-[#1a1a1a] flex flex-col mb-8 p-5 shadow-lg max-w-2xl mx-auto z-20">
       {/* Bandeau rouge */}
       <div className="absolute top-0 left-0 w-full h-2 bg-[#970000] "></div>
 
@@ -128,10 +135,10 @@ const FightCard: React.FC<FightCardProps> = ({ eventTitle, fighter1, fighter2, f
         {/* Buttons under Fighters */}
         <div className="flex flex-col items-center border-t-[0.0625rem] border-t-[#272727] space-y-[0.75rem]">
           <a className="inline-flex items-center justify-center mt-5 h-12 w-[14rem] bg-[#b1100f] text-white rounded-[0.125rem] text-[0.875rem] font-extrabold uppercase cursor-pointer transition-colors transition-bg transition-border duration-[0.37s] ease-[cubic-bezier(.39,.575,.565,1)]">
-            Fight Card
+            Watch
           </a>
           <a className="inline-flex items-center justify-center h-12 w-[14rem] bg-transparent border-[0.0625rem] text-white rounded-[0.125rem] text-[0.875rem] font-extrabold uppercase cursor-pointer transition-colors transition-bg transition-border duration-[0.37s] ease-[cubic-bezier(.39,.575,.565,1)]">
-            Watch
+          Boxscore
           </a>
         </div>
       </div>
