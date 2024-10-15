@@ -14,15 +14,16 @@ const CarlaAbout = () => {
 
   return (
     <section id="news">
-    <div className="relative h-[170vh] w-full bg-white text-black overflow-hidden"> {/* Empêche le débordement */}
-      
-      {/* Texte défilant en fond */}
-      <div
-        className="absolute top-[1%] left-0 whitespace-nowrap z-1 text-[15rem] opacity-10 uppercase font-bold text-black animate-scrollText overflow-hidden"
-        ref={textRef}
-      >
-        CARLA ABOUT 
-      </div>
+  <div className="relative h-[170vh] w-full bg-white text-black overflow-hidden"> {/* Empêche le débordement */}
+
+{/* Texte défilant en fond */}
+<div
+  className="absolute top-[1%] left-0 whitespace-nowrap z-1 text-[15rem] opacity-10 uppercase font-bold text-black animate-scrollText overflow-hidden"
+  ref={textRef}
+>
+  {/* Duplique le texte pour un défilement continu sans interruption */}
+  <span>CARLA ABOUT &nbsp; CARLA ABOUT &nbsp; CARLA ABOUT</span>
+</div>
 
       {/* Paragraphe de texte (fixe) */}
       <div className="absolute top-[15%] left-[10%] right-[10%] z-10 text-lg leading-7 text-gray-800" style={{ animation: 'none' }}>
