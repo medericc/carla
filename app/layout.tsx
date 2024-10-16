@@ -18,8 +18,8 @@ const geistMono = localFont({
 
 // Définir les métadonnées de base
 export const metadata = {
-  title: "Nom du site - Portfolio",
-  description: "Portfolio personnel avec animations dynamiques",
+  title: "Carla Leite #0",
+  description: "Fan Account de Carla Leite, la basketteuse de Villeneuve d'Ascq en LFB et des Dallas Wings en WNBA.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
