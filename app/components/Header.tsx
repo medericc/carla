@@ -1,11 +1,18 @@
 "use client";
 import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 const Header = () => {
   const { ref: statsRef, inView: statsInView } = useInView({
     triggerOnce: true,
     threshold: 0.3,
   });
+
+  // Variants pour l'animation
+  const statsVariants = {
+    hidden: { opacity: 0, y: 50 }, // Invisible et décalé vers le bas
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }, // Apparition
+  };
 
   return (
     <header className="relative text-center mt-10 md:mt-20">
@@ -35,15 +42,11 @@ const Header = () => {
           NUMBER #0
         </h2>
 
-        <h1
-          className="text-[18vw] md:text-[10vw] font-bold absolute top-[-8vw] md:top-[-5vw] left-[50%] transform -translate-x-1/2 text-white uppercase z-10 mt-[7vw]"
-        >
+        <h1 className="text-[18vw] md:text-[10vw] font-bold absolute top-[-8vw] md:top-[-5vw] left-[50%] transform -translate-x-1/2 text-white uppercase z-10 mt-[7vw]">
           CARLA
         </h1>
 
-        <h1
-          className="text-[18vw] md:text-[10vw] font-bold absolute top-[5vw] md:top-[2vw] left-[50%] transform -translate-x-1/2 text-white uppercase z-10 mt-[12vw]"
-        >
+        <h1 className="text-[18vw] md:text-[10vw] font-bold absolute top-[5vw] md:top-[2vw] left-[50%] transform -translate-x-1/2 text-white uppercase z-10 mt-[12vw]">
           LEITE
         </h1>
 
@@ -77,9 +80,13 @@ const Header = () => {
         </div>
       </div>
 
-      <div
+      {/* Animation des statistiques */}
+      <motion.div
         ref={statsRef}
         className="flex justify-center mt-10 md:mt-24 text-uppercase tracking-wide text-white mb-10"
+        initial="hidden"
+        animate={statsInView ? "visible" : "hidden"}
+        variants={statsVariants}
       >
         <ul className="flex w-full md:w-auto justify-between md:gap-10 px-4 md:px-0 bg-black pt-[0.75rem] pb-[0.75rem] ml-4 mr-4 max-w-[90%]">
           <li className="text-center border-r md:border-r-0 md:border-b-0 border-gray-600 flex-1 md:w-auto">
@@ -194,7 +201,7 @@ const Header = () => {
             </p>
           </li>
         </ul>
-      </div>
+      </motion.div>
     </header>
   );
 };
