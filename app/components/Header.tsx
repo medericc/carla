@@ -4,8 +4,7 @@ import { motion } from "framer-motion";
 
 const Header = () => {
   const { ref: statsRef, inView: statsInView } = useInView({
-    triggerOnce: true,
-    threshold: 0.3,
+    threshold: 0.3, // Tu peux ajuster ce seuil selon tes besoins
   });
 
   // Variants pour l'animation
