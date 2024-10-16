@@ -91,7 +91,7 @@ const FightCard: React.FC<FightCardProps> = ({ eventTitle, fighter1, fighter2, f
   // Intersection Observer to trigger animations when the card comes into view
   const { ref, inView } = useInView({
     triggerOnce: false,  // Trigger animation when scrolling up and down
-    threshold: 0.3,  // Trigger when 30% of the card is in view
+    threshold: 0.2,  // Trigger when 30% of the card is in view
   });
 
   return (
@@ -101,13 +101,13 @@ const FightCard: React.FC<FightCardProps> = ({ eventTitle, fighter1, fighter2, f
         variants={cardVariants}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}  // Re-trigger the animation on scroll
-        className="relative bg-[#1a1a1a] flex flex-col mb-8 p-5 shadow-lg max-w-2xl mx-auto z-20"
+        className="relative bg-[#1a1a1a] flex flex-col mb-8  shadow-lg max-w-2xl mx-auto z-20"
       >
         {/* Bandeau rouge */}
         <div className="absolute top-0 left-0 w-full h-2 bg-[#970000]"></div>
 
         {/* Event Title */}
-        <div className="mt-5 text-center">
+        <div className="mt-10 text-center">
           <div className="text-white py-2 text-2xl mb-5">
           <p
   className="text-lg text-white uppercase"
@@ -184,7 +184,7 @@ const FightCard: React.FC<FightCardProps> = ({ eventTitle, fighter1, fighter2, f
           </div>
 
           {/* Buttons under Fighters */}
-          <div className="flex flex-col items-center border-t-[0.0625rem] border-t-[#272727] space-y-[0.75rem] mt-2">
+          <div className="flex flex-col mb-7 items-center border-t-[0.0625rem] border-t-[#272727] space-y-[0.75rem] mt-2">
           <a
   href={watchUrl}
   className="inline-flex items-center justify-center mt-5 h-12 w-[14rem] bg-[#b1100f] text-white rounded-[0.125rem] text-[0.875rem] font-extrabold uppercase cursor-pointer transition-colors transition-bg transition-border duration-[0.37s] ease-[cubic-bezier(.39,.575,.565,1)]"
@@ -193,7 +193,7 @@ const FightCard: React.FC<FightCardProps> = ({ eventTitle, fighter1, fighter2, f
 </a>
 <a
   href={boxscoreUrl}
-  className="inline-flex items-center justify-center h-12 w-[14rem] bg-transparent border-[0.0625rem] text-white rounded-[0.125rem] text-[0.875rem] font-extrabold uppercase cursor-pointer transition-colors transition-bg transition-border duration-[0.37s] ease-[cubic-bezier(.39,.575,.565,1)]"
+  className="inline-flex items-center justify-center h-12 w-[14rem] bg-transparent border-[0.0625rem] text-white rounded-[0.125rem] text-[0.875rem] font-extrabold uppercase cursor-pointer transition-colors transition-bg transition-border duration-[0.37s] ease-[cubic-bezier(.39,.575,.565,1)] "
 >
   Boxscore
 </a>
