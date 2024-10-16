@@ -95,3 +95,9 @@ a {
   white-space: nowrap;
   width: 200%; /* Double la largeur pour assurer un défilement continu */
 }
+@font-face {
+  font-family: 'Oswald';
+  src: url('/fonts/Oswald-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}

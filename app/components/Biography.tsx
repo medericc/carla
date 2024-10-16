@@ -67,18 +67,21 @@ useEffect(() => {
       style={{ minHeight: '100vh', color: '#fff' }}
     >
       {/* Titre avec styles */}
-      <h2 className="text-4xl font-bold mb-10 text-center"
-        style={{
-          fontSize: '2.5rem',
-          marginBottom: '2rem',
-          textAlign: 'center',
-          lineHeight: '1.2',
-          fontWeight: '700',
-          letterSpacing: '0',
-        }}
-      >
-        THE GREATNESS
-      </h2>
+      <h2
+  className="text-4xl font-bold mb-10 text-center"
+  style={{
+    fontFamily: 'Oswald, sans-serif',
+    fontSize: '1.5rem',
+    marginBottom: '2rem',
+    textAlign: 'center',
+    lineHeight: '1.2',
+    fontWeight: '700',
+    letterSpacing: '0',
+  }}
+>
+  THE GREATNESS
+</h2>
+
 
       {/* Section avec Image et Biographie */}
       <div className="flex items-center w-full max-w-6xl mx-auto mt-5">
