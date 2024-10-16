@@ -1,75 +1,53 @@
 "use client";
-import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Header = () => {
+  const { ref: statsRef, inView: statsInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+
   return (
-    <motion.header
-      initial={{ opacity: 0, y: -50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1 }}
-      className="relative text-center mt-10 md:mt-20"
-    >
-      <motion.img
+    <header className="relative text-center mt-10 md:mt-20">
+      <img
         src="/arrow.png"
         alt="Arrow Background"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 4 }}
-        transition={{ duration: 2 }}
         className="absolute top-[-45px] left-1/2 transform -translate-x-1/2 w-[300vw] md:w-[30vw] z-50"
       />
 
       <div className="relative inline-block mt-[30vw]">
-
-        {/* Numéro doré au-dessus du nom */}
-        <motion.h2
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 1.5 }}
-          className="font-bold absolute top-[-12vw] md:top-[-8vw] left-[34.5%] transform -translate-x-1/2 z-20 uppercase"
+        <h2
+          className="font-bold absolute top-[-12vw] md:top-[-8vw] left-[50%] transform -translate-x-1/2 z-20 uppercase"
           style={{
-            background: 'linear-gradient(90deg, #eec99e, #ffeec2)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text',
-            fontFamily: 'Heroic, Helvetica, Arial, sans-serif',
-            fontSize: '1.45rem',
+            background: "linear-gradient(90deg, #eec99e, #ffeec2)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            backgroundClip: "text",
+            fontFamily: "Heroic, Helvetica, Arial, sans-serif",
+            fontSize: "1.45rem",
             fontWeight: 700,
-            letterSpacing: '0',
+            letterSpacing: "0",
             lineHeight: 0.9,
-            paddingTop: '0.1em',
-            textTransform: 'uppercase',
+            paddingTop: "0.1em",
+            textTransform: "uppercase",
           }}
         >
           NUMBER #0
-        </motion.h2>
+        </h2>
 
-        {/* Titre CARLA */}
-        <motion.h1
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 1.5 }}
-          className="text-[18vw] md:text-[10vw] font-bold absolute top-[-8vw] md:top-[-5vw] left-[20%] transform -translate-x-1/2 text-white uppercase z-10 mt-[7vw]"
+        <h1
+          className="text-[18vw] md:text-[10vw] font-bold absolute top-[-8vw] md:top-[-5vw] left-[50%] transform -translate-x-1/2 text-white uppercase z-10 mt-[7vw]"
         >
           CARLA
-        </motion.h1>
+        </h1>
 
-        {/* Titre LEITE */}
-        <motion.h1
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 1.5 }}
-          className="text-[18vw] md:text-[10vw] font-bold absolute top-[5vw] md:top-[2vw] left-[26%] transform -translate-x-1/2 text-white uppercase z-10 mt-[12vw]"
+        <h1
+          className="text-[18vw] md:text-[10vw] font-bold absolute top-[5vw] md:top-[2vw] left-[50%] transform -translate-x-1/2 text-white uppercase z-10 mt-[12vw]"
         >
           LEITE
-        </motion.h1>
+        </h1>
 
-        {/* Vidéo du drapeau */}
-        <motion.div
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 2 }}
-          className="relative z-0 w-full h-[80vh] overflow-hidden"
-        >
+        <div className="relative z-0 w-full h-[80vh] overflow-hidden">
           <video
             muted
             loop
@@ -80,101 +58,95 @@ const Header = () => {
           >
             <source src="/fr.mp4" type="video/mp4" />
           </video>
+        </div>
 
-        </motion.div>
-
-        {/* Personnage */}
-        <motion.div
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 2, duration: 1 }}
-          className="absolute bottom-[-11px] left-[2%]  z-20"
-        >
+        <div className="absolute bottom-[-11px] left-[3%] z-20">
           <img
             src="/perso.png"
             alt="Personnage"
-            className="w-[95vw] md:w-[20vw] h-auto"
-            style={{ maxWidth: 'none' }}
+            className="w-[93vw] md:w-[20vw] h-auto"
+            style={{ maxWidth: "none" }}
           />
-          
-  {/* Dégradé pour masquer le bas de l'image */}
-  <div className="absolute bottom-0 left-0 w-full h-[16vw] z-[1001]" 
-    style={{ 
-      background: 'linear-gradient(0deg, #1a1a1a 10%, rgba(195, 0, 0, 0))'
-    }} 
-  />
-        </motion.div>
+
+          <div
+            className="absolute bottom-0 left-0 w-full h-[16vw] z-[1001]"
+            style={{
+              background: "linear-gradient(0deg, #1a1a1a 10%, rgba(195, 0, 0, 0))",
+            }}
+          />
+        </div>
       </div>
 
-     
-
-
-      {/* Section des stats */}
-      <motion.div
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1.5 }}
+      <div
+        ref={statsRef}
         className="flex justify-center mt-10 md:mt-24 text-uppercase tracking-wide text-white mb-10"
       >
-        <ul
-          className="flex w-full md:w-auto justify-between md:gap-10 px-4 md:px-0 bg-black pt-[0.75rem] pb-[0.75rem] ml-4 mr-4 max-w-[90%]" 
-        >
+        <ul className="flex w-full md:w-auto justify-between md:gap-10 px-4 md:px-0 bg-black pt-[0.75rem] pb-[0.75rem] ml-4 mr-4 max-w-[90%]">
           <li className="text-center border-r md:border-r-0 md:border-b-0 border-gray-600 flex-1 md:w-auto">
-          <p
-              style={{
-                fontSize: '.75rem',
-                fontFamily: 'Industry, Helvetica, Arial, sans-serif',
-                fontWeight: 600,
-                textTransform: 'uppercase',
-                opacity: 0.5,
-                boxSizing: 'inherit',
-              }}
-              className="mb-1"
-            >PTS</p>
-             <p
-              style={{
-                fontSize: '11vw',
-                margin: '-.3em 0 -.16em',
-                fontFamily: 'Industry, Helvetica, Arial, sans-serif',
-                fontWeight: 600,
-                textTransform: 'uppercase',
-                boxSizing: 'inherit',
-              }}
-            >30</p>
-          </li>
-          <li className="text-center border-r md:border-r-0 md:border-b-0 border-gray-600 flex-1 md:w-auto">
-          <p
-              style={{
-                fontSize: '.75rem',
-                fontFamily: 'Industry, Helvetica, Arial, sans-serif',
-                fontWeight: 600,
-                textTransform: 'uppercase',
-                opacity: 0.5,
-                boxSizing: 'inherit',
-              }}
-              className="mb-1"
-            >AST</p>
             <p
               style={{
-                fontSize: '11vw',
-                margin: '-.3em 0 -.16em',
-                fontFamily: 'Industry, Helvetica, Arial, sans-serif',
+                fontSize: ".75rem",
+                fontFamily: "Industry, Helvetica, Arial, sans-serif",
                 fontWeight: 600,
-                textTransform: 'uppercase',
-                boxSizing: 'inherit',
+                textTransform: "uppercase",
+                opacity: 0.5,
+                boxSizing: "inherit",
               }}
-            >05</p>
-          </li>
-          <li className="text-center border-r md:border-r-0 md:border-b-0 border-gray-600 flex-1 md:w-auto">
-            {/* Styled Draws */}
+              className="mb-1"
+            >
+              PTS
+            </p>
             <p
               style={{
-                fontSize: '.75rem',
-                fontFamily: 'Industry, Helvetica, Arial, sans-serif',
+                fontSize: "11vw",
+                margin: "-.3em 0 -.16em",
+                fontFamily: "Industry, Helvetica, Arial, sans-serif",
                 fontWeight: 600,
-                textTransform: 'uppercase',
+                textTransform: "uppercase",
+                boxSizing: "inherit",
+              }}
+            >
+              30
+            </p>
+          </li>
+
+          <li className="text-center border-r md:border-r-0 md:border-b-0 border-gray-600 flex-1 md:w-auto">
+            <p
+              style={{
+                fontSize: ".75rem",
+                fontFamily: "Industry, Helvetica, Arial, sans-serif",
+                fontWeight: 600,
+                textTransform: "uppercase",
                 opacity: 0.5,
-                boxSizing: 'inherit',
+                boxSizing: "inherit",
+              }}
+              className="mb-1"
+            >
+              AST
+            </p>
+            <p
+              style={{
+                fontSize: "11vw",
+                margin: "-.3em 0 -.16em",
+                fontFamily: "Industry, Helvetica, Arial, sans-serif",
+                fontWeight: 600,
+                textTransform: "uppercase",
+                boxSizing: "inherit",
+              }}
+            >
+              05
+            </p>
+          </li>
+
+          <li className="text-center border-r md:border-r-0 md:border-b-0 border-gray-600 flex-1 md:w-auto">
+            <p
+              style={{
+                fontSize: ".75rem",
+                fontFamily: "Industry, Helvetica, Arial, sans-serif",
+                fontWeight: 600,
+                textTransform: "uppercase",
+                opacity: 0.5,
+                boxSizing: "inherit",
               }}
               className="mb-1"
             >
@@ -182,25 +154,27 @@ const Header = () => {
             </p>
             <p
               style={{
-                fontSize: '11vw',
-                margin: '-.3em 0 -.16em',
-                fontFamily: 'Industry, Helvetica, Arial, sans-serif',
+                fontSize: "11vw",
+                margin: "-.3em 0 -.16em",
+                fontFamily: "Industry, Helvetica, Arial, sans-serif",
                 fontWeight: 600,
-                textTransform: 'uppercase',
-                boxSizing: 'inherit',
+                textTransform: "uppercase",
+                boxSizing: "inherit",
               }}
-            >00</p>
+            >
+              00
+            </p>
           </li>
+
           <li className="text-center flex-1 md:w-auto">
-            {/* Styled KO */}
             <p
               style={{
-                fontSize: '.75rem',
-                fontFamily: 'Industry, Helvetica, Arial, sans-serif',
+                fontSize: ".75rem",
+                fontFamily: "Industry, Helvetica, Arial, sans-serif",
                 fontWeight: 600,
-                textTransform: 'uppercase',
+                textTransform: "uppercase",
                 opacity: 0.5,
-                boxSizing: 'inherit',
+                boxSizing: "inherit",
               }}
               className="mb-1"
             >
@@ -208,19 +182,20 @@ const Header = () => {
             </p>
             <p
               style={{
-                fontSize: '11vw',
-                margin: '-.3em 0 -.16em',
-                fontFamily: 'Industry, Helvetica, Arial, sans-serif',
+                fontSize: "11vw",
+                margin: "-.3em 0 -.16em",
+                fontFamily: "Industry, Helvetica, Arial, sans-serif",
                 fontWeight: 600,
-                textTransform: 'uppercase',
-                boxSizing: 'inherit',
+                textTransform: "uppercase",
+                boxSizing: "inherit",
               }}
-            >18</p>
+            >
+              18
+            </p>
           </li>
         </ul>
-      </motion.div>
-      
-    </motion.header>
+      </div>
+    </header>
   );
 };
 
