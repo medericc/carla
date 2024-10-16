@@ -142,13 +142,13 @@ a {
 } 
 
 
-@media (max-width: 382px) {
+@media (max-width: 391px) {
   #news .relative {
     height: 200vh; /* Définit la hauteur à 200vh uniquement pour la section ciblée */
   }
 }
 /* Ajustement de la position pour les écrans plus petits */
-@media (max-width: 382px) {
+@media (max-width: 391px) {
   #ing {
     right: 128.5%; /* Ajuste cette valeur pour les petits écrans */
   }
