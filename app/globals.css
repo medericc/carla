@@ -113,6 +113,37 @@ a {
   font-weight: 400;
   font-style: normal;
 }
+@media (max-width: 424px) {
+  #news .relative {
+    height: 190vh; /* Définit la hauteur à 200vh uniquement pour la section ciblée */
+  }
+}
+/* Ajustement de la position pour les écrans plus petits */
+@media (max-width: 424px) {
+  #ing {
+   /* Ajuste cette valeur pour les petits écrans */
+  }
+  #img {
+    width: 97vw;
+    
+  }
+  #imgg {
+   
+    left: 3%;
+  }
+  #un {
+  
+   top:-5vw;
+  }
+  #deux {
+    top:7vw;
+    
+  }
+} 
+
+
+
+
 @media (max-width: 375px) {
   #news .relative {
     height: 200vh; /* Définit la hauteur à 200vh uniquement pour la section ciblée */
@@ -139,5 +170,209 @@ a {
    top:9vw;
     
   }
+} 
+
+
+@media (max-width: 362px) {
+  #news .relative {
+    height: 215vh; /* Définit la hauteur à 200vh uniquement pour la section ciblée */
+  }
+}
+/* Ajustement de la position pour les écrans plus petits */
+@media (max-width: 362px) {
+  #ing {
+    right: 132.5%; /* Ajuste cette valeur pour les petits écrans */
+  }
+  #img {
+    width: 109vw;
+    
+  }
+  #imgg {
+   
+    left: -4.2%;
+  }
+  #un {
+    top:-2.5vw;
+   
+  }
+  #deux {
+   top:11vw;
+    
+  }
+  #video {
+    width: 102%;
+  }
+} 
+
+@media (max-width: 355px) {
+  #ing {
+    right: 136.5%; /* Ajuste cette valeur pour les petits écrans */
+  }
+  #img {
+    width: 112vw;
+    
+  }
+  #imgg {
+   
+    left: -5.2%;
+  }
+  #un {
+    top:-1.5vw;
+   
+  }
+  #deux {
+   top:12vw;
+    
+  }
+  #video {
+    width: 102%;
+  }
+} 
+
+@media (max-width: 339px) {
+  #ing {
+    right: 139.5%; /* Ajuste cette valeur pour les petits écrans */
+  }
+  #img {
+    width: 118vw;
+    
+  }
+  #imgg {
+   
+    left: -8.2%;
+  }
+  #un {
+    top:0vw;
+   
+  }
+  #deux {
+   top:13vw;
+    
+  }
+  #video {
+    width: 102%;
+  }
+} 
+@media (max-width: 315px) {
+  #ing {
+    right: 170.5%; /* Ajuste cette valeur pour les petits écrans */
+  }
+  #img {
+    width: 122vw;
+    
+  }
+  #imgg {
+   
+    left: -10%;
+  }
+  #un {
+    top:-1vw;
+   
+  }
+  #deux {
+   top:14vw;
+    
+  }
+  #video {
+    width: 103%;
+  }
 }
 
+@media (max-width: 325px) {
+  #news .relative {
+    height: 235vh; /* Définit la hauteur à 200vh uniquement pour la section ciblée */
+  }
+}
+/* Ajustement de la position pour les écrans plus petits */
+@media (max-width: 325px) {
+  #ing {
+    right: 170.5%; /* Ajuste cette valeur pour les petits écrans */
+  }
+  #img {
+    width: 122vw;
+    
+  }
+  #imgg {
+   
+    left: -10%;
+  }
+  #un {
+    top:-1vw;
+   
+  }
+  #deux {
+   top:14vw;
+    
+  }
+  #video {
+    width: 103%;
+  }
+}
+
+@media (max-width: 313px) {
+  #news .relative {
+    height: 245vh; /* Définit la hauteur à 200vh uniquement pour la section ciblée */
+  }
+}
+/* Ajustement de la position pour les écrans plus petits */
+@media (max-width: 313px) {
+  #ing {
+    right: 173.5%; /* Ajuste cette valeur pour les petits écrans */
+  }
+  #img {
+    width: 129vw;
+    
+  }
+  #imgg {
+   
+    left: -15%;
+  }
+  #un {
+    top:-1vw;
+   
+  }
+  #deux {
+   top:14vw;
+    
+  }
+  #video {
+    width: 103%;
+  }
+}
+
+@media (max-width: 295px) {
+  #news .relative {
+    height: 255vh; /* Définit la hauteur à 200vh uniquement pour la section ciblée */
+  }
+}
+
+@media (max-width: 275px) {
+  #news .relative {
+    height: 265vh; /* Définit la hauteur à 200vh uniquement pour la section ciblée */
+  }
+}
+/* Ajustement de la position pour les écrans plus petits */
+@media (max-width: 275px) {
+  #ing {
+    right: 186.5%; /* Ajuste cette valeur pour les petits écrans */
+  }
+  #img {
+    width: 136vw;
+    
+  }
+  #imgg {
+   
+    left: -16%;
+  }
+  #un {
+    top:12vw;
+   
+  }
+  #deux {
+   top:24vw;
+    
+  }
+  #video {
+    width: 107%;
+  }
+}

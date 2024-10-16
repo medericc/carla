@@ -49,7 +49,7 @@ const Header = () => {
           LEITE
         </h1>
 
-        <div className="relative z-0 w-full h-[80vh] overflow-hidden">
+        <div className="relative z-0 w-full h-[80vh] overflow-hidden" id="video">
           <video
             muted
             loop
