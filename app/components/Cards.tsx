@@ -160,7 +160,7 @@ const FightCard: React.FC<FightCardProps> = ({ eventTitle, fighter1, fighter2, f
             </div>
 
             {/* VS */}
-            <div className={`relative ${styles.fighters} flex-1 text-center text-[#272727]`}></div>
+            <div className={`relative ${styles.fighters} flex-1 text-center top-[-2vh]  left-[-0.05vh] text-[#272727]`}></div>
 
         {/* Fighter 2 */}
 <div className="flex-1 text-center relative border-r border-r-[#272727]">
