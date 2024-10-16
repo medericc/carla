@@ -31,6 +31,8 @@ const Cards = () => {
           fightDetail="Journée 3"
           fighter1={{ name: "Angers", img: "/ufa.png", win: true }}
           fighter2={{ name: "Lille", img: "/esbva.png", win: false }}
+            watchUrl="https://www.youtube.com/watch?v=6BKEGfDOnqA"
+  boxscoreUrl="https://basketlfb.com/laboulangerewonderligue/match/789999-angers-villeneuve-d-ascq"
         />
       </div>
 
@@ -40,6 +42,8 @@ const Cards = () => {
         fightDetail="Journée 1"
         fighter1={{ name: "Lille", img: "/esbva.png", win: false }}
         fighter2={{ name: "Fenerbahce", img: "/fene.png", win: true }}
+          watchUrl="https://www.youtube.com/watch?v=_xwJqXRWTAE"
+  boxscoreUrl="https://www.fiba.basketball/en/events/euroleague-women-24-25/games/123701-ESBVA-FENER#boxscore"
       />
 
       <FightCard
@@ -48,6 +52,8 @@ const Cards = () => {
         fightDetail="Journée 2"
         fighter1={{ name: "Lille", img: "/esbva.png", win: false }}
         fighter2={{ name: "Lyon", img: "/asvel.png", win: true }}
+          watchUrl="https://www.youtube.com/watch?v=vAfee_orHVs&pp=ygUPZmZiYiBseW9uIGVzYnZh"
+  boxscoreUrl="https://basketlfb.com/laboulangerewonderligue/match/789994-villeneuve-d-ascq-lyon"
       />
       
       <FightCard
@@ -56,6 +62,8 @@ const Cards = () => {
         fightDetail="Journée 1"
         fighter1={{ name: "Landerneau", img: "/lbb.png", win: true }}
         fighter2={{ name: "Lille", img: "/esbva.png", win: false }}
+          watchUrl="https://www.youtube.com/watch?v=YnWzf3Hfbkk"
+  boxscoreUrl="https://basketlfb.com/laboulangerewonderligue/match/789983-landerneau-villeneuve-d-ascq"
       />
     </div>
   );
@@ -74,9 +82,12 @@ interface FightCardProps {
   fighter2: Fighter;
   fightDetails: string;
   fightDetail: string;
+  watchUrl: string;
+  boxscoreUrl: string;
 }
 
-const FightCard: React.FC<FightCardProps> = ({ eventTitle, fighter1, fighter2, fightDetails, fightDetail }) => {
+
+const FightCard: React.FC<FightCardProps> = ({ eventTitle, fighter1, fighter2, fightDetails, fightDetail, watchUrl, boxscoreUrl }) => {
   // Intersection Observer to trigger animations when the card comes into view
   const { ref, inView } = useInView({
     triggerOnce: false,  // Trigger animation when scrolling up and down
@@ -154,12 +165,19 @@ const FightCard: React.FC<FightCardProps> = ({ eventTitle, fighter1, fighter2, f
 
           {/* Buttons under Fighters */}
           <div className="flex flex-col items-center border-t-[0.0625rem] border-t-[#272727] space-y-[0.75rem] mt-2">
-            <a className="inline-flex items-center justify-center mt-5 h-12 w-[14rem] bg-[#b1100f] text-white rounded-[0.125rem] text-[0.875rem] font-extrabold uppercase cursor-pointer transition-colors transition-bg transition-border duration-[0.37s] ease-[cubic-bezier(.39,.575,.565,1)]">
-              Watch
-            </a>
-            <a className="inline-flex items-center justify-center h-12 w-[14rem] bg-transparent border-[0.0625rem] text-white rounded-[0.125rem] text-[0.875rem] font-extrabold uppercase cursor-pointer transition-colors transition-bg transition-border duration-[0.37s] ease-[cubic-bezier(.39,.575,.565,1)]">
-              Boxscore
-            </a>
+          <a
+  href={watchUrl}
+  className="inline-flex items-center justify-center mt-5 h-12 w-[14rem] bg-[#b1100f] text-white rounded-[0.125rem] text-[0.875rem] font-extrabold uppercase cursor-pointer transition-colors transition-bg transition-border duration-[0.37s] ease-[cubic-bezier(.39,.575,.565,1)]"
+>
+  Watch
+</a>
+<a
+  href={boxscoreUrl}
+  className="inline-flex items-center justify-center h-12 w-[14rem] bg-transparent border-[0.0625rem] text-white rounded-[0.125rem] text-[0.875rem] font-extrabold uppercase cursor-pointer transition-colors transition-bg transition-border duration-[0.37s] ease-[cubic-bezier(.39,.575,.565,1)]"
+>
+  Boxscore
+</a>
+
           </div>
         </div>
       </motion.div>
