@@ -88,6 +88,7 @@ useEffect(() => {
         {/* Section Image à gauche */}
         <div className="flex-shrink-0 w-1/3  ">
         <Image
+        id="ing"
   src="/img.png" // Assure-toi que le chemin de l'image est correct
   alt="Character Image"
   width={335}
