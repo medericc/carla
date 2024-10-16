@@ -108,11 +108,31 @@ const FightCard: React.FC<FightCardProps> = ({ eventTitle, fighter1, fighter2, f
 
         {/* Event Title */}
         <div className="mt-5 text-center">
-          <div className="text-white py-2 text-2xl mb-5">{eventTitle}</div>
+          <div className="text-white py-2 text-2xl mb-5">
+          <p
+  className="text-lg text-white uppercase"
+  style={{
+    fontFamily: 'Freeman, sans-serif',
+    fontSize: '2.5rem',
+   
+    textAlign: 'center',
+    lineHeight: '1.2',
+    fontWeight: '550', // Si tu veux changer le poids, adapte cette valeur
+  }}>
+{eventTitle}
+</p>
+            
+            </div>
 
           {/* Fight details */}
           <div className="flex flex-col justify-between items-center max-w-full relative border-t-[0.0625rem] border-t-[#272727] mt-6 mb-8 pt-7 px-4 pb-0">
-            <p className="text-lg text-white">{fightDetails}</p>
+          <p
+  className="text-lg text-white uppercase"
+  style={{ fontFamily: 'Roboto, sans-serif', fontWeight: '500', fontSize: '1.3rem' }}
+>
+  {fightDetails}
+</p>
+
             <span className="flex items-center bg-white text-black rounded-[0.0625rem] font-sans text-[0.75rem] font-semibold h-4 mt-[0.3125rem] p-[0.7rem] pl-[0.6rem] uppercase">
               {fightDetail}
             </span>
@@ -136,7 +156,7 @@ const FightCard: React.FC<FightCardProps> = ({ eventTitle, fighter1, fighter2, f
   </span>
 )}
               </div>
-              <p className="mt-2 text-xl font-bold">{fighter1.name}</p>
+              <p className="mt-2 text-xl font-medium  uppercase">{fighter1.name}</p>
             </div>
 
             {/* VS */}
@@ -158,7 +178,7 @@ const FightCard: React.FC<FightCardProps> = ({ eventTitle, fighter1, fighter2, f
       </span>
     )}
   </div>
-  <p className="mt-2 text-xl font-bold">{fighter2.name}</p>
+  <p className="mt-2 text-xl font-medium uppercase">{fighter2.name}</p>
 </div>
 
           </div>
