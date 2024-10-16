@@ -41,11 +41,11 @@ const Header = () => {
           NUMBER #0
         </h2>
 
-        <h1 className="text-[18vw] md:text-[10vw] font-bold absolute top-[-8vw] md:top-[-5vw] left-[50%] transform -translate-x-1/2 text-white uppercase z-10 mt-[7vw]">
+        <h1 className="text-[18vw] md:text-[10vw] font-bold absolute top-[-8vw] md:top-[-5vw] left-[50%] transform -translate-x-1/2 text-white uppercase z-10 mt-[7vw]" id="un">
           CARLA
         </h1>
 
-        <h1 className="text-[18vw] md:text-[10vw] font-bold absolute top-[5vw] md:top-[2vw] left-[50%] transform -translate-x-1/2 text-white uppercase z-10 mt-[12vw]">
+        <h1 className="text-[18vw] md:text-[10vw] font-bold absolute top-[5vw] md:top-[2vw] left-[50%] transform -translate-x-1/2 text-white uppercase z-10 mt-[12vw]" id="deux">
           LEITE
         </h1>
 
@@ -62,9 +62,10 @@ const Header = () => {
           </video>
         </div>
 
-        <div className="absolute bottom-[-11px] left-[3%] z-20">
+        <div className="absolute bottom-[-11px] left-[3%] z-20" id="imgg">
           <img
             src="/perso.png"
+            id="img"
             alt="Personnage"
             className="w-[93vw] md:w-[20vw] h-auto"
             style={{ maxWidth: "none" }}

@@ -123,5 +123,21 @@ a {
   #ing {
     right: 128.5%; /* Ajuste cette valeur pour les petits écrans */
   }
+  #img {
+    width: 105vw;
+    
+  }
+  #imgg {
+   
+    left: -3%;
+  }
+  #un {
+    top:-4vw;
+   
+  }
+  #deux {
+   top:9vw;
+    
+  }
 }
 
