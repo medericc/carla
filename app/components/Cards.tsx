@@ -16,9 +16,9 @@ const cardVariants = {
 
 const Cards = () => {
   return (
-    <div className="relative bg-black text-white py-10 text-center overflow-hidden max-w-full px-5">
+    <div className="relative bg-black text-white pb-10 text-center overflow-hidden max-w-full px-5">
       {/* Scrolling Text in the background */}
-      <div className="absolute left-0 top-[3%] whitespace-nowrap z-1 text-[15rem] uppercase font-bold text-white animate-scrollTextx">
+      <div className="absolute left-0 top-[1.25%] whitespace-nowrap z-1 text-[15rem] uppercase font-bold text-white animate-scrollTextx">
         <span>GAMES HISTORY</span>
         <span className="ml-[100vw]">GAMES HISTORY</span> {/* Double text for seamless scrolling */}
       </div>
@@ -29,8 +29,8 @@ const Cards = () => {
           eventTitle="GAME 04"
           fightDetails="Ligue Féminine de Basket"
           fightDetail="Journée 3"
-          fighter1={{ name: "Angers", img: "/path-to-image/perreira.png", win: false }}
-          fighter2={{ name: "Lille", img: "/path-to-image/vakhitov.png", win: true }}
+          fighter1={{ name: "Angers", img: "/ufa.png", win: true }}
+          fighter2={{ name: "Lille", img: "/esbva.png", win: false }}
         />
       </div>
 
@@ -38,24 +38,24 @@ const Cards = () => {
         eventTitle="GAME 03"
         fightDetails="Euroleague Women"
         fightDetail="Journée 1"
-        fighter1={{ name: "Lille", img: "/path-to-image/adesanya.png", win: false }}
-        fighter2={{ name: "Fenerbahce", img: "/path-to-image/blachowicz.png", win: true }}
+        fighter1={{ name: "Lille", img: "/esbva.png", win: false }}
+        fighter2={{ name: "Fenerbahce", img: "/fene.png", win: true }}
       />
 
       <FightCard
         eventTitle="GAME 02"
         fightDetails="Ligue Féminine de Basket"
         fightDetail="Journée 2"
-        fighter1={{ name: "Lille", img: "/path-to-image/nurmagomedov.png", win: true }}
-        fighter2={{ name: "Lyon", img: "/path-to-image/mcgregor.png", win: false }}
+        fighter1={{ name: "Lille", img: "/esbva.png", win: false }}
+        fighter2={{ name: "Lyon", img: "/asvel.png", win: true }}
       />
       
       <FightCard
         eventTitle="GAME 01"
         fightDetails="Ligue Féminine de Basket"
         fightDetail="Journée 1"
-        fighter1={{ name: "Landerneau", img: "/path-to-image/nurmagomedov.png", win: true }}
-        fighter2={{ name: "Lille", img: "/path-to-image/mcgregor.png", win: false }}
+        fighter1={{ name: "Landerneau", img: "/lbb.png", win: true }}
+        fighter2={{ name: "Lille", img: "/esbva.png", win: false }}
       />
     </div>
   );
@@ -111,43 +111,45 @@ const FightCard: React.FC<FightCardProps> = ({ eventTitle, fighter1, fighter2, f
             {/* Fighter 1 */}
             <div className="flex-1 text-center border-r border-l border-l-[#272727] border-r-[#272727]">
               <div className="relative border-b border-b-[#272727]">
-                <Image
-                  src={fighter1.img}
-                  alt={fighter1.name}
-                  width={150}
-                  height={150}
-                  className="rounded-full object-cover"
-                />
-                {fighter1.win && (
-                  <span className="absolute bg-[#c30000] text-white font-bold uppercase text-[1.25rem] leading-[0.8] px-6 py-3 left-0 bottom-0 z-20">
-                    WIN
-                  </span>
-                )}
+              <Image
+  src={fighter1.img}
+  alt={fighter1.name}
+  width={300}  // Ajuste à la taille souhaitée
+  height={300}
+  className="w-full object-cover"  // Cela s'étend sur toute la largeur du conteneur
+/>
+
+{fighter1.win && (
+  <span className="absolute bg-[#c30000] text-white font-bold uppercase text-[1rem] leading-[0.8] px-3 py-1.5 right-0 bottom-0 z-20">
+    WIN
+  </span>
+)}
               </div>
               <p className="mt-2 text-xl font-bold">{fighter1.name}</p>
             </div>
 
             {/* VS */}
-            <div className={`relative ${styles.fighters} flex-1 text-center`}></div>
+            <div className={`relative ${styles.fighters} flex-1 text-center text-[#272727]`}></div>
 
-            {/* Fighter 2 */}
-            <div className="flex-1 text-center relative border-r border-r-[#272727]">
-              <div className="border-b border-b-[#272727]">
-                <Image
-                  src={fighter2.img}
-                  alt={fighter2.name}
-                  width={150}
-                  height={150}
-                  className="rounded-full object-cover"
-                />
-              </div>
-              <p className="mt-2 text-xl font-bold">{fighter2.name}</p>
-              {fighter2.win && (
-                <span className="absolute bg-[#c30000] text-white font-bold uppercase text-[1.25rem] leading-[0.8] px-6 py-3 right-0 bottom-0 z-20">
-                  WIN
-                </span>
-              )}
-            </div>
+        {/* Fighter 2 */}
+<div className="flex-1 text-center relative border-r border-r-[#272727]">
+  <div className="relative border-b border-b-[#272727]">
+    <Image
+      src={fighter2.img}
+      alt={fighter2.name}
+      width={300}  // Ajuste à la taille souhaitée
+      height={300}
+      className="object-cover"
+    />
+    {fighter2.win && (
+      <span className="absolute bg-[#c30000] text-white font-bold uppercase text-[1rem] leading-[0.8] px-3 py-1.5 left-0 bottom-0 z-20">
+        WIN
+      </span>
+    )}
+  </div>
+  <p className="mt-2 text-xl font-bold">{fighter2.name}</p>
+</div>
+
           </div>
 
           {/* Buttons under Fighters */}
