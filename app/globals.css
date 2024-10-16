@@ -63,21 +63,6 @@ a {
   scrollbar-width: none;
 }
 
-@keyframes scrollText {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-.animate-scrollText {
-  animation: scrollText 15s linear infinite;
-  white-space: nowrap;
-  display: flex;
-}
-
 
 .snap-x {
   scroll-snap-type: x mandatory;
@@ -103,4 +88,10 @@ a {
   height: 25.75rem;
   padding: 3rem 2.375rem;
   text-align: center;
+}
+.scroll-container {
+  display: flex;
+  overflow: hidden; /* Empêche le débordement */
+  white-space: nowrap;
+  width: 200%; /* Double la largeur pour assurer un défilement continu */
 }

@@ -56,7 +56,7 @@ const Stats = () => {
     <section id="records">
     <div className="relative h-screen w-full text-white overflow-hidden">
       {/* Texte animé en fond */}
-      <div className="absolute top-[-15%] left-0 whitespace-nowrap z-1 text-[25rem] opacity-10 uppercase font-bold text-white animate-scrollText">
+      <div className="absolute top-[-1%] left-0 whitespace-nowrap z-1 text-[18rem]  uppercase font-bold text-white animate-scrollText mt-2">
   <span>STATISTICS STATISTICS STATISTICS</span>
   <span className="ml-[100vw]">STATISTICS STATISTICS STATISTICS</span> {/* Double pour le défilement continu */}
 </div>
@@ -141,14 +141,14 @@ const Stats = () => {
 const keyframesStyle = `
   @keyframes scrollText {
     0% {
-      transform: translateX(100%);
+      transform: translateX(0%);
     }
     100% {
       transform: translateX(-100%);
     }
   }
   .animate-scrollText {
-    animation: scrollText 60s linear infinite;
+    animation: scrollText 20s linear infinite;
   }
 `;
 
