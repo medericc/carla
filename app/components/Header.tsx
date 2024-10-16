@@ -62,7 +62,7 @@ const Header = () => {
           </video>
         </div>
 
-        <div className="absolute bottom-[-11px] left-[3%] z-20" id="imgg">
+        <div className="absolute bottom-[-11px] left-[2%] z-20" id="imgg">
           <img
             src="/perso.png"
             id="img"

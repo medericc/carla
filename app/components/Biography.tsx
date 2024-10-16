@@ -93,7 +93,7 @@ useEffect(() => {
   alt="Character Image"
   width={335}
   height={470}
-  className="rounded-lg right-[104.5%]"
+  className="rounded-lg right-[119.5%]"
   style={{ maxWidth: 'none', width: '335px', position: 'relative'}} // Ajout de position: relative
 />
 

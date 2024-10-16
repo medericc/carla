@@ -142,6 +142,44 @@ a {
 } 
 
 
+@media (max-width: 382px) {
+  #news .relative {
+    height: 200vh; /* Définit la hauteur à 200vh uniquement pour la section ciblée */
+  }
+}
+/* Ajustement de la position pour les écrans plus petits */
+@media (max-width: 382px) {
+  #ing {
+    right: 128.5%; /* Ajuste cette valeur pour les petits écrans */
+  }
+  #img {
+    width: 103vw;
+    
+  }
+  #imgg {
+   
+    left: -1.5%;
+  }
+  #un {
+    top:-4vw;
+   
+  }
+  #deux {
+   top:9vw;
+    
+  }
+} 
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media (max-width: 375px) {
