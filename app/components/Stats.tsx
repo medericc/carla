@@ -12,7 +12,7 @@ const statsData = [
   { label: 'Seule joueuse de l\'histoire des PO LFB à scorer 26 points à 90% 🌟', value: '26 pts to 90%' },
   { label: 'Première à éliminer en quart la meilleure équipe de l\'histoire du championnat français en MVP 🌟', value: '26 pts to 90%' },
   { label: 'Joueuse la plus décisive sur une campagne de PO LFB 🌟', value: '25.6' },
-  { label: 'PPM Record de l\'Eurobasket U20) 🌟', value: '0.8' },
+  { label: 'PPM Record de l\'Eurobasket U20 🌟', value: '0.8' },
   { label: 'Meilleure marqueuse française championne 🌟', value: "18.4" },
   { label: 'Seule européenne à finir une saison en 15-5 en LFB 🌟', value: '15-5' },
   { label: 'Seule joueuse de l\'histoire des Playoffs LFB à finir à +20 ppg 🌟', value: '21' },
