@@ -414,3 +414,9 @@ a {
     width: 107%;
   }
 }
+
+@media (min-width: 760px) {
+  #he {
+    min-height: '10vh';
+  }
+}

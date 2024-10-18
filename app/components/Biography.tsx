@@ -63,6 +63,7 @@ useEffect(() => {
   return (
     <section id="biography">
     <div
+    id="he"
       className=" p-5 rounded-lg text-white flex flex-col items-center"
       style={{ minHeight: '100vh', color: '#fff' }}
     >
@@ -93,7 +94,7 @@ useEffect(() => {
   alt="Character Image"
   width={335}
   height={470}
-  className="rounded-lg right-[119.5%]"
+  className="rounded-lg right-[119.5%] md:right-[42.5%]"
   style={{ maxWidth: 'none', width: '335px', position: 'relative'}} // Ajout de position: relative
 />
 

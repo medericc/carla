@@ -41,11 +41,11 @@ const Header = () => {
           NUMBER #0
         </h2>
 
-        <h1 className="text-[18vw] md:text-[10vw] font-bold absolute top-[-8vw] md:top-[-5vw] left-[50%] transform -translate-x-1/2 text-white uppercase z-10 mt-[7vw]" id="un">
+        <h1 className="text-[18vw] md:text-[18vw] font-bold absolute top-[-8vw] md:top-[-8vw] left-[50%] transform -translate-x-1/2 text-white uppercase z-10 mt-[7vw]" id="un">
           CARLA
         </h1>
 
-        <h1 className="text-[18vw] md:text-[10vw] font-bold absolute top-[5vw] md:top-[2vw] left-[50%] transform -translate-x-1/2 text-white uppercase z-10 mt-[12vw]" id="deux">
+        <h1 className="text-[18vw] md:text-[18vw] font-bold absolute top-[5vw] md:top-[5vw] left-[50%] transform -translate-x-1/2 text-white uppercase z-10 mt-[12vw]" id="deux">
           LEITE
         </h1>
 
@@ -62,17 +62,17 @@ const Header = () => {
           </video>
         </div>
 
-        <div className="absolute bottom-[-11px] left-[2%] z-20" id="imgg">
+        <div className="absolute bottom-[-11px] left-[3%] md:left-[-10%] z-20" id="imgg">
           <img
             src="/perso.png"
             id="img"
             alt="Personnage"
-            className="w-[93vw] md:w-[20vw] h-auto"
+            className="w-[93vw] md:w-[120vw]  h-auto"
             style={{ maxWidth: "none" }}
           />
 
           <div
-            className="absolute bottom-0 left-0 w-full h-[16vw] z-[1001]"
+            className="absolute bottom-[-0.015rem] left-0 w-full h-[16vw] z-[1001]"
             style={{
               background: "linear-gradient(0deg, #1a1a1a 10%, rgba(195, 0, 0, 0))",
             }}
@@ -88,7 +88,7 @@ const Header = () => {
         animate={statsInView ? "visible" : "hidden"}
         variants={statsVariants}
       >
-        <ul className="flex w-full md:w-auto justify-between md:gap-10 px-4 md:px-0 bg-black pt-[0.75rem] pb-[0.75rem] ml-4 mr-4 max-w-[90%]">
+        <ul className="flex w-full md:w-full justify-between md:gap-10 px-4 md:px-4 bg-black pt-[0.75rem] pb-[0.75rem] ml-4 mr-4 max-w-[90%]">
           <li className="text-center border-r md:border-r-0 md:border-b-0 border-gray-600 flex-1 md:w-auto">
             <p
               style={{
