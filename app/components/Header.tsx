@@ -70,7 +70,7 @@ const Header = () => {
             id="img"
             alt="Personnage"
             className="w-[70.5vw] md:w-[120vw]  h-auto"
-            style={{ maxWidth: "none" }}
+            style={{ maxWidth: "100%" }}
           />
 
           <div
