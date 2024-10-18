@@ -1,6 +1,5 @@
-// app/layout.tsx
-
 import localFont from "next/font/local";
+import Head from "next/head";
 import "./globals.css";
 
 // Charger les polices locales
@@ -25,6 +24,11 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr">
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+      </Head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
