@@ -101,7 +101,7 @@ useEffect(() => {
         </div>
 
         {/* Informations biographiques */}
-        <div className="flex-grow pl-[8rem] mt-20">
+        <div className="flex-grow pl-[8rem] md:pl-[6rem] mt-20">
           <div className=" mt-5 mb-1 w-full">
             {[
               { label: 'Club', value: 'ESBVA-LM' },

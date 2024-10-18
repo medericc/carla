@@ -116,6 +116,301 @@ a {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 580px) {
+  #img {
+    width: 50.5vw; 
+  }
+  #imgg {
+    left: 24.5%;
+  }
+  #new {
+    height: 129vh;
+  }
+  #ing {
+    right: 70.5%; /* Ajuste cette valeur pour les petits écrans */
+  }
+
+  #un {
+    top:-17vw;
+   
+  }
+  #deux {
+   top:-3vw;
+    
+  }
+  #deu {
+    top:-18vw;
+  }
+}
+
+@media (max-width: 570px) {
+  #img {
+    width: 51.5vw; 
+  }
+  #imgg {
+    left: 23.6%;
+  }
+  #new {
+    height: 130vh;
+  }
+}
+@media (max-width: 560px) {
+  #img {
+    width: 52.5vw; 
+  }
+  #imgg {
+    left: 23.4%;
+  }
+  #new {
+    height: 131vh;
+  }
+}
+@media (max-width: 550px) {
+  #img {
+    width: 53.5vw; 
+  }
+  #imgg {
+    left: 21.9%;
+  }
+  #new {
+    height: 132vh;
+  }
+}
+@media (max-width: 540px) {
+  #img {
+    width: 54.5vw; 
+  }
+  #imgg {
+    left: 22.3%;
+  }
+  #new {
+    height: 133vh;
+  }
+  #ing {
+    right: 76.5%; /* Ajuste cette valeur pour les petits écrans */
+  }
+
+
+}
+@media (max-width: 530px) {
+  #img {
+    width: 55.5vw; 
+  }
+  #imgg {
+    left: 22%;
+  }
+  #new {
+    height: 134vh;
+  }
+}
+@media (max-width: 520px) {
+  #img {
+    width: 56.5vw; 
+  }
+  #imgg {
+    left: 21.5%;
+  }
+  #new {
+    height: 135vh;
+  }
+}
+@media (max-width: 510px) {
+  #img {
+    width: 57.5vw; 
+  }
+  #imgg {
+    left: 21%;
+  }
+  #new {
+    height: 136vh;
+  }
+}
+@media (max-width: 500px) {
+  #img {
+    width: 59vw; 
+  }
+  #imgg {
+    left: 20.5%;
+  }
+  #new {
+    height: 137vh;
+  }
+  #ing {
+    right: 79.5%; /* Ajuste cette valeur pour les petits écrans */
+  }
+}
+
+@media (max-width: 490px) {
+  #img {
+    width: 60vw; 
+  }
+  #imgg {
+    left: 19.9%;
+  }
+  #new {
+    height: 139vh;
+  }
+}
+@media (max-width: 485px) {
+  #img {
+    width: 61.5vw; 
+  }
+  #imgg {
+    left: 19.4%;
+  }
+  #new {
+    height: 140vh;
+  }
+}
+@media (max-width: 480px) {
+  #img {
+    width: 62.5vw; 
+  }
+  #imgg {
+    left: 19.4%;
+  }
+  #new {
+    height: 142vh;
+  }
+}
+@media (max-width: 475px) {
+  #img {
+    width: 63vw; 
+  }
+  #imgg {
+    left: 19%;
+  }
+  #new {
+    height: 144vh;
+  }
+}
+@media (max-width: 470px) {
+  #img {
+    width: 64vw; 
+  }
+  #imgg {
+    left: 18.4%;
+  }
+  #new {
+    height: 146vh;
+  }
+}
+@media (max-width: 465px) {
+  #img {
+    width: 64.5vw; 
+  }
+  #imgg {
+    left: 18.1%;
+  }
+  #new {
+    height: 147vh;
+  }
+}
+@media (max-width: 460px) {
+  #img {
+    width: 65vw; 
+  }
+  #imgg {
+    left: 17.8%;
+  }
+  #new {
+    height: 148vh;
+  }
+}
+@media (max-width: 455px) {
+  #img {
+    width: 65.5vw; 
+  }
+  #imgg {
+    left: 17.5%;
+  }
+  #new {
+    height: 152vh;
+  }
+}
+@media (max-width: 450px) {
+  #img {
+    width: 66vw; 
+  }
+  #imgg {
+    left: 17.2%;
+  }
+  #new {
+    height: 154vh;
+  }
+}
+
+@media (max-width: 445px) {
+  #img {
+    width: 66.5vw; 
+  }
+  #imgg {
+    left: 16.9%;
+  }
+  #new {
+    height: 156vh;
+  }
+}
+
+@media (max-width: 440px) {
+  #img {
+    width: 67vw; 
+  }
+  #imgg {
+    left: 16.4%;
+  }
+  #new {
+    height: 157vh;
+  }
+}
+@media (max-width: 435px) {
+  #img {
+    width: 67.5vw; 
+  }
+  #imgg {
+    left: 15.8%;
+  }
+  #new {
+    height: 158vh;
+  }
+}
+
+@media (max-width: 430px) {
+  #img {
+    width: 68vw; 
+  }
+  #imgg {
+    left: 15.3%;
+  }
+  #new {
+    height: 159vh;
+  }
+}
+
+
+
+
+
+
 @media (max-width: 420px) {
   #img {
     width: 71vw; 
@@ -124,7 +419,7 @@ a {
     left: 14.8%;
   }
   #new {
-    height: 160vh;
+    height: 163vh;
   }
 }
 
@@ -134,6 +429,9 @@ a {
   }
   #imgg {
     left: 13%;
+  }
+  #new {
+    height: 167vh;
   }
 }
 
@@ -211,7 +509,7 @@ a {
     left: 8.4%;
   }
   #new {
-    height: 174vh;
+    height: 177vh;
   }
 }
 
@@ -226,7 +524,7 @@ a {
     left: 8.1%;
   }
   #new {
-    height: 176vh;
+    height: 180vh;
   }
   #ing {
     right: 128.5%; /* Ajuste cette valeur pour les petits écrans */
@@ -257,7 +555,7 @@ a {
     left: 7.1%;
   }
   #new {
-    height: 179vh;
+    height: 183vh;
   }
   #ing {
     right: 130.5%; /* Ajuste cette valeur pour les petits écrans */
@@ -600,8 +898,48 @@ a {
     margin-top:3.9rem;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (min-width: 760px) {
   #he {
-    min-height: '10vh';
+    min-height: '10vh' !important;
   }
+  #img {
+    width: 60vw; 
+  }
+  #imgg {
+    left: 20.3%;
+  }
+  #ing {
+    right:125.5%; /* Ajuste cette valeur pour les petits écrans */
+  }
+  #un {
+    top:-27vw;
+   
+  }
+  #deux {
+   top:-15vw;
+    
+  }
+  #deu {
+    top:-25vw;
+    font-size: 1.1rem !important;
+  }
+  #ing {
+    right: 40.5%; /* Ajuste cette valeur pour les petits écrans */
+  }
+
 }
+

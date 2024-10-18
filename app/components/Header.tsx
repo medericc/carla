@@ -16,13 +16,15 @@ const Header = () => {
   return (
     <header className="relative text-center mt-10 md:mt-20">
       <img
+      id="arrow"
         src="/arrow.png"
         alt="Arrow Background"
-        className="absolute top-[-45px] left-1/2 transform -translate-x-1/2 w-[300vw] md:w-[30vw] z-50"
+        className="absolute top-[-45px] left-1/2 transform -translate-x-1/2 w-[300vw] md:w-[100vw] z-50"
       />
 
       <div className="relative inline-block mt-[30vw]">
         <h2
+        id="deu"
           className="font-bold absolute top-[-12vw] md:top-[-8vw] left-[50%] transform -translate-x-1/2 z-20 uppercase"
           style={{
             background: "linear-gradient(90deg, #eec99e, #ffeec2)",
@@ -89,8 +91,8 @@ const Header = () => {
         animate={statsInView ? "visible" : "hidden"}
         variants={statsVariants}
       >
-        <ul className="flex w-full md:w-full justify-between md:gap-10 px-4 md:px-4 bg-black pt-[0.75rem] pb-[0.75rem] ml-4 mr-4 max-w-[90%]">
-          <li className="text-center border-r md:border-r-0 md:border-b-0 border-gray-600 flex-1 md:w-auto">
+        <ul className="flex w-full md:w-full justify-between px-4 md:px-4 bg-black pt-[0.75rem] pb-[0.75rem] ml-4 mr-4 max-w-[90%]">
+          <li className="text-center border-r  border-gray-600 flex-1 md:w-auto">
             <p
               style={{
                 fontSize: ".75rem",
@@ -118,7 +120,7 @@ const Header = () => {
             </p>
           </li>
 
-          <li className="text-center border-r md:border-r-0 md:border-b-0 border-gray-600 flex-1 md:w-auto">
+          <li className="text-center border-r  border-gray-600 flex-1 ">
             <p
               style={{
                 fontSize: ".75rem",
@@ -146,7 +148,7 @@ const Header = () => {
             </p>
           </li>
 
-          <li className="text-center border-r md:border-r-0 md:border-b-0 border-gray-600 flex-1 md:w-auto">
+          <li className="text-center border-r  border-gray-600 flex-1 md:w-auto">
             <p
               style={{
                 fontSize: ".75rem",
