@@ -40,7 +40,7 @@ const Header = () => {
         >
           NUMBER #0
         </h2>
-
+        
         <h1 className="text-[18vw] md:text-[18vw] font-bold absolute top-[-8vw] md:top-[-8vw] left-[50%] transform -translate-x-1/2 text-white uppercase z-10 mt-[7vw]" id="un">
           CARLA
         </h1>
@@ -48,7 +48,7 @@ const Header = () => {
         <h1 className="text-[18vw] md:text-[18vw] font-bold absolute top-[5vw] md:top-[5vw] left-[50%] transform -translate-x-1/2 text-white uppercase z-10 mt-[12vw]" id="deux">
           LEITE
         </h1>
-
+<div id="top">
         <div className="relative z-0 w-full h-[80vh] overflow-hidden" id="video">
           <video
             muted
@@ -62,22 +62,23 @@ const Header = () => {
           </video>
         </div>
 
-        <div className="absolute bottom-[-11px] left-[3%] md:left-[-10%] z-20" id="imgg">
+        <div className="absolute bottom-[-11px] left-[14.6%] md:left-[-10%] z-20" id="imgg">
           <img
             src="/perso.png"
             id="img"
             alt="Personnage"
-            className="w-[93vw] md:w-[120vw]  h-auto"
+            className="w-[70.5vw] md:w-[120vw]  h-auto"
             style={{ maxWidth: "none" }}
           />
 
           <div
+          id="band"
             className="absolute bottom-[-0.015rem] left-0 w-full h-[16vw] z-[1001]"
             style={{
               background: "linear-gradient(0deg, #1a1a1a 10%, rgba(195, 0, 0, 0))",
             }}
           />
-        </div>
+        </div></div>
       </div>
 
       {/* Animation des statistiques */}

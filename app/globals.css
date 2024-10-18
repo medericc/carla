@@ -113,308 +113,493 @@ a {
   font-weight: 400;
   font-style: normal;
 }
-@media (max-width: 424px) {
-  #news .relative {
-    height: 190vh; /* Définit la hauteur à 200vh uniquement pour la section ciblée */
+
+
+
+@media (max-width: 420px) {
+  #img {
+    width: 71vw; 
+  }
+  #imgg {
+    left: 14.8%;
+  }
+  #new {
+    height: 160vh;
   }
 }
-/* Ajustement de la position pour les écrans plus petits */
-@media (max-width: 424px) {
-  #ing {
-   /* Ajuste cette valeur pour les petits écrans */
-  }
+
+@media (max-width: 415px) {
   #img {
-    width: 97vw;
+    width: 72vw; 
+  }
+  #imgg {
+    left: 13%;
+  }
+}
+
+@media (max-width: 410px) {
+  #img {
+    width: 73vw; 
+  }
+  #imgg {
+    left: 12.2%;
+  }
+  #new {
+    height: 170vh;
+  }
+  #ing {
+    right:120.5%; /* Ajuste cette valeur pour les petits écrans */
+  }
+}
+
+@media (max-width: 405px) {
+  #img {
+    width: 74.5vw; 
+  }
+  #imgg {
+    left: 11.4%;
+  }
+}
+
+@media (max-width: 400px) {
+  #img {
+    width: 75.5vw; 
+  }
+  #imgg {
+    left: 11.6%;
+  }
+  #ing {
+    right:122.5%; /* Ajuste cette valeur pour les petits écrans */
+  }
+}
+
+@media (max-width: 395px) {
+  #img {
+    width: 77vw; 
+  }
+  #imgg {
+    left: 9.8%;
+  }
+}
+
+@media (max-width: 390px) {
+  #img {
+    width: 78.5vw; 
+  }
+  #imgg {
+    left: 9.3%;
+  }
+  #ing {
+    right:125.5%; /* Ajuste cette valeur pour les petits écrans */
+  }
+}
+
+@media (max-width: 385px) {
+  #img {
+    width: 80vw; 
+  }
+  #imgg {
+    left: 8.7%;
+  }
+}
+
+@media (max-width: 380px) {
+  #img {
+    width: 81.5vw; 
+  }
+  #imgg {
+    left: 8.4%;
+  }
+  #new {
+    height: 174vh;
+  }
+}
+
+/* Ajustement de la position pour les écrans plus petits */
+@media (max-width: 375px) {
+  #img {
+    width: 83vw;
+    
+  }
+  #imgg {
+   
+    left: 8.1%;
+  }
+  #new {
+    height: 176vh;
+  }
+  #ing {
+    right: 128.5%; /* Ajuste cette valeur pour les petits écrans */
+  }
+
+  #un {
+    top:-3.5vw;
+   
+  }
+  #deux {
+   top:10.5vw;
+    
+  }
+  #band {
+    bottom: -0.2rem;
+  }
+  #top {
+    margin-top:1rem;
+  }
+} 
+@media (max-width: 370px) {
+  #img {
+    width: 84vw;
+    
+  }
+  #imgg {
+   
+    left: 7.1%;
+  }
+  #new {
+    height: 179vh;
+  }
+  #ing {
+    right: 130.5%; /* Ajuste cette valeur pour les petits écrans */
+  }
+
+  #un {
+    top:-3.5vw;
+   
+  }
+  #deux {
+   top:10.5vw;
+    
+  }
+  #band {
+    bottom: -0.2rem;
+  }
+  #top {
+    margin-top:1rem;
+  }
+} 
+
+@media (max-width: 365px) {
+  #img {
+    width: 85vw;
+    
+  }
+  #imgg {
+   
+    left: 7%;
+  }
+  #new {
+    height: 182vh;
+  }
+  #ing {
+    right: 130.5%; /* Ajuste cette valeur pour les petits écrans */
+  }
+
+  #un {
+    top:-3.5vw;
+   
+  }
+  #deux {
+   top:10.5vw;
+    
+  }
+  #band {
+    bottom: -0.2rem;
+  }
+  #top {
+    margin-top:1rem;
+  }
+} 
+
+@media (max-width: 360px) {
+  #img {
+    width: 86.5vw;
+    
+  }
+  #imgg {
+   
+    left: 6.5%;
+  }
+  #new {
+    height: 182vh;
+  }
+  #ing {
+    right: 132.5%; /* Ajuste cette valeur pour les petits écrans */
+  }
+
+  #un {
+    top:-3.5vw;
+   
+  }
+  #deux {
+   top:10.5vw;
+    
+  }
+  #band {
+    bottom: -0.2rem;
+  }
+  #top {
+    margin-top:1rem;
+  }
+} 
+@media (max-width: 355px) {
+  #img {
+    width: 86.5vw;
+    
+  }
+  #imgg {
+   
+    left: 6.5%;
+  }
+  #new {
+    height: 184vh;
+  }
+  #ing {
+    right: 133.5%; /* Ajuste cette valeur pour les petits écrans */
+  }
+
+  #un {
+    top:-3.5vw;
+   
+  }
+  #deux {
+   top:10.5vw;
+    
+  }
+  #band {
+    bottom: -0.2rem;
+  }
+  #top {
+    margin-top:1.1rem;
+  }
+} 
+
+@media (max-width: 350px) {
+  #img {
+    width: 88vw;
+    
+  }
+  #imgg {
+   
+    left: 5.5%;
+  }
+  #new {
+    height: 187vh;
+  }
+  #ing {
+    right: 135.5%; /* Ajuste cette valeur pour les petits écrans */
+  }
+
+  #un {
+    top:-3.5vw;
+   
+  }
+  #deux {
+   top:10.5vw;
+    
+  }
+  #band {
+    bottom: -0.2rem;
+  }
+  #top {
+    margin-top:1.2rem;
+  }
+} 
+
+@media (max-width: 345px) {
+  #img {
+    width: 90vw;
+    
+  }
+  #imgg {
+   
+    left: 4.5%;
+  }
+  #new {
+    height: 187vh;
+  }
+  #ing {
+    right: 137.5%; /* Ajuste cette valeur pour les petits écrans */
+  }
+
+  #un {
+    top:-3.5vw;
+   
+  }
+  #deux {
+   top:10.5vw;
+    
+  }
+  #band {
+    bottom: -0.2rem;
+  }
+  #top {
+    margin-top:1.3rem;
+  }
+} 
+
+@media (max-width: 340px) {
+  #img {
+    width: 92vw;
+    
+  }
+  #imgg {
+   
+    left: 3.7%;
+  }
+  #new {
+    height: 190vh;
+  }
+  #ing {
+    right: 140.5%; /* Ajuste cette valeur pour les petits écrans */
+  }
+
+  #un {
+    top:-3.5vw;
+   
+  }
+  #deux {
+   top:10.5vw;
+    
+  }
+  #band {
+    bottom: -0.2rem;
+  }
+  #top {
+    margin-top:1.4rem;
+  }
+} 
+
+
+@media (max-width: 335px) {
+  #img {
+    width: 94vw;
     
   }
   #imgg {
    
     left: 3%;
   }
+  #new {
+    height: 194vh;
+  }
+  #ing {
+    right: 143.5%; /* Ajuste cette valeur pour les petits écrans */
+  }
+
   #un {
-  
-   top:-5vw;
+    top:-3.5vw;
+   
   }
   #deux {
-    top:7vw;
+   top:10.5vw;
     
+  }
+  #band {
+    bottom: -0.2rem;
+  }
+  #top {
+    margin-top:1.5rem;
   }
 } 
 
-
-@media (max-width: 391px) {
-  #news .relative {
-    height: 200vh; /* Définit la hauteur à 200vh uniquement pour la section ciblée */
-  }
-}
-/* Ajustement de la position pour les écrans plus petits */
-@media (max-width: 391px) {
-  #ing {
-    right: 128.5%; /* Ajuste cette valeur pour les petits écrans */
-  }
+@media (max-width: 330px) {
   #img {
-    width: 103vw;
+    width: 96vw;
     
   }
   #imgg {
    
-    left: -1.5%;
+    left: 2.2%;
   }
+  #new {
+    height: 194vh;
+  }
+  #ing {
+    right: 145.5%; /* Ajuste cette valeur pour les petits écrans */
+  }
+
   #un {
-    top:-4vw;
+    top:-3.5vw;
    
   }
   #deux {
-   top:9vw;
+   top:10.5vw;
     
+  }
+  #band {
+    bottom: -0.2rem;
+  }
+  #top {
+    margin-top:2.2rem;
   }
 } 
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 375px) {
-  #news .relative {
-    height: 200vh; /* Définit la hauteur à 200vh uniquement pour la section ciblée */
-  }
-}
-/* Ajustement de la position pour les écrans plus petits */
-@media (max-width: 375px) {
-  #ing {
-    right: 128.5%; /* Ajuste cette valeur pour les petits écrans */
-  }
-  #img {
-    width: 105vw;
-    
-  }
-  #imgg {
-   
-    left: -3%;
-  }
-  #un {
-    top:-4vw;
-   
-  }
-  #deux {
-   top:9vw;
-    
-  }
-} 
-
-
-@media (max-width: 362px) {
-  #news .relative {
-    height: 215vh; /* Définit la hauteur à 200vh uniquement pour la section ciblée */
-  }
-}
-/* Ajustement de la position pour les écrans plus petits */
-@media (max-width: 362px) {
-  #ing {
-    right: 132.5%; /* Ajuste cette valeur pour les petits écrans */
-  }
-  #img {
-    width: 109vw;
-    
-  }
-  #imgg {
-   
-    left: -4.2%;
-  }
-  #un {
-    top:-2.5vw;
-   
-  }
-  #deux {
-   top:11vw;
-    
-  }
-  #video {
-    width: 102%;
-  }
-} 
-
-@media (max-width: 355px) {
-  #ing {
-    right: 136.5%; /* Ajuste cette valeur pour les petits écrans */
-  }
-  #img {
-    width: 112vw;
-    
-  }
-  #imgg {
-   
-    left: -5.2%;
-  }
-  #un {
-    top:-1.5vw;
-   
-  }
-  #deux {
-   top:12vw;
-    
-  }
-  #video {
-    width: 102%;
-  }
-} 
-
-@media (max-width: 339px) {
-  #ing {
-    right: 139.5%; /* Ajuste cette valeur pour les petits écrans */
-  }
-  #img {
-    width: 118vw;
-    
-  }
-  #imgg {
-   
-    left: -8.2%;
-  }
-  #un {
-    top:0vw;
-   
-  }
-  #deux {
-   top:13vw;
-    
-  }
-  #video {
-    width: 102%;
-  }
-} 
-@media (max-width: 315px) {
-  #ing {
-    right: 170.5%; /* Ajuste cette valeur pour les petits écrans */
-  }
-  #img {
-    width: 122vw;
-    
-  }
-  #imgg {
-   
-    left: -10%;
-  }
-  #un {
-    top:-1vw;
-   
-  }
-  #deux {
-   top:14vw;
-    
-  }
-  #video {
-    width: 103%;
-  }
-}
 
 @media (max-width: 325px) {
-  #news .relative {
-    height: 235vh; /* Définit la hauteur à 200vh uniquement pour la section ciblée */
-  }
-}
-/* Ajustement de la position pour les écrans plus petits */
-@media (max-width: 325px) {
-  #ing {
-    right: 170.5%; /* Ajuste cette valeur pour les petits écrans */
-  }
   #img {
-    width: 122vw;
+    width: 98vw;
     
   }
   #imgg {
    
-    left: -10%;
+    left: 1.7%;
   }
+  #new {
+    height: 194vh;
+  }
+  #ing {
+    right: 147.5%; /* Ajuste cette valeur pour les petits écrans */
+  }
+
   #un {
-    top:-1vw;
+    top:-3.5vw;
    
   }
   #deux {
-   top:14vw;
+   top:10.5vw;
     
   }
-  #video {
-    width: 103%;
+  #band {
+    bottom: -0.2rem;
   }
-}
+  #top {
+    margin-top:2.2rem;
+  }
+} 
 
-@media (max-width: 313px) {
-  #news .relative {
-    height: 245vh; /* Définit la hauteur à 200vh uniquement pour la section ciblée */
+@media (max-width: 320px) {
+  #new {
+    height: 209vh;
   }
-}
-/* Ajustement de la position pour les écrans plus petits */
-@media (max-width: 313px) {
   #ing {
-    right: 173.5%; /* Ajuste cette valeur pour les petits écrans */
+    right: 162.5%; /* Ajuste cette valeur pour les petits écrans */
   }
   #img {
-    width: 129vw;
+    width: 97vw;
     
   }
   #imgg {
-   
-    left: -15%;
+    
+    left: 2%;
   }
   #un {
-    top:-1vw;
+    top:2vw;
    
   }
   #deux {
-   top:14vw;
+   top:17vw;
     
   }
   #video {
-    width: 103%;
+    width: 102%;
+  }
+  #band {
+    bottom: -0.2rem;
+  }
+  #top {
+    margin-top:3.9rem;
   }
 }
-
-@media (max-width: 295px) {
-  #news .relative {
-    height: 255vh; /* Définit la hauteur à 200vh uniquement pour la section ciblée */
-  }
-}
-
-@media (max-width: 275px) {
-  #news .relative {
-    height: 265vh; /* Définit la hauteur à 200vh uniquement pour la section ciblée */
-  }
-}
-/* Ajustement de la position pour les écrans plus petits */
-@media (max-width: 275px) {
-  #ing {
-    right: 186.5%; /* Ajuste cette valeur pour les petits écrans */
-  }
-  #img {
-    width: 136vw;
-    
-  }
-  #imgg {
-   
-    left: -16%;
-  }
-  #un {
-    top:12vw;
-   
-  }
-  #deux {
-   top:24vw;
-    
-  }
-  #video {
-    width: 107%;
-  }
-}
-
 @media (min-width: 760px) {
   #he {
     min-height: '10vh';

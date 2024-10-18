@@ -14,7 +14,7 @@ const CarlaAbout = () => {
 
   return (
     <section id="news">
-      <div className="relative h-[156vh]  w-full bg-white text-black overflow-hidden"> {/* Empêche le débordement */}
+      <div id="new" className="relative h-[156vh]  w-full bg-white text-black overflow-hidden"> {/* Empêche le débordement */}
 
         {/* Texte défilant en fond */}
         <div
