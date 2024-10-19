@@ -120,19 +120,21 @@ const Stats = () => {
       </div>
 
       {/* Dots pour indiquer la position */}
-      <div className="absolute bottom-40 w-full flex justify-center z-20">
-        <div className="flex space-x-2">
-          {statsData.map((_, index) => (
-            <div
-              key={index}
-              className={`h-2 w-2 rounded-full ${
-                currentIndex === index ? 'bg-white' : 'bg-gray-500'
-              } cursor-pointer`}
-              onClick={() => handleDotClick(index)}
-            />
-          ))}
-        </div>
-      </div>
+    {/* Dots for indicating the current position */}
+<div className="absolute inset-x-0 bottom-4 w-full flex justify-center z-20">
+  <div className="flex space-x-2">
+    {statsData.map((_, index) => (
+      <div
+        key={index}
+        className={`h-2 w-2 rounded-full ${
+          currentIndex === index ? 'bg-white' : 'bg-gray-500'
+        } cursor-pointer`}
+        onClick={() => handleDotClick(index)}
+      />
+    ))}
+  </div>
+</div>
+
     </div></section>
   );
 };
