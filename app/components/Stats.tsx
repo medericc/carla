@@ -64,16 +64,15 @@ const Stats = () => {
 
 
      {/* Scroll horizontal manuel */}
-<div
-  className="absolute top-[25%] left-0 right-0 z-10 flex overflow-x-scroll scrollbar-hide snap-x snap-mandatory mb-16" // Ajout de mb-16 pour créer un espace sous la carte
+     <div
+  className="absolute top-[25%] left-0 right-0 z-10 flex overflow-x-scroll scrollbar-hide snap-x snap-mandatory mb-16"
   ref={containerRef}
   style={{ scrollSnapType: 'x mandatory', scrollBehavior: 'smooth' }}
 >
   {statsData.map((stat, index) => (
     <div
       key={index}
-      className="min-w-full p-8 flex justify-center items-center snap-center"
-      style={{ minWidth: '100%' }}
+      className="min-w-full p-4 flex justify-center items-center snap-center md:min-w-[50%] lg:min-w-[33.33%]"  // Single block by default, 2 blocks on md, 3 blocks on lg
     >
       <motion.div
         className="bg-black-2 p-8 rounded-lg shadow-lg"
@@ -110,6 +109,7 @@ const Stats = () => {
     </div>
   ))}
 </div>
+
 
 {/* Dots pour indiquer la position */}
 <div className="absolute inset-x-0 bottom-4 w-full flex justify-center z-20">
