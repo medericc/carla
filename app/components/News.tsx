@@ -8,7 +8,7 @@ const CarlaAbout = () => {
   useEffect(() => {
     const textEl = textRef.current;
     if (textEl) {
-      textEl.style.animation = 'scrollCarlaAbout 50s linear infinite';
+      textEl.style.animation = 'scrollCarlaAbout 40s linear infinite';
     }
   }, []);
 
@@ -22,8 +22,8 @@ const CarlaAbout = () => {
           ref={textRef}
         >
           {/* Texte défilant pour un défilement continu sans interruption */}
-          <span>CARLA ABOUT &nbsp; CARLA ABOUT &nbsp; CARLA ABOUT &nbsp; </span>
-          <span className="ml-[100vw]">CARLA ABOUT &nbsp; CARLA ABOUT &nbsp; CARLA ABOUT</span>
+          <span>CARLA ABOUT &nbsp; CARLA ABOUT &nbsp; CARLA ABOUT &nbsp; CARLA ABOUT &nbsp; CARLA ABOUT &nbsp; </span>
+          <span className="ml-[100vw]">CARLA ABOUT &nbsp; CARLA ABOUT &nbsp; CARLA ABOUT &nbsp; CARLA ABOUT &nbsp; CARLA ABOUT</span>
         </div>
 
         {/* Paragraphe de texte (fixe) */}
@@ -61,14 +61,14 @@ const CarlaAbout = () => {
 const keyframesStylee = `
   @keyframes scrollCarlaAbout {
     0% {
-      transform: translateX(100%);
+      transform: translateX(0%);
     }
     100% {
       transform: translateX(-100%);
     }
   }
   .animate-scrollCarlaAbout {
-    animation: scrollCarlaAbout 80s linear infinite;
+    animation: scrollCarlaAbout 20s linear infinite;
   }
 `;
 
