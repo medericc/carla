@@ -72,7 +72,7 @@ const Header = () => {
               src="/perso.png"
               id="img"
               alt="Personnage"
-              className="w-[70.5vw] md:w-[60vw] h-auto z-[99]"
+              className="w-[70.5vw] md:w-[53vw] h-auto z-[99]"
               style={{
                 position: "absolute", // Rend l'image absolue par rapport à son parent
                 bottom: 0, // Fixe l'image en bas de son conteneur parent

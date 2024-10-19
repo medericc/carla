@@ -162,15 +162,16 @@ const FightCard: React.FC<FightCardProps> = ({ eventTitle, fighter1, fighter2, f
             {/* VS */}
             <div className={`relative ${styles.fighters} flex-1 text-center top-[-2vh]  left-[-0.05vh] text-[#272727]`}></div>
 
-        {/* Fighter 2 */}
-<div className="flex-1 text-center relative border-r border-r-[#272727]">
-  <div className="relative border-b border-b-[#272727]">
+      {/* Fighter 2 */}
+{/* Fighter 2 */}
+<div className="flex-1 text-center relative border-r border-r-[#272727] flex flex-col items-center md:w-full md:h-full"> {/* md:h-full ajouté pour garantir que ça prenne toute la hauteur */}
+  <div className="relative border-b border-b-[#272727] w-full h-full">  {/* w-full et h-full ajoutés */}
     <Image
       src={fighter2.img}
       alt={fighter2.name}
-      width={300}  // Ajuste à la taille souhaitée
+      width={300}  // Taille souhaitée
       height={300}
-      className="object-cover"
+      className="object-cover w-full h-full"  // w-full et h-full pour que l'image prenne tout l'espace
     />
     {fighter2.win && (
       <span className="absolute bg-[#c30000] text-white font-bold uppercase text-[1rem] leading-[0.8] px-3 py-1.5 left-0 bottom-0 z-20">
@@ -180,6 +181,8 @@ const FightCard: React.FC<FightCardProps> = ({ eventTitle, fighter1, fighter2, f
   </div>
   <p className="mt-2 text-xl font-medium uppercase">{fighter2.name}</p>
 </div>
+
+
 
           </div>
 

@@ -27,7 +27,7 @@ const CarlaAbout = () => {
         </div>
 
         {/* Paragraphe de texte (fixe) */}
-        <div className="relative z-10 px-10 py-20 text-lg leading-7 text-gray-800 overflow-y-auto">
+        <div className="relative z-10 px-10 py-20 md:pt-[28rem] text-lg leading-7 text-gray-800 overflow-y-auto">
           <p className="mb-6">
             En tant que cadette à Lyon, Carla est devenue championne de France espoir 
             et a mené son équipe à Bercy grâce à un run à plus de 30 points 
