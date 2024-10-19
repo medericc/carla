@@ -25,7 +25,7 @@ const Header = () => {
       <div className="relative inline-block mt-[30vw]">
         <h2
         id="deu"
-          className="font-bold absolute top-[-12vw] md:top-[-8vw] left-[50%] transform -translate-x-1/2 z-20 uppercase"
+          className="font-bold absolute top-[-12vw] md:top-[-24vw] left-[50%] transform -translate-x-1/2 z-20 uppercase"
           style={{
             background: "linear-gradient(90deg, #eec99e, #ffeec2)",
             WebkitBackgroundClip: "text",
@@ -43,11 +43,11 @@ const Header = () => {
           NUMBER #0
         </h2>
         
-        <h1 className="text-[18vw] md:text-[18vw] font-bold absolute top-[-8vw] md:top-[-8vw] left-[50%] transform -translate-x-1/2 text-white uppercase z-10 mt-[7vw]" id="un">
+        <h1 className="text-[18vw] md:text-[18vw] font-bold absolute top-[-8vw] md:top-[-30vw] left-[50%] transform -translate-x-1/2 text-white uppercase z-10 mt-[7vw]" id="un">
           CARLA
         </h1>
 
-        <h1 className="text-[18vw] md:text-[18vw] font-bold absolute top-[5vw] md:top-[5vw] left-[50%] transform -translate-x-1/2 text-white uppercase z-10 mt-[12vw]" id="deux">
+        <h1 className="text-[18vw] md:text-[18vw] font-bold absolute top-[5vw] md:top-[-18vw] left-[50%] transform -translate-x-1/2 text-white uppercase z-10 mt-[12vw]" id="deux">
           LEITE
         </h1>
 <div id="top">
@@ -72,7 +72,7 @@ const Header = () => {
               src="/perso.png"
               id="img"
               alt="Personnage"
-              className="w-[70.5vw] md:w-[120vw] h-auto z-[99]"
+              className="w-[70.5vw] md:w-[60vw] h-auto z-[99]"
               style={{
                 position: "absolute", // Rend l'image absolue par rapport à son parent
                 bottom: 0, // Fixe l'image en bas de son conteneur parent

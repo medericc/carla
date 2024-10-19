@@ -57,8 +57,8 @@ export default function Header() {
           />
         </div>
 
-        {/* Hamburger Icon for Mobile */}
-        <div className="md:hidden flex items-center">
+        {/* Hamburger Icon for Mobile and Tablet */}
+        <div className="lg:hidden flex items-center"> {/* Change md:hidden to lg:hidden */}
           <button
             onClick={toggleMenu}
             className="text-white focus:outline-none"
@@ -68,7 +68,7 @@ export default function Header() {
         </div>
 
         {/* Menu Links for Desktop */}
-        <ul className="hidden md:flex space-x-8 text-white uppercase text-sm">
+        <ul className="hidden lg:flex space-x-8 text-white uppercase text-sm">
           <li className="hover:text-gray-300">
             <a href="#biography" onClick={handleLinkClick}>Biography</a>
           </li>
@@ -84,7 +84,7 @@ export default function Header() {
         </ul>
 
         {/* Right Side - Shop and Tickets */}
-        <div className="hidden md:flex items-center space-x-6 relative">
+        <div className="hidden lg:flex items-center space-x-6 relative">
           <a
             href="#"
             className="text-white uppercase text-sm hover:text-gray-300"
@@ -127,7 +127,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden flex flex-col items-center bg-black text-white uppercase text-sm space-y-4 py-4">
+        <div className="lg:hidden flex flex-col items-center bg-black text-white uppercase text-sm space-y-4 py-4">
           <a href="#biography" className="hover:text-gray-300" onClick={handleLinkClick}>
             Biography
           </a>
