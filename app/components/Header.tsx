@@ -63,24 +63,32 @@ const Header = () => {
             <source src="/fr.mp4" type="video/mp4" />
           </video>
         </div>
+        <div
+            id="imgg"
+            className="flex justify-center items-end relative w-full h-auto z-99"
+            style={{ maxWidth: "100%", position: "relative" }} // Le parent doit être en position relative pour que l'absolute fonctionne
+          >
+            <img
+              src="/perso.png"
+              id="img"
+              alt="Personnage"
+              className="w-[70.5vw] md:w-[120vw] h-auto z-[99]"
+              style={{
+                position: "absolute", // Rend l'image absolue par rapport à son parent
+                bottom: 0, // Fixe l'image en bas de son conteneur parent
+                left: "50%", // Centre horizontalement l'image
+                transform: "translateX(-50%)", // Pour bien centrer l'image
+              }}
+            />
 
-        <div className="absolute bottom-[-11px] left-[14.6%] md:left-[-10%] z-20" id="imgg">
-          <img
-            src="/perso.png"
-            id="img"
-            alt="Personnage"
-            className="w-[70.5vw] md:w-[120vw]  h-auto"
-            style={{ maxWidth: "100%" }}
-          />
-
-          <div
-          id="band"
-            className="absolute bottom-[-0.015rem] left-0 w-full h-[16vw] z-[1001]"
-            style={{
-              background: "linear-gradient(0deg, #1a1a1a 10%, rgba(195, 0, 0, 0))",
-            }}
-          />
-        </div></div>
+            <div
+              id="band"
+              className="absolute bottom-[-0.15rem] left-0 w-full h-[11vw] z-[1001]"
+              style={{
+                background: "linear-gradient(0deg, #1a1a1a 10%, rgba(195, 0, 0, 0))",
+              }}
+            />
+          </div></div>
       </div>
 
       {/* Animation des statistiques */}

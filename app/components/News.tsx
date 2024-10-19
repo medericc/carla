@@ -8,26 +8,26 @@ const CarlaAbout = () => {
   useEffect(() => {
     const textEl = textRef.current;
     if (textEl) {
-      textEl.style.animation = 'scrollCarlaAbout 50s linear infinite'; // Renommé l'animation
+      textEl.style.animation = 'scrollCarlaAbout 50s linear infinite';
     }
   }, []);
 
   return (
-    <section id="news">
-      <div id="new" className="relative h-[156vh]  w-full bg-white text-black overflow-hidden"> {/* Empêche le débordement */}
-
+    <section id="news" className="relative min-h-screen w-full bg-white text-black overflow-hidden">
+      <div id="new" className="relative h-auto min-h-screen w-full bg-white text-black">
+        
         {/* Texte défilant en fond */}
         <div
-          className="absolute top-[1%] left-0 whitespace-nowrap z-1 text-[15rem] opacity-10 uppercase font-bold text-black animate-scrollCarlaAbout overflow-hidden"
+          className="absolute top-0 left-0 whitespace-nowrap z-0 text-[15rem] md:text-[20rem] opacity-10 uppercase font-bold text-black animate-scrollCarlaAbout"
           ref={textRef}
         >
-          {/* Duplique le texte pour un défilement continu sans interruption */}
+          {/* Texte défilant pour un défilement continu sans interruption */}
           <span>CARLA ABOUT &nbsp; CARLA ABOUT &nbsp; CARLA ABOUT &nbsp; </span>
           <span className="ml-[100vw]">CARLA ABOUT &nbsp; CARLA ABOUT &nbsp; CARLA ABOUT</span>
         </div>
 
         {/* Paragraphe de texte (fixe) */}
-        <div className="absolute top-[15%] left-[10%] right-[10%] z-10 text-lg leading-7 text-gray-800">
+        <div className="relative z-10 px-10 py-20 text-lg leading-7 text-gray-800 overflow-y-auto">
           <p className="mb-6">
             En tant que cadette à Lyon, Carla est devenue championne de France espoir 
             et a mené son équipe à Bercy grâce à un run à plus de 30 points 
@@ -57,11 +57,11 @@ const CarlaAbout = () => {
   );
 };
 
-// Ajouter les keyframes pour l'animation du texte défilant (renommé scrollCarlaAbout)
+// Ajouter les keyframes pour l'animation du texte défilant
 const keyframesStylee = `
   @keyframes scrollCarlaAbout {
     0% {
-      transform: translateX(0%);
+      transform: translateX(100%);
     }
     100% {
       transform: translateX(-100%);

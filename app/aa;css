@@ -115,6 +115,29 @@ a {
 }
 
 
-
-
-
+@media (max-width: 390px) {
+    #img {
+      width: 78.5vw; 
+    }
+    #imgg {
+      left: 9.3%;
+    }
+    #ing {
+      right:125.5%; /* Ajuste cette valeur pour les petits écrans */
+    }
+   
+    #new {
+        height: 180vh;
+      }
+      #un {
+        top:-17vw;
+       
+      }
+      #deux {
+       top:-3vw;
+        
+      }
+      #deu {
+        top:-18vw;
+      }
+  }
