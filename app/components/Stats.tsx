@@ -63,64 +63,55 @@ const Stats = () => {
 </div>
 
 
-      {/* Scroll horizontal manuel */}
-      <div
-        className="absolute top-[25%] left-0 right-0 z-10 flex overflow-x-scroll scrollbar-hide snap-x snap-mandatory"
-        ref={containerRef}
-        style={{ scrollSnapType: 'x mandatory', scrollBehavior: 'smooth' }}
+     {/* Scroll horizontal manuel */}
+<div
+  className="absolute top-[25%] left-0 right-0 z-10 flex overflow-x-scroll scrollbar-hide snap-x snap-mandatory mb-16" // Ajout de mb-16 pour créer un espace sous la carte
+  ref={containerRef}
+  style={{ scrollSnapType: 'x mandatory', scrollBehavior: 'smooth' }}
+>
+  {statsData.map((stat, index) => (
+    <div
+      key={index}
+      className="min-w-full p-8 flex justify-center items-center snap-center"
+      style={{ minWidth: '100%' }}
+    >
+      <motion.div
+        className="bg-black-2 p-8 rounded-lg shadow-lg"
+        style={{
+          width: '100%',
+          height: '25.75rem',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          boxSizing: 'border-box',
+          padding: '2rem',
+        }}
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
       >
-        {statsData.map((stat, index) => (
-          <div
-            key={index}
-            className="min-w-full p-8 flex justify-center items-center snap-center"
-            style={{ minWidth: '100%' }}
-          >
-            <motion.div
-              className="bg-black-2 p-8 rounded-lg shadow-lg"
-              style={{
-                width: '100%',
-                height: '25.75rem',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center',
-                boxSizing: 'border-box',
-                padding: '2rem',
-              }}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-                <h2 className="text-center text-2xl font-bold uppercase">
-    Carla Record
-  </h2>
-              {/* Label en petit */}
-              <h3 className="text-sm font-light uppercase mb-4 text-center tracking-wide">
-                {stat.label}
-              </h3>
-              {/* Valeur en grand */}
+        <h2 className="text-center text-2xl font-bold uppercase">
+          Carla Record
+        </h2>
+        <h3 className="text-sm font-light uppercase mb-4 text-center tracking-wide">
+          {stat.label}
+        </h3>
+        <span
+          className={`block font-extrabold mt-2 ${
+            stat.value === '26 to 90%' || stat.value === '26 pts to 90%'
+              ? 'text-4xl'
+              : 'text-7xl'
+          }`}
+        >
+          {stat.value}
+        </span>
+      </motion.div>
+    </div>
+  ))}
+</div>
 
-
-
-               <span
-                className={`block font-extrabold mt-2 ${
-                  stat.value === '26 to 90%' || stat.value === '26 pts to 90%'
-                    ? 'text-4xl'
-                    : 'text-7xl'
-                }`}
-              >
-               
-               
-               
-                {stat.value}
-              </span>
-            </motion.div>
-          </div>
-        ))}
-      </div>
-
-      {/* Dots pour indiquer la position */}
-    {/* Dots for indicating the current position */}
+{/* Dots pour indiquer la position */}
 <div className="absolute inset-x-0 bottom-4 w-full flex justify-center z-20">
   <div className="flex space-x-2">
     {statsData.map((_, index) => (
@@ -134,6 +125,7 @@ const Stats = () => {
     ))}
   </div>
 </div>
+
 
     </div></section>
   );
