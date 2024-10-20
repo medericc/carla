@@ -25,7 +25,7 @@ const Header = () => {
       <div className="relative inline-block mt-[30vw]">
         <h2
         id="deu"
-          className="font-bold absolute top-[-12vw] md:top-[-24vw] lg:top-[-25vw] xl:top-[-27.3vw] left-[50%] transform -translate-x-1/2 z-20 uppercase"
+          className="font-bold absolute top-[-12vw] md:top-[-24vw] lg:top-[-25vw] xl:top-[-27.7vw] left-[50%] transform -translate-x-1/2 z-20 uppercase"
           style={{
             background: "linear-gradient(90deg, #eec99e, #ffeec2)",
             WebkitBackgroundClip: "text",
@@ -43,15 +43,15 @@ const Header = () => {
           NUMBER #0
         </h2>
         
-        <h1 className="text-[18vw] md:text-[18vw]  lg:text-[16vw]  font-bold absolute top-[-8vw] md:top-[-30vw] lg:top-[-31.5vw]  xl:top-[-35.5vw]  left-[50%] transform -translate-x-1/2 text-white uppercase z-10 mt-[7vw]" id="un">
+        <h1 className="text-[18vw] md:text-[18vw]  lg:text-[14vw]  font-bold absolute top-[-8vw] md:top-[-30vw] lg:top-[-33.5vw]  xl:top-[-36vw]  left-[50%] transform -translate-x-1/2 text-white uppercase z-10 mt-[7vw]" id="un">
           CARLA
         </h1>
 
-        <h1 className="text-[18vw] lg:text-[16vw] md:text-[18vw]  font-bold absolute top-[5vw] md:top-[-18vw] lg:top-[-21vw]  xl:top-[-25vw] left-[50%] transform -translate-x-1/2 text-white uppercase z-10 mt-[12vw]" id="deux">
+        <h1 className="text-[18vw] lg:text-[14vw] md:text-[18vw]  font-bold absolute top-[5vw] md:top-[-18vw] lg:top-[-24vw]  xl:top-[-29vw] left-[50%] transform -translate-x-1/2 text-white uppercase z-10 mt-[12vw] opacity-1" id="deux">
           LEITE
         </h1>
 <div id="top">
-        <div className="relative z-0 w-full h-[80vh] overflow-hidden" id="video">
+<div className="relative z-0 w-full h-[80vh] lg:h-auto lg:aspect-video overflow-hidden lg:mt-[-15.5rem] xl:mt-[-19.5rem]" id="video">
           <video
             muted
             loop
