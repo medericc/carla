@@ -42,9 +42,8 @@ export default function Header() {
 
   return (
     <header
-      className={`w-full py-4 fixed top-0 left-0 z-[100] transition-colors duration-300 ${
-        scrolled ? "bg-black" : "bg-transparent"
-      }`}
+    className={`w-full py-4 fixed top-0 left-0 z-[100] transition-colors duration-300 ${scrolled || isOpen ? "bg-black" : "bg-transparent"}`}
+
     >
       <nav className="max-w-7xl mx-auto flex items-center justify-between px-4">
         {/* Logo */}
