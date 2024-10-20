@@ -25,7 +25,7 @@ const Header = () => {
       <div className="relative inline-block mt-[30vw]">
         <h2
         id="deu"
-          className="font-bold absolute top-[-12vw] md:top-[-24vw] left-[50%] transform -translate-x-1/2 z-20 uppercase"
+          className="font-bold absolute top-[-12vw] md:top-[-24vw] lg:top-[-25vw] xl:top-[-27.3vw] left-[50%] transform -translate-x-1/2 z-20 uppercase"
           style={{
             background: "linear-gradient(90deg, #eec99e, #ffeec2)",
             WebkitBackgroundClip: "text",
@@ -43,11 +43,11 @@ const Header = () => {
           NUMBER #0
         </h2>
         
-        <h1 className="text-[18vw] md:text-[18vw] font-bold absolute top-[-8vw] md:top-[-30vw] left-[50%] transform -translate-x-1/2 text-white uppercase z-10 mt-[7vw]" id="un">
+        <h1 className="text-[18vw] md:text-[18vw]  lg:text-[16vw]  font-bold absolute top-[-8vw] md:top-[-30vw] lg:top-[-31.5vw]  xl:top-[-35.5vw]  left-[50%] transform -translate-x-1/2 text-white uppercase z-10 mt-[7vw]" id="un">
           CARLA
         </h1>
 
-        <h1 className="text-[18vw] md:text-[18vw] font-bold absolute top-[5vw] md:top-[-18vw] left-[50%] transform -translate-x-1/2 text-white uppercase z-10 mt-[12vw]" id="deux">
+        <h1 className="text-[18vw] lg:text-[16vw] md:text-[18vw]  font-bold absolute top-[5vw] md:top-[-18vw] lg:top-[-21vw]  xl:top-[-25vw] left-[50%] transform -translate-x-1/2 text-white uppercase z-10 mt-[12vw]" id="deux">
           LEITE
         </h1>
 <div id="top">
@@ -72,7 +72,7 @@ const Header = () => {
               src="/perso.png"
               id="img"
               alt="Personnage"
-              className="w-[70.5vw] md:w-[53vw] h-auto z-[99]"
+              className="w-[70.5vw] md:w-[53vw] lg:w-[42vw] xl:w-[34vw] 2xl:w-[30vw] h-auto z-[99]"
               style={{
                 position: "absolute", // Rend l'image absolue par rapport à son parent
                 bottom: 0, // Fixe l'image en bas de son conteneur parent

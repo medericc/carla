@@ -42,7 +42,7 @@ export default function Header() {
 
   return (
     <header
-      className={`w-full py-4 fixed top-0 left-0 z-50 transition-colors duration-300 ${
+      className={`w-full py-4 fixed top-0 left-0 z-[100] transition-colors duration-300 ${
         scrolled ? "bg-black" : "bg-transparent"
       }`}
     >
