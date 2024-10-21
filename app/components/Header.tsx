@@ -71,8 +71,8 @@ const Header = () => {
             <img
               src="/perso.png"
               id="img"
-              alt="Personnage"
-              className="w-[70.5vw] md:w-[53vw] lg:w-[42vw] xl:w-[34vw] 2xl:w-[30vw] h-auto z-[99]"
+              alt="Carla Leite WNBA Player Basketball Women ESBVA Dallas Wings France Joueuse GOAT"
+              className="w-[67.5vw] md:w-[53vw] lg:w-[42vw] xl:w-[34vw] 2xl:w-[30vw] h-auto z-[99]"
               style={{
                 position: "absolute", // Rend l'image absolue par rapport à son parent
                 bottom: 0, // Fixe l'image en bas de son conteneur parent

@@ -8,7 +8,8 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false); // État pour le menu déroulant "OTHERS"
-
+  const [searchOpen, setSearchOpen] = useState(false); // État pour le champ de recherche
+  const [searchQuery, setSearchQuery] = useState("");
   // Fonction pour détecter le scroll
   useEffect(() => {
     const handleScroll = () => {
@@ -33,7 +34,14 @@ export default function Header() {
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
   };
+  const toggleSearch = () => {
+    setSearchOpen(!searchOpen); // Ouvre/ferme le champ de recherche
+  };
 
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchQuery(e.target.value); // Met à jour l'état en fonction de la saisie
+  };
+  
   const handleLinkClick = () => {
     // Ferme le menu après un clic
     setIsOpen(false);
@@ -120,8 +128,19 @@ export default function Header() {
             )}
           </div>
 
-          <FaSearch className="text-white hover:text-gray-300 cursor-pointer" />
-        </div>
+         {/* Search Icon */}
+         <FaSearch onClick={toggleSearch} className="text-white hover:text-gray-300 cursor-pointer" />
+
+{/* Search Field */}
+{searchOpen && (
+  <input
+    type="text"
+    value={searchQuery}
+    onChange={handleSearchChange}
+    className="ml-2 px-4 py-2 text-black rounded"
+    placeholder="Search..."
+  />
+)}      </div>
       </nav>
 
       {/* Mobile Menu */}

@@ -91,7 +91,7 @@ useEffect(() => {
         <Image
         id="ing"
   src="/img.png" // Assure-toi que le chemin de l'image est correct
-  alt="Character Image"
+  alt="Carla Leite WNBA Player Basketball Women ESBVA Dallas Wings"
   width={335}
   height={470}
   className="rounded-lg right-[119.5%] md:right-[42.5%]"
