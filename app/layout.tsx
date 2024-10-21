@@ -65,22 +65,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="twitter:description" content={metadata.description} />
         <meta name="twitter:image" content="/carla-leite-basket.png" />
 
-        {/* Google Analytics */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZVWXT3GBXV"></script>
-        <script>
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-ZVWXT3GBXV');
-          `}
-        </script>
+      
         {/* Ajout du JSON-LD pour Schema.org */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
         />
-      </Head>
+         </Head>
+      {/* Google Analytics juste après le <head> */}
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZVWXT3GBXV"></script>
+      <script>
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-ZVWXT3GBXV');
+        `}
+      </script>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
