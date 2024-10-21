@@ -124,7 +124,7 @@ const Header = () => {
                 boxSizing: "inherit",
               }}
             >
-              22
+              19
             </p>
           </li>
 
@@ -152,7 +152,7 @@ const Header = () => {
                 boxSizing: "inherit",
               }}
             >
-              05
+              06
             </p>
           </li>
 
@@ -208,7 +208,7 @@ const Header = () => {
                 boxSizing: "inherit",
               }}
             >
-              12
+              16
             </p>
           </li>
         </ul>
