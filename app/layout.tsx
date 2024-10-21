@@ -65,6 +65,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="twitter:description" content={metadata.description} />
         <meta name="twitter:image" content="/carla-leite-basket.png" />
 
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZVWXT3GBXV"></script>
+        <script>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-ZVWXT3GBXV');
+          `}
+        </script>
         {/* Ajout du JSON-LD pour Schema.org */}
         <script
           type="application/ld+json"
