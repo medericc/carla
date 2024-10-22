@@ -82,6 +82,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           gtag('config', 'G-ZVWXT3GBXV');
         `}
       </script>
+      <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
         <Analytics />
