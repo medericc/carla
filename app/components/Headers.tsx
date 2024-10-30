@@ -173,7 +173,7 @@ export default function Header() {
             {dropdownOpen && (
               <div className="w-full mt-2 flex flex-col items-center bg-black border border-white text-white text-sm">
                 <a
-                  href="#"
+                  href="/lena"
                   className="block px-4 py-2 hover:bg-white hover:text-black"
                   onClick={handleLinkClick}
                 >
