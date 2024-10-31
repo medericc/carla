@@ -62,96 +62,96 @@ const BasketPage: React.FC = () => {
             position: [-8, 0.1, 1], 
             videoUrl: '/videos/panier1.mp4', 
             details: 'Saison 2022-2023', 
-            matchInfo: 'LBB vs TGB - Journée 1', 
-            timeInfo: '4e quart temps 4\'54 - Lay Up' 
+            matchInfo: 'LBB vs TGB - Journée 12', 
+            timeInfo: '4e quart temps 3\'24 - Lay Up' 
         }, 
         { 
             id: 2, 
             position: [5, 0.1, -3], 
             videoUrl: '/videos/panier2.mp4', 
             details: 'Saison 2023-2024', 
-            matchInfo: 'TGB vs BLB - Journée 2', 
-            timeInfo: '2e quart temps 3\'10 - 3 pts' 
+            matchInfo: 'TGB vs BLB - Journée 5', 
+            timeInfo: '2e quart temps 0\'57 - 3 pts' 
         }, 
         { 
             id: 3, 
             position: [3, 0.1, -0.5], 
             videoUrl: '/videos/panier3.mp4', 
             details: 'Saison 2023-2024',
-            matchInfo: 'TGB vs RVB - Journée 2', 
-            timeInfo: '2e quart temps 3\'10 - 3 pts' 
+            matchInfo: 'TGB vs RVB - Journée 8', 
+            timeInfo: '2e quart temps 6\'48 - 3 pts' 
         }, 
         { 
             id: 4, 
             position: [8, 0.1, 1], 
             videoUrl: '/videos/panier4.mp4', 
             details: 'Saison 2023-2024',
-            matchInfo: 'TGB vs BLM - Journée 2', 
-            timeInfo: '2e quart temps 3\'10 - 2 pts' 
+            matchInfo: 'TGB vs BLM - Journée 9', 
+            timeInfo: '2e quart temps 1\'34 - 2 pts' 
         }, 
         { 
             id: 5, 
             position: [5.5, 0.1, 3.8], 
             videoUrl: '/videos/panier5.mp4', 
             details: 'Saison 2023-2024',
-            matchInfo: 'TGB vs BLM - Journée 2', 
-            timeInfo: '2e quart temps 3\'10 - 3 pts'
+            matchInfo: 'TGB vs BLM - Journée 9', 
+            timeInfo: '2e quart temps 4\'34 - 3 pts'
         }, 
         { 
             id: 6, 
             position: [-8.5, 0.1, 0.5], 
             videoUrl: '/videos/panier6.mp4', 
             details: 'Saison 2023-2024',
-            matchInfo: 'FCB vs TGB - Journée 2', 
-            timeInfo: '2e quart temps 3\'10 - 2 pts' 
+            matchInfo: 'FCB vs TGB - Journée 7', 
+            timeInfo: '4e quart temps 0\'21 - 2 pts' 
         }, 
         { 
             id: 7, 
             position: [-4.2, 0.1, 2.5], 
             videoUrl: '/videos/panier7.mp4', 
             details: 'Saison 2023-2024',
-            matchInfo: 'FCB vs TGB - Journée 2', 
-            timeInfo: '2e quart temps 3\'10 - 3 pts' 
+            matchInfo: 'FCB vs TGB - Journée 7', 
+            timeInfo: '4e quart temps 3\'07 - 3 pts' 
         }, 
         { 
             id: 8, 
             position: [8, 0.1, 0.5], 
             videoUrl: '/videos/panier8.mp4', 
             details: 'Saison 2023-2024',
-            matchInfo: 'SAH vs TGB - Journée 2', 
-            timeInfo: '2e quart temps 3\'10 - 2 pts' 
+            matchInfo: 'SAH vs TGB - Journée 14', 
+            timeInfo: '1e quart temps 0\'04 - 2 pts' 
         }, 
         { 
             id: 9, 
             position: [3.6, 0.1, 2], 
             videoUrl: '/videos/panier9.mp4', 
             details: 'Saison 2023-2024',
-            matchInfo: 'BLB vs TGB - Journée 2', 
-            timeInfo: '2e quart temps 3\'10 - 3 pts' 
+            matchInfo: 'BLB vs TGB - Journée 16', 
+            timeInfo: '2e quart temps 0\'19 - 3 pts' 
         }, 
         { 
             id: 10, 
             position: [-5.5, 0.1, -3.5], 
             videoUrl: '/videos/panier10.mp4', 
             details: 'Saison 2023-2024',
-            matchInfo: 'RVB vs TGB - Journée 2', 
-            timeInfo: '2e quart temps 3\'10 - 3 pts' 
+            matchInfo: 'RVB vs TGB - Journée 19', 
+            timeInfo: '3e quart temps 1\'05 - 3 pts' 
         }, 
         { 
             id: 11, 
             position: [-8.5, 0.1, 4.2], 
             videoUrl: '/videos/panier11.mp4', 
             details: 'Saison 2023-2024',
-            matchInfo: 'RVB vs TGB - Journée 2', 
-            timeInfo: '2e quart temps 3\'10 - 3 pts' 
+            matchInfo: 'RVB vs TGB - Journée 19', 
+            timeInfo: '4e quart temps 0\'41 - 3 pts' 
         }, 
         { 
             id: 12, 
             position: [-4.8, 0.1, -3.], 
             videoUrl: '/videos/panier12.mp4', 
             details: 'Saison 2024-2025',
-            matchInfo: 'UFA vs TGB - Journée 2', 
-            timeInfo: '2e quart temps 3\'10 - 3 pts' 
+            matchInfo: 'UFA vs TGB - Journée 1', 
+            timeInfo: '4e quart temps 7\'22 - 3 pts' 
         }, 
 
     ];
