@@ -132,18 +132,18 @@ const BasketPage: React.FC = () => {
         { 
             id: 10, 
             position: [-5.5, 0.1, -3.5], 
-            videoUrl: '/videos/panier10.mp4', 
-            details: 'Saison 2023-2024',
-            matchInfo: 'RVB vs TGB - Journée 19', 
-            timeInfo: '3e quart temps 1\'05 - 3 pts' 
-        }, 
-        { 
-            id: 11, 
-            position: [-8.5, 0.1, 4.2], 
             videoUrl: '/videos/panier11.mp4', 
             details: 'Saison 2023-2024',
             matchInfo: 'RVB vs TGB - Journée 19', 
             timeInfo: '4e quart temps 0\'41 - 3 pts' 
+        }, 
+        { 
+            id: 11, 
+            position: [-8.5, 0.1, 4.2], 
+            videoUrl: '/videos/panier10.mp4', 
+            details: 'Saison 2023-2024',
+            matchInfo: 'RVB vs TGB - Journée 19', 
+            timeInfo: '3e quart temps 1\'05 - 3 pts' 
         }, 
         { 
             id: 12, 
