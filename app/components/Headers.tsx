@@ -93,11 +93,11 @@ export default function Header() {
         {/* Right Side - Shop and Tickets */}
         <div className="hidden lg:flex items-center space-x-6 relative">
           <a
-            href="#"
+            href="/directory"
             className="text-white uppercase text-sm hover:text-gray-300"
             onClick={handleLinkClick}
           >
-            Home ↗
+            Stats ↗
           </a>
 
           {/* Dropdown Button */}
@@ -158,8 +158,8 @@ export default function Header() {
           <a href="#watch" className="hover:text-gray-300" onClick={handleLinkClick}>
             Watch
           </a>
-          <a href="#" className="text-sm hover:text-gray-300" onClick={handleLinkClick}>
-            Home ↗
+          <a href="/directory" className="text-sm hover:text-gray-300" onClick={handleLinkClick}>
+            Stats ↗
           </a>
 
           {/* Mobile Dropdown Button */}
