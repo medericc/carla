@@ -77,23 +77,28 @@ export default function Directory() {
 
 
 
-<ul className="flex w-full md:w-full justify-between p-4 bg-red-800 rounded-lg mt-4 ml-4 mr-4 max-w-[90%] shadow-md">
-  <li className="text-center flex-1 text-white border-r border-red-700 last:border-0">
-    <p className="text-xs font-semibold uppercase opacity-70 mb-1">PTS</p>
-    <p className="text-2xl font-bold tracking-wide">{data.reduce((total, match) => total + Number(match.PTS), 0)}</p>
-  </li>
-  
-  <li className="text-center flex-1 text-white border-r border-red-700 last:border-0">
-    <p className="text-xs font-semibold uppercase opacity-70 mb-1">AST</p>
-    <p className="text-2xl font-bold tracking-wide">{data.reduce((total, match) => total + Number(match.AST), 0)}</p>
-  </li>
-  
-  <li className="text-center flex-1 text-white">
-    <p className="text-xs font-semibold uppercase opacity-70 mb-1">RBD</p>
-    <p className="text-2xl font-bold tracking-wide">{data.reduce((total, match) => total + Number(match.RBD), 0)}</p>
-  </li>
-</ul>
+    <ul className="flex w-full md:w-full justify-between p-4 bg-red-800 rounded-lg mt-4 mx-auto max-w-[90%] shadow-md">
+    <li className="text-center flex-1 text-white border-r border-red-700 last:border-0">
+      <p className="text-xs font-semibold uppercase opacity-70 mb-1">PTS</p>
+      <p className="text-2xl font-bold tracking-wide">
+        {data.reduce((total, match) => total + Number(match.PTS), 0)}
+      </p>
+    </li>
 
+    <li className="text-center flex-1 text-white border-r border-red-700 last:border-0">
+      <p className="text-xs font-semibold uppercase opacity-70 mb-1">AST</p>
+      <p className="text-2xl font-bold tracking-wide">
+        {data.reduce((total, match) => total + Number(match.AST), 0)}
+      </p>
+    </li>
+
+    <li className="text-center flex-1 text-white">
+      <p className="text-xs font-semibold uppercase opacity-70 mb-1">RBD</p>
+      <p className="text-2xl font-bold tracking-wide">
+        {data.reduce((total, match) => total + Number(match.RBD), 0)}
+      </p>
+    </li>
+  </ul>
 
 
 
@@ -124,7 +129,7 @@ export default function Directory() {
       {/* Options de sélection et filtre */}
       <div className="mb-4 mt-5 grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-2 items-center">
         <div className="flex flex-col">
-          <label htmlFor="stat-select" className="mb-1 text-sm">Sélectionnez une statistique :</label>
+          <label htmlFor="stat-select" className="mb-1 text-sm">Statistiques :</label>
           <select
             id="stat-select"
             value={stat}
@@ -171,11 +176,11 @@ export default function Directory() {
       </div>
 
       <button
-        onClick={handleFilter}
-        className="w-full sm:w-auto bg-red-800 text-white p-2 rounded mt-2 sm:col-span-3"
-      >
-        Filtrer
-      </button>
+    onClick={handleFilter}
+    className="w-full sm:w-auto bg-red-800 text-white p-2 rounded mt-2 sm:col-span-3 mx-auto"
+  >
+    Filtrer
+  </button>
 
       {/* Affichage des cartes de match */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
