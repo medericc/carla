@@ -33,7 +33,7 @@ export default function Directory() {
   // State pour stocker les totaux de PTS, AST, et RBD
   const [totals, setTotals] = useState({ PTS: 0, AST: 0, RBD: 0 });
   const [showCompetitionFilter, setShowCompetitionFilter] = useState(false);
-
+  const [showName, setShowName] = useState(false);
   useEffect(() => {
     Papa.parse("/carla.csv", {
       header: true,
@@ -50,7 +50,9 @@ export default function Directory() {
       },
     });
   }, []);
-
+  const handleToggleName = () => {
+    setShowName(!showName);
+  };
 
   const toggleCompetitionFilter = () => {
     setShowCompetitionFilter(!showCompetitionFilter);
@@ -104,29 +106,39 @@ export default function Directory() {
 
 
 
-    <ul className="flex w-full md:w-full justify-between p-4 bg-red-800 rounded-lg mt-4 mx-auto max-w-[90%] shadow-md">
-    <li className="text-center flex-1 text-white border-r border-red-700 last:border-0">
-      <p className="text-xs font-semibold uppercase opacity-70 mb-1">PTS</p>
-      <p className="text-2xl font-bold tracking-wide">
-        {data.reduce((total, match) => total + Number(match.PTS), 0)}
-      </p>
-    </li>
+    <ul
+        className="flex w-full md:w-full justify-between p-4 bg-red-800 rounded-lg mt-4 mx-auto max-w-[90%] shadow-md cursor-pointer"
+        onClick={handleToggleName}
+      >
+        {showName ? (
+         <li className="text-center flex-1 text-white text-2xl font-bold">
+         {data.length} MATCHS {/* Nombre de matchs joués */}
+       </li>
+        ) : (
+          <>
+            <li className="text-center flex-1 text-white border-r border-red-700 last:border-0">
+              <p className="text-xs font-semibold uppercase opacity-70 mb-1">PTS</p>
+              <p className="text-2xl font-bold tracking-wide">
+                {data.reduce((total, match) => total + Number(match.PTS), 0)}
+              </p>
+            </li>
 
-    <li className="text-center flex-1 text-white border-r border-red-700 last:border-0">
-      <p className="text-xs font-semibold uppercase opacity-70 mb-1">AST</p>
-      <p className="text-2xl font-bold tracking-wide">
-        {data.reduce((total, match) => total + Number(match.AST), 0)}
-      </p>
-    </li>
+            <li className="text-center flex-1 text-white border-r border-red-700 last:border-0">
+              <p className="text-xs font-semibold uppercase opacity-70 mb-1">AST</p>
+              <p className="text-2xl font-bold tracking-wide">
+                {data.reduce((total, match) => total + Number(match.AST), 0)}
+              </p>
+            </li>
 
-    <li className="text-center flex-1 text-white">
-      <p className="text-xs font-semibold uppercase opacity-70 mb-1">RBD</p>
-      <p className="text-2xl font-bold tracking-wide">
-        {data.reduce((total, match) => total + Number(match.RBD), 0)}
-      </p>
-    </li>
-  </ul>
-
+            <li className="text-center flex-1 text-white">
+              <p className="text-xs font-semibold uppercase opacity-70 mb-1">RBD</p>
+              <p className="text-2xl font-bold tracking-wide">
+                {data.reduce((total, match) => total + Number(match.RBD), 0)}
+              </p>
+            </li>
+          </>
+        )}
+      </ul>
 
 
 
