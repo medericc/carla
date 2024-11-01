@@ -231,7 +231,7 @@ export default function Directory() {
     onClick={handleFilter}
     className="w-full sm:w-auto bg-red-800 text-white p-2 rounded mt-2 sm:col-span-3 mx-auto font-bold"
   >
-    FILTRER
+    Filtrer
   </button>
 
       {/* Affichage des cartes de match */}
