@@ -202,7 +202,7 @@ export default function Directory() {
         </div>
         <button
     onClick={toggleCompetitionFilter}
-    className="w-full sm:w-auto bg-blue-800 text-white p-2 rounded mt-2 sm:col-span-3 mx-auto font-semibold"
+    className="w-full sm:w-auto bg-blue-700 text-white p-2 rounded mt-2 sm:col-span-3 mx-auto font-semibold"
   >
     {showCompetitionFilter ? "Cacher" : "Plus"}
   </button>
