@@ -202,9 +202,9 @@ export default function Directory() {
         </div>
         <button
     onClick={toggleCompetitionFilter}
-    className="w-full sm:w-auto bg-blue-800 text-white font-bold p-2 rounded mt-2 sm:col-span-3 mx-auto"
+    className="w-full sm:w-auto bg-blue-800 text-white p-2 rounded mt-2 sm:col-span-3 mx-auto font-semibold"
   >
-    {showCompetitionFilter ? "MASK" : "SHOW"}
+    {showCompetitionFilter ? "Cacher" : "Plus"}
   </button>
 
   {showCompetitionFilter && (
@@ -229,9 +229,9 @@ export default function Directory() {
 
       <button
     onClick={handleFilter}
-    className="w-full sm:w-auto bg-red-800 text-white p-2 rounded mt-2 sm:col-span-3 mx-auto"
+    className="w-full sm:w-auto bg-red-800 text-white p-2 rounded mt-2 sm:col-span-3 mx-auto font-bold"
   >
-    Filtrer
+    FILTRER
   </button>
 
       {/* Affichage des cartes de match */}
