@@ -26,11 +26,20 @@ const Cards = () => {
       {/* Animated Cards */}
       <div className="mt-[15rem]">
       <FightCard
+          eventTitle="GAME 06"
+          fightDetails="Ligue Féminine de Basket"
+          fightDetail="Journée 7"
+          fighter1={{ name: "Lille", img: "/esbva.png", win: false }}
+          fighter2={{ name: "Charnay", img: "/charnay.png", win: true }}
+            watchUrl="https://www.youtube.com/watch?v=MFlMvvPtoLs"
+  boxscoreUrl="https://basketlfb.com/laboulangerewonderligue/match/790014-villeneuve-d-ascq-charnay"
+        />
+      <FightCard
           eventTitle="GAME 05"
           fightDetails="Ligue Féminine de Basket"
           fightDetail="Journée 4"
-          fighter1={{ name: "Lille", img: "/esbva.png", win: true }}
-          fighter2={{ name: "Flammes", img: "/flamme.png", win: false }}
+          fighter1={{ name: "Lille", img: "/esbva.png", win: false }}
+          fighter2={{ name: "Flammes", img: "/flamme.png", win: true }}
             watchUrl="https://www.youtube.com/watch?v=1G8RqdmPsiA"
   boxscoreUrl="https://basketlfb.com/laboulangerewonderligue/match/790004-villeneuve-d-ascq-charleville-mezieres"
         />
