@@ -26,7 +26,16 @@ const Cards = () => {
       {/* Animated Cards */}
       <div className="mt-[15rem]">
       <FightCard
-          eventTitle="GAME 06"
+        eventTitle="GAME 08"
+        fightDetails="Euroleague Women"
+        fightDetail="Journée 5"
+        fighter1={{ name: "Lille", img: "/esbva.png", win: true }}
+        fighter2={{ name: "Polkowice", img: "/polko.png", win: false }}
+          watchUrl="https://www.youtube.com/live/JoDO6UGMgkA?si=2mPy4jH7ckosDH9S"
+  boxscoreUrl="https://www.fiba.basketball/en/events/euroleague-women-24-25/games/123709-ESBVA-KGHM#boxscore"
+      />
+      <FightCard
+          eventTitle="GAME 07"
           fightDetails="Ligue Féminine de Basket"
           fightDetail="Journée 7"
           fighter1={{ name: "Lille", img: "/esbva.png", win: false }}
@@ -35,7 +44,7 @@ const Cards = () => {
   boxscoreUrl="https://basketlfb.com/laboulangerewonderligue/match/790014-villeneuve-d-ascq-charnay"
         />
       <FightCard
-          eventTitle="GAME 05"
+          eventTitle="GAME 06"
           fightDetails="Ligue Féminine de Basket"
           fightDetail="Journée 4"
           fighter1={{ name: "Lille", img: "/esbva.png", win: false }}
@@ -43,6 +52,15 @@ const Cards = () => {
             watchUrl="https://www.youtube.com/watch?v=1G8RqdmPsiA"
   boxscoreUrl="https://basketlfb.com/laboulangerewonderligue/match/790004-villeneuve-d-ascq-charleville-mezieres"
         />
+              <FightCard
+        eventTitle="GAME 05"
+        fightDetails="Euroleague Women"
+        fightDetail="Journée 2"
+        fighter1={{ name: "Polkowice", img: "/polko.png", win: false }}
+        fighter2={{ name: "Lille", img: "/esbva.png", win: true }}
+          watchUrl="https://www.youtube.com/live/Ab44Ft1-sIQ?si=eNf1jzbbfyNL1Lqs"
+  boxscoreUrl="https://www.fiba.basketball/en/events/euroleague-women-24-25/teams/kghm-bc-polkowice#games"
+      />
         <FightCard
           eventTitle="GAME 04"
           fightDetails="Ligue Féminine de Basket"
