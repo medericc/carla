@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Papa from "papaparse";
-
+import Image from "next/image";
 interface MatchData {
   SAISON: string;
   ANNEE: string;
@@ -97,7 +97,15 @@ export default function Directory() {
 
 
 
-
+ <div className="flex justify-center mt-2">
+    <Image
+      src="/lucile.png"
+      alt="Lucile"
+      width={90} // Adaptez la taille selon vos besoins
+      height={90} // Adaptez la taille selon vos besoins
+      className="rounded-full"
+    />
+  </div>
 
 
 
@@ -107,7 +115,7 @@ export default function Directory() {
 
 
     <ul
-        className="flex w-full md:w-full justify-between p-4 bg-red-800 rounded-lg mt-4 mx-auto max-w-[90%] shadow-md cursor-pointer"
+        className="flex w-full md:w-full justify-between p-4 bg-red-800 rounded-lg mt-5 mx-auto max-w-[90%] shadow-md cursor-pointer"
         onClick={handleToggleName}
       >
         {showName ? (
