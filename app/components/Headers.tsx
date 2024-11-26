@@ -118,7 +118,7 @@ export default function Header() {
                   Lena
                 </a>
                 <a
-                  href="#"
+                  href="/lucile"
                   className="block px-4 py-2 hover:bg-white hover:text-black"
                   onClick={handleLinkClick}
                 >
@@ -180,7 +180,7 @@ export default function Header() {
                   Lena
                 </a>
                 <a
-                  href="#"
+                  href="/lucile"
                   className="block px-4 py-2 hover:bg-white hover:text-black"
                   onClick={handleLinkClick}
                 >
