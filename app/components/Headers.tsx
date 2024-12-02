@@ -124,6 +124,13 @@ export default function Header() {
                 >
                   Lucile
                 </a>
+                <a
+                  href="/ines"
+                  className="block px-4 py-2 hover:bg-white hover:text-black"
+                  onClick={handleLinkClick}
+                >
+                  Ines
+                </a>
               </div>
             )}
           </div>
@@ -185,6 +192,13 @@ export default function Header() {
                   onClick={handleLinkClick}
                 >
                   Lucile
+                </a>
+                <a
+                  href="/ines"
+                  className="block px-4 py-2 hover:bg-white hover:text-black"
+                  onClick={handleLinkClick}
+                >
+                  Ines
                 </a>
               </div>
             )}

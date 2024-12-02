@@ -1,5 +1,5 @@
 "use client";
-import { FaInstagram, FaTwitter, FaFacebook } from 'react-icons/fa';
+import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -16,7 +16,7 @@ const Footer = () => {
           <FaTwitter style={iconStyle} />
         </a>
         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-          <FaFacebook style={iconStyle} />
+          <FaYoutube style={iconStyle} />
         </a>
       </div>
 
