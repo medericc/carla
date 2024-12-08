@@ -84,7 +84,7 @@ const Biography: React.FC = () => {
           {/* Image */}
           <div className="flex-shrink-0 w-1/3">
             <Image
-              src="/logo512.png" // Assurez-vous que le chemin est correct
+              src="/ines-logo.png" // Assurez-vous que le chemin est correct
               alt="Inès Debroise Basketball Player"
               width={335}
               height={470}

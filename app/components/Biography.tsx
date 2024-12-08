@@ -109,7 +109,7 @@ useEffect(() => {
               { label: 'Age', value: '20' },
               { label: 'Height', value: '1.74m' },
               { label: 'Nationality', value: 'French' },
-              { label: 'WNBA Team', value: 'Dallas' },
+              { label: 'WNBA Team', value: 'Valkyries' },
             ].map((info, idx) => (
               <motion.div
               key={idx}

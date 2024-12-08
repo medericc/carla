@@ -4,9 +4,9 @@ import Header from "./components/Header";
 
 
 import Biography from "./components/Biography";
-import Footer from "./components/Footer";
+import DragCards  from "./components/Footer";
 import Travel from "./components/Travel";
-import Timeline from "./components/Timeline";
+import SwipeCarousel from "./components/Scroll";
 
 export default function Home() {
   return (
@@ -18,13 +18,13 @@ export default function Home() {
 {/* Biographie */}
 <Biography />
       {/* Statistiques */}
-      <Timeline />
+      <SwipeCarousel />
 
       
 
       {/* News */}
     
-      <Footer />
+      <DragCards  />
     </main>
   );
 }
