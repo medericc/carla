@@ -5,12 +5,12 @@ export const CITY_MARKERS = [
       long: 25.1300, // Longitude
       color: "#8B0000", // Couleur du marqueur
       info: {
-        title: "Heraklion Data Node",
-        description: "Centre stratégique pour la Méditerranée",
+        title: "Championne d'Europe U18",
+        description: "Victoire face à l'Espagne",
         stats: {
-          servers: "800+",
-          uptime: "99.995%",
-          clients: "150+"
+          points: "11",
+          assists: "10",
+          rebonds: "2"
         }
       }
     },
@@ -20,12 +20,12 @@ export const CITY_MARKERS = [
       long: 21.1200, // Longitude
       color: "#006400", // Couleur du marqueur
       info: {
-        title: "Klaipeda Digital Center",
-        description: "Hub clé pour les États baltes",
+        title: "Championne d'Europe U20",
+        description: "Victoire face à la Lettonie",
         stats: {
-          servers: "900+",
-          uptime: "99.996%",
-          clients: "200+"
+          points: "11",
+          assists: "2",
+          rebonds: "2"
         }
       }
     },
@@ -35,12 +35,12 @@ export const CITY_MARKERS = [
       long: 4.8300, // Longitude
       color: "#4682B4", // Couleur du marqueur
       info: {
-        title: "Charnay Tech Node",
-        description: "Centre de support technologique régional",
+        title: "Charnay",
+        description: "Début dans l'élite",
         stats: {
-          servers: "600+",
-          uptime: "99.994%",
-          clients: "100+"
+          points: "11",
+          assists: "2",
+          rebonds: "1"
         }
       }
     },
@@ -50,12 +50,12 @@ export const CITY_MARKERS = [
       long: 2.3522, // Longitude
       color: "#02367b", // Couleur du marqueur
       info: {
-        title: "Paris Data Center",
-        description: "Centre de données haute performance",
+        title: "Centre Fédéral",
+        description: "Début dans le big 3",
         stats: {
-          servers: "1500+",
-          uptime: "99.999%",
-          clients: "350+"
+          points: "11",
+          assists: "1",
+          rebonds: "2"
         }
       }
     },
@@ -65,12 +65,12 @@ export const CITY_MARKERS = [
       long: -71.5200, // Longitude
       color: "#FF8C00", // Couleur du marqueur
       info: {
-        title: "Kingston Cloud Hub",
-        description: "Centre cloud régional pour la côte Est",
+        title: "Rhode Island",
+        description: "Passage en NCAA",
         stats: {
-          servers: "1200+",
-          uptime: "99.997%",
-          clients: "250+"
+          points: "11",
+          assists: "1",
+          rebonds: "2"
         }
       }
     },
@@ -80,12 +80,12 @@ export const CITY_MARKERS = [
       long: 21.4254, // Longitude
       color: "#800080", // Couleur du marqueur
       info: {
-        title: "Skopje Innovation Hub",
-        description: "Centre de données pour l'Europe du Sud-Est",
+        title: "Championant d'Europe U16",
+        description: "Première compétition avec la France",
         stats: {
-          servers: "1100+",
-          uptime: "99.996%",
-          clients: "220+"
+          points: "11",
+          assists: "1",
+          rebonds: "2"
         }
       }
     }

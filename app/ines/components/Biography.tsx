@@ -56,7 +56,7 @@ const Biography: React.FC = () => {
     { label: "Age", value: "21" },
     { label: "Height", value: "1.74m" },
     { label: "Nationality", value: "French" },
-    { label: "Former", value: "Charnay BBS" },
+    { label: "Former", value: "Charnay" },
   ];
 
   return (
@@ -88,13 +88,13 @@ const Biography: React.FC = () => {
               alt="Inès Debroise Basketball Player"
               width={335}
               height={470}
-              className="rounded-lg"
-              style={{ maxWidth: "none", width: "335px", position: "relative" }}
+              className="rounded-lg right-[60.5%] md:right-[42.5%]"
+              style={{ maxWidth: "none", width: "300px", position: "relative" }}
             />
           </div>
 
           {/* Informations Biographiques */}
-          <div className="flex-grow pl-20 md:pl-24 mt-20">
+          <div className="flex-grow pl-[7rem] md:pl-24 mt-20">
             <div className="mt-5 mb-1 w-full">
               {bioData.map((info, idx) => (
                 <motion.div

@@ -49,9 +49,9 @@ const Header: React.FC = () => {
             <Image
               src="/logo.png"
               alt="Logo"
-              width={150}
-              height={50}
-              className="w-[150px] md:w-[200px] hover:opacity-90 transition-opacity"
+              width={75}
+              height={25}
+              className="w-[70px] md:w-[200px] hover:opacity-90 transition-opacity"
             />
           </Link>
         </div>

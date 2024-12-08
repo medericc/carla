@@ -76,16 +76,16 @@ import { latLongToVector3 } from "./utils";
                                         </p>
                                         <div className='gap-3 grid grid-cols-2 text-sm'>
                                             <div>
-                                                <p className='font-bold' style={{color: city.color}}>Serveurs</p>
-                                                <p>{city.info.stats.servers}</p>
+                                                <p className='font-bold' style={{color: city.color}}>Points</p>
+                                                <p>{city.info.stats.points}</p>
                                             </div>
                                             <div>
-                                                <p className='font-bold' style={{color: city.color}}>Uptime</p>
-                                                <p>{city.info.stats.uptime}</p>
+                                                <p className='font-bold' style={{color: city.color}}>Rebonds</p>
+                                                <p>{city.info.stats.rebonds}</p>
                                             </div>
                                             <div>
-                                                <p className='font-bold' style={{color: city.color}}>Clients</p>
-                                                <p>{city.info.stats.clients}</p>
+                                                <p className='font-bold' style={{color: city.color}}>Assists</p>
+                                                <p>{city.info.stats.assists}</p>
                                             </div>
                                         </div>
                                         <button

@@ -18,8 +18,8 @@ interface CardProps {
 export const DragCards: React.FC = () => {
   return (
     <section className="relative grid min-h-screen w-full place-content-center overflow-hidden bg-neutral-950">
-      <h2 className="relative z-0 text-[20vw] font-black text-neutral-800 md:text-[200px]">
-        ASTRO<span className="text-indigo-500">.</span>
+      <h2 className="relative z-0 text-[15vw] font-black text-neutral-800 md:text-[200px]">
+        DEBROISE<span className="text-blue-500">.</span>
       </h2>
       <Cards />
     </section>
