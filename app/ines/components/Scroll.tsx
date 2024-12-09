@@ -26,7 +26,6 @@ const SPRING_OPTIONS = {
 
 const SwipeCarousel: React.FC = () => {
   const [imgIndex, setImgIndex] = useState<number>(0);
-
   const dragX = useMotionValue(0);
 
   useEffect(() => {
@@ -39,32 +38,37 @@ const SwipeCarousel: React.FC = () => {
 
   const onDragEnd = () => {
     const x = dragX.get();
-    const threshold = 50;
+    const threshold = 100; // Distance pour valider le changement d'image
 
     if (x <= -threshold && imgIndex < imgs.length - 1) {
-      setImgIndex((prev) => prev + 1);
+      setImgIndex((prev) => Math.min(prev + 1, imgs.length - 1));
     } else if (x >= threshold && imgIndex > 0) {
-      setImgIndex((prev) => prev - 1);
+      setImgIndex((prev) => Math.max(prev - 1, 0));
     }
+
+    dragX.set(0); // Réinitialiser la position après le drag
   };
 
   return (
-    <section className="relative overflow-hidden py-8 mt-4 mb-4">
+    <section id="timeline" className="relative overflow-hidden py-8 mt-4 mb-4">
       <motion.div
         drag="x"
-        dragConstraints={{ left: 0, right: 0 }}
+        dragConstraints={{
+          left: imgIndex === imgs.length - 1 ? 0 : -Infinity, // Bloquer après la dernière image
+          right: imgIndex === 0 ? 0 : Infinity, // Bloquer avant la première image
+        }}
         style={{ x: dragX }}
         animate={{ translateX: `-${imgIndex * 100}%` }}
         transition={SPRING_OPTIONS}
         onDragEnd={onDragEnd}
-        className="flex cursor-grab active:cursor-grabbing px-8"
+        className="flex cursor-grab active:cursor-grabbing"
       >
         {imgs.map((imgSrc, idx) => {
           const isVideo = imgSrc.endsWith(".mp4");
           return (
             <motion.div
               key={idx}
-              className="aspect-video w-screen shrink-0 overflow-hidden  bg-neutral-800 ml-1"
+              className="w-full sm:w-[80vw] md:w-[70vw] lg:w-[60vw] xl:w-[50vw] shrink-0 overflow-hidden bg-neutral-800 ml-1"
             >
               {isVideo ? (
                 <video
@@ -88,8 +92,6 @@ const SwipeCarousel: React.FC = () => {
           );
         })}
       </motion.div>
-
-     
     </section>
   );
 };
