@@ -14,6 +14,7 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        'custom-gray': 'rgb(26, 26, 26)',
       },
       animation: {
         scrollText: 'scrollText 10s linear infinite',

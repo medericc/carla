@@ -6,29 +6,16 @@ import { motion, useMotionValue } from "framer-motion";
 const imgs = [
   "/iness.jpg",
   "/ines_charnay.mp4",
-
   "/innes.jpg",
   "/ines_euro.mp4",
   "/iness.png",
   "/ines_three.mp4",
- 
   "/inesss.jpg",
   "/ines_rhody.mp4",
-
-  
-
-
-
   "/inesd.jpg",
-"/ines_edf.mp4",
-
+  "/ines_edf.mp4",
   "/ines.jpg",
 ];
-
-
-const ONE_SECOND = 1000;
-const AUTO_DELAY = ONE_SECOND * 10;
-const DRAG_BUFFER = 50;
 
 const SPRING_OPTIONS = {
   type: "spring",
@@ -37,139 +24,74 @@ const SPRING_OPTIONS = {
   damping: 50,
 };
 
-export const SwipeCarousel: React.FC = () => {
+const SwipeCarousel: React.FC = () => {
   const [imgIndex, setImgIndex] = useState<number>(0);
 
   const dragX = useMotionValue(0);
 
   useEffect(() => {
     const intervalRef = setInterval(() => {
-      const x = dragX.get();
-
-      if (x === 0) {
-        setImgIndex((pv) => {
-          if (pv === imgs.length - 1) {
-            return 0;
-          }
-          return pv + 1;
-        });
-      }
-    }, AUTO_DELAY);
+      setImgIndex((prev) => (prev + 1) % imgs.length);
+    }, 5000);
 
     return () => clearInterval(intervalRef);
-  }, [dragX]);
+  }, []);
 
   const onDragEnd = () => {
     const x = dragX.get();
+    const threshold = 50;
 
-    if (x <= -DRAG_BUFFER && imgIndex < imgs.length - 1) {
-      setImgIndex((pv) => pv + 1);
-    } else if (x >= DRAG_BUFFER && imgIndex > 0) {
-      setImgIndex((pv) => pv - 1);
+    if (x <= -threshold && imgIndex < imgs.length - 1) {
+      setImgIndex((prev) => prev + 1);
+    } else if (x >= threshold && imgIndex > 0) {
+      setImgIndex((prev) => prev - 1);
     }
   };
 
   return (
-    <section id="timeline">
-    <div className="relative overflow-hidden bg-neutral-950 py-8">
+    <section className="relative overflow-hidden py-8 mt-4 mb-4">
       <motion.div
         drag="x"
-        dragConstraints={{
-          left: 0,
-          right: 0,
-        }}
-        style={{
-          x: dragX,
-        }}
-        animate={{
-          translateX: `-${imgIndex * 100}%`,
-        }}
+        dragConstraints={{ left: 0, right: 0 }}
+        style={{ x: dragX }}
+        animate={{ translateX: `-${imgIndex * 100}%` }}
         transition={SPRING_OPTIONS}
         onDragEnd={onDragEnd}
-        className="flex cursor-grab items-center active:cursor-grabbing"
+        className="flex cursor-grab active:cursor-grabbing px-8"
       >
-        <Images imgIndex={imgIndex} />
+        {imgs.map((imgSrc, idx) => {
+          const isVideo = imgSrc.endsWith(".mp4");
+          return (
+            <motion.div
+              key={idx}
+              className="aspect-video w-screen shrink-0 overflow-hidden  bg-neutral-800 ml-1"
+            >
+              {isVideo ? (
+                <video
+                  src={imgSrc}
+                  className="h-full w-full object-cover"
+                  autoPlay
+                  loop
+                  muted
+                />
+              ) : (
+                <div
+                  style={{
+                    backgroundImage: `url(${imgSrc})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
+                  className="h-full w-full"
+                />
+              )}
+            </motion.div>
+          );
+        })}
       </motion.div>
 
-      <Dots imgIndex={imgIndex} setImgIndex={setImgIndex} />
-      <GradientEdges />
-    </div></section>
+     
+    </section>
   );
 };
 
-interface ImagesProps {
-  imgIndex: number;
-}
-
-const Images: React.FC<ImagesProps> = ({ imgIndex }) => {
-  return (
-    <>
-      {imgs.map((imgSrc, idx) => {
-        const isVideo = imgSrc.endsWith(".mp4"); // Vérifie si le fichier est une vidéo
-        return (
-          <motion.div
-            key={idx}
-            animate={{
-              scale: imgIndex === idx ? 0.95 : 0.85,
-            }}
-            transition={SPRING_OPTIONS}
-            className="aspect-video w-screen shrink-0 rounded-xl bg-neutral-800 overflow-hidden"
-          >
-            {isVideo ? (
-              <video
-                src={imgSrc}
-                className="h-full w-full object-cover"
-                autoPlay
-                loop
-                muted
-              />
-            ) : (
-              <div
-                style={{
-                  backgroundImage: `url(${imgSrc})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-                className="h-full w-full"
-              />
-            )}
-          </motion.div>
-        );
-      })}
-    </>
-  );
-};
-
-
-interface DotsProps {
-  imgIndex: number;
-  setImgIndex: React.Dispatch<React.SetStateAction<number>>;
-}
-
-const Dots: React.FC<DotsProps> = ({ imgIndex, setImgIndex }) => {
-  return (
-    <div className="mt-4 flex w-full justify-center gap-2">
-      {imgs.map((_, idx) => {
-        return (
-          <button
-            key={idx}
-            onClick={() => setImgIndex(idx)}
-            className={`h-3 w-3 rounded-full transition-colors ${
-              idx === imgIndex ? "bg-neutral-50" : "bg-neutral-500"
-            }`}
-          />
-        );
-      })}
-    </div>
-  );
-};
-
-const GradientEdges: React.FC = () => {
-  return (
-    <>
-      <div className="pointer-events-none absolute bottom-0 left-0 top-0 w-[10vw] max-w-[100px] bg-gradient-to-r from-neutral-950/50 to-neutral-950/0" />
-      <div className="pointer-events-none absolute bottom-0 right-0 top-0 w-[10vw] max-w-[100px] bg-gradient-to-l from-neutral-950/50 to-neutral-950/0" />
-    </>
-  );
-};
 export default SwipeCarousel;

@@ -41,19 +41,7 @@ const Travel: React.FC = () => (
                 SON ÉQUIPE
               </button>
             </div>
-            <div className="hidden md:flex md:flex-row flex-col justify-around items-center border-[#808080] border-2 bg-[#808080]/50 backdrop-blur-xl mx-4 mt-10 mx-md:mr-0 p-4 md:p-2 rounded-lg instructions">
-              <div className="mb-4 md:mb-0 text-left">
-                <h3 className="mb-2 font-bold text-blue-500 text-xl md:text-2xl">
-                  Suivez son ascension.
-                </h3>
-                <ul className="text-base text-white md:text-lg">
-                  <li>Survole les points</li>
-                  <li>Clique sur les points pour voir les détails</li>
-                  <li>Explore son parcours jusqu'en NCAA</li>
-                </ul>
-              </div>
-              <Image src="/concrete-wall-2.png" alt="imgInfo" width={100} height={100} />
-            </div>
+           
           </div>
         </div>
         <section id="globe">
