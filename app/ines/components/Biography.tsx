@@ -76,7 +76,7 @@ const Biography: React.FC = () => {
             fontWeight: "700",
           }}
         >
-          THE CAPTAIN
+          THE GENERAL
         </h2>
 
         {/* Contenu Biographie */}

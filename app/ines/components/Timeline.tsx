@@ -46,7 +46,7 @@ const milestones: Milestone[] = [
 // Composant principal Timeline
 const Timeline: React.FC = () => {
   return (
-    <section id="timeline">
+    
       <div className="relative bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white py-12 px-8 overflow-hidden">
         {/* Texte défilant en arrière-plan */}
         <div className="absolute left-0 top-[-5.25%] whitespace-nowrap z-1 text-[15rem] uppercase font-bold text-gray-500 opacity-20 animate-scrollTexty">
@@ -88,7 +88,7 @@ const Timeline: React.FC = () => {
           </div>
         </div>
       </div>
-    </section>
+    
   );
 };
 

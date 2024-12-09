@@ -51,7 +51,7 @@ const Header: React.FC = () => {
               alt="Logo"
               width={75}
               height={25}
-              className="w-[70px] md:w-[200px] hover:opacity-90 transition-opacity"
+              className="w-[60px] md:w-[200px] hover:opacity-90 transition-opacity"
             />
           </Link>
         </div>

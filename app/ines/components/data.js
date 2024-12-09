@@ -1,91 +1,91 @@
 export const CITY_MARKERS = [
     {
       name: "Heraklion",
-      lat: 35.3400, // Latitude
-      long: 25.1300, // Longitude
-      color: "#8B0000", // Couleur du marqueur
+      lat: 7, // Latitude
+      long: -41, // Longitude
+      color: "#193393", // Couleur du marqueur
       info: {
         title: "Championne d'Europe U18",
         description: "Victoire face à l'Espagne",
         stats: {
-          points: "11",
-          assists: "10",
-          rebonds: "2"
+          points: "6",
+          assists: "2.4",
+          rebonds: "3.6"
         }
       }
     },
     {
       name: "Klaipeda",
-      lat: 55.7100, // Latitude
-      long: 21.1200, // Longitude
-      color: "#006400", // Couleur du marqueur
+      lat: 6.5, // Latitude
+      long: -50, // Longitude
+      color: "#193393", // Couleur du marqueur
       info: {
         title: "Championne d'Europe U20",
         description: "Victoire face à la Lettonie",
         stats: {
-          points: "11",
-          assists: "2",
-          rebonds: "2"
+          points: "7",
+          assists: "3.6",
+          rebonds: "4.3"
         }
       }
     },
     {
       name: "Charnay",
-      lat: 46.3000, // Latitude
-      long: 4.8300, // Longitude
-      color: "#4682B4", // Couleur du marqueur
+      lat: 3, // Latitude
+      long: -45, // Longitude
+      color: "#CC6CE7", // Couleur du marqueur
       info: {
         title: "Charnay",
         description: "Début dans l'élite",
         stats: {
-          points: "11",
-          assists: "2",
-          rebonds: "1"
+          points: "4.4",
+          assists: "1.1",
+          rebonds: "2.6"
         }
       }
     },
     {
       name: "Paris",
-      lat: 48.8566, // Latitude
-      long: 2.3522, // Longitude
-      color: "#02367b", // Couleur du marqueur
+      lat: 0, // Latitude
+      long: -47.3522, // Longitude
+      color: "#2A4094", // Couleur du marqueur
       info: {
         title: "Centre Fédéral",
         description: "Début dans le big 3",
         stats: {
-          points: "11",
-          assists: "1",
-          rebonds: "2"
+          points: "5.2",
+          assists: "1.9",
+          rebonds: "2.7"
         }
       }
     },
     {
       name: "Kingston",
-      lat: 41.4800, // Latitude
-      long: -71.5200, // Longitude
-      color: "#FF8C00", // Couleur du marqueur
+      lat: -50, // Latitude
+      long: -75.5200, // Longitude
+      color: "#4C7FE4", // Couleur du marqueur
       info: {
         title: "Rhode Island",
         description: "Passage en NCAA",
         stats: {
-          points: "11",
-          assists: "1",
-          rebonds: "2"
+          points: "4.4",
+          assists: "1.9",
+          rebonds: "3.1"
         }
       }
     },
     {
       name: "Skopje",
-      lat: 41.9981, // Latitude
-      long: 21.4254, // Longitude
-      color: "#800080", // Couleur du marqueur
+      lat: 7, // Latitude
+      long: -44, // Longitude
+      color: "#193393", // Couleur du marqueur
       info: {
-        title: "Championant d'Europe U16",
+        title: "Championnat d'Europe U16",
         description: "Première compétition avec la France",
         stats: {
-          points: "11",
-          assists: "1",
-          rebonds: "2"
+          points: "7.4",
+          assists: "1.4",
+          rebonds: "3"
         }
       }
     }
@@ -94,12 +94,12 @@ export const CITY_MARKERS = [
   export const clubs = [
     {
       name: "Pôle Espoir",
-      stats: { points: 10.2, rebounds: 5.1, assists: 3.5 },
+      stats: { points: 5.2, rebounds: 1.9, assists: 2.7 },
       image: "/images/pole_espoir.jpg",
     },
     {
       name: "Charnay Basket",
-      stats: { points: 12.8, rebounds: 6.2, assists: 4.0 },
+      stats: { points: 4.4, rebounds: 1.1, assists: 2.6 },
       image: "/images/charnay.jpg",
     },
     {

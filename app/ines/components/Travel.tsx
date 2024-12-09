@@ -13,16 +13,18 @@ const Travel: React.FC = () => (
         {/* Section gauche */}
         <div className="mb-8 md:mb-0 w-full md:w-1/2">
           <div className="flex flex-col justify-center">
-            <h1 className="relative mb-4 font-bold text-4xl md:text-5xl">
-              <span className="block title-line">Découvrez le parcours{' '}</span>
-              <span className="block title-line">
-                <span className="text-blue-500">dévoué</span>
-              </span>
-              <span className="block title-line">de la meneuse</span>
-              <span className="block title-line">
-                et capitaine de <span className="text-blue-500">Rhody</span>.
-              </span>
-            </h1>
+          <h1 className="relative mb-4 font-bold text-4xl md:text-5xl text-white">
+  <span className="block title-line">
+    Découvrez le <span className="text-blue-500"> parcours</span>{' '}
+  </span>
+  <span className="block title-line">
+    de la <span className="text-white">meneuse</span>
+  </span>
+  <span className="block title-line">
+    et capitaine de <span className="text-blue-500">Rhody</span>.
+  </span>
+</h1>
+
             <p className="mb-8 w-full md:w-[90%] text-gray-300 text-lg md:text-xl description">
               De son entrée au Pole Espoir à son titre de MVP de la finale de l'EuroBasket en
               2023, en continuant d'évoluer à Rhode Island.
