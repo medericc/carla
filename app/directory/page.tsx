@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Papa from "papaparse";
+import Image from "next/image";
 
 interface MatchData {
   SAISON: string;
@@ -96,7 +97,15 @@ export default function Directory() {
 
 
 
-
+    <div className="flex justify-center mt-2">
+    <Image
+      src="/carla.png"
+      alt="Carla"
+      width={90} // Adaptez la taille selon vos besoins
+      height={90} // Adaptez la taille selon vos besoins
+      className="rounded-full"
+    />
+  </div>
 
 
 

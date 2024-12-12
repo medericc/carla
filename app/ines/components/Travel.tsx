@@ -30,17 +30,23 @@ const Travel: React.FC = () => (
               2023, en continuant d'évoluer à Rhode Island.
             </p>
             <div className="flex md:flex-row flex-col space-y-4 md:space-x-9 md:space-y-0">
-              {/* Boutons avec navigation */}
-              <Link
-                href="/stats"
-                className="button relative bg-blue-500 px-6 py-2 rounded-lg w-full md:w-[200px] font-medium text-xl text-center transition-all duration-300"
-              >
-                STATSCENTER
-              </Link>
-              <button className="button relative border-2 border-blue-500 hover:bg-blue-500 px-6 py-2 rounded-lg w-full md:w-[200px] font-medium text-xl transition-all duration-300">
-                SON ÉQUIPE
-              </button>
-            </div>
+  {/* Boutons avec navigation */}
+  <Link
+    href="/ines/stats"
+    className="button relative bg-blue-500 px-6 py-2 rounded-lg w-full md:w-[200px] font-medium text-xl text-center transition-all duration-300"
+  >
+    STATSCENTER
+  </Link>
+  <Link
+    href="https://gorhody.com/sports/womens-basketball"
+    target="_blank" // Ouvre le lien dans un nouvel onglet
+    rel="noopener noreferrer" // Meilleure pratique pour la sécurité
+    className="button relative border-2 border-blue-500  px-6 py-2 rounded-lg w-full md:w-[200px] font-medium text-xl text-center transition-all duration-300"
+  >
+    SON ÉQUIPE
+  </Link>
+</div>
+
            
           </div>
         </div>

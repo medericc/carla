@@ -115,7 +115,7 @@ export default function Directory() {
 
 
     <ul
-        className="flex w-full md:w-full justify-between p-4 bg-red-800 rounded-lg mt-5 mx-auto max-w-[90%] shadow-md cursor-pointer"
+        className="flex w-full md:w-full justify-between p-4 bg-blue-400 rounded-lg mt-5 mx-auto max-w-[90%] shadow-md cursor-pointer"
         onClick={handleToggleName}
       >
         {showName ? (
@@ -124,14 +124,14 @@ export default function Directory() {
        </li>
         ) : (
           <>
-            <li className="text-center flex-1 text-white border-r border-red-700 last:border-0">
+            <li className="text-center flex-1 text-white border-r border-blue-700 last:border-0">
               <p className="text-xs font-semibold uppercase opacity-70 mb-1">PTS</p>
               <p className="text-2xl font-bold tracking-wide">
                 {data.reduce((total, match) => total + Number(match.PTS), 0)}
               </p>
             </li>
 
-            <li className="text-center flex-1 text-white border-r border-red-700 last:border-0">
+            <li className="text-center flex-1 text-white border-r border-blue-700 last:border-0">
               <p className="text-xs font-semibold uppercase opacity-70 mb-1">AST</p>
               <p className="text-2xl font-bold tracking-wide">
                 {data.reduce((total, match) => total + Number(match.AST), 0)}
@@ -222,7 +222,7 @@ export default function Directory() {
         </div>
         <button
     onClick={toggleCompetitionFilter}
-    className="w-full sm:w-auto bg-blue-700 text-white p-2 rounded mt-2 sm:col-span-3 mx-auto font-semibold"
+    className="w-full sm:w-auto bg-blue-500 text-white p-2 rounded mt-2 sm:col-span-3 mx-auto font-semibold"
   >
     {showCompetitionFilter ? "Cacher" : "Plus"}
   </button>
@@ -249,7 +249,7 @@ export default function Directory() {
 
       <button
     onClick={handleFilter}
-    className="w-full sm:w-auto bg-red-800 text-white p-2 rounded mt-2 sm:col-span-3 mx-auto font-bold"
+    className="w-full sm:w-auto bg-blue-400 text-white p-2 rounded mt-2 sm:col-span-3 mx-auto font-bold"
   >
     Filtrer
   </button>
@@ -258,10 +258,9 @@ export default function Directory() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
         {filteredData.map((match, index) => (
           <div key={index} className="border p-4 rounded-lg shadow-lg bg-white text-center">
-            <h3 className="text-lg font-bold text-black">{match.ADVERSAIRE}</h3>
+            <h3 className="text-lg font-bold text-blue-500">{match.ADVERSAIRE}</h3>
             <p className="text-black">Saison : {match.SAISON} | Année : {match.ANNEE}</p>
-            <p className="text-black">Championnat : {match.CHAMPIONNAT}</p>
-            <p className="text-red-600 font-semibold">
+          <p className="text-blue-500 font-semibold">
               {stat} : {match[stat]}
             </p>
           </div>
