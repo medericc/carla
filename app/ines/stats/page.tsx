@@ -35,7 +35,7 @@ export default function Directory() {
   const [showCompetitionFilter, setShowCompetitionFilter] = useState(false);
   const [showName, setShowName] = useState(false);
   useEffect(() => {
-    Papa.parse("/lucile.csv", {
+    Papa.parse("/ines.csv", {
       header: true,
       download: true,
       complete: (result) => {
@@ -99,8 +99,8 @@ export default function Directory() {
 
  <div className="flex justify-center mt-2">
     <Image
-      src="/lucile.png"
-      alt="Lucile"
+      src="/ines.jpg"
+      alt="Ines"
       width={90} // Adaptez la taille selon vos besoins
       height={90} // Adaptez la taille selon vos besoins
       className="rounded-full"
