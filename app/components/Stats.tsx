@@ -19,6 +19,10 @@ const statsData = [
   { label: 'Joueuse française la plus rapide à atteindre 1000 points 🌟', value: '64' },
   { label: 'Plus jeune joueuse à finir joueuse la plus décisive de la LFB 🌟', value: '21.3' },
   { label: 'Seule joueuse de l\'histoire des PO LFB à scorer 26 points à 90% 🌟', value: '26 pts to 90%' },
+  { label: 'Plus large victoire de l\'histoire de la Team France 🌟', value: '101' },
+  { label: 'Match de LFB avec la plus grande affluence de l\'histoire 🌟', value: '8K' },
+  { label: 'Draft WNBA la plus suivie de l\'histoire 🌟', value: '2024' },
+  
 ];
 
 const Stats = () => {
