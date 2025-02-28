@@ -18,7 +18,7 @@ const geistMono = localFont({
 // Définir les métadonnées de base
 export const metadata = {
   title: "Carla Leite",
-  description: "Carla Leite, championne de France espoir, meilleure joueuse des PO LFB, championne d'Europe u20 et membre des Dallas Wings en WNBA. Suivez ses exploits et sa carrière avec l'ESBVA-LM à Villeneuve d'Ascq.",
+  description: "Carla Leite, championne de France espoir, meilleure joueuse des PO LFB, championne d'Europe u20 et membre des Valkyries en WNBA. Suivez ses exploits et sa carrière avec l'ESBVA-LM à Villeneuve d'Ascq.",
 
 };
 
@@ -32,7 +32,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     "affiliation": [
       {
         "@type": "SportsTeam",
-        "name": "Dallas Wings",
+        "name": "Golden State Valkyries",
         "sport": "Basketball"
       },
       {
