@@ -41,16 +41,23 @@ export default function Directory() {
       download: true,
       complete: (result) => {
         const parsedData = result.data as MatchData[];
-        setData(parsedData);
-
+  
+        // Vérifier que CHAMPIONNAT existe avant d'utiliser includes
+        const filteredData = parsedData.filter(
+          (match) => match.CHAMPIONNAT && !match.CHAMPIONNAT.includes("n")
+        );
+  
+        setData(filteredData);
+  
         // Calcul des totaux
-        const ptsTotal = parsedData.reduce((sum, match) => sum + match.PTS, 0);
-        const astTotal = parsedData.reduce((sum, match) => sum + match.AST, 0);
-        const rbdTotal = parsedData.reduce((sum, match) => sum + match.RBD, 0);
+        const ptsTotal = filteredData.reduce((sum, match) => sum + (match.PTS || 0), 0);
+        const astTotal = filteredData.reduce((sum, match) => sum + (match.AST || 0), 0);
+        const rbdTotal = filteredData.reduce((sum, match) => sum + (match.RBD || 0), 0);
         setTotals({ PTS: ptsTotal, AST: astTotal, RBD: rbdTotal });
       },
     });
   }, []);
+  
   const handleToggleName = () => {
     setShowName(!showName);
   };
@@ -121,8 +128,9 @@ export default function Directory() {
       >
         {showName ? (
          <li className="text-center flex-1 text-white text-2xl font-bold">
-         {data.length} MATCHS {/* Nombre de matchs joués */}
+         {data.filter(match => !match.CHAMPIONNAT.includes("n")).length} MATCHS
        </li>
+       
         ) : (
           <>
             <li className="text-center flex-1 text-white border-r border-red-700 last:border-0">
