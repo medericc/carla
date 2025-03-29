@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import Head from "next/head";
 import "./globals.css";
+import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
 // Charger les polices locales
 const geistSans = localFont({
@@ -74,19 +75,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
          </Head>
       {/* Google Analytics juste après le <head> */}
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZVWXT3GBXV"></script>
-      <script>
+      <Script
+        strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=G-ZVWXT3GBXV"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', 'G-ZVWXT3GBXV');
         `}
-      </script>
-      <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-        />
+      </Script>
+    
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
         <Analytics />
