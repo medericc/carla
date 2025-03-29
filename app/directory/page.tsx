@@ -82,19 +82,24 @@ export default function Directory() {
         return data;
     }
   };
-  const handleFilter = () => {
-    if (data.length === 0) return;
-  
-    const competitionFilteredData = filterByCompetition(data);
-  
-    const sortedData = [...competitionFilteredData].sort((a, b) => {
-      const aValue = a[stat] as number;
-      const bValue = b[stat] as number;
-      return sortOrder === "top" ? bValue - aValue : aValue - bValue;
-    });
-  
-    setFilteredData(sortedData.slice(0, numResults));
-  };
+
+ const handleFilter = () => {
+  if (data.length === 0) return;
+
+  const competitionFilteredData = filterByCompetition(data);
+
+  // Trier selon la statistique choisie
+  const sortedData = [...competitionFilteredData].sort((a, b) => {
+    const aValue = a[stat] as number;
+    const bValue = b[stat] as number;
+    return sortOrder === "top" ? bValue - aValue : aValue - bValue;
+  });
+
+  // Exclure ceux contenant "x" avant l'affichage
+  const finalFilteredData = sortedData.filter((match) => !match.CHAMPIONNAT.includes("x"));
+
+  setFilteredData(finalFilteredData.slice(0, numResults));
+};
   
   
   return (
