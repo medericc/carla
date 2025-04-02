@@ -20,7 +20,7 @@ const statsData = [
   { label: 'Plus jeune joueuse à scorer 176 pts en une campagne de PO 🌟', value: '20' },
   { label: 'Plus jeune joueuse à finir meilleure marqueuse des Eurocup PO 🌟', value: '20' },
   { label: 'Plus jeune joueuse à finir joueuse la plus décisive des Eurocup PO 🌟', value: '20' },
-  { label: 'Plus jeune joueuse à scorer 176 pts en une campagne de PO 🌟', value: '176' },
+  { label: 'Plus jeune joueuse à scorer 176 pts en une campagne de PO 🌟', value: '20' },
   { label: 'Plus jeune joueuse à finir joueuse la plus décisive de la LFB 🌟', value: '21.3' },
   { label: 'Première européenne à gagner une campagne de PO avec 228 Pts + Ast 🌟', value: '228' },
   { label: 'Première joueuse à scorer +160 pts à 55 % en une campagne de PO de Coupe d\'Europe 🌟', value: '176' },
