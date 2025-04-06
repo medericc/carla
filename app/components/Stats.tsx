@@ -6,9 +6,10 @@ const statsData = [
   { label: 'Meilleure Evaluation de l\'histoire des PO LFB 🌟', value: 21 },
   { label: 'Meilleure Evaluation de l\'histoire sur une campagne de PO LFB 🌟', value: 21 },
   { label: 'Meilleur marqueur jeune français de l\'histoire 🌟', value: 18.4 },
-  { label: 'Joueuse la plus rapide à rentrer dans la First Team de la LFB 🌟', value: '2th' },
+
   { label: 'Meilleure Marqueuse de l\'histoire des PO LFB 🌟', value: 20 },
   { label: 'Meilleure Marqueuse de l\'histoire sur une campagne de PO LFB 🌟', value: '20' },
+  { label: 'Plus Jeune Meilleure Marqueuse de l\'histoire de la LFB 🌟', value: '20' },
   { label: 'Première à éliminer en quart la meilleure équipe de l\'histoire du championnat français en MVP 🌟', value: '26 pts to 90%' },
   { label: 'Joueuse la plus décisive sur une campagne de PO LFB 🌟', value: '25.6' },
   { label: 'PPM Record de l\'Eurobasket U20 🌟', value: '0.8' },
@@ -28,6 +29,7 @@ const statsData = [
   { label: 'Plus large victoire de l\'histoire de la Team France 🌟', value: '101' },
   { label: 'Match de LFB avec la plus grande affluence de l\'histoire 🌟', value: '8K' },
   { label: 'Draft WNBA la plus suivie de l\'histoire 🌟', value: '2024' },
+  { label: 'Joueuse la plus rapide à rentrer dans la First Team de la LFB 🌟', value: '2th' },
   
 ];
 
