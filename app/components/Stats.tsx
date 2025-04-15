@@ -9,7 +9,7 @@ const statsData = [
 
   { label: "Meilleure moyenne de points à 20 ans en LFB", value: 15 },
   { label: "Plus jeune à atteindre 975 points en LFB", value: 20 },
-  { label: "1ere européenne meilleure scoreuse avec 40% à 3pts", value: 16.4 },
+  { label: "Seule européenne meilleure scoreuse avec 40% à 3pts", value: 16.4 },
   { label: "Plus grand nombre de trophées de joueuse la plus décisive", value: 2 },
   { label: "Plus grand nombre de points par une européenne avec 40%+ à 3pts", value: 16.4 },
   { label: "Meilleure moyenne de points + passes à 20 ans en LFB", value: 20.3 },
