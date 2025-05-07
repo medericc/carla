@@ -6,8 +6,8 @@ const statsData = [
   { label: 'Premier Français Meilleur Marqueur d\'une franchise 🌟', value: '06/05' },
   { label: 'Meilleure Evaluation de l\'histoire des PO LFB 🌟', value: 21 },
   { label: 'Meilleure Evaluation de l\'histoire sur une campagne de PO LFB 🌟', value: 21 },
-  { label: 'Meilleur marqueur jeune français de l\'histoire 🌟', value: 18.4 },
-
+  { label: 'Meilleur marqueur jeune français de l\'histoire en compétition internationale 🌟', value: 18.4 },
+  { label: 'Seul Français Meilleur Marqueur d\'une franchise 🌟', value: '06/05' },
   { label: "Meilleure moyenne de points à 20 ans en LFB 🌟", value: 15 },
   { label: "Plus jeune à atteindre 975 points en LFB 🌟", value: 20 },
   { label: "Seule européenne meilleure scoreuse avec 40% à 3pts 🌟", value: 16.4 },
