@@ -17,8 +17,6 @@ const statsData = [
   { label: "Européenne la plus rapide à 975 points en LFB 🌟", value: 20 },
   { label: "Meilleure moyenne de points sur 3 saisons en LFB 🌟", value: 15 },
   { label: "Meilleur total points + passes sur 3 saisons en LFB 🌟", value: 20.3 },
- 
-
   { label: 'Meilleure Marqueuse de l\'histoire des PO LFB 🌟', value: 20 },
   { label: 'Meilleure Marqueuse de l\'histoire sur une campagne de PO LFB 🌟', value: '20' },
   { label: 'Plus Jeune Meilleure Marqueuse de l\'histoire de la LFB 🌟', value: '20' },
@@ -41,6 +39,7 @@ const statsData = [
   { label: 'Plus large victoire de l\'histoire de la Team France 🌟', value: '101' },
   { label: 'Match de LFB avec la plus grande affluence de l\'histoire 🌟', value: '8K' },
   { label: 'Draft WNBA la plus suivie de l\'histoire 🌟', value: '2024' },
+  { label: 'Plus grosse vente d\'abonnements de l\'histoire de la WNBA 🌟', value: '2025' },
   { label: 'Joueuse la plus rapide à rentrer dans la First Team de la LFB 🌟', value: '2th' },
   
 ];
