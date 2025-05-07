@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useState, useRef, useEffect } from 'react';
 
 const statsData = [
+  { label: 'Premier Français Meilleur Marqueur d\'une franchise 🌟', value: '06/05' },
   { label: 'Meilleure Evaluation de l\'histoire des PO LFB 🌟', value: 21 },
   { label: 'Meilleure Evaluation de l\'histoire sur une campagne de PO LFB 🌟', value: 21 },
   { label: 'Meilleur marqueur jeune français de l\'histoire 🌟', value: 18.4 },
