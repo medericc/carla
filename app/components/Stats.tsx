@@ -17,7 +17,7 @@ const statsData = [
   { label: "Européenne la plus rapide à 975 points en LFB 🌟", value: 20 },
   { label: "Meilleure moyenne de points sur 3 saisons en LFB 🌟", value: 15 },
   { label: "Meilleur total points + passes sur 3 saisons en LFB 🌟", value: 20.3 },
-  { label: 'Meilleure Marqueuse de l\'histoire des PO LFB 🌟', value: 20 },
+  { label: 'Meilleure PPG de l\'histoire des PO LFB 🌟', value: 20 },
   { label: 'Meilleure Marqueuse de l\'histoire sur une campagne de PO LFB 🌟', value: '20' },
   { label: 'Plus Jeune Meilleure Marqueuse de l\'histoire de la LFB 🌟', value: '20' },
   { label: 'Première à éliminer en quart la meilleure équipe de l\'histoire du championnat français en MVP 🌟', value: '26 pts to 90%' },
