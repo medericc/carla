@@ -40,6 +40,7 @@ const statsData = [
   { label: 'Match de LFB avec la plus grande affluence de l\'histoire 🌟', value: '8K' },
   { label: 'Draft WNBA la plus suivie de l\'histoire 🌟', value: '2024' },
   { label: 'Plus grosse vente d\'abonnements de l\'histoire de la WNBA 🌟', value: '2025' },
+   { label: 'Plus grosse affluence pour un premier match de WNBA 🌟', value: '18 064' },
   { label: 'Joueuse la plus rapide à rentrer dans la First Team de la LFB 🌟', value: '2th' },
   
 ];
