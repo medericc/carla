@@ -55,6 +55,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="fr">
       <Head>
       <meta name="google-adsense-account" content="ca-pub-6915108633693700"></meta>
+       <meta name="google-site-verification" content="AxJDrbCgDWHBOIcKdtu0epbjppUL8VHs5t3XMhPJE5Y" />
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
@@ -66,7 +68,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="twitter:title" content={metadata.title} />
         <meta name="twitter:description" content={metadata.description} />
         <meta name="twitter:image" content="/carla-leite-basket.png" />
-<meta name="google-site-verification" content="AxJDrbCgDWHBOIcKdtu0epbjppUL8VHs5t3XMhPJE5Y" />
 
       
         {/* Ajout du JSON-LD pour Schema.org */}
