@@ -66,7 +66,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="twitter:title" content={metadata.title} />
         <meta name="twitter:description" content={metadata.description} />
         <meta name="twitter:image" content="/carla-leite-basket.png" />
-<meta name="google-site-verification" content="Gkkpmz3Sd9IlBP2bT6RGYrYFMtFeKfmOETR6F-CtW98" />
+<meta name="google-site-verification" content="AxJDrbCgDWHBOIcKdtu0epbjppUL8VHs5t3XMhPJE5Y" />
 
       
         {/* Ajout du JSON-LD pour Schema.org */}
