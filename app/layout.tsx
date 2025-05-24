@@ -49,7 +49,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         "@type": "SportsTeam",
         "name": " Casademont Zaragoza Femenino",
         "sport": "Basketball"
-      }
+      },
       {
         "@type": "SportsTeam",
         "name": "ESBVA-LM (Villeneuve d'Ascq)",
