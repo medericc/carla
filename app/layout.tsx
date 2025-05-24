@@ -30,12 +30,26 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     "@type": "Person",
     "name": "Carla Leite",
     "jobTitle": "Basketteuse",
+      "keywords": "Carla Leite, tir à 3 points, highlights Carla Leite, Carla Leite stats, WNBA, ESBVA, basketball féminine, Golden State Valkyries, Casademont Zaragoza",
+ 
     "affiliation": [
       {
         "@type": "SportsTeam",
         "name": "Golden State Valkyries",
         "sport": "Basketball"
       },
+      ,
+      {
+        "@type": "SportsTeam",
+        "name": "Dallas Wings",
+        "sport": "Basketball"
+      }
+      ,
+      {
+        "@type": "SportsTeam",
+        "name": " Casademont Zaragoza Femenino",
+        "sport": "Basketball"
+      }
       {
         "@type": "SportsTeam",
         "name": "ESBVA-LM (Villeneuve d'Ascq)",
