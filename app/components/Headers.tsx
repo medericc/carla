@@ -110,13 +110,7 @@ export default function Header() {
             </button>
             {dropdownOpen && (
               <div className="absolute right-0 mt-2 w-48 bg-black border border-white text-white text-sm">
-                <a
-                  href="/lena"
-                  className="block px-4 py-2 hover:bg-white hover:text-black"
-                  onClick={handleLinkClick}
-                >
-                  Lena
-                </a>
+               
                 <a
                   href="/lucile"
                   className="block px-4 py-2 hover:bg-white hover:text-black"
@@ -124,12 +118,13 @@ export default function Header() {
                 >
                   Lucile
                 </a>
-                <a
-                  href="/ines"
+               
+                 <a
+                  href="/jade"
                   className="block px-4 py-2 hover:bg-white hover:text-black"
                   onClick={handleLinkClick}
                 >
-                  Ines
+                  Jade
                 </a>
               </div>
             )}

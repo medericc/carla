@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import Papa from "papaparse";
 import Image from "next/image";
+import Link from "next/link";
 interface MatchData {
   SAISON: string;
   ANNEE: string;
@@ -38,6 +39,7 @@ export default function Directory() {
     Papa.parse("/lucile.csv", {
       header: true,
       download: true,
+      skipEmptyLines: true,
       complete: (result) => {
         const parsedData = result.data as MatchData[];
         setData(parsedData);
@@ -98,13 +100,14 @@ export default function Directory() {
 
 
  <div className="flex justify-center mt-2">
+  <Link href="/" passHref>
     <Image
       src="/lucile.png"
       alt="Lucile"
       width={90} // Adaptez la taille selon vos besoins
       height={90} // Adaptez la taille selon vos besoins
-      className="rounded-full"
-    />
+      className="rounded-full cursor-pointer hover:opacity-80 transition"
+    /></Link>
   </div>
 
 
