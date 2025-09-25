@@ -174,26 +174,20 @@ export default function Header() {
             </button>
             {dropdownOpen && (
               <div className="w-full mt-2 flex flex-col items-center bg-black border border-white text-white text-sm">
-                <a
-                  href="/lena"
-                  className="block px-4 py-2 hover:bg-white hover:text-black"
-                  onClick={handleLinkClick}
-                >
-                  Lena
-                </a>
-                <a
+               <a
                   href="/lucile"
                   className="block px-4 py-2 hover:bg-white hover:text-black"
                   onClick={handleLinkClick}
                 >
                   Lucile
                 </a>
-                <a
-                  href="/ines"
+               
+                 <a
+                  href="/jade"
                   className="block px-4 py-2 hover:bg-white hover:text-black"
                   onClick={handleLinkClick}
                 >
-                  Ines
+                  Jade
                 </a>
               </div>
             )}
