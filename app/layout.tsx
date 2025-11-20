@@ -57,8 +57,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       }
     ],
     "nationality": "Française",
-    "url": "https://carla-leite-fan.com",
-    "image": "https://carla-leite-fan.com/carla-leite-basket.png",
+    "url": "https://carlaleitefan.com",
+    "image": "https://carlaleitefan.com/carla-leite-basket.png",
     "sameAs": [
       "https://www.instagram.com/fan_carlaleite/"
     ]
@@ -77,7 +77,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta property="og:title" content={metadata.title} />
         <meta property="og:description" content={metadata.description} />
         <meta property="og:image" content="/carla-leite-basket.png" />
-        <meta property="og:url" content="https://carla-leite-fan.com" />
+        <meta property="og:url" content="https://carlaleitefan.com" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={metadata.title} />
         <meta name="twitter:description" content={metadata.description} />
