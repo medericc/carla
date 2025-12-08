@@ -127,7 +127,7 @@ const filterByCompetition = (data: MatchData[]) => {
 
 
     <ul
-        className="flex w-full md:w-full justify-between p-4 bg-purple-800 rounded-lg mt-5 mx-auto max-w-[90%] shadow-md cursor-pointer"
+        className="flex w-full md:w-full justify-between p-4 bg-gray-800 rounded-lg mt-5 mx-auto max-w-[90%] shadow-md cursor-pointer"
         onClick={handleToggleName}
       >
         {showName ? (
@@ -136,14 +136,14 @@ const filterByCompetition = (data: MatchData[]) => {
        </li>
         ) : (
           <>
-            <li className="text-center flex-1 text-white border-r border-purple-700 last:border-0">
+            <li className="text-center flex-1 text-white border-r border-gray-700 last:border-0">
               <p className="text-xs font-semibold uppercase opacity-70 mb-1">PTS</p>
               <p className="text-2xl font-bold tracking-wide">
                 {data.reduce((total, match) => total + Number(match.PTS), 0)}
               </p>
             </li>
 
-            <li className="text-center flex-1 text-white border-r border-purple-700 last:border-0">
+            <li className="text-center flex-1 text-white border-r border-gray-700 last:border-0">
               <p className="text-xs font-semibold uppercase opacity-70 mb-1">AST</p>
               <p className="text-2xl font-bold tracking-wide">
                 {data.reduce((total, match) => total + Number(match.AST), 0)}
@@ -234,7 +234,7 @@ const filterByCompetition = (data: MatchData[]) => {
         </div>
         <button
     onClick={toggleCompetitionFilter}
-    className="w-full sm:w-auto bg-yellow-500 text-purple-900 p-2 rounded mt-2 sm:col-span-3 mx-auto font-semibold"
+    className="w-full sm:w-auto bg-yellow-600 text-gray-900 p-2 rounded mt-2 sm:col-span-3 mx-auto font-semibold"
   >
     {showCompetitionFilter ? "Cacher" : "Plus"}
   </button>
@@ -259,7 +259,7 @@ const filterByCompetition = (data: MatchData[]) => {
 
       <button
     onClick={handleFilter}
-    className="w-full sm:w-auto bg-purple-800 text-white p-2 rounded mt-2 sm:col-span-3 mx-auto font-bold"
+    className="w-full sm:w-auto bg-gray-800 text-white p-2 rounded mt-2 sm:col-span-3 mx-auto font-bold"
   >
     Filtrer
   </button>
@@ -271,7 +271,7 @@ const filterByCompetition = (data: MatchData[]) => {
             <h3 className="text-lg font-bold text-black">{match.ADVERSAIRE}</h3>
             <p className="text-black">Saison : {match.SAISON} | Année : {match.ANNEE}</p>
             <p className="text-black">Championnat : {match.CHAMPIONNAT}</p>
-            <p className="text-purple-600 font-semibold">
+            <p className="text-yellow-700 font-semibold">
               {stat} : {match[stat]}
             </p>
           </div>

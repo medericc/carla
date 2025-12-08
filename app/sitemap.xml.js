@@ -1,6 +1,6 @@
 export async function getServerSideProps({ res }) {
     // Définir les URL importantes pour le sitemap
-    const baseUrl = 'https://carla-leite-fan.com';
+    const baseUrl = 'https://carlaleitefan.com';
   
     const sitemap = `
       <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
