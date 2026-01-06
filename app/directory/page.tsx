@@ -70,8 +70,11 @@ export default function Directory() {
   const filterByCompetition = (data: MatchData[]) => {
     switch (competitionFilter) {
       case "Championnat":
-        return data.filter((match) => match.CHAMPIONNAT === "LFB");
-      case "PlayOff":
+      return data.filter(
+    (match) =>
+      match.CHAMPIONNAT.includes("LFB") ||
+      match.CHAMPIONNAT.includes("LIGA")
+  );  case "PlayOff":
         return data.filter(
           (match) => match.CHAMPIONNAT.includes("PO") || match.CHAMPIONNAT.includes("CDF")
         );
