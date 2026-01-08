@@ -12,14 +12,19 @@ const Header = () => {
     hidden: { opacity: 0, y: 50 }, // Invisible et décalé vers le bas
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }, // Apparition
   };
-
+ const stats = [
+    { label: "PTS", value: "19", desc: "Points par match" },
+    { label: "AST", value: "06", desc: "Passes décisives" },
+    { label: "RBD", value: "02", desc: "Rebonds" },
+    { label: "EFF", value: "16", desc: "Évaluation" },
+  ];
   return (
     <header className="relative text-center mt-10 md:mt-20">
       <img
       id="arrow"
         src="/arrow.png"
         alt="Arrow Background"
-        className="absolute top-[-45px] left-1/2 transform -translate-x-1/2 w-[300vw] md:w-[100vw] z-50"
+        className="absolute top-[-45px] left-1/2 transform -translate-x-1/2 w-[300vw] md:w-[100vw] z-40"
       />
 
       <div className="relative inline-block mt-[30vw]">
@@ -91,127 +96,108 @@ const Header = () => {
           </div></div>
       </div>
 
-      {/* Animation des statistiques */}
+       {/* Stats section tablette et +*/}
+       <div className="hidden md:block">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
+          className="mt-8 md:mt-8 mb-8"
+        >
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {stats.map((stat, index) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: 1.4 + index * 0.1 }}
+                  whileHover={{ y: -10 }}
+                  className="group relative"
+                >
+                  <div className="relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-6 text-center hover:border-red-500/30 transition-all duration-300">
+                    {/* Animated background on hover */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-red-600/0 via-red-600/5 to-red-600/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
+                    
+                    {/* Stat value */}
+                    <div className="relative">
+                      <div className="text-5xl md:text-6xl font-bold mb-2">
+                        <span className="bg-gradient-to-b from-white to-gray-400 bg-clip-text text-transparent">
+                          {stat.value}
+                        </span>
+                      </div>
+                      
+                      {/* Stat label */}
+                      <div className="flex items-center justify-center gap-2 mb-2">
+                        <div className="w-1.5 h-1.5 bg-red-500 rounded-full" />
+                        <span className="text-sm tracking-widest uppercase text-gray-400 font-semibold">
+                          {stat.label}
+                        </span>
+                      </div>
+                      
+                      {/* Description */}
+                      <p className="text-xs text-gray-500">
+                        {stat.desc}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </motion.div></div>
+      
+{/* Stats mobile +*/}
       <motion.div
-        ref={statsRef}
-        className="flex justify-center mt-10 md:mt-24 text-uppercase tracking-wide text-white mb-10"
-        initial="hidden"
-        animate={statsInView ? "visible" : "hidden"}
-        variants={statsVariants}
+  ref={statsRef}
+  className="flex justify-center mt-10 text-white mb-10 md:hidden"
+  initial="hidden"
+  animate={statsInView ? "visible" : "hidden"}
+  variants={statsVariants}
+>
+  <ul className="flex w-full justify-between px-4 bg-black py-3 max-w-[90%]">
+    {stats.map((stat, index) => (
+      <li
+        key={stat.label}
+        className={`text-center flex-1 ${
+          index !== stats.length - 1 ? "border-r border-gray-600" : ""
+        }`}
       >
-        <ul className="flex w-full md:w-full justify-between px-4 md:px-4 bg-black pt-[0.75rem] pb-[0.75rem] ml-4 mr-4 max-w-[90%]">
-          <li className="text-center border-r  border-gray-600 flex-1 md:w-auto">
-            <p
-              style={{
-                fontSize: ".75rem",
-                fontFamily: "Industry, Helvetica, Arial, sans-serif",
-                fontWeight: 600,
-                textTransform: "uppercase",
-                opacity: 0.5,
-                boxSizing: "inherit",
-              }}
-              className="mb-1"
-            >
-              PTS
-            </p>
-            <p
-              style={{
-                fontSize: "11vw",
-                margin: "-.3em 0 -.16em",
-                fontFamily: "Industry, Helvetica, Arial, sans-serif",
-                fontWeight: 600,
-                textTransform: "uppercase",
-                boxSizing: "inherit",
-              }}
-            >
-              19
-            </p>
-          </li>
+        <p
+          className="mb-1 opacity-50"
+          style={{
+            fontSize: ".75rem",
+            fontFamily: "Industry, Helvetica, Arial, sans-serif",
+            fontWeight: 600,
+            textTransform: "uppercase",
+          }}
+        >
+          {stat.label}
+        </p>
+        <p
+          style={{
+            fontSize: "11vw",
+            margin: "-.3em 0 -.16em",
+            fontFamily: "Industry, Helvetica, Arial, sans-serif",
+            fontWeight: 600,
+          }}
+        >
+          {stat.value}
+        </p>
+      </li>
+    ))}
+  </ul>
+</motion.div>
 
-          <li className="text-center border-r  border-gray-600 flex-1 ">
-            <p
-              style={{
-                fontSize: ".75rem",
-                fontFamily: "Industry, Helvetica, Arial, sans-serif",
-                fontWeight: 600,
-                textTransform: "uppercase",
-                opacity: 0.5,
-                boxSizing: "inherit",
-              }}
-              className="mb-1"
-            >
-              AST
-            </p>
-            <p
-              style={{
-                fontSize: "11vw",
-                margin: "-.3em 0 -.16em",
-                fontFamily: "Industry, Helvetica, Arial, sans-serif",
-                fontWeight: 600,
-                textTransform: "uppercase",
-                boxSizing: "inherit",
-              }}
-            >
-              06
-            </p>
-          </li>
-
-          <li className="text-center border-r  border-gray-600 flex-1 md:w-auto">
-            <p
-              style={{
-                fontSize: ".75rem",
-                fontFamily: "Industry, Helvetica, Arial, sans-serif",
-                fontWeight: 600,
-                textTransform: "uppercase",
-                opacity: 0.5,
-                boxSizing: "inherit",
-              }}
-              className="mb-1"
-            >
-              RBD
-            </p>
-            <p
-              style={{
-                fontSize: "11vw",
-                margin: "-.3em 0 -.16em",
-                fontFamily: "Industry, Helvetica, Arial, sans-serif",
-                fontWeight: 600,
-                textTransform: "uppercase",
-                boxSizing: "inherit",
-              }}
-            >
-              02
-            </p>
-          </li>
-
-          <li className="text-center flex-1 md:w-auto">
-            <p
-              style={{
-                fontSize: ".75rem",
-                fontFamily: "Industry, Helvetica, Arial, sans-serif",
-                fontWeight: 600,
-                textTransform: "uppercase",
-                opacity: 0.5,
-                boxSizing: "inherit",
-              }}
-              className="mb-1"
-            >
-              EFF
-            </p>
-            <p
-              style={{
-                fontSize: "11vw",
-                margin: "-.3em 0 -.16em",
-                fontFamily: "Industry, Helvetica, Arial, sans-serif",
-                fontWeight: 600,
-                textTransform: "uppercase",
-                boxSizing: "inherit",
-              }}
-            >
-              16
-            </p>
-          </li>
-        </ul>
+  <motion.div
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 2, repeat: Infinity }}
+        className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
+      >
+        <div className="flex flex-col items-center gap-2">
+          <span className="text-sm text-gray-500 tracking-widest">DÉCOUVRIR</span>
+          <div className="w-px h-16 bg-gradient-to-b from-red-500 to-transparent" />
+        </div>
       </motion.div>
     </header>
   );
