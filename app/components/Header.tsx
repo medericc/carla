@@ -90,9 +90,11 @@ const Header = () => {
 >
   <Image
     src="/perso.png"
-    alt="Carla Leite WNBA Player Basketball Women ESBVA Dallas Wings France Joueuse GOAT"
+    alt="Carla Leite joueuse de basket française en WNBA avec les Valkyries"
     width={900}
     height={1600}
+    itemProp="image"
+
     priority
     sizes="(max-width: 768px) 70vw, (max-width: 1280px) 45vw, 30vw"
     className="w-full h-auto"

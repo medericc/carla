@@ -1,6 +1,7 @@
 "use client";
 import { FaInstagram, FaTwitter, FaYoutube, FaTiktok, FaBasketballBall } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import Link from "next/link";
 
 const Footer = () => {
   const socialLinks = [
@@ -112,29 +113,43 @@ const Footer = () => {
         </div> */}
 
         {/* Bottom bar */}
-        <div className="pt-8 border-t border-gray-800">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            {/* Copyright */}
-            <p className="text-gray-500 text-sm text-center md:text-left">
-              © {new Date().getFullYear()} Carla Leite Fan. Tous droits réservés.
-            </p>
+      <div className="pt-8 border-t border-gray-800">
+  <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+    {/* Copyright */}
+    <p className="text-gray-500 text-sm text-center md:text-left">
+      © {new Date().getFullYear()} Carla Leite Fan. Tous droits réservés.
+    </p>
 
-            {/* Additional links */}
-            <div className="flex flex-wrap justify-center gap-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                Plan du site
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                FAQ
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                Presse
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                Partenariats
-              </a>
-            </div>
+    {/* Additional links */}
+    <div className="flex flex-wrap justify-center gap-6 text-sm">
+      <Link
+        href="/mentions-legales"
+        className="text-gray-400 hover:text-white transition-colors"
+      >
+        Mentions
+      </Link>
 
+      <Link
+        href="/confidentialite"
+        className="text-gray-400 hover:text-white transition-colors"
+      >
+        Confidentialité
+      </Link>
+
+      <Link
+        href="/contact"
+        className="text-gray-400 hover:text-white transition-colors"
+      >
+        Contact
+      </Link>
+
+      <Link
+        href="/a-propos"
+        className="text-gray-400 hover:text-white transition-colors"
+      >
+        À propos
+      </Link>
+    </div>
             {/* Basketball icon */}
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-full bg-gradient-to-br from-red-600 to-red-800 flex items-center justify-center animate-bounce">

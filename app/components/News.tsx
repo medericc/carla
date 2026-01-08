@@ -71,6 +71,16 @@ const timeline = [
     text: "Carla devient la première personne française à être meilleure marqueuse d'une franchise NBA/WNBA."
   },
 ];
+function normalizeDate(year: string): string {
+  if (year.includes("16 oct")) return "2024-10-16";
+  if (year.includes("6 fév")) return "2025-02-06";
+  if (year === "2024") return "2024-03-15";
+  if (year === "2023") return "2023-07-15";
+  if (year === "2019–2022") return "2022-06-30";
+  if (year === "2022-2024") return "2024-05-01";
+  if (year === "2024-2025") return "2025-04-15";
+  return "2024-01-01";
+}
 
 
 export default function News() {
@@ -89,8 +99,44 @@ export default function News() {
       mobileTextRef.current.style.animation = "scrollCarla 40s linear infinite";
     }
   }, []);
+const timelineArticlesSchema = timeline.map((item) => ({
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": item.text.slice(0, 110),
+  "description": item.text,
+  "datePublished": normalizeDate(item.year),
+  "author": {
+    "@type": "Person",
+    "name": "Carla Leite"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Carla Leite – Site non officiel",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://carlaleitefan.com/logo.png"
+    }
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://carlaleitefan.com/carla-leite-discover.jpg",
+    "width": 1200,
+    "height": 675
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://carlaleitefan.com/#timeline"
+  }
+}));
 
   return (
+    <>
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify(timelineArticlesSchema)
+    }}
+  />
     <section id="news" className="relative w-full overflow-hidden">
 
       {/* ======================================================
@@ -223,6 +269,6 @@ export default function News() {
           animation: spin-slow 20s linear infinite;
         }
       `}</style>
-    </section>
+    </section></>
   );
 }

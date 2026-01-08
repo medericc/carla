@@ -365,6 +365,19 @@ const Stats = () => {
   const [viewMode, setViewMode] = useState<'carousel' | 'grid'>('carousel');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const containerRef = useRef<HTMLDivElement>(null);
+const [open, setOpen] = useState(false)
+
+
+useEffect(() => {
+  if (!containerRef.current) return;
+
+  containerRef.current.scrollTo({
+    left: 0,
+    behavior: 'auto',
+  });
+
+  setCurrentIndex(0);
+}, [viewMode, selectedCategory]);
 
   // Filter stats by category
   const filteredStats = selectedCategory === 'all' 
@@ -391,7 +404,8 @@ const Stats = () => {
     
     const scrollLeft = containerRef.current.scrollLeft;
     const width = containerRef.current.clientWidth;
-    const newIndex = Math.round(scrollLeft / width);
+    const newIndex = Math.floor((scrollLeft + width / 2) / width);
+
     setCurrentIndex(newIndex);
   };
 
@@ -417,8 +431,83 @@ const Stats = () => {
     const prevIndex = (currentIndex - 1 + filteredStats.length) % filteredStats.length;
     handleDotClick(prevIndex);
   };
+const semanticSchemas = [
+  // 🧑 Person (Carla Leite)
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Carla Leite",
+    "jobTitle": "Joueuse professionnelle de basketball",
+    "nationality": "France",
+    "affiliation": [
+      {
+        "@type": "SportsTeam",
+        "name": "ESBVA-LM"
+      },
+      {
+        "@type": "SportsTeam",
+        "name": "Golden State Valkyries"
+      }
+    ]
+  },
 
-  return (
+  // 🏀 Organisation
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsOrganization",
+    "name": "ESBVA-LM",
+    "sport": "Basketball",
+    "member": {
+      "@type": "Person",
+      "name": "Carla Leite"
+    }
+  },
+
+  // 🏆 Événement sportif
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsEvent",
+    "name": "EuroBasket U20 Féminin 2023",
+    "startDate": "2023-07-08",
+    "endDate": "2023-07-16",
+    "performer": {
+      "@type": "Person",
+      "name": "Carla Leite"
+    }
+  },
+
+  // 🧭 Breadcrumb (SEO pur)
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Accueil",
+        "item": "https://carlaleitefan.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Carla Leite",
+        "item": "https://carlaleitefan.com/directory"
+      }
+    ]
+  }
+];
+
+  return (   
+<>
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(semanticSchemas)
+  }}
+/>
+
+
+
     <section id="records" className="relative min-h-screen bg-gradient-to-b from-black via-gray-900 to-black text-white overflow-hidden">
       {/* Animated background text - Optimisé pour mobile et 4K */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -534,6 +623,9 @@ const Stats = () => {
                   const Icon = stat.icon;
                   
                   return (
+
+
+                    
                     <div
                       key={index}
                       className="min-w-full h-full flex-shrink-0 snap-center"
@@ -727,21 +819,67 @@ const Stats = () => {
       </div>
 
       {/* Mobile Category Selector - Only shown on mobile */}
-      <div className="md:hidden fixed bottom-4 left-1/2 transform -translate-x-1/2 z-30">
-        <select
-          value={selectedCategory}
-          onChange={(e) => setSelectedCategory(e.target.value)}
-          className="px-4 py-2 bg-gradient-to-br from-gray-900 to-black border border-gray-700 rounded-lg text-white text-sm appearance-none"
-        >
-          {categories.map((category) => (
-            <option key={category} value={category}>
-              {category === 'all' ? 'Tous les records' : category}
-            </option>
-          ))}
-        </select>
+   <div className="md:hidden sticky bottom-4 flex justify-center z-30 mt-8">
+  <div className="relative w-64">
+    <button
+      onClick={() => setOpen(!open)}
+      className="
+        w-full px-6 py-2
+        bg-neutral-900
+        border border-neutral-700
+        rounded-full
+        text-white text-sm font-medium
+        shadow-xl
+        flex justify-between items-center
+      "
+    >
+      {selectedCategory === 'all' ? 'Tous les records' : selectedCategory}
+      <span className={`transition ${open ? 'rotate-180' : ''}`}>▼</span>
+    </button>
+
+    {open && (
+      <div className="
+        absolute bottom-full mb-2
+        w-full
+        bg-neutral-900
+        border border-neutral-700
+        rounded-2xl
+        shadow-2xl
+        overflow-hidden
+      ">
+        {categories.map((category) => (
+          <button
+            key={category}
+            onClick={() => {
+              setSelectedCategory(category)
+              setOpen(false)
+            }}
+            className="
+              w-full text-left px-6 py-2
+              text-sm text-white
+              hover:bg-neutral-800
+              transition
+            "
+          >
+            {category === 'all' ? 'Tous les records' : category}
+          </button>
+        ))}
       </div>
+    )}
+  </div>
+</div>
     </section>
-  );
+  
+
+
+
+
+
+
+
+
+
+</>);
 };
 
 // Add styles for animations
