@@ -2,8 +2,10 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "Contact - Site Fan Carla Leite | Équipe de passionnés",
-  description: "Contactez l'équipe de fans dédiée à Carla Leite. Formulaire de contact, email, réseaux sociaux. Réponse sous 48h.",
-  keywords: "contact Carla Leite, site fan, formulaire contact, email, réseaux sociaux, Instagram, Twitter, YouTube, communauté fans",
+  description:
+    "Contactez l'équipe de fans dédiée à Carla Leite. Formulaire de contact, email, réseaux sociaux. Réponse sous 48h.",
+  keywords:
+    "contact Carla Leite, site fan, formulaire contact, email, réseaux sociaux, Instagram, Twitter, YouTube, communauté fans",
   openGraph: {
     title: "Contact - Site Fan Carla Leite",
     description: "Contactez notre équipe de fans passionnés dédiée à Carla Leite",
@@ -18,5 +20,13 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-  }
+  },
 };
+
+export default function Layout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return <>{children}</>;
+}
