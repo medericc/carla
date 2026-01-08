@@ -22,7 +22,7 @@ const itemVariants = {
 /* ================= DATA ================= */
 
 const playerInfo = [
-  { label: "Club", value: "Saragosse" },
+  { label: "Club", value: "CD Saragosse" },
   { label: "Poste", value: "Small Guard" },
   { label: "Age", value: "21" },
   { label: "Height", value: "1.74m" },
