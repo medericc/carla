@@ -238,8 +238,7 @@ const ContactPage = () => {
             >
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { label: 'Réponse sous', value: '+24h', icon: FaRocket },
-                  { label: 'Fans actifs', value: '10K+', icon: FaHeart },
+                { label: 'Fans actifs', value: '10K+', icon: FaHeart },
                  { label: 'Moi', value: 'Passionné', icon: FaUserFriends },
                 ].map((stat, index) => {
                   const Icon = stat.icon;
@@ -456,7 +455,7 @@ const ContactPage = () => {
             {[
               {
                 question: "Êtes-vous affiliés à Carla Leite ?",
-                answer: "Non, je suis pas affiliés officiellement à Carla Leite, à ses clubs ou à la WNBA."
+                answer: "Non, je ne suis pas affilié officiellement à Carla Leite, à ses clubs ou à la WNBA."
               },
               {
                 question: "Quel est votre délai de réponse ?",

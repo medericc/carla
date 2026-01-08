@@ -28,7 +28,7 @@ const AboutPage = () => {
     {
       title: "Notre Équipe",
       icon: FaUsers,
-      content: "Je ne suis pas affiliés officiellement à Carla Leite, à ses clubs ou à la WNBA - juste dévoués.",
+      content: "Je ne suis pas affiliés officiellement à Carla Leite, à ses clubs ou à la WNBA - juste dévoué.",
       color: "from-blue-500 to-cyan-400"
     },
     {

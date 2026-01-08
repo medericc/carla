@@ -154,7 +154,7 @@ const LegalPage = () => {
                 Site non officiel - Fans uniquement
               </h3>
               <p className="text-gray-300">
-                Ce site est géré par des fans indépendants et n&apos;a aucun lien officiel avec 
+                Ce site est géré par un fan indépendant et n&apos;a aucun lien officiel avec 
                 Carla Leite, ses clubs, ou les organisations sportives mentionnées.
               </p>
             </div>
