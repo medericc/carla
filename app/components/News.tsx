@@ -1,81 +1,190 @@
 "use client";
-import { useEffect, useRef } from 'react';
 
-const CarlaAbout = () => {
-  const textRef = useRef<HTMLDivElement>(null);
+import { useRef, useEffect } from "react";
+import { motion, useScroll } from "framer-motion";
 
-  // Effet de défilement du texte "Carla About"
+const timeline = [
+  {
+    year: "2019–2022",
+    text: "En tant que cadette à Lyon, Carla est devenue championne de France espoir et a mené son équipe à Bercy grâce à un run à plus de 30 points de moyenne en Coupe de France."
+  },
+  {
+    year: "2022-2024",
+    text: "Elle signe à Tarbes et devient la plus jeune joueuse à terminer joueuse la plus décisive de la saison et à intégrer la First Team de la LFB après une saison à 15 points et 5 passes (un exploit jamais réalisé par une Européenne)."
+  },
+  
+   {
+    year: "2023",
+    text: "Pour sa première sélection en équipe de France, Carla est championne d'Europe avec le MVP, meilleure moyenne de points pour une française championne, elle est aussi la meilleure scoreuse par minutes de l'histoire de l'EuroBasket U20 Féminin."
+  },
+  {
+    year: "2024",
+    text: "Carla élimine en quart de finale la meilleure équipe de l'histoire du championnat français, invaincue à ce stade dans toute son histoire, par une performance inédite."
+  },
+    {
+    year: "2024",
+    text: "Carla a la meilleure évaluation et le meilleure scoring de l'histoire en une campagne de PO LFB."
+  },
+  {
+    year: "2024",
+    text: "Elle dispute deux matchs avec l’équipe de France, qui sont remportés avec brio. Puis sans elle, l'équipe de France subit deux défaites et échoue aux Jeux olympiques de Paris."
+  },
+  {
+    year: "16 oct. 2024",
+    text: "Elle devient la Française la plus rapide à franchir la barre des 1000 points."
+  },
+   {
+    year: "2024-2025",
+    text: "Carla devient la plus jeune joueuse à terminer meilleure marqueuse de la saison régulière de LFB avec 40 % à 3 Points (du jamais vu pour une européenne) et est une deuxième fois joueuse la plus décisive (record)."
+  },
+   {
+    year: "6 fév. 2025",
+    text: "Face à l'Irlande, Carla remporte la victoire la plus large de l\'histoire de l\'équipe de France (+101)."
+  },
+   {
+    year: "2025",
+    text: "Carla est championne d'Europe avec l'ESBVA avec le MVP, le PO Scoring Title (plus jeune de l'histoire), en combinant 160+ points à 55% (record), avec 228 Pts + Ast (record pour une européenne) ou encore avec le record de points pour une française en finale aller."
+  },
+    {
+    year: "2022-2025",
+    text: "Carla quitte la LFB en étant la meilleure moyenne de points + passes à 20 ans, l'européenne la plus rapide à atteindre 975 points, la meilleure moyenne de points sur 3 saisons en LFB ou encore le meilleur total points + passes sur 3 saisons en LFB  "
+  },
+ 
+   {
+    year: "2025",
+    text: "Carla devient la première personne française à être meilleure marqueuse d'une franchise NBA/WNBA."
+  },
+];
+
+
+export default function News() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const mobileTextRef = useRef<HTMLDivElement>(null);
+
+  /* ===== Desktop scroll ===== */
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end end"]
+  });
+
+  /* ===== Mobile background scroll ===== */
   useEffect(() => {
-    const textEl = textRef.current;
-    if (textEl) {
-      textEl.style.animation = 'scrollCarlaAbout 40s linear infinite';
+    if (mobileTextRef.current) {
+      mobileTextRef.current.style.animation = "scrollCarla 40s linear infinite";
     }
   }, []);
 
   return (
-    <section id="news" className="relative min-h-screen w-full bg-white text-black overflow-hidden">
-      <div id="new" className="relative h-auto min-h-screen w-full bg-white text-black">
-        
-        {/* Texte défilant en fond */}
+    <section id="news" className="relative w-full overflow-hidden">
+
+      {/* ======================================================
+          ===================== MOBILE ========================
+          ====================================================== */}
+      <div className="md:hidden relative min-h-screen bg-white text-black">
+        {/* Scrolling background text */}
         <div
-          className="absolute top-0 left-0 whitespace-nowrap z-0 text-[15rem] md:text-[20rem] opacity-10 uppercase font-bold text-black animate-scrollCarlaAbout"
-          ref={textRef}
+          ref={mobileTextRef}
+          className="absolute top-0 left-0 whitespace-nowrap text-[12rem] opacity-10 font-bold uppercase"
         >
-          {/* Texte défilant pour un défilement continu sans interruption */}
-          <span>CARLA ABOUT &nbsp; CARLA ABOUT &nbsp; CARLA ABOUT &nbsp; CARLA ABOUT &nbsp; CARLA ABOUT &nbsp; </span>
-          <span className="ml-[100vw]">CARLA ABOUT &nbsp; CARLA ABOUT &nbsp; CARLA ABOUT &nbsp; CARLA ABOUT &nbsp; CARLA ABOUT</span>
+          <span>CARLA ABOUT&nbsp;CARLA ABOUT&nbsp;CARLA ABOUT&nbsp;</span>
+          <span className="ml-[100vw]">CARLA ABOUT&nbsp;CARLA ABOUT</span>
         </div>
 
-        {/* Paragraphe de texte (fixe) */}
-        <div className="relative z-10 px-10 py-20 md:pt-[28rem] text-lg leading-7 text-gray-800 overflow-y-auto">
-          <p className="mb-6">
-            En tant que cadette à Lyon, Carla est devenue championne de France espoir 
-            et a mené son équipe à Bercy grâce à un run à plus de 30 points 
-            de moyenne en Coupe de France.
-          </p>
-          <p className="mb-6">
-            En 2022, elle fait ses débuts professionnels à Tarbes, où elle devient la plus jeune 
-            joueuse à terminer joueuse la plus décisive de la saison, et devient aussi la plus jeune 
-            à intégrer la First Team de la LFB après une saison à 15 points, 5 passes, un exploit jamais réalisé 
-            par une Européenne.
-          </p>
-          <p className="mb-6">
-            Carla réalise aussi la meilleure campagne de playoffs de l’histoire de la LFB, éliminant en quart 
-            de finale la meilleure équipe de l'histoire du championnat français en MVP, invaincue à ce stade dans 
-            toute son histoire. Elle bat alors les records de points et d’évaluation sur une campagne de playoffs. 
-            Malgré deux saisons assez satisfaisantes individuellement à Tarbes, l’expérience collective est un échec.
-          </p>
-          <p className="mb-6">
-            Après cela, elle se dirige vers Villeneuve d'Ascq, mais avant de rejoindre son nouveau club, elle dispute 
-            deux matchs avec l’équipe de France, remportés avec brio. Sans elle, l'équipe subit deux défaites et échoue 
-            aux Jeux olympiques de Paris. Puis, le 16 octobre 2024, elle entre encore un peu plus dans l'histoire en devenant 
-            la Française la plus rapide à franchir la barre des 1000 points.
-          </p>
+        {/* Content */}
+        <div className="relative z-10 px-8 py-24 space-y-8 text-gray-800 text-lg leading-7">
+         {timeline.map((item, i) => (
+  <p key={i}>{item.text}</p>
+))}
+
         </div>
       </div>
+
+      {/* ======================================================
+          =============== DESKTOP / TABLETTE ==================
+          ====================================================== */}
+      <div
+        ref={containerRef}
+        className="hidden md:block relative min-h-[200vh] bg-gradient-to-b from-black via-gray-900 to-black text-white"
+      >
+        <div className="relative z-10 max-w-6xl mx-auto px-6 py-32">
+
+          {/* Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-24"
+          >
+            <span className="text-red-400 tracking-widest uppercase text-sm">
+              Parcours
+            </span>
+            <h2 className="text-6xl font-bold mt-4">
+              L&apos;Ascension
+            </h2>
+            <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
+              De Lyon à de Multiples Records
+            </p>
+          </motion.div>
+
+          {/* Timeline */}
+          <div className="relative">
+            <div className="absolute left-1/2 -translate-x-1/2 w-px h-full bg-gray-800" />
+
+            <div className="space-y-32">
+            {timeline.map((item, i) => (
+  <motion.div
+    key={i}
+    initial={{ opacity: 0, x: i % 2 === 0 ? -80 : 80 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true, margin: "-120px" }}
+    transition={{ duration: 0.8 }}
+    className={`relative flex ${
+      i % 2 === 0 ? "flex-row" : "flex-row-reverse"
+    }`}
+  >
+    {/* Dot */}
+    <div className="absolute left-1/2 -translate-x-1/2">
+      <div className="w-5 h-5 bg-red-600 rounded-full" />
+    </div>
+
+    {/* Card */}
+    <div className={`w-1/2 ${i % 2 === 0 ? "pr-16 text-right" : "pl-16"}`}>
+      <div className="p-8 rounded-2xl bg-gradient-to-br from-gray-900/40 to-black/40 border border-gray-800">
+        <span className="text-red-400 font-bold tracking-widest">
+          {item.year}
+        </span>
+        <p className="mt-4 text-gray-300 leading-relaxed">
+          {item.text}
+        </p>
+      </div>
+    </div>
+  </motion.div>
+))}
+
+            </div>
+          </div>
+        </div>
+
+        {/* Decorative rings */}
+        <div className="fixed top-1/3 left-10 w-32 h-32 border border-red-500/10 rounded-full animate-spin-slow" />
+        <div className="fixed bottom-1/4 right-10 w-24 h-24 border border-red-500/5 rounded-full" />
+      </div>
+
+      {/* Animations */}
+      <style jsx global>{`
+        @keyframes scrollCarla {
+          from { transform: translateX(0); }
+          to { transform: translateX(-100%); }
+        }
+        @keyframes spin-slow {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+        .animate-spin-slow {
+          animation: spin-slow 20s linear infinite;
+        }
+      `}</style>
     </section>
   );
-};
-
-// Ajouter les keyframes pour l'animation du texte défilant
-const keyframesStylee = `
-  @keyframes scrollCarlaAbout {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-  .animate-scrollCarlaAbout {
-    animation: scrollCarlaAbout 20s linear infinite;
-  }
-`;
-
-if (typeof document !== 'undefined') {
-  const style = document.createElement('style');
-  style.innerHTML = keyframesStylee;
-  document.head.appendChild(style);
 }
-
-export default CarlaAbout;
