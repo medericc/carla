@@ -2,6 +2,8 @@ import localFont from "next/font/local";
 import Head from "next/head";
 import "./globals.css";
 import Script from "next/script";
+import PWAClient from "./components/PWAClient";
+
 import { Analytics } from "@vercel/analytics/react";
 // Charger les polices locales
 const geistSans = localFont({
@@ -82,7 +84,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="twitter:title" content={metadata.title} />
         <meta name="twitter:description" content={metadata.description} />
         <meta name="twitter:image" content="/carla-leite-basket.png" />
-
+        <link rel="manifest" href="/manifest.json" />
+<meta name="theme-color" content="#C8102E" />
+<link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+<meta name="apple-mobile-web-app-title" content="Carla Leite" />
       
         {/* Ajout du JSON-LD pour Schema.org */}
         <script
@@ -106,6 +111,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
+       <PWAClient />
         <Analytics />
       </body>
     </html>
