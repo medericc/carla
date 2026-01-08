@@ -3,6 +3,22 @@
 import { useRef, useEffect } from "react";
 import { motion, useScroll } from "framer-motion";
 
+const mobileConnectors = [
+  "",                // premier paragraphe → rien
+  "Ensuite, ",
+  "Puis, ",
+  "Pour sa dernière saison avec le TGB, ",
+  "Désormais, ",
+  "Après cela, ",
+  "Le 16 octobre 2024, ",
+   "À Lille, ",
+   "",
+   "Ensuite, ",
+   "",
+   "Au printemps 2025, ",
+];
+
+
 const timeline = [
   {
     year: "2019–2022",
@@ -92,9 +108,31 @@ export default function News() {
 
         {/* Content */}
         <div className="relative z-10 px-8 py-24 space-y-8 text-gray-800 text-lg leading-7">
-         {timeline.map((item, i) => (
-  <p key={i}>{item.text}</p>
-))}
+       {timeline.map((item, i) => {
+  const connector = mobileConnectors[i] ?? "Puis, ";
+  const hasConnector = connector !== "";
+
+  let text = item.text;
+
+  if (hasConnector) {
+    if (text.startsWith("Carla")) {
+      // on ne touche pas à Carla
+      text = text;
+    } else {
+      // on force la minuscule sur la première lettre
+      text = text.charAt(0).toLowerCase() + text.slice(1);
+    }
+  }
+
+  return (
+    <p key={i}>
+      <span>{connector}</span>
+      {text}
+    </p>
+  );
+})}
+
+
 
         </div>
       </div>
