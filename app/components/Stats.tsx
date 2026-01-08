@@ -504,7 +504,7 @@ const Stats = () => {
         {viewMode === 'carousel' && (
           <div className="relative">
             {/* Carousel Container */}
-            <div className="relative h-[400px] sm:h-[450px] md:h-[500px] lg:h-[550px] xl:h-[600px] 2xl:h-[700px] rounded-2xl md:rounded-3xl overflow-hidden border border-gray-800 bg-gradient-to-br from-gray-900/30 to-black/30 backdrop-blur-sm">
+            <div className="relative h-[320px] sm:h-[400px] md:h-[500px] lg:h-[550px] xl:h-[600px] 2xl:h-[700px] rounded-2xl md:rounded-3xl overflow-hidden border border-gray-800 bg-gradient-to-br from-gray-900/30 to-black/30 backdrop-blur-sm">
               
               {/* Navigation Arrows */}
               <button
@@ -544,23 +544,23 @@ const Stats = () => {
                         transition={{ duration: 0.5 }}
                         className="h-full flex items-center justify-center p-4 md:p-6 lg:p-8"
                       >
-                        <div className="relative w-full max-w-4xl h-full">
+                        <div className="relative w-2/3 md:w-full mmax-w-[68%] sm:max-w-2xl md:max-w-4xl h-full mx-auto">
                           {/* Card Background */}
                           <div className="absolute inset-0 bg-gradient-to-br from-gray-900 to-black rounded-2xl md:rounded-3xl border border-gray-800" />
                           <div className={`absolute inset-0 bg-gradient-to-br ${stat.color} opacity-10 rounded-2xl md:rounded-3xl`} />
                           
                           {/* Card Content */}
-                          <div className="relative h-full flex flex-col lg:flex-row items-center justify-center gap-6 md:gap-8 lg:gap-12 p-6 md:p-8 lg:p-12">
+                          <div className="relative h-full flex flex-col items-center justify-center gap-4 sm:gap-6 lg:flex-row lg:gap-12 p-4 sm:p-6 md:p-8 lg:p-12">
                             {/* Icon Section */}
                             <div className="relative order-2 lg:order-1">
                               <div className={`absolute inset-0 bg-gradient-to-br ${stat.color} rounded-xl md:rounded-2xl blur-xl opacity-30`} />
-                              <div className={`relative w-20 h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 xl:w-40 xl:h-40 bg-gradient-to-br ${stat.color} rounded-xl md:rounded-2xl flex items-center justify-center`}>
-                                <Icon className="w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 xl:w-20 xl:h-20 text-white" />
+                              <div className={`relative w-14 h-14 sm:w-18 sm:h-18 md:w-24 md:h-24 lg:w-32 xl:w-40 bg-gradient-to-br ${stat.color} rounded-xl md:rounded-2xl flex items-center justify-center`}>
+                                <Icon className="w-7 h-7 sm:w-9 sm:h-9 md:w-12 md:h-12 lg:w-16 xl:w-20 text-white" />
                               </div>
                             </div>
 
                             {/* Text Section */}
-                            <div className="flex-1 order-1 lg:order-2 text-center lg:text-left">
+                            <div className="flex-1 order-1 lg:order-2 text-center lg:text-left px-2 sm:px-0">
                               {/* Category Badge */}
                               <div className="inline-flex items-center gap-2 mb-3 md:mb-4">
                                 <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
@@ -576,7 +576,7 @@ const Stats = () => {
 
                               {/* Record Value */}
                               <div className="mb-4 md:mb-6">
-                                <div className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-[10rem] font-black mb-2">
+                                <div className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-[10rem] leading-none font-black mb-2">
                                   <span className={`bg-gradient-to-br ${stat.color} bg-clip-text text-transparent`}>
                                     {stat.value}
                                   </span>

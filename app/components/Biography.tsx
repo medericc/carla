@@ -22,9 +22,9 @@ const itemVariants = {
 /* ================= DATA ================= */
 
 const playerInfo = [
-  { label: "Club", value: "ESBVA-LM" },
+  { label: "Club", value: "Saragosse" },
   { label: "Poste", value: "Small Guard" },
-  { label: "Age", value: "20" },
+  { label: "Age", value: "21" },
   { label: "Height", value: "1.74m" },
   { label: "Nationality", value: "French" },
   { label: "WNBA Team", value: "Valkyries" },
