@@ -16,7 +16,7 @@ const cardVariants = {
 
 const Cards = () => {
   return (
-    <div className="relative bg-black text-white pb-10 text-center overflow-hidden max-w-full px-5">
+    <div className="md:hidden relative bg-black text-white pb-10 text-center overflow-hidden max-w-full px-5">
       {/* Scrolling Text in the background */}
       <div className="absolute left-0 top-[1.25%] whitespace-nowrap z-1 text-[15rem] uppercase font-bold text-white animate-scrollTextx">
         <span>GAMES HISTORY</span>

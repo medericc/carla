@@ -194,10 +194,7 @@ const Header = () => {
         transition={{ duration: 2, repeat: Infinity }}
         className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
       >
-        <div className="flex flex-col items-center gap-2">
-          <span className="text-sm text-gray-500 tracking-widest">DÉCOUVRIR</span>
-          <div className="w-px h-16 bg-gradient-to-b from-red-500 to-transparent" />
-        </div>
+      
       </motion.div>
     </header>
   );
