@@ -1,6 +1,7 @@
 "use client";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const Header = () => {
   const { ref: statsRef, inView: statsInView } = useInView({
@@ -73,18 +74,31 @@ const Header = () => {
             className="flex justify-center items-end relative w-full h-auto z-99"
             style={{ maxWidth: "100%", position: "relative" }} // Le parent doit être en position relative pour que l'absolute fonctionne
           >
-            <img
-              src="/perso.png"
-              id="img"
-              alt="Carla Leite WNBA Player Basketball Women ESBVA Dallas Wings France Joueuse GOAT"
-              className="w-[67.5vw] md:w-[53vw] lg:w-[42vw] xl:w-[34vw] 2xl:w-[30vw] h-auto z-[99]"
-              style={{
-                position: "absolute", // Rend l'image absolue par rapport à son parent
-                bottom: 0, // Fixe l'image en bas de son conteneur parent
-                left: "50%", // Centre horizontalement l'image
-                transform: "translateX(-50%)", // Pour bien centrer l'image
-              }}
-            />
+         <div
+  className="
+    absolute
+    bottom-0
+    left-1/2
+    -translate-x-1/2
+    w-[67.5vw]
+    md:w-[53vw]
+    lg:w-[42vw]
+    xl:w-[34vw]
+    2xl:w-[30vw]
+    z-[10]
+  "
+>
+  <Image
+    src="/perso.png"
+    alt="Carla Leite WNBA Player Basketball Women ESBVA Dallas Wings France Joueuse GOAT"
+    width={900}
+    height={1600}
+    priority
+    sizes="(max-width: 768px) 70vw, (max-width: 1280px) 45vw, 30vw"
+    className="w-full h-auto"
+  />
+</div>
+
 
             <div
               id="band"

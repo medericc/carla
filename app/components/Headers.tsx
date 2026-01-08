@@ -4,6 +4,7 @@ import Image from "next/image";
 import { FaSearch, FaBars, FaTimes, FaBasketballBall } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 
+
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -19,6 +20,17 @@ export default function Navigation() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+useEffect(() => {
+  if (isOpen) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "";
+  }
+
+  return () => {
+    document.body.style.overflow = "";
+  };
+}, [isOpen]);
 
   const navItems = [
     { label: "Biographie", href: "#biography" },
@@ -199,7 +211,7 @@ export default function Navigation() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden overflow-hidden"
+             className="lg:hidden overflow-y-auto max-h-[calc(100vh-80px)]"
             >
               <div className="pt-6 pb-8 space-y-6">
                 {/* Mobile Navigation Items */}
@@ -219,7 +231,7 @@ export default function Navigation() {
 
                 {/* Mobile Stats Link */}
                 <a
-                  href="/stats"
+                  href="/directory"
                   className="flex items-center gap-3 px-4 py-3 text-lg font-semibold tracking-wider uppercase text-gray-300 hover:text-white hover:bg-gradient-to-r hover:from-red-600/10 hover:to-transparent rounded-lg transition-all duration-300"
                   onClick={handleLinkClick}
                 >

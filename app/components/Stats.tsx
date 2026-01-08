@@ -204,14 +204,14 @@ const statsData = [
     category: 'Playoffs'
   },
   { 
-    label: 'Plus Jeune Joueuse la plus décisive sur un PO LFB', 
+    label: 'Plus Jeune Joueuse la Plus Décisive sur un PO LFB', 
     value: '20',
     icon: FaAward,
     color: 'from-violet-600 to-purple-500',
     category: 'Vieillesse'
   },
   { 
-    label: 'Plus Vieille Joueuse la plus décisive sur un PO LFB', 
+    label: 'Plus Vieille Joueuse la Plus Décisive sur un PO LFB', 
     value: '20',
     icon: FaAward,
     color: 'from-violet-600 to-purple-500',

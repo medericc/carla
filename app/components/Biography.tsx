@@ -35,25 +35,38 @@ const playerInfo = [
 export default function Biography() {
   const [visibleItems, setVisibleItems] = useState<number[]>([]);
   const itemsRef = useRef<Array<HTMLDivElement | null>>([]);
+const [isDesktop, setIsDesktop] = useState(false);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          const index = Number(entry.target.getAttribute("data-index"));
-          if (entry.isIntersecting) {
-            setVisibleItems((prev) =>
-              prev.includes(index) ? prev : [...prev, index]
-            );
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
+useEffect(() => {
+  setIsDesktop(window.innerWidth >= 1024);
+}, []);
 
-    itemsRef.current.forEach((el) => el && observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
+ useEffect(() => {
+  if (isDesktop) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const index = Number(entry.target.getAttribute("data-index"));
+        if (entry.isIntersecting) {
+          setVisibleItems((prev) =>
+            prev.includes(index) ? prev : [...prev, index]
+          );
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  itemsRef.current.forEach((el) => el && observer.observe(el));
+  return () => observer.disconnect();
+}, [isDesktop]);
+
+useEffect(() => {
+  if (isDesktop) {
+    setVisibleItems(playerInfo.map((_, i) => i));
+  }
+}, [isDesktop]);
 
   return (
     <section id="biography" className="relative min-h-screen bg-black py-20 px-4 md:px-8">

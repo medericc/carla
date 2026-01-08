@@ -49,7 +49,7 @@ const Footer = () => {
               </h3>
             </div>
             <p className="text-gray-400 max-w-md">
-              Sur le Parcours de la Meilleure Joueuse de l'Histoire du Basketball Féminin
+              Suivez le Parcours de la Meilleure Joueuse de l'Histoire du Basketball Féminin
             </p>
           </motion.div>
 
