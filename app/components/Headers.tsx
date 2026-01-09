@@ -37,7 +37,7 @@ useEffect(() => {
     { label: "Records", href: "#records" },
  
     { label: "Actualités", href: "#news" },
-       { label: "Matchs", href: "#watch" },
+       { label: "Contact", href: "#contact" },
   ];
 
   const dropdownItems = [
@@ -50,6 +50,16 @@ useEffect(() => {
     setDropdownOpen(false);
     setSearchOpen(false);
   };
+const scrollToSection = (id: string) => {
+  handleLinkClick();
+
+  setTimeout(() => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  }, 100);
+};
 
   return (
     <div className="z-50">
@@ -100,7 +110,14 @@ useEffect(() => {
                   <a
                     href={item.href}
                     className="relative text-sm font-semibold tracking-wider uppercase text-gray-300 hover:text-white transition-colors group"
-                    onClick={handleLinkClick}
+                    onClick={(e) => {
+    if (item.href.startsWith("#")) {
+      e.preventDefault();
+      scrollToSection(item.href.substring(1));
+    } else {
+      handleLinkClick();
+    }
+  }}
                   >
                     {item.label}
                     <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-red-600 to-red-800 group-hover:w-full transition-all duration-300" />
@@ -151,7 +168,14 @@ useEffect(() => {
                         transition={{ delay: index * 0.05 }}
                         href={item.href}
                         className="flex items-center gap-3 px-4 py-3 text-sm text-gray-300 hover:text-white hover:bg-gradient-to-r hover:from-red-600/10 hover:to-transparent transition-all duration-300 group"
-                        onClick={handleLinkClick}
+                       onClick={(e) => {
+    if (item.href.startsWith("#")) {
+      e.preventDefault();
+      scrollToSection(item.href.substring(1));
+    } else {
+      handleLinkClick();
+    }
+  }}
                       >
                         <div className="w-1.5 h-1.5 bg-red-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
                         {item.label}
@@ -220,7 +244,14 @@ useEffect(() => {
                     key={item.label}
                     href={item.href}
                     className="block px-4 py-3 text-lg font-semibold tracking-wider uppercase text-gray-300 hover:text-white hover:bg-gradient-to-r hover:from-red-600/10 hover:to-transparent rounded-lg transition-all duration-300"
-                    onClick={handleLinkClick}
+                    onClick={(e) => {
+    if (item.href.startsWith("#")) {
+      e.preventDefault();
+      scrollToSection(item.href.substring(1));
+    } else {
+      handleLinkClick();
+    }
+  }}
                   >
                     {item.label}
                   </a>
@@ -259,7 +290,14 @@ useEffect(() => {
                           key={item.label}
                           href={item.href}
                           className="block px-4 py-2 text-gray-400 hover:text-white transition-colors"
-                          onClick={handleLinkClick}
+                          onClick={(e) => {
+    if (item.href.startsWith("#")) {
+      e.preventDefault();
+      scrollToSection(item.href.substring(1));
+    } else {
+      handleLinkClick();
+    }
+  }}
                         >
                           {item.label}
                         </a>

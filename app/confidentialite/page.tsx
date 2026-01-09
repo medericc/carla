@@ -11,6 +11,8 @@ import {
   FaExternalLinkAlt,
   FaCheckCircle
 } from 'react-icons/fa';
+import Link from "next/link";
+import { FaArrowLeft } from "react-icons/fa";
 
 const PrivacyPolicyPage = () => {
   const privacySections = [
@@ -96,6 +98,33 @@ const PrivacyPolicyPage = () => {
 
   return (
     <section className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black text-white overflow-hidden">
+      {/* Back button */}
+<motion.div
+  initial={{ opacity: 0, x: -20 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.5 }}
+  className="fixed top-4 left-4 z-50"
+>
+  <Link
+    href="/"
+    className="
+      flex items-center gap-2
+      px-3 py-2
+      rounded-xl
+      bg-black/60 backdrop-blur
+      border border-gray-700
+      text-gray-200 text-sm
+      hover:text-white hover:border-green-500/50
+      transition-all
+      md:px-4 md:py-2.5
+      md:text-base
+    "
+  >
+    <FaArrowLeft className="w-4 h-4 md:w-5 md:h-5" />
+    <span className="hidden sm:inline">Back</span>
+  </Link>
+</motion.div>
+
       {/* Animated background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
