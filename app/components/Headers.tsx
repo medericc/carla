@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { FaSearch, FaBars, FaTimes, FaBasketballBall } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
+import { timeline } from "@/app/components/News"; // adapte le chemin
 
 
 export default function Navigation() {
@@ -31,6 +32,13 @@ useEffect(() => {
     document.body.style.overflow = "";
   };
 }, [isOpen]);
+const newsResults =
+  searchQuery.length > 1
+    ? timeline.filter(item =>
+        item.text.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        item.year.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    : [];
 
   const navItems = [
     { label: "Biographie", href: "#biography" },
@@ -212,6 +220,34 @@ const scrollToSection = (id: string) => {
                       placeholder="Rechercher..."
                       className="w-full px-4 py-2 bg-gradient-to-b from-gray-900 to-black border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-red-500 transition-colors"
                     />
+               {/* 🔍 Résultats News */}
+{newsResults.length > 0 && (
+  <div className="mt-2 bg-gradient-to-b from-gray-900 to-black border border-gray-800 rounded-lg max-h-80 overflow-y-auto">
+    {newsResults.map((item, index) => (
+      <button
+        key={index}
+        onClick={() => {
+          setSearchOpen(false);
+          setSearchQuery("");
+
+          scrollToSection("news");
+
+          setTimeout(() => {
+            document
+              .getElementById(`news-${index}`)
+              ?.scrollIntoView({ behavior: "smooth", block: "center" });
+          }, 400);
+        }}
+        className="w-full text-left px-4 py-3 text-sm text-gray-300 hover:bg-red-600/10 transition"
+      >
+        <div className="font-semibold text-white">{item.year}</div>
+        <div className="text-xs text-gray-400 line-clamp-2">
+          {item.text}
+        </div>
+      </button>
+    ))}
+  </div>
+)}
                   </motion.div>
                 )}
               </AnimatePresence>

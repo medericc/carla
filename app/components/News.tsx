@@ -19,7 +19,7 @@ const mobileConnectors = [
 ];
 
 
-const timeline = [
+export const timeline = [
   {
     year: "2019–2022",
     text: "En tant que cadette à Lyon, Carla est devenue championne de France espoir et a mené son équipe à Bercy grâce à un run à plus de 30 points de moyenne en Coupe de France."
@@ -154,7 +154,7 @@ const timelineArticlesSchema = timeline.map((item) => ({
 
         {/* Content */}
         <div className="relative z-10 px-8 py-24 space-y-8 text-gray-800 text-lg leading-7">
-       {timeline.map((item, i) => {
+      {timeline.map((item, i) => {
   const connector = mobileConnectors[i] ?? "Puis, ";
   const hasConnector = connector !== "";
 
@@ -162,21 +162,25 @@ const timelineArticlesSchema = timeline.map((item) => ({
 
   if (hasConnector) {
     if (text.startsWith("Carla")) {
-      // on ne touche pas à Carla
       text = text;
     } else {
-      // on force la minuscule sur la première lettre
       text = text.charAt(0).toLowerCase() + text.slice(1);
     }
   }
 
   return (
-    <p key={i}>
-      <span>{connector}</span>
-      {text}
-    </p>
+    <motion.div
+      key={i}
+      id={`news-${i}`}
+      className="relative"
+    >
+      <p className="text-gray-800 text-lg leading-7">
+        {connector}{text}
+      </p>
+    </motion.div>
   );
 })}
+
 
 
 
