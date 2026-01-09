@@ -636,7 +636,7 @@ const semanticSchemas = [
                         transition={{ duration: 0.5 }}
                         className="h-full flex items-center justify-center p-4 md:p-6 lg:p-8"
                       >
-                        <div className="relative w-2/3 md:w-full mmax-w-[68%] sm:max-w-2xl md:max-w-4xl h-full mx-auto">
+                        <div className="relative w-2/3 md:w-full max-w-[68%] sm:max-w-2xl md:max-w-4xl h-full mx-auto">
                           {/* Card Background */}
                           <div className="absolute inset-0 bg-gradient-to-br from-gray-900 to-black rounded-2xl md:rounded-3xl border border-gray-800" />
                           <div className={`absolute inset-0 bg-gradient-to-br ${stat.color} opacity-10 rounded-2xl md:rounded-3xl`} />
