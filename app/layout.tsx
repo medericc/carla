@@ -1,11 +1,10 @@
 import localFont from "next/font/local";
-import Head from "next/head";
 import "./globals.css";
 import Script from "next/script";
 import PWAClient from "./components/PWAClient";
-
 import { Analytics } from "@vercel/analytics/react";
-// Charger les polices locales
+
+
 const geistSans = localFont({
   src: "/fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -13,105 +12,126 @@ const geistSans = localFont({
 });
 
 const geistMono = localFont({
-  src: '/fonts/GeistMonoVF.woff',
-  variable: '--font-geist-mono',
-  weight: '100 900',
+  src: "/fonts/GeistMonoVF.woff",
+  variable: "--font-geist-mono",
+  weight: "100 900",
 });
 
-// Définir les métadonnées de base
-export const metadata = {
-  title: "Carla Leite",
-  description: "Carla Leite, championne de France espoir, meilleure joueuse des PO LFB, championne d'Europe u20 et membre des Valkyries en WNBA. Suivez ses exploits et sa carrière avec l'ESBVA-LM à Villeneuve d'Ascq.",
 
+export const metadata = {
+  metadataBase: new URL("https://carlaleitefan.com"),
+
+  title: {
+    default: "Carla Leite",
+    template: "%s | Carla Leite",
+  },
+
+  description:
+    "Carla Leite, championne de France espoir, meilleure joueuse des Playoffs LFB, championne d’Europe U20 et joueuse WNBA. Actualités, carrière et performances.",
+
+  keywords: [
+    "Carla Leite",
+    "basketball féminin",
+    "WNBA",
+    "Golden State Valkyries",
+    "ESBVA-LM",
+    "Casademont Zaragoza",
+    "équipe de France U20",
+  ],
+
+  alternates: {
+    canonical: "https://carlaleitefan.com",
+  },
+
+  openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    url: "https://carlaleitefan.com",
+    title: "Carla Leite – Basketteuse professionnelle",
+    description:
+      "Carla Leite, joueuse française de basketball, championne d’Europe U20 et membre de la WNBA.",
+    images: [
+      {
+        url: "https://carlaleitefan.com/carla-leite-basket.png",
+        width: 1200,
+        height: 630,
+        alt: "Carla Leite basketteuse professionnelle",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Carla Leite – Basketteuse professionnelle",
+    description:
+      "Carla Leite, championne d’Europe U20, joueuse WNBA et figure du basketball féminin français.",
+    images: ["https://carlaleitefan.com/carla-leite-basket.png"],
+  },
+
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: "/icons/icon-192x192.png",
+  },
+
+  manifest: "/manifest.json",
+
+  verification: {
+    google: "AxJDrbCgDWHBOIcKdtu0epbjppUL8VHs5t3XMhPJE5Y",
+  },
+
+  other: {
+    "google-adsense-account": "ca-pub-6915108633693700",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  // JSON-LD Schema.org Data
+  // ✅ JSON-LD Schema.org (parfait pour Google Discover & Knowledge Graph)
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Carla Leite",
-    "jobTitle": "Basketteuse",
-      "keywords": "Carla Leite, tir à 3 points, highlights Carla Leite, Carla Leite stats, WNBA, ESBVA, basketball féminine, Golden State Valkyries, Casademont Zaragoza",
- 
-    "affiliation": [
-      {
-        "@type": "SportsTeam",
-        "name": "Golden State Valkyries",
-        "sport": "Basketball"
-      },
-      ,
-      {
-        "@type": "SportsTeam",
-        "name": "Dallas Wings",
-        "sport": "Basketball"
-      }
-      ,
-      {
-        "@type": "SportsTeam",
-        "name": " Casademont Zaragoza Femenino",
-        "sport": "Basketball"
-      },
-      {
-        "@type": "SportsTeam",
-        "name": "ESBVA-LM (Villeneuve d'Ascq)",
-        "sport": "Basketball"
-      }
+    name: "Carla Leite",
+    jobTitle: "Basketteuse professionnelle",
+    nationality: "Française",
+    url: "https://carlaleitefan.com",
+    image: "https://carlaleitefan.com/carla-leite-basket.png",
+    sameAs: ["https://www.instagram.com/fan_carlaleite/"],
+    affiliation: [
+      { "@type": "SportsTeam", name: "Golden State Valkyries" },
+      { "@type": "SportsTeam", name: "Dallas Wings" },
+      { "@type": "SportsTeam", name: "Casademont Zaragoza Femenino" },
+      { "@type": "SportsTeam", name: "ESBVA-LM (Villeneuve d'Ascq)" },
     ],
-    "nationality": "Française",
-    "url": "https://carlaleitefan.com",
-    "image": "https://carlaleitefan.com/carla-leite-basket.png",
-    "sameAs": [
-      "https://www.instagram.com/fan_carlaleite/"
-    ]
   };
-  
 
   return (
     <html lang="fr">
-      <Head>
-      <meta name="google-adsense-account" content="ca-pub-6915108633693700"></meta>
-       <meta name="google-site-verification" content="AxJDrbCgDWHBOIcKdtu0epbjppUL8VHs5t3XMhPJE5Y" />
-
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        <meta property="og:title" content={metadata.title} />
-        <meta property="og:description" content={metadata.description} />
-        <meta property="og:image" content="/carla-leite-basket.png" />
-        <meta property="og:url" content="https://carlaleitefan.com" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={metadata.title} />
-        <meta name="twitter:description" content={metadata.description} />
-        <meta name="twitter:image" content="/carla-leite-basket.png" />
-        <link rel="manifest" href="/manifest.json" />
-<meta name="theme-color" content="#C8102E" />
-<link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
-<meta name="apple-mobile-web-app-title" content="Carla Leite" />
-      
-        {/* Ajout du JSON-LD pour Schema.org */}
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        {/* JSON-LD */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
         />
-         </Head>
-      {/* Google Analytics juste après le <head> */}
-      <Script
-        strategy="afterInteractive"
-        src="https://www.googletagmanager.com/gtag/js?id=G-ZVWXT3GBXV"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-ZVWXT3GBXV');
-        `}
-      </Script>
-    
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+
+        {/* Google Analytics */}
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-ZVWXT3GBXV"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-ZVWXT3GBXV');
+          `}
+        </Script>
+
         {children}
-       <PWAClient />
+        <PWAClient />
         <Analytics />
       </body>
     </html>
