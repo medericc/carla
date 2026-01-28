@@ -94,7 +94,7 @@ const [modalOpen, setModalOpen] = useState(false);
           cursor-pointer
           px-4 py-2
           rounded-md
-          focus:bg-red-600 focus:text-white
+          focus:bg-red-700 focus:text-white
           data-[state=checked]:bg-red-700 data-[state=checked]:text-white
         "
       >
