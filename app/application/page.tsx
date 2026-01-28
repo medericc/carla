@@ -80,18 +80,30 @@ const [modalOpen, setModalOpen] = useState(false);
 
         {/* Menu déroulant */}
         <div className=" mt-8 mb-4">
-          <Select value={selectedCategory} onValueChange={setSelectedCategory}>
-            <SelectTrigger className="w-full bg-white text-neutral-900 font-semibold">
-              <SelectValue placeholder="Choisis une catégorie" />
-            </SelectTrigger>
-            <SelectContent>
-              {categories.map((cat) => (
-                <SelectItem key={cat} value={cat}>
-                  {cat}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
+        <Select value={selectedCategory} onValueChange={setSelectedCategory}>
+  <SelectTrigger className="w-full bg-white text-neutral-900 font-semibold">
+    <SelectValue placeholder="Choisis une catégorie" />
+  </SelectTrigger>
+
+  <SelectContent className="bg-white text-neutral-900 border border-neutral-200 rounded-xl shadow-lg">
+    {categories.map((cat) => (
+      <SelectItem
+        key={cat}
+        value={cat}
+        className="
+          cursor-pointer
+          px-4 py-2
+          rounded-md
+          focus:bg-red-600 focus:text-white
+          data-[state=checked]:bg-red-700 data-[state=checked]:text-white
+        "
+      >
+        {cat}
+      </SelectItem>
+    ))}
+  </SelectContent>
+</Select>
+
         </div>
       </div>
 
