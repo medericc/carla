@@ -1,3 +1,6 @@
+
+import Link from "next/link";
+import styles from "./lou.module.css"
 export const metadata = {
   title: "LiveStats Lucile & Carla",
   description: "Les stats détaillées en direct.",
@@ -31,15 +34,20 @@ export default function LucileCarlaLayout({
 }: {
   children: React.ReactNode;
 }) {
+
+
   return (
     <>
+    <div className={styles.page}>
       <header className="bg-gradient-to-r from-blue-900 to-blue-950 text-white p-8 text-4xl font-extrabold text-center shadow-md">
+        <Link href="/" className="cursor-pointer hover:opacity-80">
         LIVESTATS
+      </Link>
       </header>
 
       <main className="container mx-auto mt-4">
         {children}
-      </main>
+      </main></div>
     </>
   );
 }

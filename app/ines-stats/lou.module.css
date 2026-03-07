@@ -1,0 +1,9 @@
+.page {
+  background: #f3f4f6;
+  color: black;
+  min-height: 100vh;
+}
+
+.table {
+  border-collapse: collapse;
+}

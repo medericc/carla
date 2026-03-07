@@ -1,3 +1,6 @@
+import Link from "next/link";
+import styles from "./lou.module.css"
+
 export const metadata = {
     title: "Inès LiveStats",
     description: "Les stats détaillées en direct.",
@@ -36,14 +39,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 return (
 
 
- <>
+ <> <div className={styles.page}> 
       <header className="bg-gradient-to-r from-[#08618a] to-[#054a79] text-white p-8 text-4xl font-extrabold text-center shadow-md tracking-wide">
-        LIVESTATS
+        
+ <Link href="/" className="cursor-pointer hover:opacity-80">
+          LIVESTATS
+        </Link>
+
       </header>
 
       <main className="container mx-auto mt-4">
         {children}
-      </main>
+      </main>  </div> 
     </>
 
 );

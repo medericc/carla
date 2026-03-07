@@ -2,8 +2,8 @@
 import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { useState,useEffect } from 'react';
 import Image from 'next/image';
-import VideoHeader from '../double-components/VideoHeader';
-import InputForm from '../double-components/InputForm';
+import VideoHeader from '../double-components/VideoHeaderLC';
+import InputForm from '../double-components/InputFormLC';
 import MatchTable from '../double-components/MatchTableL';
 import {
     Select,
@@ -204,29 +204,7 @@ if (url.includes("fiba.basketball")) {
               setCsvData(rows);
               setCsvGenerated(true);
   
-          // 🔁 Cas 2 : WNBA JSON direct
-        } else if (url.includes("data.wnba.com")) {
-          jsonUrl = url;
-          const proxyUrl = `/api/proxy?url=${encodeURIComponent(jsonUrl)}`;
-          const response = await fetch(proxyUrl);
-          if (!response.ok) throw new Error("Erreur WNBA (JSON direct)");
       
-          data = await response.json();
-          console.log("📦 [WNBA JSON direct] Données JSON brutes:", data);
-      
-          const playByPlay = data?.g?.pl;
-          if (!Array.isArray(playByPlay)) {
-              throw new Error("Format inattendu des données WNBA (JSON direct)");
-          }
-      
-          const filteredData = playByPlay
-              .filter((action: any) => action.p === effectivePlayer)
-              .sort((a: any, b: any) => b.cl.localeCompare(a.cl));
-      
-          const csvContent = generateWNBACSV(filteredData);
-          const rows = csvContent.split('\n').slice(1).map((row) => row.split(','));
-          setCsvData(rows);
-          setCsvGenerated(true);
       /* 🔁 Cas FEB */
 } else if (url.includes("feb")) {
 console.log("MODE FEB");

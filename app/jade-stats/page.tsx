@@ -5,7 +5,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from '@/components/ui/table';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import VideoHeader from '../double-components/VideoHeader';
+import VideoHeader from '../double-components/VideoHeaderJ';
 import { Button } from '@/components/ui/button';
 
 interface MatchAction {
@@ -204,8 +204,7 @@ const handleGenerate = async () => {
   setLoading(true);
 
   try {
-    const res = await fetch(`/api/play-analysis?url=${encodeURIComponent(selectedMatch)}`);
-
+   const res = await fetch(`/api/njcaa?url=${encodeURIComponent(selectedMatch)}`);
     // ⛔ Erreur HTTP → modale
     if (!res.ok) {
       throw new Error(`Erreur HTTP : ${res.status}`);
@@ -264,8 +263,8 @@ const handleGenerate = async () => {
 
 
   return (
-<div className="flex flex-col items-center justify-center min-h-screen p-6 sm:p-12 gap-8 bg-white text-gray-900">
-<VideoHeader className="absolute top-0 left-0 w-full" />
+<div className="flex flex-col items-center justify-center min-h-screen p-6 sm:p-12 gap-8 bg-transparent text-gray-900">
+<VideoHeader  src="/video.webm" className="absolute top-0 left-0 w-full" />
 
       <main className="flex flex-col items-center gap-6 w-full max-w-4xl mt-10">
         {/* Sélection du match */}

@@ -2,8 +2,8 @@
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { useState } from 'react';
 
-import VideoHeader from '../double-components/VideoHeader';
-import InputForm from '../double-components/InputForm';
+import VideoHeader from '../double-components/VideoHeaderL';
+import InputForm from '../double-components/InputFormLe';
 import MatchTable from '../double-components/MatchTableL';
 import {
     Select,
@@ -157,7 +157,7 @@ export default function Home() {
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen p-6 sm:p-12 gap-8 bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white">
-        <VideoHeader className="absolute top-0 left-0 w-full" />
+        <VideoHeader  src="/lena.webm" className="absolute top-0 left-0 w-full" />
         
         <main className="flex flex-col items-center gap-6 w-full max-w-lg sm:max-w-2xl md:max-w-4xl">
           <Select value={selectedLink} onValueChange={setSelectedLink}>

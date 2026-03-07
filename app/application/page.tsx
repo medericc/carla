@@ -31,21 +31,19 @@ const links = [
   
   
    { title: "StatsCenter de Carla", url: "https://www.carlaleitefan.com/directory", icon: <BarChart className="w-5 h-5 mr-4" />, category: "StatsCenter" },
-  { title: "LiveStats de Carla", url: "https://carla-lucile.vercel.app/", icon: <BarChart className="w-5 h-5 mr-4" />, category: "LiveStats" },
+  { title: "LiveStats de Carla", url: "https://www.carlaleitefan.com/lucile-stats", icon: <BarChart className="w-5 h-5 mr-4" />, category: "LiveStats" },
   { title: "StatsCenter de Lucile", url: "https://www.carlaleitefan.com/lucile", icon: <BarChart className="w-5 h-5 mr-4" />, category: "StatsCenter" },
     { title: "StatsCenter d'Inès", url: "https://www.carlaleitefan.com/ines", icon: <BarChart className="w-5 h-5 mr-4" />, category: "StatsCenter" },
      { title: "StatsCenter de Léna", url: "https://www.carlaleitefan.com/lena", icon: <BarChart className="w-5 h-5 mr-4" />, category: "StatsCenter" },
  
-    { title: "LiveStats de Lucile", url: "https://carla-lucile.vercel.app/", icon: <BarChart className="w-5 h-5 mr-4" />, category: "LiveStats" },
-    { title: "LiveStats de Léna", url: "https://lenastats.vercel.app/", icon: <BarChart className="w-5 h-5 mr-4" />, category: "LiveStats" },
+    { title: "LiveStats de Lucile", url: "https://www.carlaleitefan.com/lucile-stats", icon: <BarChart className="w-5 h-5 mr-4" />, category: "LiveStats" },
+    { title: "LiveStats de Léna", url: "https://www.carlaleitefan.com/lena-stats", icon: <BarChart className="w-5 h-5 mr-4" />, category: "LiveStats" },
    { title: "LiveStats de Jade", url: "https://jade-livestats.vercel.app/", icon: <BarChart className="w-5 h-5 mr-4" />, category: "LiveStats" },
   
-    { title: "LiveStats de Louann", url: "https://lou-livestats.vercel.app/", icon: <BarChart className="w-5 h-5 mr-4" />, category: "LiveStats" },
+    { title: "LiveStats de Louann", url: "https://www.carlaleitefan.com/lou-stats", icon: <BarChart className="w-5 h-5 mr-4" />, category: "LiveStats" },
   { title: "LiveStats LFB & LF2", url: "https://www.lfbfantasy.com/livestats", icon: <BarChart className="w-5 h-5 mr-4" />, category: "LiveStats" },
   
-  { title: "Calendrier d'Inès", url: "https://ines-agenda.vercel.app/", icon: <Calendar className="w-5 h-5 mr-4" />, category: "Schedule" },
-  { title: "Calendrier de Jade", url: "https://jade-application.vercel.app/", icon: <Calendar className="w-5 h-5 mr-4" />, category: "Schedule" },
-  { title: "Calendrier de Louann", url: "https://schedule-lou.vercel.app/", icon: <Calendar className="w-5 h-5 mr-4" />, category: "Schedule" },
+ { title: "Calendrier de Jade", url: "https://www.carlaleitefan.com/jade-schedule", icon: <Calendar className="w-5 h-5 mr-4" />, category: "Schedule" },
  
   { title: "Instagram d'Inès", url: "https://www.instagram.com/ines_debroise_fan/", icon: <FaInstagram className="w-5 h-5 mr-4" />, category: "Instagram" },
   { title: "Tiktok d'Inès", url: "https://www.tiktok.com/@ines_debroise_fan", icon: <FaTiktok className="w-5 h-5 mr-4" />, category: "TikTok" },

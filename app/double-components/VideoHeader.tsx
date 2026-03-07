@@ -1,20 +1,26 @@
-export default function VideoHeader({ className = "" }: { className?: string }) {
+export default function VideoHeader({
+  className = "",
+  src = "/video.mp4",
+}: {
+  className?: string;
+  src?: string;
+}) {
   return (
     <header className={`w-full max-w-3xl mx-auto relative min-h-[200px] ${className}`}>
       <div className="relative w-full h-[200px] overflow-hidden rounded-lg shadow-lg">
         <video
           className="absolute inset-0 w-full h-full object-cover"
-          src="/video.mp4"
+          src={src}
           autoPlay
           loop
           muted
           playsInline
         />
       </div>
-         <h1 className="text-[1.6rem] font-extrabold text-center mt-8 bg-gradient-to-r from-[#0a6894] to-[#075081] bg-clip-text text-transparent">
+
+      <h1 className="text-[1.6rem] font-extrabold text-center mt-8 bg-gradient-to-r from-[#0a6894] to-[#075081] bg-clip-text text-transparent">
         STATS PAR MINUTES
       </h1>
-
     </header>
   );
 }

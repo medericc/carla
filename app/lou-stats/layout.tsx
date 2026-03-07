@@ -1,4 +1,5 @@
-
+import Link from "next/link";
+import styles from "./lou.module.css"
 export const metadata = {
   title: "LiveStats Louann",
   description: "Les stats détaillées en direct.",
@@ -38,14 +39,19 @@ export default function LouannLayout({
 }) {
   return (
     <>
+    <div className={styles.page}>
       <header className="bg-gradient-to-r from-[#001E5A] to-[#000814] text-white p-8 text-4xl font-extrabold text-center shadow-md tracking-wide">
-        LIVESTATS
+       
+        <Link href="/" className="cursor-pointer hover:opacity-80">
+          LIVESTATS
+        </Link>
+
       </header>
 
       <main className="container mx-auto mt-4">
         {children}
       </main>
-
+</div>
      
     </>
   );

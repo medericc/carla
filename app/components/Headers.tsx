@@ -49,8 +49,9 @@ const newsResults =
   ];
 
   const dropdownItems = [
-    { label: "Lucile", href: "/lucile" },
-    { label: "Jade", href: "/jade" },
+    { label: "Apps", href: "/application" },
+    { label: "Inès", href: "https://www.ines-debroise.com/" },
+    
  ];
 
   const handleLinkClick = () => {

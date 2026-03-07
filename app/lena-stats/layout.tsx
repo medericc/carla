@@ -1,3 +1,5 @@
+import Link from "next/link";
+import styles from "./lou.module.css"
 export const metadata = {
   title: "LiveStats Léna",
   description: "Les stats détaillées en direct.",
@@ -32,14 +34,18 @@ export default function LenaLayout({
   children: React.ReactNode;
 }) {
   return (
-    <>
+    <>  <div className={styles.page}>
       <header className="bg-gradient-to-r from-red-700 to-red-800 text-white p-8 text-4xl font-extrabold text-center shadow-md">
-        LIVESTATS
+        
+ <Link href="/" className="cursor-pointer hover:opacity-80">
+          LIVESTATS
+        </Link>
+
       </header>
 
       <main className="container mx-auto mt-4">
         {children}
-      </main>
+      </main>  </div>
     </>
   );
 }

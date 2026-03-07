@@ -2,8 +2,8 @@
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { useState } from 'react';
 
-import VideoHeader from '../double-components/VideoHeader';
-import InputForm from '../double-components/InputForm';
+import VideoHeader from '../double-components/VideoHeaderLo';
+import InputForm from '../double-components/InputFormLo';
 import MatchTable from '../double-components/MatchTableE';
 import {
     Select,
@@ -44,60 +44,60 @@ export default function Home() {
     const [isWaitingModalOpen, setIsWaitingModalOpen] = useState(false);
 
    const matchLinks = [
-     { name: "Roadrunners", url: "/api/espn?gameId=401828147" } ,
+     { name: "Roadrunners", url: "/api/espnl?gameId=401828147" } ,
      
-   { name: "Tulsa GH", url: "/api/espn?gameId=401828134" } ,
-        { name: "Temple", url: "/api/espn?gameId=401828131" } ,
+   { name: "Tulsa GH", url: "/api/espnl?gameId=401828134" } ,
+        { name: "Temple", url: "/api/espnl?gameId=401828131" } ,
 
-        { name: "East Carolina", url: "/api/espn?gameId=401828122" } ,
+        { name: "East Carolina", url: "/api/espnl?gameId=401828122" } ,
 
-     { name: "South Florida", url: "/api/espn?gameId=401828118" } ,
+     { name: "South Florida", url: "/api/espnl?gameId=401828118" } ,
 
-      { name: "Wichita State", url: "/api/espn?gameId=401828109" } ,
+      { name: "Wichita State", url: "/api/espnl?gameId=401828109" } ,
 
-      { name: "North Texas", url: "/api/espn?gameId=401828106" } ,
+      { name: "North Texas", url: "/api/espnl?gameId=401828106" } ,
 
-//     { name: "Memphis", url: "/api/espn?gameId=401828099" } ,
+//     { name: "Memphis", url: "/api/espnl?gameId=401828099" } ,
 
-// { name: "Roadrunners", url: "/api/espn?gameId=401828089" } ,
+// { name: "Roadrunners", url: "/api/espnl?gameId=401828089" } ,
 
-//      { name: "Temple", url: "/api/espn?gameId=401828086" } ,
+//      { name: "Temple", url: "/api/espnl?gameId=401828086" } ,
 
-//  { name: "Tulane", url: "/api/espn?gameId=401828078" } ,
+//  { name: "Tulane", url: "/api/espnl?gameId=401828078" } ,
 
-//   { name: "Tulsa", url: "/api/espn?gameId=401828072" } ,
+//   { name: "Tulsa", url: "/api/espnl?gameId=401828072" } ,
 
-//       { name: "North Texas", url: "/api/espn?gameId=401828067" } ,
+//       { name: "North Texas", url: "/api/espnl?gameId=401828067" } ,
 
-//          { name: "UAB Blazers", url: "/api/espn?gameId=401828062" } ,
+//          { name: "UAB Blazers", url: "/api/espnl?gameId=401828062" } ,
 
-//         { name: "Charlotte 49ers", url: "/api/espn?gameId=401828049" } ,
+//         { name: "Charlotte 49ers", url: "/api/espnl?gameId=401828049" } ,
 
-//        { name: "Florida Atlantic", url: "/api/espn?gameId=401828041" } ,
+//        { name: "Florida Atlantic", url: "/api/espnl?gameId=401828041" } ,
 
-//     { name: "South Florida", url: "/api/espn?gameId=401828035" } ,
+//     { name: "South Florida", url: "/api/espnl?gameId=401828035" } ,
 
-//             { name: "Houston", url: "/api/espn?gameId=401820504" } ,
+//             { name: "Houston", url: "/api/espnl?gameId=401820504" } ,
 
-//      { name: "Grambling", url: "/api/espn?gameId=401825079" } ,
+//      { name: "Grambling", url: "/api/espnl?gameId=401825079" } ,
 
-//      { name: "Arlington", url: "/api/espn?gameId=401825078" } ,
+//      { name: "Arlington", url: "/api/espnl?gameId=401825078" } ,
 
-//     { name: "Lady Rebels", url: "/api/espn?gameId=401825077" } ,
+//     { name: "Lady Rebels", url: "/api/espnl?gameId=401825077" } ,
 
-// { name: "Sam Houston", url: "/api/espn?gameId=401825076" } ,
-// { name: "UCF Knights", url: "/api/espn?gameId=401825075" } ,
-// { name: "Morgan State", url: "/api/espn?gameId=401825074" } ,
-//     { name: "Illinois St", url: "/api/espn?gameId=401825073" } ,
-// { name: "Incarnate Word", url: "/api/espn?gameId=401809052" } ,
-//       { name: "Princeton", url: "/api/espn?gameId=401827784" }
+// { name: "Sam Houston", url: "/api/espnl?gameId=401825076" } ,
+// { name: "UCF Knights", url: "/api/espnl?gameId=401825075" } ,
+// { name: "Morgan State", url: "/api/espnl?gameId=401825074" } ,
+//     { name: "Illinois St", url: "/api/espnl?gameId=401825073" } ,
+// { name: "Incarnate Word", url: "/api/espnl?gameId=401809052" } ,
+//       { name: "Princeton", url: "/api/espnl?gameId=401827784" }
 // ,
 
-//         { name: "Middle Tennessee", url: "/api/espn?gameId=401825071" }
+//         { name: "Middle Tennessee", url: "/api/espnl?gameId=401825071" }
 // ,
-//       { name: "Houston UH", url: "/api/espn?gameId=401822211" }
+//       { name: "Houston UH", url: "/api/espnl?gameId=401822211" }
 // ,
-//        { name: "South Dakota State", url: "/api/espn?gameId=401825070" }
+//        { name: "South Dakota State", url: "/api/espnl?gameId=401825070" }
 
 ];
 
@@ -165,7 +165,7 @@ const handleGenerate = async () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-6 sm:p-12 gap-8 bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white">
-      <VideoHeader className="absolute top-0 left-0 w-full" />
+      <VideoHeader src="/louann.webm" className="absolute top-0 left-0 w-full" />
 
       <main className="flex flex-col items-center gap-6 w-full max-w-lg sm:max-w-2xl md:max-w-4xl">
         <Select value={selectedLink} onValueChange={setSelectedLink}>
