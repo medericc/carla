@@ -5,7 +5,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from '@/components/ui/table';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import VideoHeader from '../double-components/VideoHeaderJ';
+import VideoHeader from '../../double-components/VideoHeaderJ';
 import { Button } from '@/components/ui/button';
 
 interface MatchAction {

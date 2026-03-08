@@ -4,6 +4,9 @@ import styles from "./lou.module.css"
 export const metadata = {
     title: "Inès LiveStats",
     description: "Les stats détaillées en direct.",
+    alternates: {
+    canonical: "/livestats/ines",
+  },
     icons: {
         icon: "/favicon.ico", // Pour le favicon par défaut
         shortcut: "/favicon.ico", // Pour les navigateurs type iOS

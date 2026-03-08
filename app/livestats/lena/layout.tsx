@@ -3,6 +3,9 @@ import styles from "./lou.module.css"
 export const metadata = {
   title: "LiveStats Léna",
   description: "Les stats détaillées en direct.",
+ alternates: {
+    canonical: "/livestats/lena",
+  },
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",

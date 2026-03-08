@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import Papa from "papaparse";
 import Image from "next/image";
+import Link from "next/link";
 interface MatchData {
   SAISON: string;
   ANNEE: string;
@@ -101,7 +102,8 @@ export default function Directory() {
 
 
 
-
+    <Link href="/" className="cursor-pointer hover:opacity-80">
+     
  <div className="flex justify-center mt-2">
     <Image
       src="/ines.jpg"
@@ -112,7 +114,7 @@ export default function Directory() {
     />
   </div>
 
-
+</Link>
 
 
 

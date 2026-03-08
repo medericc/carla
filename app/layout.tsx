@@ -20,7 +20,10 @@ const geistMono = localFont({
 
 export const metadata = {
   metadataBase: new URL("https://carlaleitefan.com"),
-
+  robots: {
+    index: true,
+    follow: true,
+  },
   title: {
     default: "Carla Leite",
     template: "%s | Carla Leite",
@@ -39,10 +42,9 @@ export const metadata = {
     "équipe de France U20",
   ],
 
-  alternates: {
-    canonical: "https://carlaleitefan.com",
-  },
-
+ alternates: {
+  canonical: "/",
+},
   openGraph: {
     type: "website",
     locale: "fr_FR",

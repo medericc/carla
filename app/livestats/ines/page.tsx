@@ -3,9 +3,9 @@
 import { useState } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 
-import VideoHeader from '../double-components/VideoHeader';
-import InputForm from '../double-components/InputForm';
-import MatchTable from '../double-components/MatchTableE';
+import VideoHeader from '../../double-components/VideoHeader';
+import InputForm from '../../double-components/InputForm';
+import MatchTable from '../../double-components/MatchTableE';
 
 import {
   Select,

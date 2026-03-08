@@ -4,6 +4,9 @@ import "./lou.module.css";
 export const metadata = {
   title: "LiveStats Jade Celerier",
   description: "Les livestats des matchs de Jade Celerier",
+ alternates: {
+    canonical: "/livestats/jade",
+  },
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",

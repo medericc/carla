@@ -2,9 +2,9 @@
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { useState } from 'react';
 
-import VideoHeader from '../double-components/VideoHeaderLo';
-import InputForm from '../double-components/InputFormLo';
-import MatchTable from '../double-components/MatchTableE';
+import VideoHeader from '../../double-components/VideoHeaderLo';
+import InputForm from '../../double-components/InputFormLo';
+import MatchTable from '../../double-components/MatchTableE';
 import {
     Select,
     SelectContent,
