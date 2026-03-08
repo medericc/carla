@@ -49,7 +49,7 @@ const newsResults =
   ];
 
   const dropdownItems = [
-    { label: "Apps", href: "/application" },
+    { label: "Application", href: "/application" },
     { label: "Inès", href: "https://www.ines-debroise.com/" },
     
  ];
@@ -313,7 +313,7 @@ const scrollToSection = (id: string) => {
                     onClick={() => setDropdownOpen(!dropdownOpen)}
                     className="w-full px-4 py-3 text-lg font-semibold tracking-wider uppercase text-gray-300 hover:text-white hover:bg-gradient-to-r hover:from-red-600/10 hover:to-transparent rounded-lg transition-all duration-300 text-left"
                   >
-                    Autres Joueurs
+                    Autres Apps
                   </button>
                   
                   {dropdownOpen && (
