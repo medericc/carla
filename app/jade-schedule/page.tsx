@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card";
+import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/carde";
 import { Clock, CalendarPlus, ExternalLink } from "lucide-react";
 import { Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
 import { createEvents } from "ics";
@@ -228,7 +228,7 @@ const [isNoLinkModalOpen, setIsNoLinkModalOpen] = useState(false);
       
        grid 
     gap-6
-    grid-cols-[repeat(auto-fit,minmax(280px,1fr))]
+    grid-cols-[repeat(auto-fit,minmax(300px,1fr))]
     p-4
     ">
         {matches.map((match) => {

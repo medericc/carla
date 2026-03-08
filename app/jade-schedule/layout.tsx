@@ -47,9 +47,9 @@ export default function JadeLayout({
         
       <header className="bg-gradient-to-r from-purple-800 via-purple-700 to-purple-600 text-white p-6 md:p-8 text-3xl sm:text-3xl font-bold text-center shadow-lg tracking-wide">
         <span className="sm:hidden">🏀 JADE SCHEDULE</span>
-        <span className="hidden sm:inline lg:hidden">🏀 CALENDRIER DE JADE</span>
+        <span className="hidden sm:inline lg:hidden">🏀 CALANDRIÈ DE JADE</span>
         <span className="hidden lg:inline">
-          🏀 CALENDRIER DE JADE - DODGE CITY
+          🏀 CALANDRIÈ DE JADE - DODGE CITY 
         </span>
       </header>
 </Link>
