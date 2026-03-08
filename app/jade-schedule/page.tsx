@@ -90,7 +90,7 @@ const dayMapping: Record<string, string> = {
   MERCREDI: "DIMÈRS",
   JEUDI: "DIYAUS",
   VENDREDI: "DIBÉS",
-  SAMEDI: "DISSÀTTẸ",
+  SAMEDI: "DISSÀTTE",
   DIMANCHE: "DIMÉNDYẸ",
 };
 export default function PhoenixSchedulePage() {
