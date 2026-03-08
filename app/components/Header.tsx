@@ -71,7 +71,7 @@ const Header = () => {
         </div>
         <div
             id="imgg"
-            className="flex justify-center items-end relative w-full h-auto z-99"
+            className="flex justify-center items-end relative w-full h-auto z-10"
             style={{ maxWidth: "100%", position: "relative" }} // Le parent doit être en position relative pour que l'absolute fonctionne
           >
          <div
@@ -104,7 +104,7 @@ const Header = () => {
 
             <div
               id="band"
-              className="absolute bottom-[-0.15rem] left-0 w-full h-[11vw] z-[1001]"
+              className="absolute bottom-[-0.15rem] left-0 w-full h-[11vw] z-[100]"
               style={{
                 background: "linear-gradient(0deg, #1a1a1a 10%, rgba(195, 0, 0, 0))",
               }}
