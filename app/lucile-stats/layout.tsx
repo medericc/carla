@@ -37,7 +37,7 @@ export default function LucileCarlaLayout({
 
 
   return (
-    <>
+    <> <div className="lu-page">
     <div className={styles.page}>
       <header className="bg-gradient-to-r from-blue-900 to-blue-950 text-white p-8 text-4xl font-extrabold text-center shadow-md">
         <Link href="/" className="cursor-pointer hover:opacity-80">
@@ -47,7 +47,7 @@ export default function LucileCarlaLayout({
 
       <main className="container mx-auto mt-4">
         {children}
-      </main></div>
+      </main></div></div>
     </>
   );
 }

@@ -38,7 +38,7 @@ export default function LouannLayout({
   children: React.ReactNode;
 }) {
   return (
-    <>
+    <> <div className="lou-page">
     <div className={styles.page}>
       <header className="bg-gradient-to-r from-[#001E5A] to-[#000814] text-white p-8 text-4xl font-extrabold text-center shadow-md tracking-wide">
        
@@ -52,7 +52,7 @@ export default function LouannLayout({
         {children}
       </main>
 </div>
-     
+     </div>
     </>
   );
 }

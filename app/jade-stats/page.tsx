@@ -263,7 +263,7 @@ const handleGenerate = async () => {
 
 
   return (
-<div className="flex flex-col items-center justify-center min-h-screen p-6 sm:p-12 gap-8 bg-transparent text-gray-900">
+<div className="flex flex-col items-center justify-center min-h-screen p-6 sm:p-12 gap-8 bg-white text-gray-900">
 <VideoHeader  src="/video.webm" className="absolute top-0 left-0 w-full" />
 
       <main className="flex flex-col items-center gap-6 w-full max-w-4xl mt-10">

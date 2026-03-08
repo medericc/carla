@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import "./lou.module.css";
 export const metadata = {
   title: "Calendrier de Jade - Dodge City",
   description: "Le calendrier des matchs de Jade.",
@@ -42,6 +42,7 @@ export default function JadeLayout({
 }) {
   return (
     <>
+     <div className="jade-page min-h-screen">
      <Link href="/" className="cursor-pointer hover:opacity-80">
         
       <header className="bg-gradient-to-r from-purple-800 via-purple-700 to-purple-600 text-white p-6 md:p-8 text-3xl sm:text-3xl font-bold text-center shadow-lg tracking-wide">
@@ -53,6 +54,6 @@ export default function JadeLayout({
       </header>
 </Link>
       <main className="container mx-auto mt-6 px-4">{children}</main>
-    </>
+ </div>   </>
   );
 }

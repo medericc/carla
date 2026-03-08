@@ -39,7 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 return (
 
 
- <> <div className={styles.page}> 
+ <>   <div className="ines-page">  <div className={styles.page}> 
       <header className="bg-gradient-to-r from-[#08618a] to-[#054a79] text-white p-8 text-4xl font-extrabold text-center shadow-md tracking-wide">
         
  <Link href="/" className="cursor-pointer hover:opacity-80">
@@ -50,7 +50,7 @@ return (
 
       <main className="container mx-auto mt-4">
         {children}
-      </main>  </div> 
+      </main>  </div> </div> 
     </>
 
 );

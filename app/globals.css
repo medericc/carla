@@ -182,3 +182,74 @@ html {
 }
 
 
+.jade-page {
+  background: #fff;
+  min-height: 100vh;
+}
+
+/* force le fond de toute la page */
+body:has(.jade-page) {
+  background: #fff !important;
+  color: #111 !important;
+}
+/* Scrollbar violette uniquement sur Jade */
+body:has(.jade-page)::-webkit-scrollbar {
+  width: 10px;
+}
+
+body:has(.jade-page)::-webkit-scrollbar-track {
+  background: #e5e7eb; /* gris clair */
+}
+
+body:has(.jade-page)::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #7e3fec, #6a2ad1); /* violet */
+  border-radius: 6px;
+}
+
+body:has(.jade-page)::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #8f62f8, #7833e7);
+}
+
+body:has(.lena-page)::-webkit-scrollbar-track {
+  background: #e5e7eb; /* gris clair */
+}
+
+body:has(.lou-page)::-webkit-scrollbar-track {
+  background: #e5e7eb; /* gris clair */
+}
+
+body:has(.lou-page)::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #2024eb, #0d20c7); /* violet */
+  border-radius: 6px;
+}
+
+body:has(.lou-page)::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #1518b3, #0a0dc2);
+}
+
+body:has(.lu-page)::-webkit-scrollbar-track {
+  background: #e5e7eb; /* gris clair */
+}
+
+body:has(.lu-page)::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #2024eb, #0d20c7); /* violet */
+  border-radius: 6px;
+}
+
+body:has(.lu-page)::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #1518b3, #0a0dc2);
+}
+
+
+body:has(.ines-page)::-webkit-scrollbar-track {
+  background: #e5e7eb; /* gris clair */
+}
+
+body:has(.ines-page)::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #246bee, rgb(21, 91, 221)); /* violet */
+  border-radius: 6px;
+}
+
+body:has(.ines-page)::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #175bda, #0b53c0);
+}

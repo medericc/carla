@@ -1,9 +1,9 @@
-.page {
-  background: #f3f4f6;
+.jade-page {
+  background: #fff;
   color: black;
   min-height: 100vh;
 }
 
-.table {
+.jade-page table {
   border-collapse: collapse;
 }

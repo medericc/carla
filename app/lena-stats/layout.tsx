@@ -34,7 +34,7 @@ export default function LenaLayout({
   children: React.ReactNode;
 }) {
   return (
-    <>  <div className={styles.page}>
+    <>  <div className="lena-page"><div className={styles.page}>
       <header className="bg-gradient-to-r from-red-700 to-red-800 text-white p-8 text-4xl font-extrabold text-center shadow-md">
         
  <Link href="/" className="cursor-pointer hover:opacity-80">
@@ -45,7 +45,7 @@ export default function LenaLayout({
 
       <main className="container mx-auto mt-4">
         {children}
-      </main>  </div>
+      </main>  </div></div> 
     </>
   );
 }

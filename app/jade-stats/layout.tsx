@@ -37,6 +37,7 @@ export default function JadeLayout({
  
   return (
     <>
+    <div className="jade-page">
      <header className="bg-gradient-to-r from-purple-800 to-purple-900 text-white p-8 text-4xl font-extrabold text-center shadow-md tracking-wider">
          <Link href="/" className="cursor-pointer hover:opacity-80">
           LIVESTATS
@@ -46,6 +47,6 @@ export default function JadeLayout({
       <main className="livestats-page container mx-auto mt-4">
         {children}
       </main>
-    </>
+   </div> </>
   );
 }
