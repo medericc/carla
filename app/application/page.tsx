@@ -39,7 +39,7 @@ const links = [
  
     { title: "LiveStats de Lucile", url: "https://www.carlaleitefan.com/lucile-stats", icon: <BarChart className="w-5 h-5 mr-4" />, category: "LiveStats" },
     { title: "LiveStats de Léna", url: "https://www.carlaleitefan.com/lena-stats", icon: <BarChart className="w-5 h-5 mr-4" />, category: "LiveStats" },
-   { title: "LiveStats de Jade", url: "https://jade-livestats.vercel.app/", icon: <BarChart className="w-5 h-5 mr-4" />, category: "LiveStats" },
+   { title: "LiveStats de Jade", url: "https://www.carlaleitefan.com/jade-stats", icon: <BarChart className="w-5 h-5 mr-4" />, category: "LiveStats" },
   
     { title: "LiveStats de Louann", url: "https://www.carlaleitefan.com/lou-stats", icon: <BarChart className="w-5 h-5 mr-4" />, category: "LiveStats" },
   { title: "LiveStats LFB & LF2", url: "https://www.lfbfantasy.com/livestats", icon: <BarChart className="w-5 h-5 mr-4" />, category: "LiveStats" },
