@@ -253,3 +253,23 @@ body:has(.ines-page)::-webkit-scrollbar-thumb {
 body:has(.ines-page)::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(to bottom, #175bda, #0b53c0);
 }
+
+body:has(.ines-page) main {
+  padding: 0;
+}
+
+body:has(.lou-page) main {
+  padding: 0;
+}
+
+body:has(.jade-page) main {
+  padding: 0;
+}
+
+body:has(.lu-page) main {
+  padding: 0;
+}
+
+body:has(.lena-page) main {
+  padding: 0;
+}

@@ -30,18 +30,27 @@ export default function InstallPrompt() {
   if (!visible && !isIos) return null;
 
   return (
-    <div className="fixed bottom-4 left-1/2 -translate-x-1/2 bg-black/90 text-white p-4 rounded-xl shadow-lg z-50 max-w-sm text-center">
+    <div className="fixed bottom-4 left-1/2 -translate-x-1/2 bg-black/90 text-white p-4 rounded-xl shadow-lg z-50 max-w-sm text-center relative">
+
+      {/* ❌ Croix fermeture */}
+      <button
+        onClick={() => setVisible(false)}
+        className="absolute top-2 right-2 text-white/70 hover:text-white text-lg"
+      >
+        ✕
+      </button>
+
       {isIos ? (
-        <>
-          <p className="text-sm">
-            Pour installer l’app :
-            <br />
-            appuie sur <b>Partager</b> puis <b>Ajouter à l’écran d’accueil</b>
-          </p>
-        </>
+        <p className="text-sm">
+          Pour installer l’app :
+          <br />
+          appuie sur <b>Partager</b> puis <b>Ajouter à l’écran d’accueil</b>
+        </p>
       ) : (
         <>
-          <p className="text-sm mb-2">Installer l’application Carla Leite Fan ?</p>
+          <p className="text-sm mb-2">
+            Installer l’application Carla Leite Fan ?
+          </p>
           <button
             className="bg-red-600 px-4 py-2 rounded-lg text-white"
             onClick={async () => {

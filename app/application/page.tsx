@@ -40,7 +40,7 @@ const links = [
     { title: "LiveStats de Lucile", url: "https://www.carlaleitefan.com/livestats/lucile", icon: <BarChart className="w-5 h-5 mr-4" />, category: "LiveStats" },
     { title: "LiveStats de Léna", url: "https://www.carlaleitefan.com/livestats/lena", icon: <BarChart className="w-5 h-5 mr-4" />, category: "LiveStats" },
    { title: "LiveStats de Jade", url: "https://www.carlaleitefan.com/livestats/jade", icon: <BarChart className="w-5 h-5 mr-4" />, category: "LiveStats" },
-  { title: "LiveStats d'Inès'", url: "https://www.carlaleitefan.com/livestats/ines", icon: <BarChart className="w-5 h-5 mr-4" />, category: "LiveStats" },
+  { title: "LiveStats d'Inès", url: "https://www.carlaleitefan.com/livestats/ines", icon: <BarChart className="w-5 h-5 mr-4" />, category: "LiveStats" },
   
     { title: "LiveStats de Louann", url: "https://www.carlaleitefan.com/livestats/lou", icon: <BarChart className="w-5 h-5 mr-4" />, category: "LiveStats" },
   { title: "LiveStats LFB & LF2", url: "https://www.lfbfantasy.com/livestats", icon: <BarChart className="w-5 h-5 mr-4" />, category: "LiveStats" },
