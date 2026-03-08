@@ -10,6 +10,7 @@ import {
 
 import { Calendar, Video, Globe, LinkIcon, BarChart } from "lucide-react";
 import { FaYoutube, FaTiktok, FaInstagram } from "react-icons/fa";
+import Link from "next/link";
 const categories = ["Site", "Schedule", "StatsCenter", "LiveStats",  "Instagram", "TikTok", "YouTube"];
 
 // const categories = ["Site", "Schedule", "StatsCenter", "LiveStats", "Instagram", "TikTok", "YouTube"];
@@ -74,8 +75,10 @@ const [modalOpen, setModalOpen] = useState(false);
     <main className="min-h-screen flex flex-col justify-between items-center bg-[#ad2424] px-6 pt-6 text-neutral-100">
       {/* Header */}
       <div className="w-full max-w-md mb-6 mt-20">
+          <Link href="/" className="cursor-pointer hover:opacity-80">
+        
         <h1 className="text-3xl font-bold text-center mb-6 text-neutral-100">App Carla & Co</h1>
-
+</Link>
         {/* Menu déroulant */}
         <div className=" mt-8 mb-4">
         <Select value={selectedCategory} onValueChange={setSelectedCategory}>

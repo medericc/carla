@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const metadata = {
   title: "Calendrier de Jade - Dodge City",
   description: "Le calendrier des matchs de Jade.",
@@ -40,6 +42,8 @@ export default function JadeLayout({
 }) {
   return (
     <>
+     <Link href="/" className="cursor-pointer hover:opacity-80">
+        
       <header className="bg-gradient-to-r from-purple-800 via-purple-700 to-purple-600 text-white p-6 md:p-8 text-3xl sm:text-3xl font-bold text-center shadow-lg tracking-wide">
         <span className="sm:hidden">🏀 JADE SCHEDULE</span>
         <span className="hidden sm:inline lg:hidden">🏀 CALENDRIER DE JADE</span>
@@ -47,7 +51,7 @@ export default function JadeLayout({
           🏀 CALENDRIER DE JADE - DODGE CITY
         </span>
       </header>
-
+</Link>
       <main className="container mx-auto mt-6 px-4">{children}</main>
     </>
   );
