@@ -87,6 +87,7 @@ export default function JadeStats() {
    const matchLinks = [
 
 
+  { name: 'Hutchinson CC', url: 'https://njcaastats.prestosports.com/sports/wbkb/2025-26/div1/boxscores/20260313_oo9a.xml?view=plays', },
 
   { name: 'Seward County', url: 'https://njcaastats.prestosports.com/sports/wbkb/2025-26/div1/boxscores/20260304_0gi5.xml?view=plays', },
 
