@@ -213,7 +213,7 @@ export const matches = [
     "match.opponent": "Miéy-Finale",
     "dayLabel": "3/13/2026",
     "hourLabel": "17:30",
-    "match.opponentLogo": "/finale.webp",
+    "match.opponentLogo": "/wbkb.mp4",
     "match.link": ""
   },
    {
