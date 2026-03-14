@@ -44,6 +44,9 @@ export default function Home() {
     const [isWaitingModalOpen, setIsWaitingModalOpen] = useState(false);
 
    const matchLinks = [
+
+     { name: "Finale", url: "/api/espnl?gameId=401851220" } ,
+    
      { name: "Roadrunners", url: "/api/espnl?gameId=401828147" } ,
      
    { name: "Tulsa GH", url: "/api/espnl?gameId=401828134" } ,
@@ -53,9 +56,9 @@ export default function Home() {
 
      { name: "South Florida", url: "/api/espnl?gameId=401828118" } ,
 
-      { name: "Wichita State", url: "/api/espnl?gameId=401828109" } ,
+      // { name: "Wichita State", url: "/api/espnl?gameId=401828109" } ,
 
-      { name: "North Texas", url: "/api/espnl?gameId=401828106" } ,
+      // { name: "North Texas", url: "/api/espnl?gameId=401828106" } ,
 
 //     { name: "Memphis", url: "/api/espnl?gameId=401828099" } ,
 

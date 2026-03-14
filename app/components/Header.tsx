@@ -109,7 +109,18 @@ const Header = () => {
                 background: "linear-gradient(0deg, #1a1a1a 10%, rgba(195, 0, 0, 0))",
               }}
             />
-          </div></div>
+          </div>
+          
+          
+          </div>
+    
+    
+    
+    
+    
+    
+    
+    
       </div>
 
        {/* Stats section tablette et +*/}
