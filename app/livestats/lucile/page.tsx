@@ -315,7 +315,7 @@ console.log("MODE FEB");
     }
     
     return (
-        <div className="flex  flex-col items-center justify-center min-h-screen p-6 sm:p-12 gap-8 bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white         ">
+        <div className="flex  flex-col items-center justify-center min-h-screen p-6 sm:p-12 gap-8 bg-gray-100  text-gray-900          ">
         <VideoHeader className="absolute top-0 left-0 w-full" />
       
         <main className="flex flex-col items-center gap-6 w-full max-w-lg sm:max-w-2xl md:max-w-4xl">
@@ -366,7 +366,7 @@ console.log("MODE FEB");
       
         {/* Modale d'erreur */}
         <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
-  <DialogContent className="w-[80%] max-w-xs rounded-lg shadow-lg bg-white dark:bg-gray-800 p-6">
+  <DialogContent className="w-[80%] max-w-xs rounded-lg shadow-lg bg-white  p-6">
     <DialogHeader>
       <DialogTitle className="text-center mb-4">⚠️ Erreur</DialogTitle>
       <DialogDescription className="text-center mt-4">{modalMessage}</DialogDescription>
@@ -375,7 +375,7 @@ console.log("MODE FEB");
 </Dialog>
 
 <Dialog open={isWaitingModalOpen} onOpenChange={setIsWaitingModalOpen}>
-<DialogContent className="w-[80%] max-w-xs rounded-lg shadow-lg bg-white dark:bg-gray-800 p-6">
+<DialogContent className="w-[80%] max-w-xs rounded-lg shadow-lg bg-white  p-6">
                     <DialogHeader>
                         <DialogTitle  className="flex items-center justify-center gap-2 mb-2">⏳ Patiente</DialogTitle>
                         <DialogDescription className="text-center mt-2"   >{modalMessage}</DialogDescription>
