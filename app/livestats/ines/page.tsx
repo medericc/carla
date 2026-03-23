@@ -195,8 +195,8 @@ export default function Home() {
       <Dialog open={isWaitingModalOpen} onOpenChange={setIsWaitingModalOpen}>
         <DialogContent className="w-[80%] max-w-xs rounded-lg shadow-lg bg-white  p-6">
           <DialogHeader>
-            <DialogTitle className="flex items-center justify-center gap-2 mb-2">⏳ Patiente</DialogTitle>
-            <DialogDescription className="text-center mt-2">{modalMessage}</DialogDescription>
+            <DialogTitle className="flex items-center justify-center gap-2 mb-2 text-black">⏳ Patiente</DialogTitle>
+            <DialogDescription className="text-center mt-2 text-black">{modalMessage}</DialogDescription>
           </DialogHeader>
         </DialogContent>
       </Dialog>
