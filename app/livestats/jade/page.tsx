@@ -85,6 +85,7 @@ export default function JadeStats() {
   const [modalMessage, setModalMessage] = useState('');
 
    const matchLinks = [
+  { name: 'NW Mississippi', url: 'https://njcaastats.prestosports.com/sports/wbkb/2025-26/div1/boxscores/20260325_0hmp.xml?view=plays', },
 
 
   { name: 'Hutchinson CC', url: 'https://njcaastats.prestosports.com/sports/wbkb/2025-26/div1/boxscores/20260313_oo9a.xml?view=plays', },
@@ -165,31 +166,33 @@ export default function JadeStats() {
    
    
    
-   {
-      name: 'Barton Sport',
-      url: 'https://www.bartonsports.com/sports/wbkb/2025-26/boxscores/20251119_90mc.xml?view=plays',
-    },
-      {
-      name: 'Laramie',
-      url: 'https://www.bartonsports.com/sports/wbkb/2025-26/boxscores/20251115_cskl.xml?view=plays',
-    },
+  //  {
+  //     name: 'Barton Sport',
+  //     url: 'https://www.bartonsports.com/sports/wbkb/2025-26/boxscores/20251119_90mc.xml?view=plays',
+  //   },
+  //     {
+  //     name: 'Laramie',
+  //     url: 'https://www.bartonsports.com/sports/wbkb/2025-26/boxscores/20251115_cskl.xml?view=plays',
+  //   },
    
   //  {
   //     name: 'Trinidad',
   //     url: 'https://www.bartonsports.com/sports/wbkb/2025-26/boxscores/20251114_48he.xml?view=plays',
   //   },
-    {
-      name: 'North Platte',
-      url: 'https://njcaastats.prestosports.com/sports/wbkb/2025-26/div1/boxscores/20251111_bcxa.xml?view=plays',
-    },
-     {
-      name: 'Colorado',
-      url: 'https://njcaastats.prestosports.com/sports/wbkb/2025-26/div1/boxscores/20251101_rp4t.xml?view=plays',
-    },
-     {
-      name: 'Salt lake',
-      url: 'https://njcaastats.prestosports.com/sports/wbkb/2025-26/div1/boxscores/20251031_46p6.xml?view=plays',
-    },
+    // {
+    //   name: 'North Platte',
+    //   url: 'https://njcaastats.prestosports.com/sports/wbkb/2025-26/div1/boxscores/20251111_bcxa.xml?view=plays',
+    // },
+    //  {
+    //   name: 'Colorado',
+    //   url: 'https://njcaastats.prestosports.com/sports/wbkb/2025-26/div1/boxscores/20251101_rp4t.xml?view=plays',
+    // },
+    //  {
+    //   name: 'Salt lake',
+    //   url: 'https://njcaastats.prestosports.com/sports/wbkb/2025-26/div1/boxscores/20251031_46p6.xml?view=plays',
+    // },
+ 
+ 
   ];
 
 
