@@ -30,6 +30,7 @@ const actionMapping: Record<string, string> = {
 
   "made jumper": "Tir à 2",
   "missed jumper": "Tir à 2",
+  "missed jump": "Tir à 2",
   "good jumper": "Tir à 2",
   "miss jumper": "Tir à 2",
 
@@ -85,7 +86,11 @@ export default function JadeStats() {
   const [modalMessage, setModalMessage] = useState('');
 
    const matchLinks = [
-  { name: 'NW Mississippi', url: 'https://njcaastats.prestosports.com/sports/wbkb/2025-26/div1/boxscores/20260325_0hmp.xml?view=plays', },
+  
+  
+    { name: 'College of SI', url: 'https://njcaastats.prestosports.com/sports/wbkb/2025-26/div1/boxscores/20260327_0lab.xml?view=plays', },
+
+    { name: 'NW Mississippi', url: 'https://njcaastats.prestosports.com/sports/wbkb/2025-26/div1/boxscores/20260325_0hmp.xml?view=plays', },
 
 
   { name: 'Hutchinson CC', url: 'https://njcaastats.prestosports.com/sports/wbkb/2025-26/div1/boxscores/20260313_oo9a.xml?view=plays', },
@@ -204,12 +209,15 @@ const handleGenerate = async () => {
     setIsModalOpen(true);
     return;
   }
-
+  console.log("✅ Match choisi:", selectedMatch);
   setLoading(true);
 
   try {
-   const res = await fetch(`/api/njcaa?url=${encodeURIComponent(selectedMatch)}`);
-    // ⛔ Erreur HTTP → modale
+   const url = `/api/njcaa?url=${encodeURIComponent(selectedMatch)}`;
+    console.log("🌍 Fetch URL:", url);
+
+    const res = await fetch(url);  // ⛔ Erreur HTTP → modale
+    console.log("📡 Status:", res.status);
     if (!res.ok) {
       throw new Error(`Erreur HTTP : ${res.status}`);
     }
@@ -219,11 +227,13 @@ const handleGenerate = async () => {
 
     // ⛔ Backend renvoie erreur → modale
     if (json.error) {
+      console.log("❌ Backend error:", json.error);
       throw new Error(json.error);
     }
 
     // ⛔ Aucune action trouvée → modale
     if (!json.actions || json.actions.length === 0) {
+     console.log("❌ AUCUNE ACTION");
       throw new Error("Aucune donnée trouvée pour ce match");
     }
 

@@ -24,7 +24,7 @@ async function parsePlays(xml: string): Promise<Play[]> {
 
     // Parcourt chaque ligne de jeu
     $(table)
-      .find("tr.row")
+      .find("tr")
       .each((_, tr) => {
         const time = $(tr).find("td.time").text().trim();
         const actionText = $(tr).find("td.play .text").text().trim();
@@ -66,8 +66,17 @@ export async function GET(req: Request) {
     }
 
     console.log("🔗 Fetch:", matchUrl);
-    const res = await fetch(matchUrl, { cache: "no-store" });
-    const xml = await res.text();
+  const res = await fetch(matchUrl, {
+  cache: "no-store",
+  headers: {
+    "User-Agent":
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/122.0.0.0 Safari/537.36",
+    Accept:
+      "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9",
+    Referer: "https://njcaastats.prestosports.com/",
+  },
+}); const xml = await res.text();
 
     const actions = await parsePlays(xml);
 
