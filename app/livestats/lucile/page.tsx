@@ -46,7 +46,11 @@ export default function Home() {
     const matchLinksByPlayer: Record<string, { name: string; url: string }[]> = {
         "L. JEROME": [ 
             // { name: "Schio", url: "https://www.fiba.basketball/en/events/api/game-live-info/128317/detail" },
-      { name: "Roche Vendée", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2724111/bs.html" },
+     
+      { name: "ESBVA", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2724116/bs.html" },
+     
+     
+            { name: "Roche Vendée", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2724111/bs.html" },
      
    
             { name: "Basket Landes", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2713760/bs.html" },
@@ -54,12 +58,12 @@ export default function Home() {
             { name: "Landerneau", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2724068/bs.html" },
       { name: "Chartres", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2724100/bs.html" },
      
-    { name: "Lyon Basket", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2724094/bs.html" },
+    // { name: "Lyon Basket", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2724094/bs.html" },
       
-      { name: "Toulouse", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2724088/bs.html" },
+    //   { name: "Toulouse", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2724088/bs.html" },
       
     
-    { name: "Angers", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2724083/bs.html" },
+    // { name: "Angers", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2724083/bs.html" },
       
     
     // { name: "Charnay", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2724078/bs.html" },

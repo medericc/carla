@@ -98,12 +98,12 @@ export default function JadeStats() {
   { name: 'Seward County', url: 'https://njcaastats.prestosports.com/sports/wbkb/2025-26/div1/boxscores/20260304_0gi5.xml?view=plays', },
 
 { name: 'Butler CC', url: 'https://njcaastats.prestosports.com/sports/wbkb/2025-26/div1/boxscores/20260225_guv5.xml?view=plays', },
-{ name: 'Garden CCC', url: 'https://njcaastats.prestosports.com/sports/wbkb/2025-26/div1/boxscores/20260221_v4cv.xml?view=plays', },
+// { name: 'Garden CCC', url: 'https://njcaastats.prestosports.com/sports/wbkb/2025-26/div1/boxscores/20260221_v4cv.xml?view=plays', },
 
 
 
 
-  { name: 'Fort Hays Tech', url: 'https://njcaastats.prestosports.com/sports/wbkb/2025-26/div1/boxscores/20260218_bupj.xml?view=plays', },
+//   { name: 'Fort Hays Tech', url: 'https://njcaastats.prestosports.com/sports/wbkb/2025-26/div1/boxscores/20260218_bupj.xml?view=plays', },
 
 //  { name: 'Prat CC', url: 'https://njcaastats.prestosports.com/sports/wbkb/2025-26/div1/boxscores/20260214_uu67.xml?view=plays', },
 

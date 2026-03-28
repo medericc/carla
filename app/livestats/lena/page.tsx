@@ -38,6 +38,11 @@ export default function Home() {
     const [isWaitingModalOpen, setIsWaitingModalOpen] = useState(false);
 
     const matchLinks: { name: string; url: string }[] = [  
+   
+      // { name: "Nice", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2713936/bs.html" },
+        
+      { name: "Saint Amand", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2713931/bs.html" },
+      
       { name: "SIG Basket", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2713920/bs.html" },
         
       { name: "La Tronche", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2713917/bs.html" },
