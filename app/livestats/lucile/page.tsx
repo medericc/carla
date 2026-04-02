@@ -59,15 +59,15 @@ export default function Home() {
             { name: "Landerneau", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2724068/bs.html" },
       { name: "Chartres", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2724100/bs.html" },
      
-    // { name: "Lyon Basket", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2724094/bs.html" },
+    { name: "Lyon Basket", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2724094/bs.html" },
       
-    //   { name: "Toulouse", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2724088/bs.html" },
-      
-    
-    // { name: "Angers", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2724083/bs.html" },
+      { name: "Toulouse", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2724088/bs.html" },
       
     
-    // { name: "Charnay", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2724078/bs.html" },
+    { name: "Angers", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2724083/bs.html" },
+      
+    
+    { name: "Charnay", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2724078/bs.html" },
       
     //  { name: "Basket Landes", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2789032/bs.html" },
       
