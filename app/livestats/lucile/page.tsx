@@ -179,7 +179,8 @@ export default function Home() {
     
     const playerMapping: Record<string, string> = {
         "Lucile": "L. JEROME",
-        "Carla": "C. LEITE"
+        "Carla": "C. LEITE",
+         "Nicole": "N. ENABOSI"
     };
     
     const handleGenerate = async () => {
