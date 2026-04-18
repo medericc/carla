@@ -124,6 +124,51 @@ export default function Home() {
             { name: "Roche Vendée", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2513252/bs.html" },
             { name: "Charnay", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2513238/bs.html" },
             // { name: "Match 2", url: "https://example.com/carla2" },
+        ],
+          "N.ENABOSI": [
+     
+
+        
+         
+
+          { name: "Basket Landes 2", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2836376/bs.html" },
+            { name: "BL 1", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2834576/bs.html" },
+            { name: "RV", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2724118/bs.html" },
+             { name: "ASVEL", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2724112/bs.html" },
+          
+          { name: "ESBVA", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2724105/bs.html" },
+          
+
+          { name: "Flammes", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2724100/bs.html" },
+            { name: "BL", url: "https://basketlfb.com/laboulangerewonderligue/match/835470-basket-landes-chartresbs.html" },
+            { name: "Landerneau", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2724090/bs.html" },
+             { name: "BLMA", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2724084/bs.html" },
+          
+          { name: "TMB", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2724080/bs.html" },
+          
+
+          { name: "UF", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2724074/bs.html" },
+            { name: "CBBS", url: "https://basketlfb.com/laboulangerewonderligue/match/835441-chartres-charnaybs.html" },
+            { name: "Chartres", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2724065/bs.html" },
+             { name: "RV", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2724057/bs.html" },
+          
+          { name: "ASVEL", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2724052/bs.html" },
+          
+
+          { name: "ESBVA", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2724046/bs.html" },
+            { name: "Flammes", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2724043/bs.html" },
+            { name: "BL", url: "https://basketlfb.com/laboulangerewonderligue/match/835403-chartres-basket-landesbs.html" },
+             { name: "Landerneau", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2713747/bs.html" },
+          
+          { name: "BLMA", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2713745/bs.html" },
+          
+
+          { name: "Toulouse MB", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2724026/bs.html" },
+            { name: "UF Angers", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2724020/bs.html" },
+            { name: "Chartres", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2724015/bs.html" },
+            { name: "Bourges", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2713739/bs.html" },
+   
+            // { name: "Match 2", url: "https://example.com/carla2" },
         ]
     }; 
     useEffect(() => {
