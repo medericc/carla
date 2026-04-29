@@ -38,7 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 return (
 
 
- <>   <div className="ines-page">  <div className={styles.page}> 
+ <>   <div >  <div className={styles.page}> 
       <header className="bg-gradient-to-r from-[#8a081e] to-[#790518] text-white p-8 text-4xl font-extrabold text-center shadow-md tracking-wide">
         
  <Link href="/" className="cursor-pointer hover:opacity-80">

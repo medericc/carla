@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 
-import VideoHeader from '../../double-components/VideoHeaderL';
+import VideoHeader from '../../double-components/VideoC';
 import InputForm from '../../double-components/InputFormLe';
 import MatchTable from '../../double-components/MatchTableE';
 
