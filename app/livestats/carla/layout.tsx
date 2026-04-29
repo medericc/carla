@@ -39,7 +39,7 @@ return (
 
 
  <>   <div className="ines-page">  <div className={styles.page}> 
-      <header className="bg-gradient-to-r from-[#08618a] to-[#054a79] text-white p-8 text-4xl font-extrabold text-center shadow-md tracking-wide">
+      <header className="bg-gradient-to-r from-[#8a081e] to-[#790518] text-white p-8 text-4xl font-extrabold text-center shadow-md tracking-wide">
         
  <Link href="/" className="cursor-pointer hover:opacity-80">
           LIVESTATS
