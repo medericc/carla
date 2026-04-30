@@ -4,7 +4,7 @@ export const dynamic = "force-dynamic";
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
-  const gameId = searchParams.get("gameId") || "401825004";
+  const gameId = searchParams.get("gameId") || "5208982";
   const playerName = (searchParams.get("player") || "Carla Leite").toLowerCase();
 
   const url = `https://site.web.api.espn.com/apis/site/v2/sports/basketball/womens-college-basketball/summary?event=${gameId}`;
