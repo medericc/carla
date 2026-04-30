@@ -48,6 +48,13 @@ const statsData = [
     color: 'from-yellow-500 to-amber-400',
     category: 'Vieillesse'
   },
+   { 
+    label: 'Première Française Meilleure Marqueuse d\'une Franchise', 
+    value: '29/04',
+    icon: FaTrophy,
+    color: 'from-yellow-500 to-amber-400',
+    category: 'WNBA'
+  },
   { 
     label: 'Meilleure Evaluation de l\'histoire des PO LFB', 
     value: '21',
