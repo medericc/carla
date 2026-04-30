@@ -32,63 +32,41 @@ export default function Home() {
   const [isWaitingModalOpen, setIsWaitingModalOpen] = useState(false);
 
   const matchLinks = [
- { name: "Seattle Prepa", url: "/api/espnc?gameId=401866516" },
+ { name: "Seattle Prepa", url: "401866516" },
     
     
   ];
 
   // 🔁 Fonction principale
-  const handleGenerate = async () => {
-    // Si aucun match choisi
-    if (selectedLink === "none") {
+ const handleGenerate = async () => {
+  if (!selectedLink) {
+    setModalMessage("Carla s’échauffe 🏀");
+    setIsWaitingModalOpen(true);
+    setTimeout(() => setIsWaitingModalOpen(false), 3000);
+    return;
+  }
+
+  try {
+    const response = await fetch(`/api/espnc?gameId=${selectedLink}`);
+    const data = await response.json();
+
+    if (!data.length) {
       setModalMessage("Carla s’échauffe 🏀");
       setIsWaitingModalOpen(true);
       setTimeout(() => setIsWaitingModalOpen(false), 3000);
       return;
     }
 
-    const url = selectedLink || customUrl || "https://sidearmstats.com/rice/wbball/game.json?detail=full";
+    setCsvData(data);
+    setCsvGenerated(true);
 
-    try {
-      let response;
-      if (url.startsWith("/")) {
-        response = await fetch(url); // API interne (pas de CORS)
-      } else {
-        const proxyUrl = `/api/proxy?url=${encodeURIComponent(url)}`;
-        response = await fetch(proxyUrl);
-      }
+  } catch (error) {
+    console.error(error);
+    setModalMessage("Erreur pendant le chargement 😅");
+    setIsModalOpen(true);
+  }
+};
 
-      const data = await response.json();
-
-      // 🧩 Accepte à la fois un tableau brut ou data.Plays
-      const plays = Array.isArray(data)
-        ? data
-        : Array.isArray(data?.Plays)
-        ? data.Plays
-        : [];
-
-      if (!plays.length) {
-        console.error("Aucune donnée trouvée :", data);
-        // 🟣 Ici on met le même message que pour le cas "échauffement"
-        setModalMessage("Carla s’échauffe 🏀");
-        setIsWaitingModalOpen(true);
-        setTimeout(() => setIsWaitingModalOpen(false), 3000);
-        return;
-      }
-
-      console.log("✅ Données ESPN récupérées :", plays.length, "actions");
-      console.log("👀 Exemple :", plays[0]);
-
-      // ✅ Tes données sont déjà au bon format [period, chrono, action, réussite]
-      setCsvData(plays);
-      setCsvGenerated(true);
-
-    } catch (error) {
-      console.error("Erreur dans handleGenerate:", error);
-      setModalMessage("Erreur pendant le chargement des données 😅");
-      setIsModalOpen(true);
-    }
-  };
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-6 sm:p-12 gap-8 bg-gray-100  text-gray-900 ">

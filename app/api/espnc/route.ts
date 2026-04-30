@@ -7,8 +7,7 @@ export async function GET(request: Request) {
   const gameId = searchParams.get("gameId") || "5208982";
   const playerName = (searchParams.get("player") || "Carla Leite").toLowerCase();
 
-  const url = `https://site.web.api.espn.com/apis/site/v2/sports/basketball/womens-college-basketball/summary?event=${gameId}`;
-
+ const url = `https://site.web.api.espn.com/apis/site/v2/sports/basketball/wnba/summary?event=${gameId}`;
   try {
     const response = await fetch(url, { cache: "no-store" });
     if (!response.ok) {
@@ -29,8 +28,11 @@ export async function GET(request: Request) {
     const filteredPlays = plays.filter((p: any) => {
       const text = (p?.text || "").toLowerCase();
       const playerNames = (p?.participants || [])
-        .map((pa: any) => pa?.athlete?.displayName?.toLowerCase?.())
-        .filter(Boolean);
+  .map((pa: any) =>
+    pa?.athlete?.displayName?.toLowerCase?.() ||
+    pa?.athlete?.name?.toLowerCase?.()
+  )
+  .filter(Boolean);
 
       return (
         text.includes(playerName) ||
@@ -91,7 +93,8 @@ if (isAssist) {
     });
 
     const clean = data.filter(r => r[2] !== "other");
-
+console.log("👀 Exemple play:", plays[0]);
+console.log("🎯 Filtered:", filteredPlays.length);
     console.log(`✅ ESPN (${gameId}): ${clean.length} actions pour ${playerName}`);
     return NextResponse.json(clean);
 
