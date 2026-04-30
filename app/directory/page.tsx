@@ -290,6 +290,9 @@ export default function Directory() {
       {filteredData.length === 0 && (
         <p className="mt-6 text-gray-500 text-center">Aucun match trouvé pour cette statistique.</p>
       )}
+      <div className="fixed bottom-2 right-2 text-[9px] sm:text-[10px] md:text-xs text-gray-500 opacity-80">
+  17 min minimum
+</div>
     </div>
   );
 }
