@@ -38,23 +38,53 @@ const statsData = [
     label: 'Plus Jeune Français Topscorer d\'une Franchise', 
     value: '21',
     icon: FaTrophy,
-    color: 'from-yellow-500 to-amber-400',
+    color: 'from-emerald-500 to-green-400',
     category: 'Jeunesse'
   },
   { 
     label: 'Plus Vieux Français Topscorer d\'une Franchise', 
     value: '21',
     icon: FaTrophy,
-    color: 'from-yellow-500 to-amber-400',
+    color: 'from-amber-500 to-orange-400',
     category: 'Vieillesse'
   },
    { 
     label: 'Première Française Meilleure Marqueuse d\'une Franchise', 
     value: '29/04',
     icon: FaTrophy,
-    color: 'from-yellow-500 to-amber-400',
+    color: 'from-red-500 to-rose-400',
     category: 'WNBA'
   },
+   { 
+    label: 'Premier Français Le Plus Décisif d\'une Franchise', 
+    value: '04/05',
+    icon: FaTrophy,
+    color: 'from-violet-500 to-purple-400',
+    category: 'WNBA'
+  },
+   { 
+    label: 'Plus Jeune Français Le Plus Décisif d\'une Franchise', 
+    value: '22',
+    icon: FaTrophy,
+    color: 'from-yellow-500 to-amber-400',
+    category: 'Jeunesse'
+  },
+    { 
+    label: 'Plus Vieux Français Le Plus Décisif d\'une Franchise', 
+    value: '22',
+    icon: FaTrophy,
+    color: 'from-amber-500 to-orange-400',
+    category: 'Vieillesse'
+  },
+  { 
+    label: 'Plus Jeune Français Meilleur Passeur d\'une Franchise', 
+    value: '21',
+    icon: FaTrophy,
+    color: 'from-red-500 to-rose-400',
+    category: 'Jeunesse'
+  },
+ 
+  
   { 
     label: 'Meilleure Evaluation de l\'histoire des PO LFB', 
     value: '21',

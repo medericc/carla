@@ -70,6 +70,10 @@ export const timeline = [
     year: "2025",
     text: "Carla devient la première personne française à être meilleure marqueuse d'une franchise NBA/WNBA."
   },
+  {
+    year: "2026",
+    text: "Carla est la première personne française à être joueuse la plus décisive d'une franchise NBA/WNBA, elle mène Portland aux points et aux passes."
+  },
 ];
 function normalizeDate(year: string): string {
   if (year.includes("16 oct")) return "2024-10-16";
