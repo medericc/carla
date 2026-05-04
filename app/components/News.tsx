@@ -70,6 +70,10 @@ export const timeline = [
     year: "2025",
     text: "Carla devient la première personne française à être meilleure marqueuse d'une franchise NBA/WNBA."
   },
+   {
+    year: "2025",
+    text: "Les Valkyries menaient par Carla sont la première équipe d'expansion à se qualifier pour les playoffs dès sa première année."
+  },
   {
     year: "2026",
     text: "Carla est la première personne française à être joueuse la plus décisive d'une franchise NBA/WNBA, elle mène Portland aux points et aux passes."

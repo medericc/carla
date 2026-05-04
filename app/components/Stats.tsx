@@ -366,6 +366,13 @@ const statsData = [
     color: 'from-red-600 to-rose-500',
     category: 'Équipe'
   },
+ { 
+    label: 'Première à aller en PO avec une new team',
+    value: '1st year',
+    icon: FaUsers,
+    color: 'from-violet-600 to-purple-500',
+    category: 'Équipe'
+  },
 
   { 
     label: 'Draft WNBA la Plus Suivie de l\'Histoire', 
