@@ -56,8 +56,8 @@ export default function Home() {
    
             { name: "Basket Landes", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2713760/bs.html" },
      
-            { name: "Landerneau", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2724068/bs.html" },
-    //   { name: "Chartres", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2724100/bs.html" },
+    //         { name: "Landerneau", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2724068/bs.html" },
+    // //   { name: "Chartres", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2724100/bs.html" },
      
     // { name: "Lyon Basket", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2724094/bs.html" },
       
