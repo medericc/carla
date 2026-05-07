@@ -72,7 +72,10 @@ if (isAssist) {
     text.includes("layup") ||
     text.includes("jumpshot") ||
     text.includes("jumper") ||
-    text.includes("hook")
+    text.includes("hook") ||
+        text.includes("two point")||
+        text.includes("two points")
+ 
   ) action = "2pt";
   else if (text.includes("free throw")) action = "1pt";
   else if (text.includes("rebound")) action = "rebound";
