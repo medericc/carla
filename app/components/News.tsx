@@ -76,7 +76,7 @@ export const timeline = [
   },
   {
     year: "2026",
-    text: "Carla est la première personne française à être joueuse la plus décisive d'une franchise NBA/WNBA, elle mène Portland aux points et aux passes."
+    text: "Carla est la première personne française à être joueuse la plus décisive d'une franchise NBA/WNBA, elle mène Portland aux points, aux passes et aux lancers."
   },
 ];
 function normalizeDate(year: string): string {

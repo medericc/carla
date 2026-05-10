@@ -83,8 +83,35 @@ const statsData = [
     color: 'from-red-500 to-rose-400',
     category: 'Jeunesse'
   },
+ { 
+    label: 'Plus Jeune Français Meilleur Passeur d\'une Franchise', 
+    value: '21',
+    icon: FaTrophy,
+    color: 'from-red-500 to-rose-400',
+    category: 'Jeunesse'
+  },
  
-  
+   { 
+    label: 'Seul Français recordman de lancers en franchise', 
+    value: '22',
+    icon: FaTrophy,
+    color: 'from-red-500 to-rose-400',
+    category: 'Jeunesse'
+  },
+   { 
+    label: 'Plus jeune Français recordman de lancers en franchise', 
+    value: '22',
+    icon: FaTrophy,
+    color: 'from-red-500 to-rose-400',
+    category: 'Jeunesse'
+  },
+   { 
+    label: 'Plus vieux Français recordman de lancers en franchise', 
+    value: '22',
+    icon: FaTrophy,
+    color: 'from-red-500 to-rose-400',
+    category: 'Vieillesse'
+  },
   { 
     label: 'Meilleure Evaluation de l\'histoire des PO LFB', 
     value: '21',
