@@ -73,7 +73,7 @@ export default function Home() {
 
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-6 sm:p-12 gap-8 bg-gray-100  text-gray-900 ">
+    <div className="flex flex-col items-center justify-center min-h-screen p-6 max-[375px]:p-0 sm:p-12 gap-8 bg-gray-100  text-gray-900 ">
       <VideoHeader className="absolute top-0 left-0 w-full" />
 
       <main className="flex flex-col items-center gap-6 w-full max-w-lg sm:max-w-2xl md:max-w-4xl">
