@@ -84,19 +84,89 @@ const statsData = [
     category: 'Jeunesse'
   },
  { 
-    label: 'Plus Jeune Français Meilleur Passeur d\'une Franchise', 
+    label: 'Plus Jeune Française Meilleur Passeur d\'une Franchise', 
     value: '21',
     icon: FaTrophy,
     color: 'from-red-500 to-rose-400',
     category: 'Jeunesse'
   },
  
+
+
+   { 
+    label: 'Première Française Le Plus Décisif d\'une Franchise', 
+    value: '04/05',
+    icon: FaTrophy,
+    color: 'from-violet-500 to-purple-400',
+    category: 'WNBA'
+  },
+   { 
+    label: 'Plus Jeune Française La Plus Décisive d\'une Franchise', 
+    value: '22',
+    icon: FaTrophy,
+    color: 'from-yellow-500 to-amber-400',
+    category: 'Jeunesse'
+  },
+    { 
+    label: 'Plus Vieille Français La Plus Décisive d\'une Franchise', 
+    value: '22',
+    icon: FaTrophy,
+    color: 'from-amber-500 to-orange-400',
+    category: 'Vieillesse'
+  },
+  { 
+    label: 'Plus Jeune Française Meilleure Passeuse d\'une Franchise', 
+    value: '21',
+    icon: FaTrophy,
+    color: 'from-red-500 to-rose-400',
+    category: 'Jeunesse'
+  },
+ { 
+    label: 'Plus Jeune Française Meilleure Passeuse d\'une Franchise', 
+    value: '21',
+    icon: FaTrophy,
+    color: 'from-red-500 to-rose-400',
+    category: 'Jeunesse'
+  },
+ 
+ { 
+    label: 'Seul Français a Réalisé le Premier Double-Double d\'une Franchise', 
+    value: '22',
+    icon: FaTrophy,
+    color: 'from-red-500 to-rose-400',
+    category: 'WNBA'
+  },
+
+ { 
+    label: 'Seule Française a Réalisé le Premier Double-Double d\'une Franchise', 
+    value: '22',
+    icon: FaTrophy,
+    color: 'from-red-500 to-rose-400',
+    category: 'WNBA'
+  },
+
+   { 
+    label: 'Seul Français a Réalisé le Premier Double-Double à la Passe d\'une Franchise', 
+    value: '22',
+    icon: FaTrophy,
+    color: 'from-red-500 to-rose-400',
+    category: 'WNBA'
+  },
+
+ { 
+    label: 'Seule Française a Réalisé le Premier Double-Double à la Passe d\'une Franchise', 
+    value: '22',
+    icon: FaTrophy,
+    color: 'from-red-500 to-rose-400',
+    category: 'WNBA'
+  },
+
    { 
     label: 'Seul Français recordman de lancers en franchise', 
     value: '22',
     icon: FaTrophy,
     color: 'from-red-500 to-rose-400',
-    category: 'Jeunesse'
+    category: 'WNBA'
   },
    { 
     label: 'Plus jeune Français recordman de lancers en franchise', 
@@ -107,6 +177,27 @@ const statsData = [
   },
    { 
     label: 'Plus vieux Français recordman de lancers en franchise', 
+    value: '22',
+    icon: FaTrophy,
+    color: 'from-red-500 to-rose-400',
+    category: 'Vieillesse'
+  },
+  { 
+    label: 'Seule Française recordwoman de lancers en franchise', 
+    value: '22',
+    icon: FaTrophy,
+    color: 'from-red-500 to-rose-400',
+    category: 'WNBA'
+  },
+   { 
+    label: 'Plus jeune Française recordwoman de lancers en franchise', 
+    value: '22',
+    icon: FaTrophy,
+    color: 'from-red-500 to-rose-400',
+    category: 'Jeunesse'
+  },
+   { 
+    label: 'Plus vieille Française recordwoman de lancers en franchise', 
     value: '22',
     icon: FaTrophy,
     color: 'from-red-500 to-rose-400',
