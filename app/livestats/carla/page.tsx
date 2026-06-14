@@ -32,6 +32,8 @@ export default function Home() {
   const [isWaitingModalOpen, setIsWaitingModalOpen] = useState(false);
 
   const matchLinks = [
+        { name: "Dallas", url: "401856988" },
+    
        { name: "Las Vegas", url: "401856983" },
       { name: "Los Angeles", url: "401856971" },
     
@@ -39,17 +41,17 @@ export default function Home() {
     
       { name: "Valkyries", url: "401856957" },
     
-        { name: "Indiana", url: "401856951" },
+//         { name: "Indiana", url: "401856951" },
     
-       { name: "Atlanta", url: "401856948" },
+//        { name: "Atlanta", url: "401856948" },
     
-      { name: "New York", url: "401856936" },
-      { name: "Toronto", url: "401856931" },
-     { name: "Indiana", url: "401856921" },
-    { name: "New York", url: "401856903" },
-    { name: "Chicago", url: "401856895" },
-     { name: "L.A. Prepa", url: "401866521" },
- { name: "Seattle Prepa", url: "401866516" },
+//       { name: "New York", url: "401856936" },
+//       { name: "Toronto", url: "401856931" },
+//      { name: "Indiana", url: "401856921" },
+//     { name: "New York", url: "401856903" },
+//     { name: "Chicago", url: "401856895" },
+//      { name: "L.A. Prepa", url: "401866521" },
+//  { name: "Seattle Prepa", url: "401866516" },
     
     
   ];
