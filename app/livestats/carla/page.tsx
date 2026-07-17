@@ -32,8 +32,9 @@ export default function Home() {
   const [isWaitingModalOpen, setIsWaitingModalOpen] = useState(false);
 
   const matchLinks = [
-
-       { name: "Seattle", url: "401857040" },
+ { name: "Seattle", url: "401857040" },
+    
+       { name: "Washington", url: "401857071" },
     
      { name: "Washington", url: "401857031" },
     
