@@ -524,8 +524,17 @@ const statsData = [
 
 const Stats = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [viewMode, setViewMode] = useState<'carousel' | 'grid'>('carousel');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+const [viewMode, setViewMode] = useState<'carousel' | 'grid'>(
+  typeof window !== 'undefined' && window.innerWidth < 768
+    ? 'grid'
+    : 'carousel'
+);
+
+const [selectedCategory, setSelectedCategory] = useState<string>(
+  typeof window !== 'undefined' && window.innerWidth < 768
+    ? 'Playoffs'
+    : 'all'
+);
   const containerRef = useRef<HTMLDivElement>(null);
 const [open, setOpen] = useState(false)
 
