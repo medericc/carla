@@ -30,13 +30,15 @@ export const metadata = {
   },
 
   description:
-    "Carla Leite, championne de France espoir, meilleure joueuse des Playoffs LFB, championne d’Europe U20 et joueuse WNBA. Actualités, carrière et performances.",
+    "Carla Leite, championne de France espoir, meilleure joueuse des Playoffs LFB, championne d’Europe U20 et joueuse WNBA au Portland Fire. Actualités, carrière et performances.",
 
   keywords: [
     "Carla Leite",
     "basketball féminin",
     "WNBA",
     "Golden State Valkyries",
+      "Portland Fire",
+            "France",
     "ESBVA-LM",
     "Casademont Zaragoza",
     "équipe de France U20",
@@ -103,7 +105,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     sameAs: ["https://www.instagram.com/fan_carlaleite/"],
     affiliation: [
       { "@type": "SportsTeam", name: "Golden State Valkyries" },
-      { "@type": "SportsTeam", name: "Dallas Wings" },
+      { "@type": "SportsTeam", name: "Portland Fire" },
       { "@type": "SportsTeam", name: "Casademont Zaragoza Femenino" },
       { "@type": "SportsTeam", name: "ESBVA-LM (Villeneuve d'Ascq)" },
     ],
