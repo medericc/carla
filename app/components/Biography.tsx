@@ -35,6 +35,7 @@ function calculateAge(birthDate: string) {
     age--;
   }
 
+  
   return age;
 }
 /* ================= DATA ================= */
