@@ -19,12 +19,30 @@ const itemVariants = {
   }),
 };
 
+const birthDate = "2004-04-16";
+function calculateAge(birthDate: string) {
+  const today = new Date();
+  const birth = new Date(birthDate);
+
+  let age = today.getFullYear() - birth.getFullYear();
+
+  const hasBirthdayPassed =
+    today.getMonth() > birth.getMonth() ||
+    (today.getMonth() === birth.getMonth() &&
+      today.getDate() >= birth.getDate());
+
+  if (!hasBirthdayPassed) {
+    age--;
+  }
+
+  return age;
+}
 /* ================= DATA ================= */
 
 const playerInfo = [
   { label: "Club", value: "CD Saragosse" },
   { label: "Poste", value: "Small Guard" },
-  { label: "Age", value: "21" },
+  { label: "Age", value: `${calculateAge(birthDate)}` },
   { label: "Height", value: "1.74m" },
   { label: "Nationality", value: "French" },
   { label: "WNBA Team", value: "Valkyries" },
