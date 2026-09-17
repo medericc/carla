@@ -49,13 +49,22 @@ const Header = () => {
           NUMBER #0
         </h2>
         
-        <h1 className="text-[18vw] md:text-[18vw]  lg:text-[14vw]  font-bold absolute top-[-8vw] md:top-[-30vw] lg:top-[-33.5vw]  xl:top-[-36vw]  left-[50%] transform -translate-x-1/2 text-white uppercase z-10 mt-[7vw]" id="un">
-          CARLA
-        </h1>
+      <h1
+  className="font-bold absolute left-[50%] transform -translate-x-1/2 text-white uppercase z-10"
+  id="un"
+>
+  <span
+    className="text-[18vw] md:text-[18vw] lg:text-[14vw] absolute top-[-8vw] md:top-[-30vw] lg:top-[-33.5vw] xl:top-[-36vw] left-[50%] transform -translate-x-1/2 mt-[7vw] whitespace-nowrap"
+  >
+    CARLA
+  </span>
 
-        <h1 className="text-[18vw] lg:text-[14vw] md:text-[18vw]  font-bold absolute top-[5vw] md:top-[-18vw] lg:top-[-24vw]  xl:top-[-29vw] left-[50%] transform -translate-x-1/2 text-white uppercase z-10 mt-[12vw] opacity-1" id="deux">
-          LEITE
-        </h1>
+  <span
+    className="text-[18vw] lg:text-[14vw] md:text-[18vw] absolute top-[5vw] md:top-[-18vw] lg:top-[-24vw] xl:top-[-29vw] left-[50%] transform -translate-x-1/2 mt-[12vw] opacity-1 whitespace-nowrap"
+  >
+    LEITE
+  </span>
+</h1>
 <div id="top">
 <div className="relative z-0 w-full h-[80vh] lg:h-auto lg:aspect-video overflow-hidden lg:mt-[-15.5rem] xl:mt-[-19.5rem]" id="video">
           <video
