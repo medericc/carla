@@ -84,7 +84,7 @@ export const metadata = {
   manifest: "/manifest.json",
 
   verification: {
-    google: "AxJDrbCgDWHBOIcKdtu0epbjppUL8VHs5t3XMhPJE5Y",
+    google: "gcLOv5jbeLOiLYtLYc45Fq24q_89NCpsYNO9wc8APgM",
   },
 
   other: {
@@ -113,7 +113,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
   return (
     <html lang="fr">
-      <head> <meta name="google-site-verification" content="gcLOv5jbeLOiLYtLYc45Fq24q_89NCpsYNO9wc8APgM" /></head>
+      <head> </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {/* JSON-LD */}
         <script
