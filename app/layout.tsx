@@ -1,9 +1,8 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import Script from "next/script";
+
 import PWAClient from "./components/PWAClient";
 import { Analytics } from "@vercel/analytics/react";
-
 
 const geistSans = localFont({
   src: "/fonts/GeistVF.woff",
@@ -17,7 +16,6 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-
 export const metadata = {
   metadataBase: new URL("https://www.carlaleitefan.com"),
   robots: {
@@ -28,25 +26,22 @@ export const metadata = {
     default: "Carla Leite",
     template: "%s | Carla Leite",
   },
-
   description:
     "Carla Leite, championne de France espoir, meilleure joueuse des Playoffs LFB, championne d’Europe U20 et joueuse WNBA au Portland Fire. Actualités, carrière et performances.",
-
   keywords: [
     "Carla Leite",
     "basketball féminin",
     "WNBA",
     "Golden State Valkyries",
-      "Portland Fire",
-            "France",
+    "Portland Fire",
+    "France",
     "ESBVA-LM",
     "Casademont Zaragoza",
     "équipe de France U20",
   ],
-
- alternates: {
-  canonical: "/",
-},
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
     locale: "fr_FR",
@@ -63,37 +58,45 @@ export const metadata = {
       },
     ],
   },
-
   twitter: {
     card: "summary_large_image",
     title: "Carla Leite – Basketteuse professionnelle",
     description:
       "Carla Leite, championne d’Europe U20, joueuse WNBA et figure du basketball féminin français.",
-    images: ["https://www.carlaleitefan.com/carla-leite-basket.png"],
+    images: [
+      "https://www.carlaleitefan.com/carla-leite-basket.png",
+    ],
   },
-
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      {
+        url: "/favicon-32x32.png",
+        sizes: "32x32",
+        type: "image/png",
+      },
+      {
+        url: "/favicon-16x16.png",
+        sizes: "16x16",
+        type: "image/png",
+      },
     ],
     apple: "/icons/icon-192x192.png",
   },
-
   manifest: "/manifest.json",
-
   verification: {
     google: "gcLOv5jbeLOiLYtLYc45Fq24q_89NCpsYNO9wc8APgM",
   },
-
   other: {
     "google-adsense-account": "ca-pub-6915108633693700",
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  // ✅ JSON-LD Schema.org (parfait pour Google Discover & Knowledge Graph)
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -101,43 +104,81 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     jobTitle: "Basketteuse professionnelle",
     nationality: "Française",
     url: "https://www.carlaleitefan.com",
-    image: "https://www.carlaleitefan.com/carla-leite-basket.png",
-    sameAs: ["https://www.instagram.com/fan_carlaleite/"],
+    image:
+      "https://www.carlaleitefan.com/carla-leite-basket.png",
+    sameAs: [
+      "https://www.instagram.com/fan_carlaleite/",
+    ],
     affiliation: [
-      { "@type": "SportsTeam", name: "Golden State Valkyries" },
-      { "@type": "SportsTeam", name: "Portland Fire" },
-      { "@type": "SportsTeam", name: "Casademont Zaragoza Femenino" },
-      { "@type": "SportsTeam", name: "ESBVA-LM (Villeneuve d'Ascq)" },
+      {
+        "@type": "SportsTeam",
+        name: "Golden State Valkyries",
+      },
+      {
+        "@type": "SportsTeam",
+        name: "Portland Fire",
+      },
+      {
+        "@type": "SportsTeam",
+        name: "Casademont Zaragoza Femenino",
+      },
+      {
+        "@type": "SportsTeam",
+        name: "ESBVA-LM (Villeneuve d'Ascq)",
+      },
     ],
   };
 
   return (
     <html lang="fr">
-      <head> </head>
-      
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {/* JSON-LD */}
+      <head>
+        {/* Google Tag Manager */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(w,d,s,l,i){
+                w[l]=w[l]||[];
+                w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+                var f=d.getElementsByTagName(s)[0],
+                    j=d.createElement(s),
+                    dl=l!='dataLayer'?'&l='+l:'';
+                j.async=true;
+                j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+                f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','GTM-WS8GWCF7');
+            `,
+          }}
+        />
+      </head>
+
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-WS8GWCF7"
+            height="0"
+            width="0"
+            style={{
+              display: "none",
+              visibility: "hidden",
+            }}
+          />
+        </noscript>
+
+        {/* JSON-LD Schema.org */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaData),
+          }}
         />
-
-        {/* Google Analytics */}
-        <Script
-          strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=G-ZVWXT3GBXV"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-ZVWXT3GBXV');
-          `}
-        </Script>
 
         {children}
+
         <PWAClient />
+
         <Analytics />
       </body>
     </html>
