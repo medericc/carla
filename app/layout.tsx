@@ -19,7 +19,7 @@ const geistMono = localFont({
 
 
 export const metadata = {
-  metadataBase: new URL("https://carlaleitefan.com"),
+  metadataBase: new URL("https://www.carlaleitefan.com"),
   robots: {
     index: true,
     follow: true,
@@ -50,13 +50,13 @@ export const metadata = {
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    url: "https://carlaleitefan.com",
+    url: "https://www.carlaleitefan.com",
     title: "Carla Leite – Basketteuse professionnelle",
     description:
       "Carla Leite, joueuse française de basketball, championne d’Europe U20 et membre de la WNBA.",
     images: [
       {
-        url: "https://carlaleitefan.com/carla-leite-basket.png",
+        url: "https://www.carlaleitefan.com/carla-leite-basket.png",
         width: 1200,
         height: 630,
         alt: "Carla Leite basketteuse professionnelle",
@@ -69,7 +69,7 @@ export const metadata = {
     title: "Carla Leite – Basketteuse professionnelle",
     description:
       "Carla Leite, championne d’Europe U20, joueuse WNBA et figure du basketball féminin français.",
-    images: ["https://carlaleitefan.com/carla-leite-basket.png"],
+    images: ["https://www.carlaleitefan.com/carla-leite-basket.png"],
   },
 
   icons: {
@@ -100,8 +100,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     name: "Carla Leite",
     jobTitle: "Basketteuse professionnelle",
     nationality: "Française",
-    url: "https://carlaleitefan.com",
-    image: "https://carlaleitefan.com/carla-leite-basket.png",
+    url: "https://www.carlaleitefan.com",
+    image: "https://www.carlaleitefan.com/carla-leite-basket.png",
     sameAs: ["https://www.instagram.com/fan_carlaleite/"],
     affiliation: [
       { "@type": "SportsTeam", name: "Golden State Valkyries" },
@@ -114,6 +114,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="fr">
       <head> </head>
+      
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {/* JSON-LD */}
         <script
