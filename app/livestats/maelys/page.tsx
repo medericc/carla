@@ -130,7 +130,7 @@ export default function Home() {
     
             if (!response.ok) {
                 console.error("Erreur de récupération :", response.status, await response.text());
-                setModalMessage("Léna s'échauffe 🏀");
+                setModalMessage("Maëlys s'échauffe 🏀");
                 setIsWaitingModalOpen(true);
                 return;
             }
@@ -142,7 +142,7 @@ export default function Home() {
                 .filter((action) => action.familyName === "Faurat")
                 .sort((a, b) => b.gt.localeCompare(a.gt));
     
-            console.log("Actions triées pour Léna :", filteredData);
+            console.log("Actions triées pour Maelys :", filteredData);
     
             const csvContent = generateCSV(filteredData);
             console.log("CSV généré :", csvContent);
