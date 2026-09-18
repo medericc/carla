@@ -139,7 +139,7 @@ export default function Home() {
             console.log("Données récupérées :", data);
     
             const filteredData = data.pbp
-                .filter((action) => action.familyName === "Monasse")
+                .filter((action) => action.familyName === "Faurat")
                 .sort((a, b) => b.gt.localeCompare(a.gt));
     
             console.log("Actions triées pour Léna :", filteredData);

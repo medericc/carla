@@ -101,7 +101,6 @@ export default function Home() {
   ];
 
   // 🔁 Fonction principale
-
 const handleGenerate = async () => {
   if (selectedLink === "none") {
     setModalMessage("Inès s’échauffe 🏀");
@@ -158,7 +157,7 @@ const handleGenerate = async () => {
 
     console.log("✅ Données LFB récupérées :", data);
 
-    // L'API Genius Sports renvoie les actions dans pbp
+    // Toutes les actions du match
     const plays = Array.isArray(data?.pbp)
       ? data.pbp
       : [];
@@ -176,29 +175,80 @@ const handleGenerate = async () => {
       return;
     }
 
-    console.log("🏀 Actions LFB :", plays.length);
-    console.log("👀 Première action :", plays[0]);
+    console.log("🏀 Nombre total d’actions LFB :", plays.length);
 
-    // Format attendu par MatchTableE :
+    // Vérification des noms disponibles dans l'API
+    console.log(
+      "👤 Noms présents dans le match :",
+      [...new Set(plays.map((action: any) => action.familyName))]
+    );
+
+    // ---------------------------------------------------------
+    // UNIQUEMENT DEBROISE
+    // ---------------------------------------------------------
+
+    const debroisePlays = plays.filter(
+      (action: any) =>
+        action.familyName?.trim().toLowerCase() === "debroise"
+    );
+
+    console.log(
+      "🏀 Actions de Debroise :",
+      debroisePlays.length
+    );
+
+    console.log(
+      "👀 Actions Debroise :",
+      debroisePlays
+    );
+
+    if (!debroisePlays.length) {
+      console.error(
+        "Aucune action trouvée pour Debroise."
+      );
+
+      setModalMessage("Inès s’échauffe 🏀");
+      setIsWaitingModalOpen(true);
+
+      setTimeout(() => {
+        setIsWaitingModalOpen(false);
+      }, 3000);
+
+      return;
+    }
+
+    // ---------------------------------------------------------
+    // Format attendu par MatchTableE
+    //
     // [période, chrono, action, réussite]
+    // ---------------------------------------------------------
 
-    const rows: string[][] = plays.map((action: any) => [
-      action.period ?? '',
-      action.gt ?? '',
-      action.actionType ?? '',
-      action.success ? '1' : '0',
-    ]);
+    const rows: string[][] = debroisePlays.map(
+      (action: any) => [
+        action.period ?? '',
+        action.gt ?? '',
+        action.actionType ?? '',
+        action.success ? '1' : '0',
+      ]
+    );
 
     setCsvData(rows);
     setCsvGenerated(true);
 
   } catch (error) {
-    console.error("Erreur dans handleGenerate :", error);
+    console.error(
+      "Erreur dans handleGenerate :",
+      error
+    );
 
-    setModalMessage("Erreur pendant le chargement des données 😅");
+    setModalMessage(
+      "Erreur pendant le chargement des données 😅"
+    );
+
     setIsModalOpen(true);
   }
 };
+
 
 
 
