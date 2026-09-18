@@ -177,12 +177,6 @@ const handleGenerate = async () => {
 
     console.log("🏀 Nombre total d’actions LFB :", plays.length);
 
-    // Vérification des noms disponibles dans l'API
-    console.log(
-      "👤 Noms présents dans le match :",
-      [...new Set(plays.map((action: any) => action.familyName))]
-    );
-
     // ---------------------------------------------------------
     // UNIQUEMENT DEBROISE
     // ---------------------------------------------------------
