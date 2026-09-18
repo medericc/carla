@@ -15,7 +15,7 @@ export const metadata = {
     description: "Le play by play en direct.",
     images: [
       {
-        url: "https://lenastats.vercel.app/preview.jpg",
+        url: "https://www.carlaleitefan.com/preview.jpg",
         width: 1200,
         height: 630,
         alt: "LiveStats Maelys",
@@ -27,7 +27,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "LiveStats Maelys",
     description: "Les stats détaillées en direct.",
-    images: ["https://lenastats.vercel.app/preview.jpg"],
+    images: ["https://www.carlaleitefan.com/preview.jpg"],
   },
 };
 
