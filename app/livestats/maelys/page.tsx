@@ -38,11 +38,9 @@ export default function Home() {
     const [isWaitingModalOpen, setIsWaitingModalOpen] = useState(false);
 
     const matchLinks: { name: string; url: string }[] = [  
- 
- 
-   { name: "Roche Vendée", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2879368/bs.html" },
      
- 
+      { name: "Roche Vendée", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2879368/bs.html" },
+     
       //     { name: "Monaco", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2713939/bs.html" },
         
       // { name: "Nice", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2713936/bs.html" },
@@ -218,7 +216,7 @@ export default function Home() {
         </Dialog>
     
         <footer className="text-sm text-gray-900 mt-8">
-          <a href="https://www.youtube.com/@fan_goat_ines" target="_blank" rel="noopener noreferrer" className="hover:underline">
+          <a href="https://www.youtube.com/@fan_maefau" target="_blank" rel="noopener noreferrer" className="hover:underline">
             Produit par @fan_carlaleite
           </a>
         </footer>

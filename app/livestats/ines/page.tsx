@@ -32,19 +32,22 @@ export default function Home() {
   const [isWaitingModalOpen, setIsWaitingModalOpen] = useState(false);
 
   const matchLinks = [
- { name: "Alabama CT", url: "/api/espn?gameId=401856513" },
+
+      { name: "Voiron", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2879363/bs.html" },
+     
+//  { name: "Alabama CT", url: "/api/espn?gameId=401856513" },
     
-     { name: "Finale A10", url: "/api/espn?gameId=401851271" },
+//      { name: "Finale A10", url: "/api/espn?gameId=401851271" },
    
-     { name: "Davidson", url: "/api/espn?gameId=401851267" },
+//      { name: "Davidson", url: "/api/espn?gameId=401851267" },
    
-     { name: "Loyola CR", url: "/api/espn?gameId=401851259" },
+//      { name: "Loyola CR", url: "/api/espn?gameId=401851259" },
    
- { name: "George Washington", url: "/api/espn?gameId=401829158" },
+//  { name: "George Washington", url: "/api/espn?gameId=401829158" },
    
-      { name: "Richmond", url: "/api/espn?gameId=401829153" },
+//       { name: "Richmond", url: "/api/espn?gameId=401829153" },
    
-     { name: "Fordham", url: "/api/espn?gameId=401829143" },
+//      { name: "Fordham", url: "/api/espn?gameId=401829143" },
    
 //      { name: "La Salle", url: "/api/espn?gameId=401829140" },
    
@@ -98,57 +101,106 @@ export default function Home() {
   ];
 
   // 🔁 Fonction principale
-  const handleGenerate = async () => {
-    // Si aucun match choisi
-    if (selectedLink === "none") {
+
+const handleGenerate = async () => {
+  if (selectedLink === "none") {
+    setModalMessage("Inès s’échauffe 🏀");
+    setIsWaitingModalOpen(true);
+
+    setTimeout(() => {
+      setIsWaitingModalOpen(false);
+    }, 3000);
+
+    return;
+  }
+
+  const url =
+    selectedLink ||
+    customUrl ||
+    "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2879363/bs.html";
+
+  try {
+    // URL LFB / Genius Sports
+    // /u/FFBB/2879363/bs.html
+    // devient
+    // /data/2879363/data.json
+
+    const jsonUrl = url
+      .replace(/\/u\/FFBB\//, '/data/')
+      .replace(/\/bs\.html\/?/, '/')
+      .replace(/\/$/, '') + '/data.json';
+
+    console.log("🏀 URL LFB :", jsonUrl);
+
+    // Proxy pour éviter le problème CORS
+    const proxyUrl = `/api/proxy?url=${encodeURIComponent(jsonUrl)}`;
+
+    const response = await fetch(proxyUrl);
+
+    if (!response.ok) {
+      console.error(
+        "Erreur récupération LFB :",
+        response.status,
+        await response.text()
+      );
+
       setModalMessage("Inès s’échauffe 🏀");
       setIsWaitingModalOpen(true);
-      setTimeout(() => setIsWaitingModalOpen(false), 3000);
+
+      setTimeout(() => {
+        setIsWaitingModalOpen(false);
+      }, 3000);
+
       return;
     }
 
-    const url = selectedLink || customUrl || "https://sidearmstats.com/rice/wbball/game.json?detail=full";
+    const data = await response.json();
 
-    try {
-      let response;
-      if (url.startsWith("/")) {
-        response = await fetch(url); // API interne (pas de CORS)
-      } else {
-        const proxyUrl = `/api/proxy?url=${encodeURIComponent(url)}`;
-        response = await fetch(proxyUrl);
-      }
+    console.log("✅ Données LFB récupérées :", data);
 
-      const data = await response.json();
+    // L'API Genius Sports renvoie les actions dans pbp
+    const plays = Array.isArray(data?.pbp)
+      ? data.pbp
+      : [];
 
-      // 🧩 Accepte à la fois un tableau brut ou data.Plays
-      const plays = Array.isArray(data)
-        ? data
-        : Array.isArray(data?.Plays)
-        ? data.Plays
-        : [];
+    if (!plays.length) {
+      console.error("Aucune donnée LFB trouvée :", data);
 
-      if (!plays.length) {
-        console.error("Aucune donnée trouvée :", data);
-        // 🟣 Ici on met le même message que pour le cas "échauffement"
-        setModalMessage("Inès s’échauffe 🏀");
-        setIsWaitingModalOpen(true);
-        setTimeout(() => setIsWaitingModalOpen(false), 3000);
-        return;
-      }
+      setModalMessage("Inès s’échauffe 🏀");
+      setIsWaitingModalOpen(true);
 
-      console.log("✅ Données ESPN récupérées :", plays.length, "actions");
-      console.log("👀 Exemple :", plays[0]);
+      setTimeout(() => {
+        setIsWaitingModalOpen(false);
+      }, 3000);
 
-      // ✅ Tes données sont déjà au bon format [period, chrono, action, réussite]
-      setCsvData(plays);
-      setCsvGenerated(true);
-
-    } catch (error) {
-      console.error("Erreur dans handleGenerate:", error);
-      setModalMessage("Erreur pendant le chargement des données 😅");
-      setIsModalOpen(true);
+      return;
     }
-  };
+
+    console.log("🏀 Actions LFB :", plays.length);
+    console.log("👀 Première action :", plays[0]);
+
+    // Format attendu par MatchTableE :
+    // [période, chrono, action, réussite]
+
+    const rows: string[][] = plays.map((action: any) => [
+      action.period ?? '',
+      action.gt ?? '',
+      action.actionType ?? '',
+      action.success ? '1' : '0',
+    ]);
+
+    setCsvData(rows);
+    setCsvGenerated(true);
+
+  } catch (error) {
+    console.error("Erreur dans handleGenerate :", error);
+
+    setModalMessage("Erreur pendant le chargement des données 😅");
+    setIsModalOpen(true);
+  }
+};
+
+
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-6 sm:p-12 gap-8 bg-gray-100  text-gray-900 ">
@@ -203,7 +255,7 @@ export default function Home() {
 
       <footer className="text-sm text-gray-900 mt-8">
         <a
-          href="https://www.youtube.com/@fan_lucilej"
+          href="https://www.youtube.com/@fan_goat_ines"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:underline"
