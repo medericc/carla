@@ -44,7 +44,14 @@ export async function GET(req: Request) {
       );
     }
 
-    const data = await response.json();
+const text = await response.text();
+
+console.log("TAILLE REPONSE :", text.length);
+console.log("DEBUT REPONSE :", text.substring(0, 500));
+
+const data = JSON.parse(text);
+
+console.log("PBP SERVEUR :", data?.pbp?.length);
 
     console.log(
       "Nombre de PBP reçus par le proxy :",
