@@ -14,14 +14,18 @@ import {
 } from '@/components/ui/select';
 
 interface MatchAction {
-    period: string;
-    gt: string; // Game time
-    actionType: string;
-    success: boolean;
-    s1: string; // Score team 1
-    s2: string; // Score team 2
-    player: string; // Nom du joueur
-    familyName: string;
+  period: string;
+  gt: string;
+  actionType: string;
+  success: boolean;
+  s1: string;
+  s2: string;
+  player?: string;
+  familyName?: string;
+  firstName?: string;
+  subType?: string;
+  scoring?: number;
+  shirtNumber?: string;
 }
 
 interface MatchData {
@@ -108,63 +112,141 @@ export default function Home() {
     //     { name: "Voiron", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2513437/bs.html" },
     ]; 
     
-    const handleGenerate = async () => {
-        const url = selectedLink || customUrl;
-    
-        if (!url) {
-            setModalMessage("Sélectionne un Match 😎");
-            setIsModalOpen(true);
-            return;
-        }
-    
-        try {
-            const jsonUrl = url
-                .replace(/\/u\/FFBB\//, '/data/')
-                .replace(/\/bs\.html\/?/, '/')
-                .replace(/\/$/, '') + '/data.json';
-    
-            console.log("URL JSON générée :", jsonUrl);
-    
-            const proxyUrl = `/api/proxy?url=${encodeURIComponent(jsonUrl)}`;
-            const response = await fetch(proxyUrl);
-    
-            if (!response.ok) {
-                console.error("Erreur de récupération :", response.status, await response.text());
-                setModalMessage("Maëlys s'échauffe 🏀");
-                setIsWaitingModalOpen(true);
-                return;
-            }
-    
-            const data: MatchData = await response.json();
-            console.log("Données récupérées :", data);
-    
-            const filteredData = data.pbp
-                .filter((action) => action.familyName === "Faurat")
-                .sort((a, b) => b.gt.localeCompare(a.gt));
-    
-            console.log("Actions triées pour Maelys :", filteredData);
-    
-            const csvContent = generateCSV(filteredData);
-            console.log("CSV généré :", csvContent);
-    
-            const rows = csvContent.split('\n').slice(1).map((row) => row.split(','));
-            setCsvData(rows);
-            setCsvGenerated(true);
-        } catch (error) {
-            console.error("Erreur dans generateCsv:", error);
-            alert('Une erreur est survenue lors de la génération du CSV.');
-        }
-    };
-    
-    const generateCSV = (data: MatchAction[]): string => {
-        let csv = 'Période,Horodatage,Action,Réussite,Score\n';
-        
-        data.forEach((action) => {
-            csv += `${action.period},${action.gt},${action.actionType},${action.success ? '1' : '0'},${action.s1}-${action.s2}\n`;
-        });
-    
-        return csv;
-    };
+  const handleGenerate = async () => {
+    const url = selectedLink || customUrl;
+
+    if (!url) {
+      setModalMessage("Sélectionne un Match 😎");
+      setIsModalOpen(true);
+      return;
+    }
+
+    try {
+      const jsonUrl = url
+        .replace(/\/u\/FFBB\//, "/data/")
+        .replace(/\/bs\.html\/?/, "/")
+        .replace(/\/$/, "") + "/data.json";
+
+      console.log("URL JSON :", jsonUrl);
+
+      const proxyUrl =
+        `/api/proxy?url=${encodeURIComponent(jsonUrl)}`;
+
+      const response = await fetch(proxyUrl, {
+        method: "GET",
+        cache: "no-store",
+      });
+
+      if (!response.ok) {
+        console.error(
+          "Erreur proxy :",
+          response.status,
+          await response.text()
+        );
+
+        setModalMessage("Maëlys s'échauffe 🏀");
+        setIsWaitingModalOpen(true);
+        return;
+      }
+
+      const data: MatchData = await response.json();
+
+      console.log("DATA :", data);
+      console.log("Nombre d'actions :", data.pbp?.length);
+
+      if (!data.pbp) {
+        console.error("Le JSON ne contient pas 'pbp' :", data);
+
+        setModalMessage("Les données du match sont introuvables.");
+        setIsModalOpen(true);
+        return;
+      }
+
+      /*
+       * Récupération de toutes les actions de maelys
+       */
+     const filteredData = data.pbp
+  .filter((action) => {
+    const familyName =
+      action.familyName?.trim().toLowerCase() || "";
+
+    const firstName =
+      action.firstName?.trim().toLowerCase() || "";
+
+    const player =
+      action.player?.trim().toLowerCase() || "";
+
+    return (
+      familyName === "faurat" ||
+      player.includes("faurat") ||
+      ((firstName === "maeys" || firstName === "maelys") &&
+        familyName === "faurat")
+    );
+  })
+  .sort((a, b) => {
+    return b.gt.localeCompare(a.gt);
+  });
+
+      console.log(
+        "========== ACTIONS DE Maëlys =========="
+      );
+
+      console.log(filteredData);
+
+      console.log(
+        "Nombre d'actions de Maëlys :",
+        filteredData.length
+      );
+
+      /*
+       * Génération du tableau
+       */
+      const csvContent = generateCSV(filteredData);
+
+      console.log("CSV :", csvContent);
+
+      const rows = csvContent
+        .split("\n")
+        .filter((row) => row.trim() !== "")
+        .slice(1)
+        .map((row) => row.split(","));
+
+      setCsvData(rows);
+      setCsvGenerated(true);
+
+    } catch (error) {
+      console.error("Erreur :", error);
+
+      setModalMessage(
+        "Une erreur est survenue lors de la récupération."
+      );
+
+      setIsModalOpen(true);
+    }
+  };
+
+  const generateCSV = (data: MatchAction[]) => {
+    let csv =
+      "Période,Horodatage,Action,Réussite,Score\n";
+
+    data.forEach((action) => {
+      const actionName =
+        action.actionType ||
+        action.subType ||
+        "";
+
+      csv += [
+        action.period,
+        action.gt,
+        actionName,
+        action.success ? "1" : "0",
+        `${action.s1}-${action.s2}`,
+      ].join(",") + "\n";
+    });
+
+    return csv;
+  };
+
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen p-6 sm:p-12 gap-8 bg-gray-100  text-gray-900 ">
