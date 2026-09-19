@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "./lou.module.css"
 export const metadata = {
-  title: "LiveStats Léna",
+  title: "LiveStats Maelys",
   description: "Les stats détaillées en direct.",
  alternates: {
     canonical: "/livestats/maelys",
