@@ -14,6 +14,7 @@ export async function GET(req: Request) {
       );
     }
 
+    console.log("========== PROXY ==========");
     console.log("URL récupérée :", targetUrl);
 
     const response = await fetch(targetUrl, {
@@ -22,6 +23,8 @@ export async function GET(req: Request) {
         Accept: "application/json",
       },
     });
+
+    console.log("Statut Genius :", response.status);
 
     if (!response.ok) {
       const errorText = await response.text();
@@ -43,7 +46,20 @@ export async function GET(req: Request) {
 
     const data = await response.json();
 
-    console.log("Données récupérées :", data);
+    console.log(
+      "Nombre de PBP reçus par le proxy :",
+      data?.pbp?.length
+    );
+
+    console.log(
+      "Premier PBP :",
+      data?.pbp?.[0]
+    );
+
+    console.log(
+      "Dernier PBP :",
+      data?.pbp?.[data?.pbp?.length - 1]
+    );
 
     return NextResponse.json(data);
   } catch (error) {
