@@ -16,18 +16,19 @@ import { FaArrowLeft } from "react-icons/fa";
 
 const PrivacyPolicyPage = () => {
   const privacySections = [
-    {
-      title: "Aucune Collecte de Données Personnelles",
-      icon: FaUserSecret,
-      content: "Ce site fan ne collecte, ne stocke et ne traite AUCUNE donnée personnelle. Aucune inscription, formulaire d'inscription ou système de compte utilisateur n'est utilisé. Votre navigation reste totalement anonyme.",
-      points: [
-        "Pas de noms, emails ou informations personnelles collectées",
-        "Pas de création de compte utilisateur",
-        "Pas de formulaire d'inscription",
-        "Pas de suivi nominatif"
-      ],
-      color: "from-green-500 to-emerald-400"
-    },
+  {
+  title: "Cookies et traceurs",
+  icon: FaCookie,
+  content: "Ce site peut utiliser des cookies et autres traceurs afin d'assurer son fonctionnement et, lorsque vous y consentez, de mesurer son audience. Les traceurs non nécessaires ne sont activés qu'après votre accord.",
+  points: [
+    "Cookies et traceurs nécessaires au fonctionnement du site",
+    "Mesure d'audience via les services configurés sur le site",
+    "Aucun cookie publicitaire ou de ciblage activé sans votre consentement",
+    "Vous pouvez accepter ou refuser les traceurs depuis le bandeau de consentement",
+    "Votre choix est conservé afin de ne pas vous redemander votre consentement à chaque visite"
+  ],
+  color: "from-amber-500 to-orange-400"
+},
     {
       title: "Analytics Anonymes Vercel",
       icon: FaChartLine,
@@ -36,7 +37,7 @@ const PrivacyPolicyPage = () => {
         "Données agrégées et anonymisées",
         "Pas de suivi individuel",
         "Pas de cookies d'identification",
-        "Conforme au RGPD et CCPA"
+       
       ],
       color: "from-blue-500 to-cyan-400"
     },
@@ -160,7 +161,7 @@ const PrivacyPolicyPage = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
-            Site fan dédié à Carla Leite • Aucune donnée personnelle collectée • Janvier 2026
+            Site fan dédié à Carla Leite • Janvier 2026
           </p>
         </motion.div>
 
@@ -181,10 +182,8 @@ const PrivacyPolicyPage = () => {
                   Engagement de Confidentialité Total
                 </h3>
                 <p className="text-gray-300 leading-relaxed text-lg md:text-xl">
-                  Ce site fan est conçu avec une approche <span className="text-green-400 font-semibold">"privacy-first"</span>. 
-                  Nous ne collectons <span className="text-green-400 font-semibold">AUCUNE</span> donnée personnelle. 
-                  Votre navigation reste <span className="text-green-400 font-semibold">100% anonyme</span> et privée.
-                </p>
+Ce site ne propose pas de compte utilisateur, d'inscription ou de newsletter. Les données éventuellement traitées par les services techniques et de mesure d'audience sont décrites dans la présente politique de confidentialité.
+   </p>
               </div>
             </div>
           </div>
@@ -322,7 +321,72 @@ const PrivacyPolicyPage = () => {
               </div>
             ))}
           </div>
-          
+
+{/* Cookies et traceurs */}
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6, delay: 0.9 }}
+  className="mb-12 md:mb-16"
+>
+  <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center text-gray-100">
+    <span className="flex items-center justify-center gap-3">
+      <FaCookie className="text-amber-400" />
+      Cookies et traceurs
+    </span>
+  </h2>
+
+  <div className="bg-gradient-to-br from-gray-900/50 to-black/50 border border-gray-800 rounded-xl md:rounded-2xl p-6 md:p-8">
+    <div className="space-y-6 text-gray-300 leading-relaxed">
+      <div>
+        <h3 className="text-xl font-bold text-amber-400 mb-2">
+          Quels cookies sont utilisés ?
+        </h3>
+        <p>
+          Le site peut utiliser des cookies et autres traceurs nécessaires
+          à son fonctionnement. Des outils de mesure d&apos;audience peuvent
+          également être utilisés afin de comprendre la fréquentation du site
+          et d&apos;améliorer son fonctionnement.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="text-xl font-bold text-amber-400 mb-2">
+          Votre consentement
+        </h3>
+        <p>
+          Lorsque le consentement est requis, les traceurs concernés ne sont
+          activés qu&apos;après votre accord. Vous pouvez accepter ou refuser
+          leur utilisation depuis le bandeau affiché lors de votre première
+          visite.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="text-xl font-bold text-amber-400 mb-2">
+          Modifier votre choix
+        </h3>
+        <p>
+          Vous pouvez à tout moment modifier ou retirer votre consentement
+          depuis le mécanisme de gestion des cookies disponible sur le site.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="text-xl font-bold text-amber-400 mb-2">
+          Mesure d&apos;audience
+        </h3>
+        <p>
+          Les données de fréquentation sont utilisées à des fins statistiques.
+          Les modalités de collecte et de conservation dépendent des services
+          effectivement configurés sur le site.
+        </p>
+      </div>
+    </div>
+  </div>
+</motion.div>
+
+
           {/* Vercel Link */}
           <div className="text-center mt-6">
             <a
