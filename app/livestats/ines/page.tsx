@@ -14,6 +14,21 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
+interface MatchData { pbp: MatchAction[]; }
+interface MatchAction {
+  period: string;
+  gt: string;
+  actionType: string;
+  success: boolean;
+  s1: string;
+  s2: string;
+  player?: string;
+  familyName?: string;
+  firstName?: string;
+  subType?: string;
+  scoring?: number;
+  shirtNumber?: string;
+}
 
 // 🕒 Convertit les secondes en format mm:ss
 const formatTime = (seconds: number) => {
@@ -35,214 +50,123 @@ export default function Home() {
 
       { name: "Voiron", url: "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2879363/bs.html" },
      
-//  { name: "Alabama CT", url: "/api/espn?gameId=401856513" },
-    
-//      { name: "Finale A10", url: "/api/espn?gameId=401851271" },
-   
-//      { name: "Davidson", url: "/api/espn?gameId=401851267" },
-   
-//      { name: "Loyola CR", url: "/api/espn?gameId=401851259" },
-   
-//  { name: "George Washington", url: "/api/espn?gameId=401829158" },
-   
-//       { name: "Richmond", url: "/api/espn?gameId=401829153" },
-   
-//      { name: "Fordham", url: "/api/espn?gameId=401829143" },
-   
-//      { name: "La Salle", url: "/api/espn?gameId=401829140" },
-   
-//      { name: "George Mason", url: "/api/espn?gameId=401829132" },
-   
-//  { name: "VCU Rams", url: "/api/espn?gameId=401829129" },
-   
-//        { name: "Saint Louis", url: "/api/espn?gameId=401829123" },
-   
-//     { name: "St Joseph's", url: "/api/espn?gameId=401829116" },
-   
-    //  { name: "Fordham", url: "/api/espn?gameId=401829106" },
-   
-      // { name: "Dayton", url: "/api/espn?gameId=401829096" },
-   
-  // { name: "Davidson", url: "/api/espn?gameId=401829086" },
-   
-  //      { name: "Duquesne", url: "/api/espn?gameId=401829082" },
-   
-      // { name: "VCU Rams", url: "/api/espn?gameId=401829076" },
-   
-      // { name: "Saint Bonaventure", url: "/api/espn?gameId=401829068" },
-   
-//      { name: "George Washington", url: "/api/espn?gameId=401829061" },
-//       { name: "Loyola", url: "/api/espn?gameId=401829034" },
- 
-//      { name: "Richmond", url: "/api/espn?gameId=401829029" },
- 
-//     { name: "Wagner", url: "/api/espn?gameId=401825008" },
- 
-// { name: "Providence", url: "/api/espn?gameId=401825007" },
- 
-// { name: "Black Bears", url: "/api/espn?gameId=401822844" },
- 
-// { name: "Saint Joseph's", url: "/api/espn?gameId=401829021" },
-//     { name: "Princeton", url: "/api/espn?gameId=401825006" },
-// { name: "NC State", url: "/api/espn?gameId=401817578" },
-// { name: "Holy Cross", url: "/api/espn?gameId=401823108" },
- 
+ ];
 
+  const handleGenerate = async () => {
+    const url = selectedLink || customUrl;
 
-// { name: "UAlbany", url: "/api/espn?gameId=401825005" },
-//   { name: "Rutgers", url: "/api/espn?gameId=401813740" },
- 
+    if (!url) {
+      setModalMessage("Sélectionne un Match 😎");
+      setIsModalOpen(true);
+      return;
+    }
 
-//         { name: "Emmanuel", url: "/api/espn?gameId=401825004" },
-//    { name: "Merrimack", url: "/api/espn?gameId=401825003" },
- 
+    try {
+      const jsonUrl = url
+        .replace(/\/u\/FFBB\//, "/data/")
+        .replace(/\/bs\.html\/?/, "/")
+        .replace(/\/$/, "") + "/data.json";
 
-//         { name: "Manhattan", url: "/api/espn?gameId=401813825" },
-  ];
+      console.log("URL JSON :", jsonUrl);
 
-  // 🔁 Fonction principale
-const handleGenerate = async () => {
-  if (selectedLink === "none") {
-    setModalMessage("Inès s’échauffe 🏀");
-    setIsWaitingModalOpen(true);
+      const proxyUrl =
+        `/api/proxy?url=${encodeURIComponent(jsonUrl)}`;
 
-    setTimeout(() => {
-      setIsWaitingModalOpen(false);
-    }, 3000);
+      const response = await fetch(proxyUrl, {
+        method: "GET",
+        cache: "no-store",
+      });
 
-    return;
-  }
+      if (!response.ok) {
+        console.error(
+          "Erreur proxy :",
+          response.status,
+          await response.text()
+        );
 
-  const url =
-    selectedLink ||
-    customUrl ||
-    "https://fibalivestats.dcd.shared.geniussports.com/u/FFBB/2879363/bs.html";
+        setModalMessage("Léna s'échauffe 🏀");
+        setIsWaitingModalOpen(true);
+        return;
+      }
 
-  try {
-    // URL LFB / Genius Sports
-    // /u/FFBB/2879363/bs.html
-    // devient
-    // /data/2879363/data.json
+      const data: MatchData = await response.json();
 
-    const jsonUrl = url
-      .replace(/\/u\/FFBB\//, '/data/')
-      .replace(/\/bs\.html\/?/, '/')
-      .replace(/\/$/, '') + '/data.json';
+      console.log("DATA :", data);
+      console.log("Nombre d'actions :", data.pbp?.length);
 
-    console.log("🏀 URL LFB :", jsonUrl);
+      if (!data.pbp) {
+        console.error("Le JSON ne contient pas 'pbp' :", data);
 
-    // Proxy pour éviter le problème CORS
-    const proxyUrl = `/api/proxy?url=${encodeURIComponent(jsonUrl)}`;
+        setModalMessage("Les données du match sont introuvables.");
+        setIsModalOpen(true);
+        return;
+      }
 
-    const response = await fetch(proxyUrl);
+      /*
+       * Récupération de toutes les actions de Léna Monasse
+       */
+     const filteredData = data.pbp .filter((action: MatchAction) => { const familyName = action.familyName?.trim().toLowerCase() || ""; const firstName = action.firstName?.trim().toLowerCase() || ""; const player = action.player?.trim().toLowerCase() || ""; return ( familyName === "debroise" || player.includes("debroise") || (firstName === "ines" && familyName === "debroise") ); }) .sort((a: MatchAction, b: MatchAction) => { return b.gt.localeCompare(a.gt); });
+     
 
-    if (!response.ok) {
-      console.error(
-        "Erreur récupération LFB :",
-        response.status,
-        await response.text()
+      console.log(
+        "========== ACTIONS DE LÉNA =========="
       );
 
-      setModalMessage("Inès s’échauffe 🏀");
-      setIsWaitingModalOpen(true);
+      console.log(filteredData);
 
-      setTimeout(() => {
-        setIsWaitingModalOpen(false);
-      }, 3000);
-
-      return;
-    }
-
-    const data = await response.json();
-
-    console.log("✅ Données LFB récupérées :", data);
-
-    // Toutes les actions du match
-    const plays = Array.isArray(data?.pbp)
-      ? data.pbp
-      : [];
-
-    if (!plays.length) {
-      console.error("Aucune donnée LFB trouvée :", data);
-
-      setModalMessage("Inès s’échauffe 🏀");
-      setIsWaitingModalOpen(true);
-
-      setTimeout(() => {
-        setIsWaitingModalOpen(false);
-      }, 3000);
-
-      return;
-    }
-
-    console.log("🏀 Nombre total d’actions LFB :", plays.length);
-
-    // ---------------------------------------------------------
-    // UNIQUEMENT DEBROISE
-    // ---------------------------------------------------------
-
-    const debroisePlays = plays.filter(
-      (action: any) =>
-        action.familyName?.trim().toLowerCase() === "debroise"
-    );
-
-    console.log(
-      "🏀 Actions de Debroise :",
-      debroisePlays.length
-    );
-
-    console.log(
-      "👀 Actions Debroise :",
-      debroisePlays
-    );
-
-    if (!debroisePlays.length) {
-      console.error(
-        "Aucune action trouvée pour Debroise."
+      console.log(
+        "Nombre d'actions de Léna :",
+        filteredData.length
       );
 
-      setModalMessage("Inès s’échauffe 🏀");
-      setIsWaitingModalOpen(true);
+      /*
+       * Génération du tableau
+       */
+      const csvContent = generateCSV(filteredData);
 
-      setTimeout(() => {
-        setIsWaitingModalOpen(false);
-      }, 3000);
+      console.log("CSV :", csvContent);
 
-      return;
+      const rows = csvContent
+        .split("\n")
+        .filter((row) => row.trim() !== "")
+        .slice(1)
+        .map((row) => row.split(","));
+
+      setCsvData(rows);
+      setCsvGenerated(true);
+
+    } catch (error) {
+      console.error("Erreur :", error);
+
+      setModalMessage(
+        "Une erreur est survenue lors de la récupération."
+      );
+
+      setIsModalOpen(true);
     }
+  };
 
-    // ---------------------------------------------------------
-    // Format attendu par MatchTableE
-    //
-    // [période, chrono, action, réussite]
-    // ---------------------------------------------------------
+  const generateCSV = (data: MatchAction[]) => {
+    let csv =
+      "Période,Horodatage,Action,Réussite,Score\n";
 
-    const rows: string[][] = debroisePlays.map(
-      (action: any) => [
-        action.period ?? '',
-        action.gt ?? '',
-        action.actionType ?? '',
-        action.success ? '1' : '0',
-      ]
-    );
+    data.forEach((action) => {
+      const actionName =
+        action.actionType ||
+        action.subType ||
+        "";
 
-    setCsvData(rows);
-    setCsvGenerated(true);
+      csv += [
+        action.period,
+        action.gt,
+        actionName,
+        action.success ? "1" : "0",
+        `${action.s1}-${action.s2}`,
+      ].join(",") + "\n";
+    });
 
-  } catch (error) {
-    console.error(
-      "Erreur dans handleGenerate :",
-      error
-    );
-
-    setModalMessage(
-      "Erreur pendant le chargement des données 😅"
-    );
-
-    setIsModalOpen(true);
-  }
-};
-
+    return csv;
+  };
 
 
 
