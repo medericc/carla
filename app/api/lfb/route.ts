@@ -8,52 +8,78 @@ export async function GET(req: Request) {
     const targetUrl = searchParams.get("url");
 
     if (!targetUrl) {
-      return new NextResponse("URL manquante", { status: 400 });
+      return NextResponse.json(
+        { error: "URL manquante" },
+        { status: 400 }
+      );
     }
 
-    console.log("=== PROXY START ===");
-    console.log("TARGET :", targetUrl);
+    console.log("========== PROXY ==========");
+    console.log("URL récupérée :", targetUrl);
 
     const response = await fetch(targetUrl, {
-      method: "GET",
       cache: "no-store",
-    });
-
-    console.log("GENIUS STATUS :", response.status);
-
-    const body = await response.text();
-
-    console.log("GENIUS BODY LENGTH :", body.length);
-
-    // On cherche combien d'éléments pbp sont présents
-    try {
-      const parsed = JSON.parse(body);
-
-      console.log(
-        "GENIUS PBP LENGTH :",
-        Array.isArray(parsed.pbp) ? parsed.pbp.length : "PAS DE PBP"
-      );
-
-      console.log("GENIUS PERIOD :", parsed.period);
-      console.log("GENIUS CLOCK :", parsed.clock);
-    } catch {
-      console.log("Impossible de parser le JSON");
-    }
-
-    console.log("=== PROXY END ===");
-
-    return new NextResponse(body, {
-      status: response.status,
       headers: {
-        "Content-Type": "application/json; charset=utf-8",
-        "Cache-Control": "no-store",
+        Accept: "application/json",
       },
     });
-  } catch (error) {
-    console.error("PROXY ERROR :", error);
 
-    return new NextResponse("Erreur proxy", {
-      status: 500,
-    });
+    console.log("Statut Genius :", response.status);
+
+    if (!response.ok) {
+      const errorText = await response.text();
+
+      console.error(
+        "Erreur Genius Sports :",
+        response.status,
+        errorText
+      );
+
+      return NextResponse.json(
+        {
+          error: "Impossible de récupérer les données",
+          status: response.status,
+        },
+        { status: response.status }
+      );
+    }
+
+const text = await response.text();
+
+console.log("TAILLE REPONSE :", text.length);
+console.log("DEBUT REPONSE :", text.substring(0, 500));
+
+const data = JSON.parse(text);
+
+console.log("PBP SERVEUR :", data?.pbp?.length);
+
+    console.log(
+      "Nombre de PBP reçus par le proxy :",
+      data?.pbp?.length
+    );
+
+    console.log(
+      "Premier PBP :",
+      data?.pbp?.[0]
+    );
+
+    console.log(
+      "Dernier PBP :",
+      data?.pbp?.[data?.pbp?.length - 1]
+    );
+
+    return NextResponse.json(data);
+  } catch (error) {
+    console.error("Erreur proxy :", error);
+
+    return NextResponse.json(
+      {
+        error:
+          error instanceof Error
+            ? error.message
+            : "Erreur inconnue",
+      },
+      { status: 500 }
+    );
   }
 }

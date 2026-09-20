@@ -18,6 +18,7 @@ const actionMapping: Record<string, string> = {
   'block': 'Block',
   'foul': 'Foul',
   '1pt': 'Lancer-Franc',
+  'freethrow': 'Lancer-Franc',
 };
 
 export default function MatchTable({ data }: MatchTableProps) {

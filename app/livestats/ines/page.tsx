@@ -5,7 +5,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 
 import VideoHeader from '../../double-components/VideoHeader';
 import InputForm from '../../double-components/InputForm';
-import MatchTable from '../../double-components/MatchTableE';
+import MatchTable from '../../double-components/MatchTableL';
 
 import {
   Select,
@@ -106,7 +106,7 @@ export default function Home() {
        * Récupération de toutes les actions de Léna Monasse
        */
      const filteredData = data.pbp .filter((action: MatchAction) => { const familyName = action.familyName?.trim().toLowerCase() || ""; const firstName = action.firstName?.trim().toLowerCase() || ""; const player = action.player?.trim().toLowerCase() || ""; return ( familyName === "debroise" || player.includes("debroise") || (firstName === "ines" && familyName === "debroise") ); }) .sort((a: MatchAction, b: MatchAction) => { return b.gt.localeCompare(a.gt); });
-     
+
 
       console.log(
         "========== ACTIONS DE LÉNA =========="
