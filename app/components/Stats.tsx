@@ -617,7 +617,7 @@ const semanticSchemas = [
       },
       {
         "@type": "SportsTeam",
-        "name": "Golden State Valkyries"
+        "name": "Portland Fire"
       }
     ]
   },

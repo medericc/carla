@@ -41,12 +41,12 @@ function calculateAge(birthDate: string) {
 /* ================= DATA ================= */
 
 const playerInfo = [
-  { label: "Club", value: "CD Saragosse" },
+  { label: "Club", value: "ÇBK Mersin" },
   { label: "Poste", value: "Small Guard" },
   { label: "Age", value: `${calculateAge(birthDate)}` },
   { label: "Height", value: "1.74m" },
   { label: "Nationality", value: "French" },
-  { label: "WNBA Team", value: "Valkyries" },
+  { label: "WNBA Team", value: "Fire" },
 ];
 
 /* ================= COMPONENT ================= */

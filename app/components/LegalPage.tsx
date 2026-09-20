@@ -19,7 +19,7 @@ const LegalPage = () => {
           </p>
           <p className="mb-4">
             Ce site est entièrement géré par un fan et n&apos;est affilié ni à Carla Leite, 
-            ni à ses clubs (ESBVA-LM, Dallas Wings/Valkyries, Saragosse), ni à la WNBA, ni à la FFBB, 
+            ni à ses clubs (Mersin, Fire), ni à la WNBA, ni à la FFBB, 
             ni à aucune organisation officielle.
           </p>
           <p className="mb-4">

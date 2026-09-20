@@ -64,6 +64,9 @@ const Header = () => {
   >
     LEITE
   </span>
+   <span className="sr-only">
+    Carla Leite, basketteuse française en WNBA
+  </span>
 </h1>
 <div id="top">
 <div className="relative z-0 w-full h-[80vh] lg:h-auto lg:aspect-video overflow-hidden lg:mt-[-15.5rem] xl:mt-[-19.5rem]" id="video">
@@ -99,7 +102,7 @@ const Header = () => {
 >
   <Image
     src="/perso.png"
-    alt="Carla Leite joueuse de basket française en WNBA avec les Valkyries"
+    alt="Carla Leite joueuse de basket française en WNBA avec les Portland Fire"
     width={900}
     height={1600}
     itemProp="image"

@@ -23,22 +23,12 @@ export const metadata = {
     follow: true,
   },
   title: {
-    default: "Carla Leite",
-    template: "%s | Carla Leite",
+    default: "Carla Leite – Basket Féminin, France, WNBA, Portland Fire",
+    template: "%s | Carla Leite – Basket Féminin, France, WNBA, Portland Fire",
   },
   description:
-    "Carla Leite, championne de France espoir, meilleure joueuse des Playoffs LFB, championne d’Europe U20 et joueuse WNBA au Portland Fire. Actualités, carrière et performances.",
-  keywords: [
-    "Carla Leite",
-    "basketball féminin",
-    "WNBA",
-    "Golden State Valkyries",
-    "Portland Fire",
-    "France",
-    "ESBVA-LM",
-    "Casademont Zaragoza",
-    "équipe de France U20",
-  ],
+     "Carla Leite, basketteuse française en WNBA avec le Portland Fire : actualités, statistiques, résultats, carrière et équipe de France.",
+
   alternates: {
     canonical: "/",
   },
