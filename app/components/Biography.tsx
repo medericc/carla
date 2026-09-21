@@ -252,9 +252,9 @@ useEffect(() => {
               transition={{ delay: 0.8 }}
               className="mt-12 p-8 rounded-xl border border-gray-800 bg-gradient-to-br from-gray-900/50 to-black/50"
             >
-              <h3 className="text-lg font-semibold text-white mb-4 tracking-wider">
+              <p className="text-lg font-semibold text-white mb-4 tracking-wider">
                 SA CARRIÈRE
-              </h3>
+              </p>
               <p className="text-gray-300 leading-relaxed">
                 Meilleure évaluation et meilleure marqueuse de l'histoire des PO
                 LFB, Carla est la joueuse française la plus rapide à inscrire

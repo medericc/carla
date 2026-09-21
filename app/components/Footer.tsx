@@ -49,16 +49,16 @@ const Footer = () => {
                 CARLA LEITE
               </h3>
             </div>
-            <p className="text-gray-400 max-w-md">
+            <h2 className="text-gray-400 max-w-md">
               Suivez le Parcours de la Meilleure Joueuse de l'Histoire du Basketball Féminin
-            </p>
+            </h2>
           </motion.div>
 
           {/* Social links */}
           <div className="flex flex-col items-center lg:items-end gap-6">
-            <h4 className="text-lg font-semibold tracking-wider text-gray-300">
+            <p className="text-lg font-semibold tracking-wider text-gray-300">
               COMPTES FANS
-            </h4>
+            </p>
             <div className="flex gap-4">
               {socialLinks.map((social, index) => (
                 <motion.a
