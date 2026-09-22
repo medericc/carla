@@ -9,7 +9,7 @@ const Footer = () => {
     { icon: FaTwitter, href: "https://x.com/leite_goat_fan", label: "Twitter" },
     { icon: FaYoutube, href: "https://www.youtube.com/@fan_goat_ines", label: "YouTube" },
     { icon: FaTiktok, href: "https://www.tiktok.com/@fan_carlaleite", label: "TikTok" },
-    { icon: FaBasketballBall, href: "https://carlaleitefan.com", label: "Statistiques" },
+    { icon: FaBasketballBall, href: "https://www.carlaleitefan.com", label: "Statistiques" },
   ];
 
   const footerLinks = [
