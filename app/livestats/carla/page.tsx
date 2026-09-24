@@ -35,25 +35,25 @@ export default function Home() {
      
     
 
-      { name: "Valkyries", url: "401857212" },
-       { name: "Sparks", url: "401857204" },
-        { name: "Valkyries", url: "401857197" },
-         { name: "Mercury", url: "401857193" },
-          { name: "Valkyries", url: "401857188" },
-           { name: "Dream", url: "401857180" },
-            { name: "Dallas", url: "401857174" },
-             { name: "Washington", url: "401857169" },
-              { name: "Tempo", url: "401857163" },
-               { name: "Mercury", url: "401857149" },
-                { name: "Seattle", url: "401857144" },
-                 { name: "Lynx", url: "401857139" },
-                  { name: "Seattle", url: "401857127" },
-                   { name: "Toronto", url: "401857121" },
-                    { name: "LA", url: "401857108" },
-                     { name: "Indiana", url: "401857104" },
-                      { name: "LV", url: "401857095" },
-                       { name: "Dallas", url: "401857091" },
-                        { name: "Lynx", url: "401857078" },
+//       { name: "Valkyries", url: "401857212" },
+//        { name: "Sparks", url: "401857204" },
+//         { name: "Valkyries", url: "401857197" },
+//          { name: "Mercury", url: "401857193" },
+//           { name: "Valkyries", url: "401857188" },
+//            { name: "Dream", url: "401857180" },
+//             { name: "Dallas", url: "401857174" },
+//              { name: "Washington", url: "401857169" },
+//               { name: "Tempo", url: "401857163" },
+//                { name: "Mercury", url: "401857149" },
+//                 { name: "Seattle", url: "401857144" },
+//                  { name: "Lynx", url: "401857139" },
+//                   { name: "Seattle", url: "401857127" },
+//                    { name: "Toronto", url: "401857121" },
+//                     { name: "LA", url: "401857108" },
+//                      { name: "Indiana", url: "401857104" },
+//                       { name: "LV", url: "401857095" },
+//                        { name: "Dallas", url: "401857091" },
+//                         { name: "Lynx", url: "401857078" },
     
     
     
@@ -61,44 +61,44 @@ export default function Home() {
     
     
     
-    { name: "Washington", url: "401857071" },
-     { name: "LV", url: "401857053" }, { name: "Dream", url: "401857059" }, { name: "Sun", url: "401857066" },
- { name: "Seattle", url: "401857040" },
+//     { name: "Washington", url: "401857071" },
+//      { name: "LV", url: "401857053" }, { name: "Dream", url: "401857059" }, { name: "Sun", url: "401857066" },
+//  { name: "Seattle", url: "401857040" },
     
      
-     { name: "Washington", url: "401857031" },
+//      { name: "Washington", url: "401857031" },
     
-      { name: "Chicago", url: "401857025" },
-        //  { name: "Chicago", url: "401857019" },
-    //  { name: "Seattle", url: "401857001" },
+//       { name: "Chicago", url: "401857025" },
+         { name: "Chicago", url: "401857019" },
+     { name: "Seattle", url: "401857001" },
     
-    //   { name: "Minnesota", url: "401856993" },
+      { name: "Minnesota", url: "401856993" },
     
-    //     { name: "Dallas", url: "401856988" },
+        { name: "Dallas", url: "401856988" },
     
-    //    { name: "Las Vegas", url: "401856983" },
-    //   { name: "Los Angeles", url: "401856971" },
+       { name: "Las Vegas", url: "401856983" },
+      { name: "Los Angeles", url: "401856971" },
     
-    // { name: "Phoenix", url: "401856965" },
+    { name: "Phoenix", url: "401856965" },
     
-    //   { name: "Valkyries", url: "401856957" },
+      { name: "Valkyries", url: "401856957" },
     
-//         { name: "Indiana", url: "401856951" },
+        { name: "Indiana", url: "401856951" },
     
-//        { name: "Atlanta", url: "401856948" },
-    //       { name: "Connecticut", url: "401856941" },
-//       { name: "New York", url: "401856936" },
-//       { name: "Toronto", url: "401856931" },
-//      { name: "Indiana", url: "401856921" },
+       { name: "Atlanta", url: "401856948" },
+          { name: "Connecticut", url: "401856941" },
+      { name: "New York", url: "401856936" },
+      { name: "Toronto", url: "401856931" },
+     { name: "Indiana", url: "401856921" },
 
-//     { name: "Connecticut", url: "401856919" },
-//     { name: "New York", url: "401856909" },
+    { name: "Connecticut", url: "401856919" },
+    { name: "New York", url: "401856909" },
 
 
-//     { name: "New York", url: "401856903" },
-//     { name: "Chicago", url: "401856895" },
-//      { name: "L.A. Prepa", url: "401866521" },
-//  { name: "Seattle Prepa", url: "401866516" },
+    { name: "New York", url: "401856903" },
+    { name: "Chicago", url: "401856895" },
+     { name: "L.A. Prepa", url: "401866521" },
+ { name: "Seattle Prepa", url: "401866516" },
     
     
   ];
