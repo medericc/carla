@@ -797,77 +797,77 @@ const statsData = [
     category: 'WNBA' 
   },
   { 
-    label: 'Meilleur total PTS + AST + STL - Française', 
+    label: 'Meilleur total PTS + AST + STL en une saison WNBA - Française', 
     value: '896', 
     icon: FaFire, 
     color: 'from-red-500 to-amber-400', 
     category: 'WNBA' 
   },
   { 
-    label: 'Meilleur total PTS + AST + STL - Européenne', 
+    label: 'Meilleur total PTS + AST + STL en une saison WNBA - Européenne', 
     value: '896', 
     icon: FaFire, 
     color: 'from-purple-500 to-violet-400', 
     category: 'WNBA' 
   },
   { 
-    label: 'Meilleur total PTS + AST + STL - Née en France', 
+    label: 'Meilleur total PTS + AST + STL en une saison WNBA - Née en France', 
     value: '896', 
     icon: FaFire, 
     color: 'from-emerald-500 to-teal-400', 
     category: 'WNBA' 
   },
   { 
-    label: 'Meilleur total PTS + AST + STL - Née en Europe', 
+    label: 'Meilleur total PTS + AST + STL en une saison WNBA - Née en Europe', 
     value: '896', 
     icon: FaFire, 
     color: 'from-blue-500 to-cyan-400', 
     category: 'WNBA' 
   },
   { 
-    label: 'Meilleur total PTS + AST + STL + BLK - Française', 
+    label: 'Meilleur total PTS + AST + STL + BLK en une saison WNBA - Française', 
     value: '898', 
     icon: FaMedal, 
     color: 'from-amber-500 to-yellow-400', 
     category: 'WNBA' 
   },
   { 
-    label: 'Meilleur total PTS + AST + STL + BLK - Européenne', 
+    label: 'Meilleur total PTS + AST + STL + BLK en une saison WNBA - Européenne', 
     value: '898', 
     icon: FaMedal, 
     color: 'from-violet-500 to-indigo-400', 
     category: 'WNBA' 
   },
   { 
-    label: 'Meilleur total PTS + AST + STL + BLK - Née en France', 
+    label: 'Meilleur total PTS + AST + STL + BLK en une saison WNBA - Née en France', 
     value: '898', 
     icon: FaMedal, 
     color: 'from-pink-500 to-rose-400', 
     category: 'WNBA' 
   },
   { 
-    label: 'Meilleur total PTS + AST + STL + BLK - Née en Europe', 
+    label: 'Meilleur total PTS + AST + STL + BLK en une saison WNBA - Née en Europe', 
     value: '898', 
     icon: FaMedal, 
     color: 'from-emerald-500 to-green-400', 
     category: 'WNBA' 
   },
   { 
-    label: 'Meilleur total PTS + AST + BLK - Française', 
+    label: 'Meilleur total PTS + AST + BLK en une saison WNBA - Française', 
     value: '873', 
     icon: FaShieldAlt, 
     color: 'from-blue-500 to-indigo-400', 
     category: 'WNBA' 
   },
   { 
-    label: 'Meilleur total PTS + AST + BLK - Européenne', 
+    label: 'Meilleur total PTS + AST + BLK en une saison WNBA - Européenne', 
     value: '873', 
     icon: FaShieldAlt, 
     color: 'from-teal-500 to-cyan-400', 
     category: 'WNBA' 
   },
   { 
-    label: 'Meilleur total PTS + AST + BLK - Née en France', 
+    label: 'Meilleur total PTS + AST + BLK en une saison WNBA - Née en France', 
     value: '873', 
     icon: FaShieldAlt, 
     color: 'from-rose-500 to-red-400', 
@@ -1603,42 +1603,42 @@ const statsData = [
 
   // ==================== SOFASCORE & PANIERS MARQUÉS ====================
   { 
-    label: 'Meilleure note SofaScore de l\'histoire en WNBA - Française', 
+    label: 'Meilleure note SofaScore de l\'histoire sur une saison WNBA - Française', 
     value: '7.4', 
     icon: FaStar, 
     color: 'from-violet-500 to-purple-400', 
     category: 'WNBA' 
   },
   { 
-    label: 'Meilleure note SofaScore de l\'histoire en WNBA - Européenne', 
+    label: 'Meilleure note SofaScore de l\'histoire sur une saison en WNBA - Européenne', 
     value: '7.4', 
     icon: FaStar, 
     color: 'from-blue-500 to-indigo-400', 
     category: 'WNBA' 
   },
   { 
-    label: 'Meilleure note SofaScore de l\'histoire en WNBA - Meneuse Française', 
+    label: 'Meilleure note SofaScore de l\'histoire sur une saison en WNBA - Meneuse Française', 
     value: '7.4', 
     icon: FaStar, 
     color: 'from-emerald-500 to-teal-400', 
     category: 'WNBA' 
   },
   { 
-    label: 'Meilleure note SofaScore de l\'histoire en WNBA - Meneuse Européenne', 
+    label: 'Meilleure note SofaScore de l\'histoire sur une saison en WNBA - Meneuse Européenne', 
     value: '7.4', 
     icon: FaStar, 
     color: 'from-amber-500 to-yellow-400', 
     category: 'WNBA' 
   },
   { 
-    label: 'Meilleure note SofaScore de l\'histoire en WNBA - Née en France', 
+    label: 'Meilleure note SofaScore de l\'histoire sur une saison en WNBA - Née en France', 
     value: '7.4', 
     icon: FaStar, 
     color: 'from-rose-500 to-red-400', 
     category: 'WNBA' 
   },
   { 
-    label: 'Meilleure note SofaScore de l\'histoire en WNBA - Née en Europe', 
+    label: 'Meilleure note SofaScore de l\'histoire sur une saison en WNBA - Née en Europe', 
     value: '7.4', 
     icon: FaStar, 
     color: 'from-pink-500 to-rose-400', 
@@ -1649,7 +1649,7 @@ const statsData = [
     value: '187', 
     icon: FaBasketballBall, 
     color: 'from-amber-500 to-orange-400', 
-    category: 'Paniers' 
+    category: 'WNBA' 
   },
   { 
     label: 'Plus de paniers marqués en une saison WNBA - Plus Jeune Française née en France', 
