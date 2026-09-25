@@ -23,6 +23,9 @@ import {
   FaTicketAlt,
   FaUserNinja,
   FaFlag,
+  FaShieldAlt,
+  FaClock,
+  FaHands,
   FaChartBar
 } from 'react-icons/fa';
 
@@ -92,7 +95,27 @@ const statsData = [
   },
  
 
-
+ { 
+    label: 'Première Française à Finir une Saison Meilleure PPG et APG d\'une Franchise', 
+    value: '2026',
+    icon: FaTrophy,
+    color: 'from-red-500 to-rose-400',
+    category: 'WNBA'
+  },
+   { 
+    label: 'Première Française à Finir une Saison Meilleure PPG + APG d\'une Franchise', 
+    value: '2026',
+    icon: FaTrophy,
+    color: 'from-violet-500 to-purple-400',
+    category: 'WNBA'
+  },
+    { 
+    label: 'Plus Jeune Joueuse de la WNBA à Finir Plusieurs Matchs en +20/+10', 
+    value: '2026',
+    icon: FaTrophy,
+    color: 'from-red-500 to-rose-400',
+    category: 'Jeunesse'
+  },
    { 
     label: 'Première Française Le Plus Décisif d\'une Franchise', 
     value: '04/05',
@@ -225,12 +248,49 @@ const statsData = [
     color: 'from-blue-500 to-indigo-400',
     category: 'International'
   },
+
+  { 
+    label: 'Top APG WNBA en une saison (parmi les - de 26,3 min)', 
+    value: '6.3',
+    icon: FaGlobeEurope,
+    color: 'from-blue-500 to-indigo-400',
+    category: 'WNBA'
+  },
+  { 
+    label: 'Top passeuse WNBA en une saison (parmi les - de 26,3 min)', 
+    value: '245',
+    icon: FaGlobeEurope,
+    color: 'from-blue-500 to-indigo-400',
+    category: 'WNBA'
+  },
+  { 
+    label: 'Meilleur Marqueur Jeune Français en Compétition', 
+    value: '18.4',
+    icon: FaGlobeEurope,
+    color: 'from-blue-500 to-indigo-400',
+    category: 'International'
+  },
+{ 
+    label: 'Top PPG WNBA en une saison (parmi les - de 26,3 min, hors COVID, +85 % joués)', 
+    value: '16.1',
+    icon: FaGlobeEurope,
+    color: 'from-purple-500 to-pink-400',
+    category: 'WNBA'
+  },
+  { 
+    label: 'Top marqueuse WNBA en une saison (parmi les - de 26,3 min)', 
+    value: '626',
+    icon: FaGlobeEurope,
+    color: 'from-purple-500 to-pink-400',
+    category: 'WNBA'
+  },
+  
   { 
     label: 'Seul Français Meilleur Marqueur d\'une Franchise', 
     value: '06/05',
     icon: FaUserNinja,
     color: 'from-purple-500 to-pink-400',
-    category: 'Exclusivité'
+    category: 'WNBA'
   },
   { 
     label: "Meilleure Moyenne de Points à 20 ans en LFB", 
@@ -388,20 +448,20 @@ const statsData = [
   },
   { 
     label: 'Plus Jeune Française à Gagner avec 18.4 ppg (IT)', 
-    value: '18.4',
+    value: '19',
     icon: FaFlag,
     color: 'from-yellow-600 to-amber-500',
     category: 'Jeunesse'
   },
   { 
     label: 'Plus Vieille Française à Gagner avec 18.4 ppg (IT)', 
-    value: '18.4',
+    value: '19',
     icon: FaFlag,
     color: 'from-yellow-600 to-amber-500',
     category: 'Vieillesse'
   },
   { 
-    label: 'Européenne à Finir en 15-5 en LFB', 
+    label: 'Seule Européenne à Finir en 15-5 en LFB', 
     value: '15-5',
     icon: FaUserNinja,
     color: 'from-indigo-600 to-blue-500',
@@ -451,7 +511,7 @@ const statsData = [
   },
   { 
     label: 'Plus Jeune Joueuse la Plus Décisive de LFB', 
-    value: '21.3',
+    value: '20',
     icon: FaChartLine,
     color: 'from-cyan-600 to-blue-500',
     category: 'Jeunesse'
@@ -519,7 +579,1091 @@ const statsData = [
     icon: FaRocket,
     color: 'from-cyan-600 to-blue-500',
     category: 'Rapidité'
+  },
+
+
+
+
+
+
+ // ==================== LANCERS FRANCS ====================
+  { 
+    label: 'Plus de lancers en une saison WNBA - Meneuse Européenne', 
+    value: '215', 
+    icon: FaTrophy, 
+    color: 'from-yellow-500 to-amber-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Plus Jeune Meneuse Européenne - Lancers en une saison WNBA', 
+    value: '22', 
+    icon: FaTrophy, 
+    color: 'from-emerald-500 to-green-400', 
+    category: 'Jeunesse' 
+  },
+  { 
+    label: 'Plus Vieille Meneuse Européenne - Lancers en une saison WNBA', 
+    value: '22', 
+    icon: FaTrophy, 
+    color: 'from-amber-500 to-orange-400', 
+    category: 'Vieillesse' 
+  },
+  { 
+    label: 'Plus de lancers en une saison WNBA - Meneuse née en Europe', 
+    value: '215', 
+    icon: FaTrophy, 
+    color: 'from-yellow-500 to-amber-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Plus de lancers en une saison WNBA - Meneuse née en France', 
+    value: '215', 
+    icon: FaTrophy, 
+    color: 'from-violet-500 to-purple-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Plus de lancers en une saison WNBA - Meneuse Française', 
+    value: '215', 
+    icon: FaTrophy, 
+    color: 'from-red-500 to-rose-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Plus de lancers en une saison WNBA (Moyenne) - Meneuse Européenne', 
+    value: '215', 
+    icon: FaChartLine, 
+    color: 'from-blue-500 to-indigo-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Plus de lancers en une saison WNBA (Moyenne) - Meneuse née en France', 
+    value: '215', 
+    icon: FaChartLine, 
+    color: 'from-emerald-500 to-teal-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Plus de lancers en une saison WNBA (Moyenne) - Meneuse Française', 
+    value: '215', 
+    icon: FaChartLine, 
+    color: 'from-rose-500 to-pink-400', 
+    category: 'WNBA' 
+  },
+
+  // ==================== POINTS & PASSES (TOTAL SAISON) ====================
+  { 
+    label: 'Record de points en une saison WNBA - Française née en France', 
+    value: '626', 
+    icon: FaCrown, 
+    color: 'from-amber-500 to-yellow-400', 
+    category: 'WNBA' 
+  },
+ 
+  { 
+    label: 'Record de points en une saison WNBA - Française à +40% à 3pts', 
+    value: '626', 
+    icon: FaBullseye, 
+    color: 'from-red-500 to-rose-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Record de points en une saison WNBA - Française à moins de 26,2 min de jeu', 
+    value: '626', 
+    icon: FaClock, 
+    color: 'from-purple-500 to-indigo-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Record de points en une saison WNBA - Française', 
+    value: '626', 
+    icon: FaTrophy, 
+    color: 'from-blue-500 to-cyan-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Record de points en une saison WNBA - Plus Jeune Française', 
+    value: '22', 
+    icon: FaTrophy, 
+    color: 'from-emerald-500 to-teal-400', 
+    category: 'Jeunesse' 
+  },
+  { 
+    label: 'Record de points en une saison WNBA - Plus Vieille Française', 
+    value: '22', 
+    icon: FaTrophy, 
+    color: 'from-amber-500 to-orange-400', 
+    category: 'Vieillesse' 
+  },
+  { 
+    label: 'Record de points en une saison WNBA - Européenne née en Europe', 
+    value: '626', 
+    icon: FaStar, 
+    color: 'from-violet-500 to-purple-400', 
+    category: 'WNBA' 
+  },
+ 
+  { 
+    label: 'Record de passes en une saison WNBA - Française', 
+    value: '245', 
+    icon: FaHands, 
+    color: 'from-emerald-500 to-teal-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Record de passes en une saison WNBA - Plus Jeune Française', 
+    value: '22', 
+    icon: FaHands, 
+    color: 'from-green-500 to-emerald-400', 
+    category: 'Jeunesse' 
+  },
+  { 
+    label: 'Record de passes en une saison WNBA - Plus Vieille Française', 
+    value: '22', 
+    icon: FaHands, 
+    color: 'from-amber-500 to-yellow-400', 
+    category: 'Vieillesse' 
+  },
+  { 
+    label: 'Record de passes en une saison WNBA - Européenne', 
+    value: '245', 
+    icon: FaHands, 
+    color: 'from-cyan-500 to-blue-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Record de passes en une saison WNBA - Née en France', 
+    value: '245', 
+    icon: FaHands, 
+    color: 'from-purple-500 to-violet-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Record de passes en une saison WNBA - Née en Europe', 
+    value: '245', 
+    icon: FaHands, 
+    color: 'from-pink-500 to-rose-400', 
+    category: 'WNBA' 
+  },
+
+  // ==================== COMBOS CUMULÉS (TOTAL SAISON) ====================
+  { 
+    label: 'Meilleur total PTS + AST en une saison WNBA - Française', 
+    value: '871', 
+    icon: FaChartBar, 
+    color: 'from-yellow-500 to-amber-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST en une saison WNBA - Plus Jeune Française', 
+    value: '22', 
+    icon: FaChartBar, 
+    color: 'from-emerald-500 to-green-400', 
+    category: 'Jeunesse' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST en une saison WNBA - Plus Vieille Française', 
+    value: '22', 
+    icon: FaChartBar, 
+    color: 'from-amber-500 to-orange-400', 
+    category: 'Vieillesse' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST en une saison WNBA - Européenne', 
+    value: '871', 
+    icon: FaChartBar, 
+    color: 'from-violet-500 to-purple-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST en une saison WNBA - Née en France', 
+    value: '871', 
+    icon: FaChartBar, 
+    color: 'from-blue-500 to-indigo-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST en une saison WNBA - Née en Europe', 
+    value: '871', 
+    icon: FaChartBar, 
+    color: 'from-red-500 to-rose-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST + STL - Française', 
+    value: '896', 
+    icon: FaFire, 
+    color: 'from-red-500 to-amber-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST + STL - Européenne', 
+    value: '896', 
+    icon: FaFire, 
+    color: 'from-purple-500 to-violet-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST + STL - Née en France', 
+    value: '896', 
+    icon: FaFire, 
+    color: 'from-emerald-500 to-teal-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST + STL - Née en Europe', 
+    value: '896', 
+    icon: FaFire, 
+    color: 'from-blue-500 to-cyan-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST + STL + BLK - Française', 
+    value: '898', 
+    icon: FaMedal, 
+    color: 'from-amber-500 to-yellow-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST + STL + BLK - Européenne', 
+    value: '898', 
+    icon: FaMedal, 
+    color: 'from-violet-500 to-indigo-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST + STL + BLK - Née en France', 
+    value: '898', 
+    icon: FaMedal, 
+    color: 'from-pink-500 to-rose-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST + STL + BLK - Née en Europe', 
+    value: '898', 
+    icon: FaMedal, 
+    color: 'from-emerald-500 to-green-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST + BLK - Française', 
+    value: '873', 
+    icon: FaShieldAlt, 
+    color: 'from-blue-500 to-indigo-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST + BLK - Européenne', 
+    value: '873', 
+    icon: FaShieldAlt, 
+    color: 'from-teal-500 to-cyan-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST + BLK - Née en France', 
+    value: '873', 
+    icon: FaShieldAlt, 
+    color: 'from-rose-500 to-red-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST + BLK - Née en Europe', 
+    value: '873', 
+    icon: FaShieldAlt, 
+    color: 'from-purple-500 to-violet-400', 
+    category: 'WNBA' 
+  },
+
+  // ==================== MOYENNES PAR MATCH ====================
+  { 
+    label: 'Record de PPG en une saison WNBA - Française à +40% à 3pts', 
+    value: '16.1', 
+    icon: FaChartLine, 
+    color: 'from-red-500 to-orange-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Record de PPG en une saison WNBA - Française à -26,3 min de jeu', 
+    value: '16.1', 
+    icon: FaChartLine, 
+    color: 'from-purple-500 to-indigo-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Record de PPG en une saison WNBA - Européenne à +40% à 3pts', 
+    value: '16.1', 
+    icon: FaChartLine, 
+    color: 'from-blue-500 to-cyan-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Record de PPG en une saison WNBA - Européenne à -26,3 min de jeu', 
+    value: '16.1', 
+    icon: FaChartLine, 
+    color: 'from-emerald-500 to-teal-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Record de PPG en une saison WNBA - Née en France', 
+    value: '16.1', 
+    icon: FaChartLine, 
+    color: 'from-amber-500 to-yellow-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Record de PPG en une saison WNBA - Née en Europe à +40% à 3pts', 
+    value: '16.1', 
+    icon: FaChartLine, 
+    color: 'from-pink-500 to-rose-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Record de APG en une saison WNBA - Française', 
+    value: '6.3', 
+    icon: FaHands, 
+    color: 'from-violet-500 to-purple-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Record de APG en une saison WNBA - Née en France', 
+    value: '6.3', 
+    icon: FaHands, 
+    color: 'from-indigo-500 to-blue-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Record de APG en une saison WNBA - Européenne à +40% à 3pts', 
+    value: '6.3', 
+    icon: FaHands, 
+    color: 'from-emerald-500 to-green-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Record de APG en une saison WNBA - Européenne à -26,3 min de jeu', 
+    value: '6.3', 
+    icon: FaHands, 
+    color: 'from-orange-500 to-amber-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST en une saison WNBA - Française', 
+    value: '22.4', 
+    icon: FaChartLine, 
+    color: 'from-red-500 to-rose-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST en une saison WNBA - Européenne née en Europe', 
+    value: '22.4', 
+    icon: FaChartLine, 
+    color: 'from-blue-500 to-indigo-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST en une saison WNBA - Née en France', 
+    value: '22.4', 
+    icon: FaChartLine, 
+    color: 'from-purple-500 to-violet-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST + STL en une saison WNBA - Française', 
+    value: '23', 
+    icon: FaChartLine, 
+    color: 'from-amber-500 to-yellow-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST + STL en une saison WNBA - Européenne née en Europe', 
+    value: '23', 
+    icon: FaChartLine, 
+    color: 'from-emerald-500 to-teal-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST + STL en une saison WNBA - Née en France', 
+    value: '23', 
+    icon: FaChartLine, 
+    color: 'from-pink-500 to-rose-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST + STL + BLK en une saison WNBA - Française', 
+    value: '23.1', 
+    icon: FaChartLine, 
+    color: 'from-red-500 to-orange-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST + STL + BLK en une saison WNBA - Européenne née en Europe', 
+    value: '23.1', 
+    icon: FaChartLine, 
+    color: 'from-violet-500 to-indigo-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST + STL + BLK en une saison WNBA - Née en France', 
+    value: '23.1', 
+    icon: FaChartLine, 
+    color: 'from-cyan-500 to-blue-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST + BLK en une saison WNBA - Française', 
+    value: '22.5', 
+    icon: FaChartLine, 
+    color: 'from-teal-500 to-emerald-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST + BLK en une saison WNBA - Européenne née en Europe', 
+    value: '22.5', 
+    icon: FaChartLine, 
+    color: 'from-purple-500 to-violet-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST + BLK en une saison WNBA - Née en France', 
+    value: '22.5', 
+    icon: FaChartLine, 
+    color: 'from-amber-500 to-orange-400', 
+    category: 'WNBA' 
+  },
+
+  // ==================== MENEUSES (TOTAL SAISON) ====================
+  { 
+    label: 'Record de points en une saison WNBA - Meneuse Française', 
+    value: '626', 
+    icon: FaCrown, 
+    color: 'from-yellow-500 to-amber-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Record de points en une saison WNBA - Plus Jeune Meneuse Française', 
+    value: '22', 
+    icon: FaCrown, 
+    color: 'from-emerald-500 to-green-400', 
+    category: 'Jeunesse' 
+  },
+  { 
+    label: 'Record de points en une saison WNBA - Plus Vieille Meneuse Française', 
+    value: '22', 
+    icon: FaCrown, 
+    color: 'from-orange-500 to-amber-400', 
+    category: 'Jeunesse' 
+  },
+  { 
+    label: 'Record de points en une saison WNBA - Meneuse née en Europe', 
+    value: '626', 
+    icon: FaStar, 
+    color: 'from-violet-500 to-purple-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Record de points en une saison WNBA - Meneuse née en France', 
+    value: '626', 
+    icon: FaStar, 
+    color: 'from-blue-500 to-indigo-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Record de points en une saison WNBA - Meneuse Européenne', 
+    value: '626', 
+    icon: FaStar, 
+    color: 'from-red-500 to-rose-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Record de passes en une saison WNBA - Meneuse Française', 
+    value: '245', 
+    icon: FaHands, 
+    color: 'from-pink-500 to-rose-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Record de passes en une saison WNBA - Meneuse née en Europe', 
+    value: '245', 
+    icon: FaHands, 
+    color: 'from-purple-500 to-indigo-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Record de passes en une saison WNBA - Meneuse née en France', 
+    value: '245', 
+    icon: FaHands, 
+    color: 'from-emerald-500 to-teal-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Record de passes en une saison WNBA - Meneuse Européenne', 
+    value: '245', 
+    icon: FaHands, 
+    color: 'from-cyan-500 to-blue-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST en une saison WNBA - Meneuse Française', 
+    value: '871', 
+    icon: FaChartBar, 
+    color: 'from-amber-500 to-yellow-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST en une saison WNBA - Meneuse née en Europe', 
+    value: '871', 
+    icon: FaChartBar, 
+    color: 'from-indigo-500 to-blue-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST en une saison WNBA - Meneuse née en France', 
+    value: '871', 
+    icon: FaChartBar, 
+    color: 'from-rose-500 to-red-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST en une saison WNBA - Meneuse Européenne', 
+    value: '871', 
+    icon: FaChartBar, 
+    color: 'from-teal-500 to-green-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST + RBD en une saison WNBA - Meneuse Française', 
+    value: '955', 
+    icon: FaBasketballBall, 
+    color: 'from-orange-500 to-amber-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST + RBD en une saison WNBA - Meneuse née en Europe', 
+    value: '955', 
+    icon: FaBasketballBall, 
+    color: 'from-violet-500 to-purple-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST + RBD en une saison WNBA - Meneuse née en France', 
+    value: '955', 
+    icon: FaBasketballBall, 
+    color: 'from-emerald-500 to-teal-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST + RBD en une saison WNBA - Meneuse Européenne', 
+    value: '955', 
+    icon: FaBasketballBall, 
+    color: 'from-blue-500 to-cyan-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST + STL en une saison WNBA - Meneuse Française', 
+    value: '896', 
+    icon: FaFire, 
+    color: 'from-red-500 to-rose-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST + STL en une saison WNBA - Meneuse née en Europe', 
+    value: '896', 
+    icon: FaFire, 
+    color: 'from-purple-500 to-violet-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST + STL en une saison WNBA - Meneuse née en France', 
+    value: '896', 
+    icon: FaFire, 
+    color: 'from-emerald-500 to-green-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST + STL en une saison WNBA - Meneuse Européenne', 
+    value: '896', 
+    icon: FaFire, 
+    color: 'from-amber-500 to-yellow-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST + STL + BLK en une saison WNBA - Meneuse Française', 
+    value: '', 
+    icon: FaMedal, 
+    color: 'from-pink-500 to-rose-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST + STL + BLK en une saison WNBA - Meneuse née en Europe', 
+    value: '', 
+    icon: FaMedal, 
+    color: 'from-indigo-500 to-blue-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST + STL + BLK en une saison WNBA - Meneuse née en France', 
+    value: '', 
+    icon: FaMedal, 
+    color: 'from-teal-500 to-emerald-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST + STL + BLK en une saison WNBA - Meneuse Européenne', 
+    value: '', 
+    icon: FaMedal, 
+    color: 'from-orange-500 to-amber-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST + BLK en une saison WNBA - Meneuse Française', 
+    value: '', 
+    icon: FaShieldAlt, 
+    color: 'from-purple-500 to-violet-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST + BLK en une saison WNBA - Meneuse née en Europe', 
+    value: '', 
+    icon: FaShieldAlt, 
+    color: 'from-blue-500 to-cyan-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST + BLK en une saison WNBA - Meneuse née en France', 
+    value: '', 
+    icon: FaShieldAlt, 
+    color: 'from-rose-500 to-red-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST + BLK en une saison WNBA - Meneuse Européenne', 
+    value: '', 
+    icon: FaShieldAlt, 
+    color: 'from-amber-500 to-yellow-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST + RBD + BLK en une saison WNBA - Meneuse Française', 
+    value: '', 
+    icon: FaBasketballBall, 
+    color: 'from-emerald-500 to-teal-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST + RBD + BLK en une saison WNBA - Meneuse née en Europe', 
+    value: '', 
+    icon: FaBasketballBall, 
+    color: 'from-indigo-500 to-purple-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST + RBD + BLK en une saison WNBA - Meneuse née en France', 
+    value: '', 
+    icon: FaBasketballBall, 
+    color: 'from-orange-500 to-red-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST + RBD + BLK en une saison WNBA - Meneuse Européenne', 
+    value: '', 
+    icon: FaBasketballBall, 
+    color: 'from-cyan-500 to-blue-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST + RBD + STL en une saison WNBA - Meneuse Française', 
+    value: '', 
+    icon: FaFire, 
+    color: 'from-red-500 to-amber-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST + RBD + STL en une saison WNBA - Meneuse née en Europe', 
+    value: '', 
+    icon: FaFire, 
+    color: 'from-violet-500 to-purple-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST + RBD + STL en une saison WNBA - Meneuse née en France', 
+    value: '', 
+    icon: FaFire, 
+    color: 'from-green-500 to-teal-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST + RBD + STL en une saison WNBA - Meneuse Européenne', 
+    value: '', 
+    icon: FaFire, 
+    color: 'from-pink-500 to-rose-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST + RBD + STL + BLK en une saison WNBA - Meneuse Française', 
+    value: '', 
+    icon: FaTrophy, 
+    color: 'from-yellow-500 to-amber-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST + RBD + STL + BLK en une saison WNBA - Meneuse née en Europe', 
+    value: '', 
+    icon: FaTrophy, 
+    color: 'from-indigo-500 to-blue-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST + RBD + STL + BLK en une saison WNBA - Meneuse née en France', 
+    value: '', 
+    icon: FaTrophy, 
+    color: 'from-emerald-500 to-green-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleur total PTS + AST + RBD + STL + BLK en une saison WNBA - Meneuse Européenne', 
+    value: '', 
+    icon: FaTrophy, 
+    color: 'from-rose-500 to-pink-400', 
+    category: 'WNBA' 
+  },
+
+  // ==================== MENEUSES (MOYENNE PAR MATCH) ====================
+  { 
+    label: 'Record de points en une saison WNBA (Moyenne) - Meneuse Française', 
+    value: '16.1', 
+    icon: FaChartLine, 
+    color: 'from-red-500 to-rose-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Record de points en une saison WNBA (Moyenne) - Meneuse née en Europe', 
+    value: '16.1', 
+    icon: FaChartLine, 
+    color: 'from-purple-500 to-indigo-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Record de points en une saison WNBA (Moyenne) - Meneuse née en France', 
+    value: '16.1', 
+    icon: FaChartLine, 
+    color: 'from-emerald-500 to-teal-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Record de points en une saison WNBA (Moyenne) - Meneuse Européenne', 
+    value: '16.1', 
+    icon: FaChartLine, 
+    color: 'from-blue-500 to-cyan-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Record de passes en une saison WNBA (Moyenne) - Meneuse Française', 
+    value: '6.3', 
+    icon: FaHands, 
+    color: 'from-amber-500 to-yellow-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Record de passes en une saison WNBA (Moyenne) - Meneuse née en France', 
+    value: '6.3', 
+    icon: FaHands, 
+    color: 'from-orange-500 to-rose-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST en une saison WNBA - Meneuse Française', 
+    value: '22.4', 
+    icon: FaChartLine, 
+    color: 'from-pink-500 to-rose-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST en une saison WNBA - Meneuse née en Europe', 
+    value: '22.4', 
+    icon: FaChartLine, 
+    color: 'from-indigo-500 to-blue-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST en une saison WNBA - Meneuse née en France', 
+    value: '22.4', 
+    icon: FaChartLine, 
+    color: 'from-teal-500 to-emerald-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST en une saison WNBA - Meneuse Européenne', 
+    value: '22.4', 
+    icon: FaChartLine, 
+    color: 'from-violet-500 to-purple-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST + RBD en une saison WNBA - Meneuse Française', 
+    value: '24.6', 
+    icon: FaBasketballBall, 
+    color: 'from-amber-500 to-orange-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST + RBD en une saison WNBA - Meneuse née en Europe', 
+    value: '24.6', 
+    icon: FaBasketballBall, 
+    color: 'from-cyan-500 to-blue-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST + RBD en une saison WNBA - Meneuse née en France', 
+    value: '24.6', 
+    icon: FaBasketballBall, 
+    color: 'from-emerald-500 to-green-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST + RBD en une saison WNBA - Meneuse Européenne', 
+    value: '24.6', 
+    icon: FaBasketballBall, 
+    color: 'from-rose-500 to-red-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST + STL en une saison WNBA - Meneuse Française', 
+    value: '23', 
+    icon: FaFire, 
+    color: 'from-red-500 to-orange-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST + STL en une saison WNBA - Meneuse née en Europe', 
+    value: '23', 
+    icon: FaFire, 
+    color: 'from-purple-500 to-indigo-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST + STL en une saison WNBA - Meneuse née en France', 
+    value: '23', 
+    icon: FaFire, 
+    color: 'from-teal-500 to-cyan-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST + STL en une saison WNBA - Meneuse Européenne', 
+    value: '23', 
+    icon: FaFire, 
+    color: 'from-yellow-500 to-amber-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST + STL + BLK en une saison WNBA - Meneuse Française', 
+    value: '23.1', 
+    icon: FaMedal, 
+    color: 'from-violet-500 to-purple-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST + STL + BLK en une saison WNBA - Meneuse née en Europe', 
+    value: '23.1', 
+    icon: FaMedal, 
+    color: 'from-blue-500 to-indigo-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST + STL + BLK en une saison WNBA - Meneuse née en France', 
+    value: '23.1', 
+    icon: FaMedal, 
+    color: 'from-emerald-500 to-teal-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST + STL + BLK en une saison WNBA - Meneuse Européenne', 
+    value: '23.1', 
+    icon: FaMedal, 
+    color: 'from-rose-500 to-pink-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST + BLK en une saison WNBA - Meneuse Française', 
+    value: '22.5', 
+    icon: FaShieldAlt, 
+    color: 'from-amber-500 to-yellow-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST + BLK en une saison WNBA - Meneuse née en Europe', 
+    value: '22.5', 
+    icon: FaShieldAlt, 
+    color: 'from-purple-500 to-violet-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST + BLK en une saison WNBA - Meneuse née en France', 
+    value: '22.5', 
+    icon: FaShieldAlt, 
+    color: 'from-cyan-500 to-blue-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST + BLK en une saison WNBA - Meneuse Européenne', 
+    value: '22.5', 
+    icon: FaShieldAlt, 
+    color: 'from-red-500 to-rose-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST + RBD + BLK en une saison WNBA - Meneuse Française', 
+    value: '24.7', 
+    icon: FaBasketballBall, 
+    color: 'from-emerald-500 to-green-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST + RBD + BLK en une saison WNBA - Meneuse née en Europe', 
+    value: '24.7', 
+    icon: FaBasketballBall, 
+    color: 'from-indigo-500 to-purple-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST + RBD + BLK en une saison WNBA - Meneuse née en France', 
+    value: '24.7', 
+    icon: FaBasketballBall, 
+    color: 'from-orange-500 to-amber-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST + RBD + BLK en une saison WNBA - Meneuse Européenne', 
+    value: '24.7', 
+    icon: FaBasketballBall, 
+    color: 'from-pink-500 to-rose-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST + RBD + STL en une saison WNBA - Meneuse Française', 
+    value: '25.2', 
+    icon: FaFire, 
+    color: 'from-red-500 to-orange-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST + RBD + STL en une saison WNBA - Meneuse née en Europe', 
+    value: '25.2', 
+    icon: FaFire, 
+    color: 'from-violet-500 to-purple-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST + RBD + STL en une saison WNBA - Meneuse née en France', 
+    value: '25.2', 
+    icon: FaFire, 
+    color: 'from-blue-500 to-cyan-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST + RBD + STL en une saison WNBA - Meneuse Européenne', 
+    value: '25.2', 
+    icon: FaFire, 
+    color: 'from-emerald-500 to-teal-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST + RBD + STL + BLK en une saison WNBA - Meneuse Française', 
+    value: '25.3', 
+    icon: FaTrophy, 
+    color: 'from-yellow-500 to-amber-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST + RBD + STL + BLK en une saison WNBA - Meneuse née en Europe', 
+    value: '25.3', 
+    icon: FaTrophy, 
+    color: 'from-indigo-500 to-blue-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST + RBD + STL + BLK en une saison WNBA - Meneuse née en France', 
+    value: '25.3', 
+    icon: FaTrophy, 
+    color: 'from-emerald-500 to-green-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure moyenne PTS + AST + RBD + STL + BLK en une saison WNBA - Meneuse Européenne', 
+    value: '25.3', 
+    icon: FaTrophy, 
+    color: 'from-rose-500 to-pink-400', 
+    category: 'WNBA' 
+  },
+
+  // ==================== SOFASCORE & PANIERS MARQUÉS ====================
+  { 
+    label: 'Meilleure note SofaScore de l\'histoire en WNBA - Française', 
+    value: '7.4', 
+    icon: FaStar, 
+    color: 'from-violet-500 to-purple-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure note SofaScore de l\'histoire en WNBA - Européenne', 
+    value: '7.4', 
+    icon: FaStar, 
+    color: 'from-blue-500 to-indigo-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure note SofaScore de l\'histoire en WNBA - Meneuse Française', 
+    value: '7.4', 
+    icon: FaStar, 
+    color: 'from-emerald-500 to-teal-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure note SofaScore de l\'histoire en WNBA - Meneuse Européenne', 
+    value: '7.4', 
+    icon: FaStar, 
+    color: 'from-amber-500 to-yellow-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure note SofaScore de l\'histoire en WNBA - Née en France', 
+    value: '7.4', 
+    icon: FaStar, 
+    color: 'from-rose-500 to-red-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Meilleure note SofaScore de l\'histoire en WNBA - Née en Europe', 
+    value: '7.4', 
+    icon: FaStar, 
+    color: 'from-pink-500 to-rose-400', 
+    category: 'WNBA' 
+  },
+  { 
+    label: 'Plus de paniers marqués en une saison WNBA - Française née en France', 
+    value: '187', 
+    icon: FaBasketballBall, 
+    color: 'from-amber-500 to-orange-400', 
+    category: 'Paniers' 
+  },
+  { 
+    label: 'Plus de paniers marqués en une saison WNBA - Plus Jeune Française née en France', 
+    value: '22', 
+    icon: FaBasketballBall, 
+    color: 'from-emerald-500 to-green-400', 
+    category: 'Jeunesse' 
+  },
+  { 
+    label: 'Plus de paniers marqués en une saison WNBA - Plus Vieille Française née en France', 
+    value: '22', 
+    icon: FaBasketballBall, 
+    color: 'from-orange-500 to-red-400', 
+    category: 'Vieillesse' 
   }
+
+
+
+
+
+  
 ];
 
 const Stats = () => {
