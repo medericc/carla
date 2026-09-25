@@ -496,6 +496,13 @@ const statsData = [
     category: 'Jeunesse'
   },
   { 
+    label: 'Plus Long Start Parfait avec l\'EDF (U20+ maj Sénior avec IT)', 
+    value: '16',
+    icon: FaStar,
+    color: 'from-rose-600 to-amber-500',
+    category: 'Exclusivité'
+  },
+  { 
     label: 'Plus Jeune Meilleure Marqueuse des Eurocup PO', 
     value: '20',
     icon: FaGlobeEurope,
@@ -517,7 +524,7 @@ const statsData = [
     category: 'Jeunesse'
   },
   { 
-    label: 'Européenne à 228 Pts + Ast en PO', 
+    label: 'Seule Européenne à 228 Pts + Ast en PO', 
     value: '2025',
     icon: FaUserNinja,
     color: 'from-violet-600 to-purple-500',
