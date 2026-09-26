@@ -1706,42 +1706,56 @@ const statsData = [
 
   // ==================== SOFASCORE & PANIERS MARQUÉS ====================
   { 
-    label: 'Meilleure note SofaScore de l\'histoire sur une saison WNBA - Française', 
+    label: 'Meilleure note SofaScore sur une saison WNBA - Française', 
     value: '7.4', 
     icon: FaStar, 
     color: 'from-violet-500 to-purple-400', 
     category: 'WNBA' 
   },
   { 
-    label: 'Meilleure note SofaScore de l\'histoire sur une saison en WNBA - Européenne', 
+    label: 'Meilleure note SofaScore sur une saison WNBA - Européenne', 
     value: '7.4', 
     icon: FaStar, 
     color: 'from-blue-500 to-indigo-400', 
     category: 'WNBA' 
   },
   { 
-    label: 'Meilleure note SofaScore de l\'histoire sur une saison en WNBA - Meneuse Française', 
+    label: 'Meilleure note SofaScore sur une saison WNBA - Meneuse Française', 
     value: '7.4', 
     icon: FaStar, 
     color: 'from-emerald-500 to-teal-400', 
     category: 'WNBA' 
   },
   { 
-    label: 'Meilleure note SofaScore de l\'histoire sur une saison en WNBA - Meneuse Européenne', 
+    label: 'Meilleure note SofaScore sur une saison WNBA - Meneuse Européenne', 
     value: '7.4', 
     icon: FaStar, 
     color: 'from-amber-500 to-yellow-400', 
     category: 'WNBA' 
   },
   { 
-    label: 'Meilleure note SofaScore de l\'histoire sur une saison en WNBA - Née en France', 
+    label: 'Meilleure note SofaScore sur une saison WNBA - Née en France', 
     value: '7.4', 
     icon: FaStar, 
     color: 'from-rose-500 to-red-400', 
     category: 'WNBA' 
   },
   { 
-    label: 'Meilleure note SofaScore de l\'histoire sur une saison en WNBA - Née en Europe', 
+    label: 'Meilleure note SofaScore sur une saison WNBA - Née en Europe', 
+    value: '7.4', 
+    icon: FaStar, 
+    color: 'from-pink-500 to-rose-400', 
+    category: 'WNBA' 
+  },
+    { 
+    label: 'Meilleure note SofaScore sur une saison WNBA avec - de 26,2\' de jeu', 
+    value: '7.4', 
+    icon: FaStar, 
+    color: 'from-pink-500 to-rose-400', 
+    category: 'WNBA' 
+  },
+    { 
+    label: 'Meilleure note SofaScore sur une saison WNBA pour une -23 ans sur l\'année', 
     value: '7.4', 
     icon: FaStar, 
     color: 'from-pink-500 to-rose-400', 
