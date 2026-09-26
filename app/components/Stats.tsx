@@ -1740,6 +1740,13 @@ const statsData = [
     color: 'from-rose-500 to-red-400', 
     category: 'WNBA' 
   },
+    { 
+    label: 'Meilleure note SofaScore sur une saison WNBA pour une 2004', 
+    value: '7.4', 
+    icon: FaStar, 
+    color: 'from-rose-500 to-red-400', 
+    category: 'WNBA' 
+  },
   { 
     label: 'Meilleure note SofaScore sur une saison WNBA - Née en Europe', 
     value: '7.4', 
