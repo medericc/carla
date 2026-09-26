@@ -94,7 +94,52 @@ const statsData = [
     category: 'Jeunesse'
   },
  
-
+{ 
+    label: 'Plus Jeune Française en 16 pts 6 ast en 1 saison WNBA', 
+    value: '22',
+    icon: FaTrophy,
+    color: 'from-red-500 to-rose-400',
+    category: 'Jeunesse'
+  },
+ 
+  { 
+       label: 'Plus Vieille Française en 16 pts 6 ast en 1 saison WNBA', 
+    value: '22',
+    icon: FaTrophy,
+    color: 'from-red-500 to-rose-400',
+    category: 'Vieillesse'
+  },
+ 
+  { 
+    label: 'Seule Française en 16 pts 6 ast en WNBA sur une saison', 
+    value: '2026',
+    icon: FaTrophy,
+    color: 'from-red-500 to-rose-400',
+    category: 'WNBA'
+  },
+ { 
+    label: 'Plus Jeune Européenne en 16 pts 6 ast en 1 saison WNBA', 
+    value: '22',
+    icon: FaTrophy,
+    color: 'from-red-500 to-rose-400',
+    category: 'Jeunesse'
+  },
+ 
+  { 
+       label: 'Plus Vieille Européenne en 16 pts 6 ast en 1 saison WNBA', 
+    value: '22',
+    icon: FaTrophy,
+    color: 'from-red-500 to-rose-400',
+    category: 'Vieillesse'
+  },
+ 
+  { 
+    label: 'Seule Européenne en 16 pts 6 ast en WNBA sur une saison', 
+    value: '2026',
+    icon: FaTrophy,
+    color: 'from-red-500 to-rose-400',
+    category: 'WNBA'
+  },
  { 
     label: 'Première Française à Finir une Saison Meilleure PPG et APG d\'une Franchise', 
     value: '2026',
