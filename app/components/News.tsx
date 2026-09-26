@@ -90,8 +90,9 @@ export const timeline = [
   },
  {
     year: "2026",
-    text: "Parmi les joueuses qui jouent moins de 26,2 minutes en 2026, elle est première en passes et en tirs ; elle a aussi réalisé plus de 200 records."
+    text: "Parmi les joueuses qui jouent moins de 26,2 minutes en 2026, elle est première en passes et en tirs ; elle a aussi réalisé plus de 200 records dont le record de PPG+APG+RPG dans le Clutch en une saison."
   },
+
 
 ];
 function normalizeDate(year: string): string {

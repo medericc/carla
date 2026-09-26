@@ -746,6 +746,41 @@ const statsData = [
     color: 'from-blue-500 to-indigo-400', 
     category: 'WNBA' 
   },
+   { 
+    label: 'Plus grand nombre de PPG dans le clutch en une saison WNBA à + de 48 %', 
+    value: '4.5', 
+    icon: FaChartLine, 
+    color: 'from-blue-500 to-indigo-400', 
+    category: 'WNBA' 
+  },
+    { 
+    label: 'Plus grand nombre de PPG dans le clutch en une saison WNBA à + de 50 3%', 
+    value: '4.5', 
+    icon: FaChartLine, 
+    color: 'from-blue-500 to-indigo-400', 
+    category: 'WNBA' 
+  },
+    { 
+    label: 'PPG + APG + RPG le plus haut dans le clutch en une saison WNBA', 
+    value: '6.5', 
+    icon: FaChartLine, 
+    color: 'from-blue-500 to-indigo-400', 
+    category: 'WNBA' 
+  },
+    { 
+    label: 'PPG + APG + RPG le plus haut dans le clutch en une saison WNBA pour une française', 
+    value: '6.5', 
+    icon: FaChartLine, 
+    color: 'from-blue-500 to-indigo-400', 
+    category: 'WNBA' 
+  },
+    { 
+    label: 'PPG + APG + RPG le plus haut dans le clutch en une saison WNBA pour une européenne', 
+    value: '6.5', 
+    icon: FaChartLine, 
+    color: 'from-blue-500 to-indigo-400', 
+    category: 'WNBA' 
+  },
   { 
     label: 'Plus de lancers en une saison WNBA (Moyenne) - Meneuse née en France', 
     value: '215', 
