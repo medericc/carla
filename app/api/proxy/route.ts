@@ -12,11 +12,15 @@ export async function GET(request: Request) {
 
     try {
         // Faites la requête à l'URL externe
+
+        console.log("========== TEST ==========");
+console.log("URL :", url);
         const response = await fetch(url);
         if (!response.ok) {
             throw new Error(`Échec de la récupération des données : ${response.statusText}`);
         }
-
+console.log("STATUS :", response.status);
+console.log("CONTENT TYPE :", response.headers.get("content-type"));
         // Retournez les données JSON
         const data = await response.json();
         return NextResponse.json(data);
