@@ -146,6 +146,58 @@ const statsData = [
     color: 'from-red-500 to-rose-400',
     category: 'WNBA'
   },
+
+
+
+    { 
+    label: 'Première Européenne à lead les PPG d\'une franchise (comptabilisé)', 
+    value: '2026',
+    icon: FaTrophy,
+    color: 'from-red-500 to-rose-400',
+    category: 'WNBA'
+  },
+    { 
+    label: 'Plus Jeune Européenne à lead les PPG d\'une franchise (comptabilisé)', 
+    value: '22',
+    icon: FaTrophy,
+    color: 'from-red-500 to-rose-400',
+    category: 'Jeunesse'
+  },
+    { 
+    label: 'Première Française à lead les PPG d\'une franchise (comptabilisé)', 
+    value: '2026',
+    icon: FaTrophy,
+    color: 'from-red-500 to-rose-400',
+    category: 'WNBA'
+  },
+    { 
+    label: 'Plus Jeune Française à lead les PPG d\'une franchise (comptabilisé)', 
+    value: '22',
+    icon: FaTrophy,
+    color: 'from-red-500 to-rose-400',
+    category: 'Jeunesse'
+  },
+ { 
+    label: 'Première Européenne à lead les PPG + APG d\'une franchise (comptabilisé)', 
+    value: '2026',
+    icon: FaTrophy,
+    color: 'from-red-500 to-rose-400',
+    category: 'WNBA'
+  },
+    { 
+    label: 'Plus Jeune Européenne à lead les PPG + APG d\'une franchise (comptabilisé)', 
+    value: '22',
+    icon: FaTrophy,
+    color: 'from-red-500 to-rose-400',
+    category: 'Jeunesse'
+  },
+   { 
+    label: 'Plus Vieille Européenne à lead les PPG + APG d\'une franchise (comptabilisé)', 
+    value: '22',
+    icon: FaTrophy,
+    color: 'from-red-500 to-rose-400',
+    category: 'Vieillesse'
+  },
  { 
     label: 'Première Française à Finir une Saison Meilleure PPG et APG d\'une Franchise', 
     value: '2026',
