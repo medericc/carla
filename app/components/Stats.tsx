@@ -95,7 +95,7 @@ const statsData = [
   },
  
 { 
-    label: 'Plus Jeune Française en 16 pts 6 ast en 1 saison WNBA', 
+    label: 'Plus Jeune Française en 16 pts 6 ast sur une saison WNBA', 
     value: '22',
     icon: FaTrophy,
     color: 'from-red-500 to-rose-400',
@@ -103,7 +103,7 @@ const statsData = [
   },
  
   { 
-       label: 'Plus Vieille Française en 16 pts 6 ast en 1 saison WNBA', 
+       label: 'Plus Vieille Française en 16 pts 6 ast sur une saison WNBA', 
     value: '22',
     icon: FaTrophy,
     color: 'from-red-500 to-rose-400',
@@ -118,7 +118,7 @@ const statsData = [
     category: 'WNBA'
   },
  { 
-    label: 'Plus Jeune Européenne en 16 pts 6 ast en 1 saison WNBA', 
+    label: 'Plus Jeune Européenne en 16 pts 6 ast sur une saison WNBA', 
     value: '22',
     icon: FaTrophy,
     color: 'from-red-500 to-rose-400',
@@ -126,13 +126,19 @@ const statsData = [
   },
  
   { 
-       label: 'Plus Vieille Européenne en 16 pts 6 ast en 1 saison WNBA', 
+       label: 'Plus Vieille Européenne en 16 pts 6 ast sur une saison WNBA', 
     value: '22',
     icon: FaTrophy,
     color: 'from-red-500 to-rose-400',
     category: 'Vieillesse'
   },
- 
+  { 
+    label: 'Plus Jeune Joueuse de WNBA à finir en 16 pts 6 ast sur une saison', 
+    value: '22',
+    icon: FaTrophy,
+    color: 'from-red-500 to-rose-400',
+    category: 'Jeunesse'
+  },
   { 
     label: 'Seule Européenne en 16 pts 6 ast en WNBA sur une saison', 
     value: '2026',
