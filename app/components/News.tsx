@@ -78,6 +78,21 @@ export const timeline = [
     year: "2026",
     text: "Carla est la première personne française à être joueuse la plus décisive d'une franchise NBA/WNBA, elle mène Portland aux points, aux passes et aux lancers."
   },
+
+
+  {
+    year: "2026",
+    text: "Carla obtient la meilleure note Sofascore sur une saison WNBA pour une joueuse européenne, pour une joueuse qui joue moins de 26,2 minutes, pour une joueuse de moins de 23 ans (dans l’année) et pour une joueuse née en 2004."
+  },
+ {
+    year: "2026",
+    text: "Carla réalise une série record de 16 victoires consécutives avec la France (en U20 et majoritairement en sénior, dont un tournoi international). En réalisant une Coupe du monde à presque 50 % aux tirs, 46 % à trois points et 91 % aux lancers francs, elle échouera en finale de la Coupe du monde (avec seulement 15 minutes de jeu ; 2 tirs, 5 points et 100 % de réussite aux tirs)."
+  },
+ {
+    year: "2026",
+    text: "Parmi les joueuses qui jouent moins de 26,2 minutes en 2026, elle est première en passes et en tirs ; elle a aussi réalisé plus de 200 records."
+  },
+
 ];
 function normalizeDate(year: string): string {
   if (year.includes("16 oct")) return "2024-10-16";
