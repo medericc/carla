@@ -1332,140 +1332,140 @@ const statsData = [
   },
   { 
     label: 'Meilleur total PTS + AST + STL + BLK en une saison WNBA - Meneuse Française', 
-    value: '', 
+    value: '898', 
     icon: FaMedal, 
     color: 'from-pink-500 to-rose-400', 
     category: 'WNBA' 
   },
   { 
     label: 'Meilleur total PTS + AST + STL + BLK en une saison WNBA - Meneuse née en Europe', 
-    value: '', 
+    value: '898', 
     icon: FaMedal, 
     color: 'from-indigo-500 to-blue-400', 
     category: 'WNBA' 
   },
   { 
     label: 'Meilleur total PTS + AST + STL + BLK en une saison WNBA - Meneuse née en France', 
-    value: '', 
+    value: '898', 
     icon: FaMedal, 
     color: 'from-teal-500 to-emerald-400', 
     category: 'WNBA' 
   },
   { 
     label: 'Meilleur total PTS + AST + STL + BLK en une saison WNBA - Meneuse Européenne', 
-    value: '', 
+    value: '898', 
     icon: FaMedal, 
     color: 'from-orange-500 to-amber-400', 
     category: 'WNBA' 
   },
   { 
     label: 'Meilleur total PTS + AST + BLK en une saison WNBA - Meneuse Française', 
-    value: '', 
+    value: '873', 
     icon: FaShieldAlt, 
     color: 'from-purple-500 to-violet-400', 
     category: 'WNBA' 
   },
   { 
     label: 'Meilleur total PTS + AST + BLK en une saison WNBA - Meneuse née en Europe', 
-    value: '', 
+    value: '873', 
     icon: FaShieldAlt, 
     color: 'from-blue-500 to-cyan-400', 
     category: 'WNBA' 
   },
   { 
     label: 'Meilleur total PTS + AST + BLK en une saison WNBA - Meneuse née en France', 
-    value: '', 
+    value: '873', 
     icon: FaShieldAlt, 
     color: 'from-rose-500 to-red-400', 
     category: 'WNBA' 
   },
   { 
     label: 'Meilleur total PTS + AST + BLK en une saison WNBA - Meneuse Européenne', 
-    value: '', 
+    value: '873', 
     icon: FaShieldAlt, 
     color: 'from-amber-500 to-yellow-400', 
     category: 'WNBA' 
   },
   { 
     label: 'Meilleur total PTS + AST + RBD + BLK en une saison WNBA - Meneuse Française', 
-    value: '', 
+    value: '957', 
     icon: FaBasketballBall, 
     color: 'from-emerald-500 to-teal-400', 
     category: 'WNBA' 
   },
   { 
     label: 'Meilleur total PTS + AST + RBD + BLK en une saison WNBA - Meneuse née en Europe', 
-    value: '', 
+    value: '957', 
     icon: FaBasketballBall, 
     color: 'from-indigo-500 to-purple-400', 
     category: 'WNBA' 
   },
   { 
     label: 'Meilleur total PTS + AST + RBD + BLK en une saison WNBA - Meneuse née en France', 
-    value: '', 
+    value: '957', 
     icon: FaBasketballBall, 
     color: 'from-orange-500 to-red-400', 
     category: 'WNBA' 
   },
   { 
     label: 'Meilleur total PTS + AST + RBD + BLK en une saison WNBA - Meneuse Européenne', 
-    value: '', 
+    value: '957', 
     icon: FaBasketballBall, 
     color: 'from-cyan-500 to-blue-400', 
     category: 'WNBA' 
   },
   { 
     label: 'Meilleur total PTS + AST + RBD + STL en une saison WNBA - Meneuse Française', 
-    value: '', 
+    value: '980', 
     icon: FaFire, 
     color: 'from-red-500 to-amber-400', 
     category: 'WNBA' 
   },
   { 
     label: 'Meilleur total PTS + AST + RBD + STL en une saison WNBA - Meneuse née en Europe', 
-    value: '', 
+    value: '980', 
     icon: FaFire, 
     color: 'from-violet-500 to-purple-400', 
     category: 'WNBA' 
   },
   { 
     label: 'Meilleur total PTS + AST + RBD + STL en une saison WNBA - Meneuse née en France', 
-    value: '', 
+    value: '980', 
     icon: FaFire, 
     color: 'from-green-500 to-teal-400', 
     category: 'WNBA' 
   },
   { 
     label: 'Meilleur total PTS + AST + RBD + STL en une saison WNBA - Meneuse Européenne', 
-    value: '', 
+    value: '980', 
     icon: FaFire, 
     color: 'from-pink-500 to-rose-400', 
     category: 'WNBA' 
   },
   { 
     label: 'Meilleur total PTS + AST + RBD + STL + BLK en une saison WNBA - Meneuse Française', 
-    value: '', 
+    value: '982', 
     icon: FaTrophy, 
     color: 'from-yellow-500 to-amber-400', 
     category: 'WNBA' 
   },
   { 
     label: 'Meilleur total PTS + AST + RBD + STL + BLK en une saison WNBA - Meneuse née en Europe', 
-    value: '', 
+    value: '982', 
     icon: FaTrophy, 
     color: 'from-indigo-500 to-blue-400', 
     category: 'WNBA' 
   },
   { 
     label: 'Meilleur total PTS + AST + RBD + STL + BLK en une saison WNBA - Meneuse née en France', 
-    value: '', 
+    value: '982', 
     icon: FaTrophy, 
     color: 'from-emerald-500 to-green-400', 
     category: 'WNBA' 
   },
   { 
     label: 'Meilleur total PTS + AST + RBD + STL + BLK en une saison WNBA - Meneuse Européenne', 
-    value: '', 
+    value: '982', 
     icon: FaTrophy, 
     color: 'from-rose-500 to-pink-400', 
     category: 'WNBA' 
