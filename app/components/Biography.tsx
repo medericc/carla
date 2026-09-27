@@ -256,7 +256,7 @@ useEffect(() => {
                 SA CARRIÈRE
               </p>
               <p className="text-gray-300 leading-relaxed">
-                Meilleure évaluation et meilleure marqueuse de l'histoire des PO
+                Meilleure EPG et meilleure PPG de l'histoire des PO
                 LFB, Carla est la joueuse française la plus rapide à inscrire
                 1.000 points en carrière.
               </p>
