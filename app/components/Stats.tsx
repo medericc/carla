@@ -1949,13 +1949,27 @@ const semanticSchemas = [
     "@context": "https://schema.org",
     "@type": "SportsEvent",
     "name": "EuroBasket U20 Féminin 2023",
-    "startDate": "2023-07-08",
-    "endDate": "2023-07-16",
-    "performer": {
-      "@type": "Person",
-      "name": "Carla Leite"
+    "startDate": "2023-07-28",
+    "endDate": "2023-08-06",
+    
+   "location": {
+    "@type": "Place",
+    "name": "Klaipėda",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Klaipėda",
+      "addressCountry": "LT"
     }
   },
+  "performer": {
+    "@id": "https://carlaleitefan.com/#carla-leite"
+  },
+  "eventStatus": "https://schema.org/EventCompleted",
+  "organizer": {
+    "@type": "Organization",
+    "name": "FIBA Europe"
+  }
+},
 
   // 🧭 Breadcrumb (SEO pur)
   {
