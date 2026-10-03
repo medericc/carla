@@ -39,7 +39,7 @@ export const timeline = [
   },
     {
     year: "2024",
-    text: "Carla a la meilleure évaluation et le meilleure scoring de l'histoire en une campagne de PO LFB."
+    text: "Carla a la meilleure évaluation et le meilleure scoring de l'histoire en une campagne et en moyenne de PO LFB."
   },
   {
     year: "2024",
