@@ -74,16 +74,18 @@ const [modalOpen, setModalOpen] = useState(false);
   const filteredLinks = links.filter(link => link.category === selectedCategory);
 
   return (
-  <main
+<main
   className="
     min-h-screen
+    w-full
+    overflow-x-hidden
     flex flex-col
     items-center
     bg-[#ad2424]
-    px-6 pt-6
+    px-6
+    pt-6
     text-neutral-100
 
-    2k:relative
     2k:justify-center
     2k:px-12
     2k:pt-0
@@ -124,17 +126,18 @@ const [modalOpen, setModalOpen] = useState(false);
       value={selectedCategory}
       onValueChange={setSelectedCategory}
     >
-      <SelectTrigger
-        className="
-          w-full
-          bg-white
-          text-neutral-900
-          font-semibold
+    <SelectTrigger
+  className="
+    w-full
+    bg-white
+    text-neutral-900
+    font-semibold
 
-          2k:h-16
-          2k:text-xl
-        "
-      >
+    2k:h-20
+    2k:px-7
+    2k:text-2xl
+  "
+>
         <SelectValue placeholder="Choisis une catégorie" />
       </SelectTrigger>
 
@@ -148,24 +151,24 @@ const [modalOpen, setModalOpen] = useState(false);
         "
       >
         {categories.map((cat) => (
-          <SelectItem
-            key={cat}
-            value={cat}
-            className="
-              cursor-pointer
-              px-4 py-2
-              rounded-md
+      <SelectItem
+  key={cat}
+  value={cat}
+  className="
+    cursor-pointer
+    px-4 py-2
+    rounded-md
 
-              2k:px-6
-              2k:py-4
-              2k:text-xl
+    2k:px-7
+    2k:py-4
+    2k:text-xl
 
-              focus:bg-red-700
-              focus:text-white
-              data-[state=checked]:bg-red-700
-              data-[state=checked]:text-white
-            "
-          >
+    focus:bg-red-700
+    focus:text-white
+    data-[state=checked]:bg-red-700
+    data-[state=checked]:text-white
+  "
+>
             {cat}
           </SelectItem>
         ))}
@@ -246,18 +249,14 @@ const [modalOpen, setModalOpen] = useState(false);
 
 
       {/* Footer */}
-   <footer
+<footer
   className="
-    w-screen
+    w-full
     bg-gradient-to-b
     from-[#ad2424]
     to-[#a11d1d]
     py-6
     mt-10
-
-    2k:absolute
-    2k:bottom-0
-    2k:left-0
   "
 >
         <p className="text-sm text-white text-opacity-70 text-center mx-auto w-full max-w-none">
