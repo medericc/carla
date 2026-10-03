@@ -39,7 +39,7 @@ h1, h2 {
   color: #fff;
 }
 
-main:not(#application-page) {
+main {
   padding: 20px;
 }
 
