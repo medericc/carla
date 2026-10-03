@@ -79,7 +79,8 @@ const [modalOpen, setModalOpen] = useState(false);
       <div className="w-full max-w-md 2xl:max-w-3xl 4k:max-w-5xl mb-6 mt-20">
           <Link href="/" className="cursor-pointer hover:opacity-80">
         
-        <h1 className="text-3xl font-bold text-center mb-6 text-neutral-100">App Carla & Co</h1>
+        <h1 className="text-3xl 2xl:text-4xl 4k:text-5xl font-bold text-center mb-6 4k:mb-10 text-neutral-100">App Carla & Co</h1>
+
 </Link>
         {/* Menu déroulant */}
         <div className=" mt-8 mb-4">
@@ -111,7 +112,7 @@ const [modalOpen, setModalOpen] = useState(false);
       </div>
 
       {/* Liste des liens */}
-   <div className="w-full max-w-md space-y-4 flex-grow">
+   <div className="-full max-w-md lg:max-w-xl 2xl:max-w-3xl 4k:max-w-5xl space-y-4 flex-grow">
   {filteredLinks.map((link, i) => {
     const isDisabled = !link.url;
 
@@ -119,7 +120,7 @@ const [modalOpen, setModalOpen] = useState(false);
       <button
         key={i}
         onClick={() => setModalOpen(true)}
-        className="flex items-center bg-[#c22525] hover:bg-red-700 transition rounded-xl px-4 py-3 text-lg font-medium shadow-sm w-full"
+   className="flex items-center bg-[#c22525] hover:bg-red-700 transition rounded-xl px-5 py-4 lg:px-6 lg:py-4 2xl:px-7 2xl:py-5 4k:px-8 4k:py-6 text-lg 2xl:text-xl 4k:text-2xl font-medium shadow-sm w-full"
       >
         {link.icon}
         {link.title}
@@ -130,8 +131,8 @@ const [modalOpen, setModalOpen] = useState(false);
         href={link.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center bg-[#c22525] hover:bg-red-700 transition rounded-xl px-4 py-3 text-lg font-medium shadow-sm"
-      >
+className="flex items-center bg-[#c22525] hover:bg-red-700 transition rounded-xl px-5 py-4 lg:px-6 lg:py-4 2xl:px-7 2xl:py-5 4k:px-8 4k:py-6 text-lg 2xl:text-xl 4k:text-2xl font-medium shadow-sm w-full"
+ >
         {link.icon}
         {link.title}
       </a>
