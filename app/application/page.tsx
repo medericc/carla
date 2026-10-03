@@ -74,6 +74,10 @@ const [modalOpen, setModalOpen] = useState(false);
   const filteredLinks = links.filter(link => link.category === selectedCategory);
 
   return (
+
+
+
+    <div className="p-5 md:p-0">
 <main
   
   className="
@@ -253,6 +257,6 @@ const [modalOpen, setModalOpen] = useState(false);
   </DialogContent>
 </Dialog>
 
-    </main>
+    </main></div>
   );
 }
