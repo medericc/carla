@@ -7,7 +7,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-
+import styles from "./app.module.css";
 import { Calendar, Video, Globe, LinkIcon, BarChart } from "lucide-react";
 import { FaYoutube, FaTiktok, FaInstagram } from "react-icons/fa";
 import Link from "next/link";
@@ -75,21 +75,21 @@ const [modalOpen, setModalOpen] = useState(false);
 
   return (
 <main
-  id="application-page"
-  className="
-  min-h-screen
-  flex flex-col
-  justify-between
-  items-center
-  bg-[#ad2424]
-  px-6
-  pt-6
-  text-neutral-100
-
-  min-[2048px]:justify-center
-  min-[2048px]:pt-0
-  min-[2048px]:relative
-">
+  className={`
+    ${styles.page}
+    min-h-screen
+    flex flex-col
+    justify-between
+    items-center
+    bg-[#ad2424]
+    px-6
+    pt-6
+    text-neutral-100
+    min-[2048px]:justify-center
+    min-[2048px]:pt-0
+    min-[2048px]:relative
+  `}
+>
       {/* Header */}
      <div className="
   w-full
