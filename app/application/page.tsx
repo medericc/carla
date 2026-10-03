@@ -74,18 +74,64 @@ const [modalOpen, setModalOpen] = useState(false);
   const filteredLinks = links.filter(link => link.category === selectedCategory);
 
   return (
-    <main className="min-h-screen flex flex-col justify-between items-center bg-[#ad2424] px-6 pt-6 text-neutral-100">
+ <main className="
+  min-h-screen
+  flex flex-col
+  justify-between
+  items-center
+  bg-[#ad2424]
+  px-6
+  pt-6
+  text-neutral-100
+
+  min-[2048px]:justify-center
+  min-[2048px]:pt-0
+  min-[2048px]:relative
+">
       {/* Header */}
-      <div className="w-full max-w-md mb-6 mt-20">
+     <div className="
+  w-full
+  max-w-md
+  mb-6
+  mt-20
+
+  min-[2048px]:max-w-3xl
+  min-[2048px]:mb-6
+  min-[2048px]:mt-0
+
+  min-[3840px]:max-w-5xl
+">
           <Link href="/" className="cursor-pointer hover:opacity-80">
         
-        <h1 className="text-3xl font-bold text-center mb-6 text-neutral-100">App Carla & Co</h1>
+      <h1 className="
+  text-3xl
+  font-bold
+  text-center
+  mb-6
+  text-neutral-100
+
+  min-[2048px]:text-5xl
+
+  min-[3840px]:text-6xl
+">App Carla & Co</h1>
 </Link>
         {/* Menu déroulant */}
         <div className=" mt-8 mb-4">
         <Select value={selectedCategory} onValueChange={setSelectedCategory}>
-  <SelectTrigger className="w-full bg-white text-neutral-900 font-semibold">
-    <SelectValue placeholder="Choisis une catégorie" />
+<SelectTrigger className="
+  w-full
+  bg-white
+  text-neutral-900
+  font-semibold
+
+  min-[2048px]:h-16
+  min-[2048px]:px-6
+  min-[2048px]:text-xl
+
+  min-[3840px]:h-20
+  min-[3840px]:px-8
+  min-[3840px]:text-2xl
+">  <SelectValue placeholder="Choisis une catégorie" />
   </SelectTrigger>
 
   <SelectContent className="bg-white text-neutral-900 border border-neutral-200 rounded-xl shadow-lg">
@@ -111,16 +157,47 @@ const [modalOpen, setModalOpen] = useState(false);
       </div>
 
       {/* Liste des liens */}
-   <div className="w-full max-w-md space-y-4 flex-grow">
-  {filteredLinks.map((link, i) => {
+<div className="
+  w-full
+  max-w-md
+  space-y-4
+  flex-grow
+
+  min-[2048px]:max-w-3xl
+  min-[2048px]:flex-grow-0
+  min-[2048px]:space-y-5
+
+  min-[3840px]:max-w-5xl
+  min-[3840px]:space-y-6
+"> {filteredLinks.map((link, i) => {
     const isDisabled = !link.url;
 
     return isDisabled ? (
       <button
         key={i}
         onClick={() => setModalOpen(true)}
-        className="flex items-center bg-[#c22525] hover:bg-red-700 transition rounded-xl px-4 py-3 text-lg font-medium shadow-sm w-full"
-      >
+  className="
+  flex
+  items-center
+  bg-[#c22525]
+  hover:bg-red-700
+  transition
+  rounded-xl
+  px-4
+  py-3
+  text-lg
+  font-medium
+  shadow-sm
+  w-full
+
+  min-[2048px]:px-7
+  min-[2048px]:py-5
+  min-[2048px]:text-xl
+
+  min-[3840px]:px-8
+  min-[3840px]:py-6
+  min-[3840px]:text-2xl
+"   >
         {link.icon}
         {link.title}
       </button>
@@ -142,8 +219,19 @@ const [modalOpen, setModalOpen] = useState(false);
 
 
       {/* Footer */}
-      <footer className="w-screen bg-gradient-to-b from-[#ad2424] to-[#a11d1d] py-6 mt-10">
-        <p className="text-sm text-white text-opacity-70 text-center mx-auto w-full max-w-none">
+  <footer className="
+  w-screen
+  bg-gradient-to-b
+  from-[#ad2424]
+  to-[#a11d1d]
+  py-6
+  mt-10
+
+  min-[2048px]:absolute
+  min-[2048px]:bottom-0
+  min-[2048px]:left-0
+  min-[2048px]:mt-0
+">    <p className="text-sm text-white text-opacity-70 text-center mx-auto w-full max-w-none">
           Fait avec{" "}
          <span className="text-2xl mr-1 ml-1 inline-block relative top-1 text-neutral-800 heartbeat">
   &hearts;
