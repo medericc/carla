@@ -75,13 +75,14 @@ const [modalOpen, setModalOpen] = useState(false);
 
   return (
  <main className="
+ application-page
   min-h-screen
   flex flex-col
   justify-between
   items-center
   bg-[#ad2424]
-  px-2
-  pt-2
+  px-6
+  pt-6
   text-neutral-100
 
   min-[2048px]:justify-center

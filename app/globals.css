@@ -273,3 +273,9 @@ body:has(.lu-page) main {
 body:has(.lena-page) main {
   padding: 0;
 }
+
+@media (min-width: 2048px) {
+  main.application-page {
+    padding: 0 !important;
+  }
+}
