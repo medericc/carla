@@ -1,9 +1,0 @@
-.page {
-  /* Rien ici : le comportement < 2048px reste celui de Tailwind */
-}
-
-@media (min-width: 2048px) {
-  .page {
-    padding: 0 !important;
-  }
-}
