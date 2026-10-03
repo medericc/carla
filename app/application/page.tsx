@@ -80,8 +80,8 @@ const [modalOpen, setModalOpen] = useState(false);
   justify-between
   items-center
   bg-[#ad2424]
-  px-6
-  pt-6
+  px-2
+  pt-2
   text-neutral-100
 
   min-[2048px]:justify-center
