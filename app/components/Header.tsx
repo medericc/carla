@@ -66,8 +66,8 @@ const Header = () => {
   </span>
  
 </h1>
-<div id="top">
-<div className="relative z-0 w-full h-[80vh] lg:h-auto lg:aspect-video overflow-hidden lg:mt-[-15.5rem] xl:mt-[-19.5rem]" id="video">
+<div id="top " className="lg:max-xl:pb-[140px]">
+<div className="relative z-0 w-full h-[80vh] lg:h-auto lg:aspect-video overflow-hidden lg:mt-[-15.5rem] xl:mt-[-19.5rem] lg:max-xl:translate-y-[140px]" id="video">
           <video
             muted
             loop
@@ -81,7 +81,7 @@ const Header = () => {
         </div>
         <div
             id="imgg"
-            className="flex justify-center items-end relative w-full h-auto z-10"
+            className="flex justify-center items-end relative w-full h-auto z-10 lg:max-xl:translate-y-[140px]"
             style={{ maxWidth: "100%", position: "relative" }} // Le parent doit être en position relative pour que l'absolute fonctionne
           >
          <div
@@ -90,6 +90,7 @@ const Header = () => {
     bottom-0
     left-1/2
     -translate-x-1/2
+    
     w-[67.5vw]
     md:w-[53vw]
     lg:w-[42vw]
@@ -141,7 +142,7 @@ const Header = () => {
           transition={{ duration: 0.8, delay: 1.2 }}
           className="mt-8 md:mt-8 mb-8"
         >
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto ">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {stats.map((stat, index) => (
                 <motion.div
