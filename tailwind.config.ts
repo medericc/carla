@@ -8,9 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
-       screens: {
-        "4k": "3840px",
-      },
+      screens: {
+  "2k": "2048px",
+  "4k": "3840px",
+},
       fontFamily: {
         heroic: ['Heroic', 'Helvetica', 'Arial', 'sans-serif'],
       },

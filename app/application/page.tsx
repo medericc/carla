@@ -74,76 +74,192 @@ const [modalOpen, setModalOpen] = useState(false);
   const filteredLinks = links.filter(link => link.category === selectedCategory);
 
   return (
-    <main className="min-h-screen flex flex-col justify-between items-center bg-[#ad2424] px-6 pt-6 text-neutral-100">
-      {/* Header */}
-      <div className="w-full max-w-md 2xl:max-w-3xl 4k:max-w-5xl mb-6 mt-20">
-          <Link href="/" className="cursor-pointer hover:opacity-80">
-        
-        <h1 className="text-3xl 2xl:text-4xl 4k:text-5xl font-bold text-center mb-6 4k:mb-10 text-neutral-100">App Carla & Co</h1>
+  <main
+  className="
+    min-h-screen
+    flex flex-col
+    items-center
+    bg-[#ad2424]
+    px-6 pt-6
+    text-neutral-100
 
-</Link>
-        {/* Menu déroulant */}
-        <div className=" mt-8 mb-4">
-        <Select value={selectedCategory} onValueChange={setSelectedCategory}>
-  <SelectTrigger className="w-full bg-white text-neutral-900 font-semibold">
-    <SelectValue placeholder="Choisis une catégorie" />
-  </SelectTrigger>
+    2k:relative
+    2k:justify-center
+    2k:px-12
+    2k:pt-0
+  "
+>
+     {/* Header */}
+  <div
+  className="
+    w-full
+    max-w-md
+    mb-6
+    mt-20
 
-  <SelectContent className="bg-white text-neutral-900 border border-neutral-200 rounded-xl shadow-lg">
-    {categories.map((cat) => (
-      <SelectItem
-        key={cat}
-        value={cat}
+    2k:max-w-3xl
+    2k:mb-0
+    2k:mt-0
+  "
+>
+  <Link href="/" className="cursor-pointer hover:opacity-80">
+    <h1
+      className="
+        text-3xl
+        font-bold
+        text-center
+        mb-6
+        text-neutral-100
+
+        2k:text-5xl
+        2k:mb-10
+      "
+    >
+      App Carla & Co
+    </h1>
+  </Link>
+
+  <div className="mt-8 mb-4 2k:mt-0 2k:mb-8">
+    <Select
+      value={selectedCategory}
+      onValueChange={setSelectedCategory}
+    >
+      <SelectTrigger
         className="
-          cursor-pointer
-          px-4 py-2
-          rounded-md
-          focus:bg-red-700 focus:text-white
-          data-[state=checked]:bg-red-700 data-[state=checked]:text-white
+          w-full
+          bg-white
+          text-neutral-900
+          font-semibold
+
+          2k:h-16
+          2k:text-xl
         "
       >
-        {cat}
-      </SelectItem>
-    ))}
-  </SelectContent>
-</Select>
+        <SelectValue placeholder="Choisis une catégorie" />
+      </SelectTrigger>
 
-        </div>
-      </div>
-
-      {/* Liste des liens */}
-   <div className="-full max-w-md lg:max-w-xl 2xl:max-w-3xl 4k:max-w-5xl space-y-4 flex-grow">
-  {filteredLinks.map((link, i) => {
-    const isDisabled = !link.url;
-
-    return isDisabled ? (
-      <button
-        key={i}
-        onClick={() => setModalOpen(true)}
-   className="flex items-center bg-[#c22525] hover:bg-red-700 transition rounded-xl px-5 py-4 lg:px-6 lg:py-4 2xl:px-7 2xl:py-5 4k:px-8 4k:py-6 text-lg 2xl:text-xl 4k:text-2xl font-medium shadow-sm w-full"
+      <SelectContent
+        className="
+          bg-white
+          text-neutral-900
+          border border-neutral-200
+          rounded-xl
+          shadow-lg
+        "
       >
-        {link.icon}
-        {link.title}
-      </button>
-    ) : (
-      <a
-        key={i}
-        href={link.url}
-        target="_blank"
-        rel="noopener noreferrer"
-className="flex items-center bg-[#c22525] hover:bg-red-700 transition rounded-xl px-5 py-4 lg:px-6 lg:py-4 2xl:px-7 2xl:py-5 4k:px-8 4k:py-6 text-lg 2xl:text-xl 4k:text-2xl font-medium shadow-sm w-full"
- >
-        {link.icon}
-        {link.title}
-      </a>
-    );
-  })}
+        {categories.map((cat) => (
+          <SelectItem
+            key={cat}
+            value={cat}
+            className="
+              cursor-pointer
+              px-4 py-2
+              rounded-md
+
+              2k:px-6
+              2k:py-4
+              2k:text-xl
+
+              focus:bg-red-700
+              focus:text-white
+              data-[state=checked]:bg-red-700
+              data-[state=checked]:text-white
+            "
+          >
+            {cat}
+          </SelectItem>
+        ))}
+      </SelectContent>
+    </Select>
+  </div>
+
+  <div
+    className="
+      w-full
+      space-y-4
+
+      2k:space-y-5
+    "
+  >
+    {filteredLinks.map((link, i) => {
+      const isDisabled = !link.url;
+
+      return isDisabled ? (
+        <button
+          key={i}
+          onClick={() => setModalOpen(true)}
+          className="
+            flex
+            items-center
+            bg-[#c22525]
+            hover:bg-red-700
+            transition
+            rounded-xl
+            px-4
+            py-3
+            text-lg
+            font-medium
+            shadow-sm
+            w-full
+
+            2k:px-7
+            2k:py-5
+            2k:text-2xl
+          "
+        >
+          {link.icon}
+          {link.title}
+        </button>
+      ) : (
+        <a
+          key={i}
+          href={link.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="
+            flex
+            items-center
+            bg-[#c22525]
+            hover:bg-red-700
+            transition
+            rounded-xl
+            px-4
+            py-3
+            text-lg
+            font-medium
+            shadow-sm
+            w-full
+
+            2k:px-7
+            2k:py-5
+            2k:text-2xl
+          "
+        >
+          {link.icon}
+          {link.title}
+        </a>
+      );
+    })}
+  </div>
 </div>
 
 
 
       {/* Footer */}
-      <footer className="w-screen bg-gradient-to-b from-[#ad2424] to-[#a11d1d] py-6 mt-10">
+   <footer
+  className="
+    w-screen
+    bg-gradient-to-b
+    from-[#ad2424]
+    to-[#a11d1d]
+    py-6
+    mt-10
+
+    2k:absolute
+    2k:bottom-0
+    2k:left-0
+  "
+>
         <p className="text-sm text-white text-opacity-70 text-center mx-auto w-full max-w-none">
           Fait avec{" "}
          <span className="text-2xl mr-1 ml-1 inline-block relative top-1 text-neutral-800 heartbeat">
