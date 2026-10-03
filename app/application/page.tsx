@@ -74,8 +74,9 @@ const [modalOpen, setModalOpen] = useState(false);
   const filteredLinks = links.filter(link => link.category === selectedCategory);
 
   return (
- <main className="
- application-page
+<main
+  id="application-page"
+  className="
   min-h-screen
   flex flex-col
   justify-between
