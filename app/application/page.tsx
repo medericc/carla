@@ -77,8 +77,8 @@ const [modalOpen, setModalOpen] = useState(false);
 
 
 
-    <div className="p-5 md:p-0">
-<main
+    <main className="p-5 md:p-0  bg-[#ad2424]">
+<div
   
   className="
   application-page
@@ -257,6 +257,6 @@ const [modalOpen, setModalOpen] = useState(false);
   </DialogContent>
 </Dialog>
 
-    </main></div>
+    </div></main>
   );
 }
