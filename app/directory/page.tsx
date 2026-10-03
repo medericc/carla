@@ -79,7 +79,8 @@ export default function Directory() {
           (match) => match.CHAMPIONNAT.includes("PO") || match.CHAMPIONNAT.includes("CDF")
         );
       case "National Team":
-        return data.filter((match) => match.CHAMPIONNAT.includes("EURO"));
+        return data.filter((match) => match.CHAMPIONNAT.includes("EURO" )||
+      match.CHAMPIONNAT.includes("CDM"));
       case "Clubs":
         return data.filter((match) => !match.CHAMPIONNAT.includes("EURO"));
       default:
