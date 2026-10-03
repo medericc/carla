@@ -76,7 +76,7 @@ const [modalOpen, setModalOpen] = useState(false);
   return (
     <main className="min-h-screen flex flex-col justify-between items-center bg-[#ad2424] px-6 pt-6 text-neutral-100">
       {/* Header */}
-      <div className="w-full max-w-md mb-6 mt-20">
+      <div className="w-full max-w-md 2xl:max-w-3xl 4k:max-w-5xl mb-6 mt-20">
           <Link href="/" className="cursor-pointer hover:opacity-80">
         
         <h1 className="text-3xl font-bold text-center mb-6 text-neutral-100">App Carla & Co</h1>
