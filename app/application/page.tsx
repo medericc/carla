@@ -75,8 +75,9 @@ const [modalOpen, setModalOpen] = useState(false);
 
   return (
 <main
-  id="application-page"
+  
   className="
+  application-page
   min-h-screen
   flex flex-col
   justify-between

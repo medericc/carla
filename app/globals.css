@@ -39,7 +39,7 @@ h1, h2 {
   color: #fff;
 }
 
-main:not(#application-page) {
+main {
   padding: 20px;
 }
 
@@ -271,5 +271,8 @@ body:has(.lu-page) main {
 }
 
 body:has(.lena-page) main {
+  padding: 0;
+}
+body:has(.application-page) main {
   padding: 0;
 }
