@@ -366,6 +366,34 @@ const statsData = [
     color: 'from-blue-500 to-indigo-400',
     category: 'WNBA'
   },
+   { 
+    label: 'Top APG WNBA FR en une saison (parmi les - de 26,3 min)', 
+    value: '6.3',
+    icon: FaGlobeEurope,
+    color: 'from-blue-500 to-indigo-400',
+    category: 'WNBA'
+  },
+   { 
+    label: 'Top APG WNBA ER en une saison (parmi les - de 26,3 min)', 
+    value: '6.3',
+    icon: FaGlobeEurope,
+    color: 'from-blue-500 to-indigo-400',
+    category: 'WNBA'
+  },
+  { 
+    label: 'Top passeuse WNBA FR en une saison (parmi les - de 26,3 min)', 
+    value: '245',
+    icon: FaGlobeEurope,
+    color: 'from-blue-500 to-indigo-400',
+    category: 'WNBA'
+  },
+   { 
+    label: 'Top passeuse WNBA ER en une saison (parmi les - de 26,3 min)', 
+    value: '245',
+    icon: FaGlobeEurope,
+    color: 'from-blue-500 to-indigo-400',
+    category: 'WNBA'
+  },
   { 
     label: 'Meilleur Marqueur Jeune Français en Compétition', 
     value: '18.4',
@@ -380,6 +408,14 @@ const statsData = [
     color: 'from-purple-500 to-pink-400',
     category: 'WNBA'
   },
+  { 
+    label: 'Top PPG WNBA ER en une saison (parmi les - de 26,3 min, hors COVID, +85 % joués)', 
+    value: '16.1',
+    icon: FaGlobeEurope,
+    color: 'from-purple-500 to-pink-400',
+    category: 'WNBA'
+  },
+  
   { 
     label: 'Top marqueuse WNBA en une saison (parmi les - de 26,3 min)', 
     value: '626',
