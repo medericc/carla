@@ -2193,9 +2193,9 @@ const semanticSchemas = [
                               </div>
 
                               {/* Record Label */}
-                              <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mb-6 text-gray-100 leading-tight">
+                              <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mb-6 text-gray-100 leading-tight">
                                 {stat.label}
-                              </h3>
+                              </p>
 
                               {/* Record Value */}
                               <div className="mb-4 md:mb-6">
