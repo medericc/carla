@@ -30,6 +30,240 @@ function shortOpponentName(name: string) {
     .slice(0, 2)
     .join(" ");
 }
+
+const opponentLogoMap: Record<string, string> = {
+  // ----------------------------------------
+  // KANSAS
+  // ----------------------------------------
+
+  "Independence Community College":
+    "/independence.webp",
+
+  "Garden City Community College":
+    "/garden.webp",
+
+  "Pratt Community College":
+    "/pratt.webp",
+
+  "Coffeyville Community College":
+    "/coffeyville.webp",
+
+  "Cowley College":
+    "/cowley.webp",
+
+  "Seward County Community College":
+    "/seward.webp",
+
+  "Cloud County Community College":
+    "/cloud.webp",
+
+  "Butler Community College":
+    "/butler.webp",
+
+  "Barton Community College":
+    "/barton.webp",
+
+  "Hutchinson Community College":
+    "/hutchinson.webp",
+
+  "Colby Community College":
+    "/colby.webp",
+
+  // ----------------------------------------
+  // OKLAHOMA
+  // ----------------------------------------
+
+  "Northwestern Oklahoma State University (Scrimmage)":
+    "/oklahoma.webp",
+
+  // ----------------------------------------
+  // NEBRASKA
+  // ----------------------------------------
+
+  "Western Nebraska Community College":
+    "/nebraska.webp",
+
+  // ----------------------------------------
+  // WYOMING
+  // ----------------------------------------
+
+  "Laramie County Community College":
+    "/laramie.webp",
+
+  // ----------------------------------------
+  // TEXAS
+  // ----------------------------------------
+
+  "Odessa College":
+    "/odessa.webp",
+
+  "Midland College":
+    "/midland.webp",
+
+  // ----------------------------------------
+  // REDLANDS / MURRAY
+  // ----------------------------------------
+
+  "Redlands Community College":
+    "/redlands.webp",
+
+  "Murray State College":
+    "/murray.webp",
+
+  // ----------------------------------------
+  // FORT HAYS
+  // ----------------------------------------
+
+  "Fort Hays Tech Northwest":
+    "/fort.webp",
+
+  // ----------------------------------------
+  // SHOWCASES
+  // ----------------------------------------
+
+  "Midwest Showcase":
+    "/midwest.webp",
+
+  "Southwest Showcase":
+    "/southwest.webp",
+};
+
+
+// ============================================================
+// RECHERCHE DU LOGO D'UNE ÉQUIPE
+// ============================================================
+
+function getOpponentLogo(opponent: string): string {
+  // --------------------------------------------------------
+  // Si plusieurs équipes sont indiquées avec "or" ou "ou",
+  // on garde uniquement la première équipe.
+  //
+  // Exemple :
+  // "Odessa College or Midland College"
+  // → "Odessa College"
+  //
+  // "Redlands Community College or Murray State College"
+  // → "Redlands Community College"
+  // --------------------------------------------------------
+
+  const firstOpponent = opponent
+    .split(/\s+(?:or|ou)\s+/i)[0]
+    .trim()
+    .replace(/\s+/g, " ");
+
+  // --------------------------------------------------------
+  // Correspondance exacte
+  // --------------------------------------------------------
+
+  if (opponentLogoMap[firstOpponent]) {
+    return opponentLogoMap[firstOpponent];
+  }
+
+  // --------------------------------------------------------
+  // Correspondance souple
+  // --------------------------------------------------------
+
+  const name = firstOpponent.toLowerCase();
+
+  if (name.includes("independence")) {
+    return "/independence.webp";
+  }
+
+  if (name.includes("garden city")) {
+    return "/garden.webp";
+  }
+
+  if (name.includes("pratt")) {
+    return "/pratt.webp";
+  }
+
+  if (name.includes("coffeyville")) {
+    return "/coffeyville.webp";
+  }
+
+  if (name.includes("cowley")) {
+    return "/cowley.webp";
+  }
+
+  if (name.includes("seward")) {
+    return "/seward.webp";
+  }
+
+  if (name.includes("cloud county")) {
+    return "/cloud.webp";
+  }
+
+  if (name.includes("butler")) {
+    return "/butler.webp";
+  }
+
+  if (name.includes("barton")) {
+    return "/barton.webp";
+  }
+
+  if (name.includes("hutchinson")) {
+    return "/hutchinson.webp";
+  }
+
+  if (name.includes("colby")) {
+    return "/colby.webp";
+  }
+
+  if (name.includes("northwestern oklahoma")) {
+    return "/oklahoma.webp";
+  }
+
+  if (name.includes("oklahoma")) {
+    return "/oklahoma.webp";
+  }
+
+  if (name.includes("western nebraska")) {
+    return "/nebraska.webp";
+  }
+
+  if (name.includes("laramie")) {
+    return "/laramie.webp";
+  }
+
+  if (name.includes("odessa")) {
+    return "/odessa.webp";
+  }
+
+  if (name.includes("midland")) {
+    return "/midland.webp";
+  }
+
+  if (name.includes("redlands")) {
+    return "/redlands.webp";
+  }
+
+  if (name.includes("murray")) {
+    return "/murray.webp";
+  }
+
+  if (name.includes("fort hays")) {
+    return "/fort.webp";
+  }
+
+  if (name.includes("midwest")) {
+    return "/midwest.webp";
+  }
+
+  if (name.includes("southwest")) {
+    return "/southwest.webp";
+  }
+
+  console.warn(
+    "⚠️ Aucun logo local trouvé pour :",
+    opponent,
+    "→ premier adversaire utilisé :",
+    firstOpponent
+  );
+
+  return "";
+}
+
+
 const translations = { fr: { addCalendarTitle: "Hourni tout las partides à lou bòste calandriè ?", appleOutlook: "📅 Apple / Outlook (.ics)", googleCalendar: "📆 Google Calendar", cancel: "Tourna", googleInstructions: [ "✅ Le fichier a été téléchargé !", "Voici comment l'importer dans Google Calendar :", "1. Ouvrez Google Calendar", "2. Cliquez sur la roue crantée en haut à droite → Paramètres", "3. Allez dans Importer et exporter", "4. Sélectionnez le fichier téléchargé : jade_2526.ics", "5. Importez-le dans le calendrier de votre choix", "🎉 Tous les matchs de Jade sont maintenant dans votre agenda !", ], iosInstructions: [ "✅ Le fichier a été téléchargé !", "Si pas déjà importer :", "1. Ouvrez l'application Fichiers", "2. Rendez-vous dans le dossier Téléchargements", "3. Appuyez sur le fichier jade_2526.ics", "4. Choisissez Ajouter à Calendrier si proposé", "📅 Tous les matchs de Jade sont maintenant ajoutés à votre calendrier !", ], close: "barra", }, }; 
 
 const dayMapping: Record<string, string> = { LUNDI: "DILHÛS", MARDI: "DIMARS", MERCREDI: "DIMÈRS", JEUDI: "DIYAUS", VENDREDI: "DIBÉS", SAMEDI: "DISSÀTTE", DIMANCHE: "DIMÉNDYE", };
@@ -268,26 +502,28 @@ if (
             parisDate.toISO()
           );
 
-          const parsed = {
-            id: `${year}-${month}-${day}-${index}`,
+     const parsed = {
+  id: `${year}-${month}-${day}-${index}`,
 
-            date: parisDate.toJSDate(),
+  date: parisDate.toJSDate(),
 
-            opponent,
+  opponent,
 
-            opponentLogo:
-              match[
-                "match.opponentLogo"
-              ],
+  // ========================================================
+  // IMPORTANT :
+  // On n'utilise PLUS le logo envoyé par l'API.
+  // On prend notre WebP local dans /public.
+  // ========================================================
+  opponentLogo: getOpponentLogo(opponent),
 
-            link:
-              match[
-                "match.link"
-              ],
+  link:
+    match[
+      "match.link"
+    ],
 
-            hasValidTime:
-              hourLabel !== "TBD",
-          };
+  hasValidTime:
+    hourLabel !== "TBD",
+};
 
           console.log(
             "✅ [FRONT] Match parsé :",
