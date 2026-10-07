@@ -2,7 +2,7 @@
   "name": "Carla Leite Fan",
   "short_name": "CarlaLeite",
   "description": "Suivez la carrière et les exploits de Carla Leite",
-  "start_url": "/",
+  "start_url": "/application",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#C8102E",
