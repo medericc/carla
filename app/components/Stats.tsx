@@ -2066,11 +2066,11 @@ const semanticSchemas = [
             <div className="w-8 md:w-16 h-px bg-gradient-to-r from-transparent via-red-500 to-transparent" />
           </div>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold mb-4 md:mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold mb-4 md:mb-6">
             <span className="bg-gradient-to-r from-white via-red-100 to-white bg-clip-text text-transparent">
               Records & Distinctions
             </span>
-          </h1>
+          </h2>
 
           <p className="text-base md:text-lg lg:text-xl text-gray-400 max-w-2xl mx-auto px-4">
             Découvrez les exploits qui ont marqué la carrière de la meneuse
