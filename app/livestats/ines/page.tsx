@@ -89,7 +89,7 @@ export default function Home() {
           await response.text()
         );
 
-        setModalMessage("Léna s'échauffe 🏀");
+        setModalMessage("Inès s'échauffe 🏀");
         setIsWaitingModalOpen(true);
         return;
       }
